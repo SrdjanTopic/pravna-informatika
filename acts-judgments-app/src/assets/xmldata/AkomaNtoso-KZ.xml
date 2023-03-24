@@ -1,0 +1,266 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act>
+    <meta>
+      <identification source="#mek">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/main"/>
+          <FRBRuri value="/akn/me/act/2003-12-25/70-2003"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2003-12-25" name="Generation"/>
+          <FRBRauthor href="#mek" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="70-2003"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/cnr@/main"/>
+          <FRBRuri value="/akn/me/act/2003-12-25/70-2003/cnr@"/>
+          <FRBRdate date="01-01-2004" name="Generation"/>
+          <FRBRauthor href="#mek" as="#editor"/>
+          <FRBRlanguage language="cnr"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/act/2003-12-25/70-2003/cnr@.akn"/>
+          <FRBRdate date="01-01-2004" name="Generation"/>
+          <FRBRauthor href="#mek" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#mek">
+        <TLCOrganization eId="mek" href="https://www.gov.me/mek" showAs="Ministarstvo ekonomskog razvoja i turizma"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+    </meta>
+    <coverPage>...</coverPage>
+    <preface>
+      <p>
+        <docTitle>
+          Zakon o bezbjednosti saobraćaja na putevima
+        </docTitle>
+      </p>
+    </preface>
+    <preamble>...</preamble>
+    <header>...</header>
+    <body>
+      <chapter id="glava3">
+        <num>GLAVA TREĆA</num>
+        <br/>
+        <title>KAZNE</title>
+        <article id="glava3-poglavlje01">
+          <num>1. </num>
+          <title>Svrha kažnjavanja, vrste kazni i uslovi za njihovo izricanje</title>
+          <subtitle>Vrste kazni</subtitle>
+          <clause id="clan33">
+            <num>Član 33</num>
+            <p id="clan33-stav01">
+              Učinocu krivičnog djela mogu se izreći sljedeće kazne:
+              <list>
+                <point>
+                  <num>1)</num> kazna dugotrajnog zatvora;
+                </point>
+                <point>
+                  <num>2)</num> kazna zatvora;
+                </point>
+                <point>
+                  <num>3)</num> novčana kazna;
+                </point>
+                <point>
+                  <num>4)</num> rad u javnom interesu.
+                </point>
+              </list>
+            </p>
+          </clause>
+          <subtitle>Kazna zatvora</subtitle>
+          <clause id="clan36">
+            <num>Član 36</num>
+            <p id="clan36-stav01">
+              Kazna zatvora ne može biti kraća od trideset dana niti duža od dvadeset godina.
+            </p>
+            <p id="clan36-stav02">
+              Kazna zatvora iz stava 1 ovog člana izriče se na pune godine i mjesece, a do šest mjeseci i na dane.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje02">
+          <num>2. </num>
+          <title>Odmjeravanje kazne</title>
+          <subtitle>Opšta pravila o odmjeravanju kazne</subtitle>
+          <clause id="clan42">
+            <num>Član 42</num>
+            <p id="clan42-stav01">
+              Sud će učiniocu krivičnog djela odmjeriti kaznu u granicama koje su zakonom propisane za to djelo, imajući u 
+              vidu svrhu kažnjavanja i uzimajući u obzir sve okolnosti koje utiču da kazna bude manja ili veća (olakšavajuće i 
+              otežavajuće okolnosti), a naročito: stepen krivice, pobude iz kojih je djelo učinjeno, jačinu ugrožavanja ili 
+              povrede zaštićenog dobra, okolnosti pod kojima je djelo učinjeno, raniji život učinioca, njegove lične prilike, 
+              njegovo držanje poslije učinjenog krivičnog djela, a naročito njegov odnos prema žrtvi krivičnog djela kao i druge 
+              okolnosti koje se odnose na ličnost učinioca.
+            </p>
+            <p id="clan42-stav02">
+              Pri odmjeravanju novčane kazne sud će posebno uzeti u obzir i imovno stanje učinioca.
+            </p>
+            <p id="clan42-stav03">
+              Okolnost koja je obilježje krivičnog djela ne može se uzeti u obzir i kao otežavajuća, odnosno olakšavajuća 
+              okolnost, izuzev ako prelazi mjeru koja je potrebna za postojanje krivičnog djela ili određenog oblika krivičnog 
+              djela ili ako postoje dvije ili više ovakvih okolnosti, pa je samo jedna dovoljna za postojanje težeg, odnosno lakšeg 
+              oblika krivičnog djela.
+            </p>
+          </clause>
+          <subtitle>Kazna zatvora</subtitle>
+          <clause id="clan36">
+            <num>Član 36</num>
+            <p id="clan36-stav01">
+              Kazna zatvora ne može biti kraća od trideset dana niti duža od dvadeset godina.
+            </p>
+            <p id="clan36-stav02">
+              Kazna zatvora iz stava 1 ovog člana izriče se na pune godine i mjesece, a do šest mjeseci i na dane.
+            </p>
+          </clause>
+        </article>
+      </chapter>
+      <chapter id="glava4">
+        <num>GLAVA ČETVRTA</num>
+        <br/>
+        <title>MJERE UPOZORENJA</title>
+        <article id="glava4-poglavlje01">
+          <num>1. </num>
+          <title>Uslovna osuda i sudska opomena</title>
+          <subtitle>Svrha uslovne osude i sudske opomene</subtitle>
+          <clause id="clan52">
+            <num>Član 52</num>
+            <p id="clan52-stav01">
+              Mjere upozorenja su: uslovna osuda i sudska opomena.
+            </p>
+            <p id="clan52-stav02">
+              U okviru opšte svrhe krivičnih sankcija (član 4 stav 2), svrha uslovne osude i sudske opomene je da se prema 
+              učiniocu krivičnog djela ne primijeni kazna za lakša krivična djela, kad to nije nužno radi krivičnopravne zaštite i 
+              kad se može očekivati da će upozorenje uz prijetnju kazne (uslovna osuda) ili samo upozorenje (sudska opomena) 
+              dovoljno uticati na učinioca da više ne vrši krivična djela.
+            </p>
+          </clause>
+          <subtitle>Uslovna osuda</subtitle>
+          <clause id="clan53">
+            <num>Član 53</num>
+            <p id="clan53-stav01">
+              Uslovnom osudom sud učinocu krivičnog djela utvrđuje kaznu i istovremeno određuje da se ona neće izvršiti, ako 
+              osuđeni za vrijeme koje odredi sud, a koje ne može biti kraće od jedne niti duže od pet godina (vrijeme 
+              provjeravanja) ne učini novo krivično djelo.
+            </p>
+            <p id="clan53-stav02">
+              Sud može u uslovnoj osudi odrediti da će se kazna izvršiti i ako osuđeni u određenom roku ne vrati imovinsku 
+              korist pribavljenu izvršenjem krivičnog djela, ne naknadi štetu koju je prouzrokovao krivičnim djelom ili ne 
+              ispuni druge obaveze predviđene u krivičnopravnim odredbama. Rok za ispunjenje tih obaveza utvrđuje sud u 
+              okviru određenog vremena provjeravanja.
+            </p>
+            <p id="clan53-stav03">
+              Mjere bezbjednosti, izrečene uz uslovnu osudu, izvršavaju se.
+            </p>
+          </clause>
+          <subtitle>Uslovi za izricanje uslovne osude</subtitle>
+          <clause id="clan54">
+            <num>Član 54</num>
+            <p id="clan54-stav01">
+              Uslovna osuda se može izreći kad je učiniocu utvrđena kazna zatvora u trajanju do dvije godine.
+            </p>
+            <p id="clan54-stav02">
+              Za krivična djela za koja se može izreći kazna zatvora u trajanju od deset godina ili teža kazna ne može se izreći 
+              uslovna osuda.
+            </p>
+            <p id="clan54-stav03">
+              Uslovna osuda se ne može izreći ako nije proteklo više od pet godina od pravosnažnosti osude kojom je učiniocu 
+              izrečena kazna za umišljajno krivično djelo. Uslovna osuda se ne može izreći učiniocu kome su već izrečene dvije 
+              uslovne osude.
+            </p>
+            <p id="clan54-stav04">
+              Pri odlučivanju da li će izreći uslovnu osudu sud će, vodeći računa o svrsi uslovne osude, posebno uzeti u obzir 
+              ličnost učinioca, njegov raniji život, njegovo ponašanje poslije izvršenog krivičnog djela, stepen krivice i druge 
+              okolnosti pod kojima je djelo učinjeno
+            </p>
+            <p id="clan54-stav05">
+              Ako je učiniocu utvrđena i kazna zatvora i novčana kazna, uslovna osuda može se izreći samo za kaznu zatvora.
+            </p>
+          </clause>
+          <subtitle>Sudska opomena</subtitle>
+          <clause id="clan65">
+            <num>Član 65</num>
+            <p id="clan65-stav01">
+              Sudska opomena može se izreći za krivična djela za koja je propisan zatvor do jedne godine ili novčana kazna, a 
+              učinjena su pod takvim olakšavajućim okolnostima koje ih čine naročito lakim.
+            </p>
+            <p id="clan65-stav02">
+              Za određena krivična djela i pod uslovima predviđenim zakonom sudska opomena može se izreći i kad je propisan 
+              zatvor do tri godine.
+            </p>
+            <p id="clan65-stav03">
+              Sudsku opomenu sud može izreći za više krivičnih djela učinjenih u sticaju, ako za svako od tih djela postoje 
+              uslovi iz st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan65-stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan65-stav02">2</ref> ovog člana.
+            </p>
+            <p id="clan65-stav04">
+              Pri odlučivanju da li će izreći sudsku opomenu sud će, vodeći računa o svrsi sudske opomene, posebno uzeti u 
+              obzir ličnost učinioca, njegov raniji život, njegovo ponašanje poslije izvršenja krivičnog djela, a naročito njegov 
+              odnos prema žrtvi krivičnog djela, stepen krivice i druge okolnosti pod kojima je djelo učinjeno.
+            </p>
+            <p id="clan65-stav05">
+              Sudska opomena ne može se izreći vojnim licima za krivična djela protiv Vojske Crne Gore.
+            </p>
+          </clause>
+        </article>
+      </chapter>
+      <chapter id="glava27">
+        <num>GLAVA DVADESET SEDMA</num>
+        <br/>
+        <title>KRIVIČNA DJELA PROTIV BEZBJEDNOSTI JAVNOG SAOBRAĆAJA</title>
+        <subtitle>Svrha uslovne osude i sudske opomene</subtitle>
+        <clause id="clan339">
+          <num>Član 339</num>
+          <p id="stav01">
+              Učesnik u saobraćaju na putevima koji se ne pridržava saobraćajnih propisa i time tako ugrozi saobraćaj da 
+              dovede u opasnost život ili tijelo ljudi ili imovinu čija vrijednost prelazi iznos od dvadeset hiljada eura, pa usljed 
+              toga kod drugog nastupi laka tjelesna povreda ili drugom prouzrokuje imovinsku štetu koja prelazi iznos od tri 
+              hiljade eura,
+              kazniće se zatvorom do tri godine.
+          </p>
+          <p id="stav02">
+              Ko se ne pridržava saobraćajnih propisa i time ugrozi željeznički, brodski, autobuski saobraćaj ili saobraćaj 
+              žičarom tako da dovede u opasnost život ili tijelo ljudi ili imovinu čija vrijednost prelazi iznos od dvadeset hiljada 
+              eura,
+              kazniće se zatvorom od šest mjeseci do šest godina.
+          </p>
+          <p id="stav03">
+              Ako je djelo iz st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav02">2</ref> ovog člana učinjeno iz nehata,
+              učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
+          </p>
+        </clause>
+        <subtitle>Teška djela protiv bezbjednosti javnog saobraćaja</subtitle>
+        <clause id="clan348">
+          <num>Član 348</num>
+          <p id="clan348-stav01">
+              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">2</ref>, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila teška 
+              tjelesna povreda nekog lica ili imovinska šteta koja prelazi iznos od četrdeset hiljada eura,
+              učinilac će se kazniti zatvorom od jedne do osam godina.
+          </p>
+          <p id="clan348-stav02">
+              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">2</ref>, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila smrt 
+              jednog ili više lica,
+              učinilac će se kazniti zatvorom od dvije do dvanaest godina.
+          </p>
+          <p id="clan348-stav03">
+              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> stav <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav03">3</ref>, 340 stav 3, 341 stav 2 i 346 stav 3 ovog zakonika nastupila teška tjelesna 
+              povreda nekog lica ili imovinska šteta koja prelazi iznos od četrdeset hiljada eura,
+              učinilac će se kazniti zatvorom do četiri godine.
+          </p>
+          <p id="clan348-stav03">
+              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> stav <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav03">3</ref>, 340 stav 3, 341 stav 2 i 346 stav 3 ovog zakonika nastupila smrt jednog ili više lica,
+              učinilac će se kazniti zatvorom od jedne do osam godina.
+          </p>
+        </clause>
+      </chapter>
+    </body>
+    <conclusions>...</conclusion>
+    <attachments>...</attachments>
+    <components>...</components>
+  </act>
+</akomaNtoso>

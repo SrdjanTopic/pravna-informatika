@@ -1,0 +1,309 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act>
+    <meta>
+      <identification source="#mki">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/main"/>
+          <FRBRuri value="/akn/me/act/2012-06-28/33-2012"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2012-06-28" name="Generation"/>
+          <FRBRauthor href="#mki" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="33-2012"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/cnr@/main"/>
+          <FRBRuri value="/akn/me/act/2012-06-28/33-2012/cnr@"/>
+          <FRBRdate date="05-01-2013" name="Generation"/>
+          <FRBRauthor href="#mki" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/act/2012-06-28/33-2012/cnr@.akn"/>
+          <FRBRdate date="05-01-2013" name="Generation"/>
+          <FRBRauthor href="#mki" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#mki">
+        <TLCOrganization eId="mki" href="https://www.gov.me/mki" showAs="Ministarstvo kapitalnih investicija"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+    </meta>
+    <preface>
+      <p>
+        <docTitle>
+          Zakon o bezbjednosti saobraćaja na putevima
+        </docTitle>
+      </p>
+    </preface>
+    <body>
+      <chapter id="glava3">
+        <num>III. </num>
+        <title>PRAVILA SAOBRAĆAJA</title>
+        <article id="glava3-poglavlje01">
+          <num>1. </num>
+          <title>Opšta pravila</title>
+          <clause id="clan26">
+            <num>Član 26</num>
+            <p id="clan26-stav01">
+              Vozač ne smije naglo da mijenja brzinu vožnje, osim u slučaju izbjegavanja neposredne opasnosti.
+            </p>
+            <p id="clan26-stav02">
+              Vozač koji namjerava da pomjeri vozilo udesno ili ulijevo, promijeni saobraćajnu traku, pretiče, obilazi, zaustavi, skrene, okrene
+              se polukružno, vozi unazad, prestroji se ili da izvrši drugu sličnu radnju, takvu radnju može da otpočne samo ako se uvjerio da to
+              može da učini na bezbjedan način.
+            </p>
+            <p id="clan26-stav03">
+              Nakon što se uvjerio da može da otpočne željenu radnju, vozač je dužan da druge učesnike u saobraćaju jasno i
+              blagovremeno obavijesti o tome, dajući im znak pomoću pokazivača pravca ili odgovarajući znak rukom ako pokazivači ne
+              postoje. Vozač koji pokazivačem pravca daje propisani znak, taj znak mora davati za svo vrijeme vršenja radnje vozilom, a po
+              izvršenoj radnji mora prestati sa davanjem tog znaka.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje03">
+          <num>3. </num>
+          <title> Kretanje vozila po putu</title>
+          <clause id="clan28">
+            <num>Član 28</num>
+            <p id="clan28-stav01">
+              Za kretanje vozila vozač mora da koristi površinu namijenjenu za saobraćaj one vrste vozila kojim upravlja, osim u slučajevima
+              propisanim ovim zakonom.
+            </p>
+            <p id="clan28-stav02">
+              Vozač vozila koji se kreće površinom koja nije namijenjena za saobraćaj te vrste vozila, ako je ovim zakonom to dozvoljeno,
+              obavezan je da upravlja vozilom sa posebnom pažnjom.
+            </p>
+          </clause>
+          <clause id="clan29">
+            <num>Član 29</num>
+            <p id="clan29-stav01">
+              Vozilo se kreće desnom stranom kolovoza u smjeru kretanja.
+            </p>
+            <p id="clan29-stav02">
+              Vozač je dužan da vozilo u kretanju drži što bliže desnoj ivici kolovoza i na tolikoj udaljenosti od te ivice da, s obzirom na brzinu
+              kretanja vozila, uslove saobraćaja i na stanje i karakteristike puta, ne ugrožava druge učesnike u saobraćaju i ne izlaže sebe
+              opasnosti.
+            </p>
+            <p id="clan29-stav03">
+              Izuzetno od stava 2 ovog člana, na putu u naselju sa najmanje dvije saobraćajne trake za isti smjer, vozač može da se
+              kreće vozilom saobraćajnom trakom koja se ne nalazi uz desnu ivicu kolovoza, ako time ne ometa vozila koja se kreću iza vozila
+              kojim on upravlja.
+            </p>
+            <p id="clan29-stav04">
+              Odredba stava 3 ovog člana ne odnosi se na vozača teretnog vozila čija je najveća dozvoljena masa veća od 3.500 kg,
+              vozača vozila koje na ravnom putu ne može razviti brzinu veću od 40 km/h i na vozača vozila koje nije motorno vozilo, osim na
+              dijelu puta ispred raskrsnice ili drugog mjesta na kojem vozilo skreće ulijevo, odnosno kad vrši preticanje ili obilaženje.
+            </p>
+          </clause>
+          <clause id="clan30">
+            <num>Član 30</num>
+            <p id="clan30-stav01">
+              Na putu za saobraćaj vozila u oba smjera, na kojem postoje najmanje četiri saobraćajne trake, vozač ne smije vozilom da se
+              kreće, odnosno prelazi na kolovoznu traku namijenjenu za saobraćaj vozila iz suprotnog smjera.
+            </p>
+            <p id="clan30-stav02">
+              Na putu za saobraćaj vozila u oba smjera, na kojem postoje tri saobraćajne trake, vozač ne smije vozilom da se kreće
+              saobraćajnom trakom koja se nalazi uz lijevu ivicu kolovoza u pravcu kretanja vozila.
+            </p>
+            <p id="clan30-stav03">
+              Na putu na kojem su kolovozne trake fizički odvojene jedna od druge, vozač ne smije vozilom da se kreće kolovoznom
+              trakom namijenjenoj za saobraćaj vozila iz suprotnog smjera.
+            </p>
+            <p id="clan30-stav04">
+              Na putu za saobraćaj vozila u jednom smjeru, vozač ne smije vozilom da se kreće u zabranjenom smjeru.
+            </p>
+          </clause>
+          <clause id="clan31">
+            <num>Član 31</num>
+            <p id="clan31-stav01">
+              Kretanje vozilom unazad dozvoljeno je na kratkom dijelu puta, stranom kolovoza kojom se do tada vozilo kretalo unaprijed
+              ako se time ne ugrožavaju niti ometaju drugi učesnici u saobraćaju.
+            </p>
+            <p id="clan31-stav02">
+              Kad se vozač vozilom kreće unazad dužan je da zaustavi svoje vozilo i propusti vozilo koje dolazi iza njegovog vozila.
+            </p>
+            <p id="clan31-stav03">
+              Kretanje vozila unazad nije dozvoljeno na nepreglednom dijelu puta, u uslovima smanjene vidljivosti, u tunelu, na dijelu puta
+              gdje je zabranjeno zaustavljanje i na prelazu preko željezničke pruge i kad se vozilom ulazi sa sporednog puta na put sa
+              prvenstvom prolaza.
+            </p>
+          </clause>
+          <clause id="clan32">
+            <num>Član 32</num>
+            <p id="clan32-stav01">
+              Vozač ne smije naglo da uspori brzinu kretanja vozila, osim u slučaju izbjegavanja neposredne opasnosti.
+            </p>
+            <p id="clan32-stav02">
+              Vozač koji naglo uspori brzinu kretanja vozila dužan je da to učini na način kojim neće ugroziti, odnosno ometati vozače koji se
+              kreću iza njega.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje04">
+          <num>4. </num>
+          <title>Brzina</title>
+          <clause id="clan35">
+            <num>Član 35</num>
+            <p id="clan35-stav01">
+              Vozač je dužan da brzinu kretanja vozila prilagodi karakteristikama i stanju puta, vidljivosti, preglednosti, atmosferskim
+              prilikama, stanju vozila i tereta, gustini saobraćaja i drugim saobraćajnim uslovima, tako da vozilo može blagovremeno zaustaviti
+              pred svakom preprekom koju pod datim okolnostima može da vidi ili predvidi, odnosno da vozilom upravlja na način kojim ne
+              ugrožava bezbjednost saobraćaja.
+            </p>
+            <p id="clan35-stav02">
+              Ako vozač vozi sporo, tako da ometa normalno odvijanje saobraćaja ili se usljed toga iza vozila kojim upravlja formira kolona
+              vozila, dužan je da na prvom odgovarajućem mjestu omogući vozilima koja se kreću iza da bezbjedno preteknu, obiđu ili prođu
+              pored vozila kojim upravlja.
+            </p>
+            <p id="clan35-stav03">
+              Brzina kretanja motornih vozila na putu, pod normalnim uslovima saobraćaja, ne smije da se ograniči saobraćajnim znakom
+              ispod 40 km/h.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje06">
+          <num>6. </num>
+          <title>Brzina</title>
+          <clause id="clan40">
+            <num>Član 40</num>
+            <p id="clan40-stav01">
+              Na raskrsnici ili u susretu sa drugim vozilom vozač je dužan da propusti vozilo koje nailazi sa njegove desne strane.
+            </p>
+            <p id="clan40-stav02">
+              Vozač vozila koji na raskrsnici skreće ulijevo dužan je da propusti vozilo koje, dolazeći iz suprotnog smjera na raskrsnici
+              zadržava pravac kretanja ili skreće udesno, ako saobraćajnim znakom nije drukčije određeno.
+            </p>
+            <p id="clan40-stav03">
+              Izuzetno od st. <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan40-stav01">1</ref> i <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan40-stav02">2</ref> ovog člana, vozilo koje se kreće po šinama u svim slučajevima ima prvenstvo prolaza, bez obzira na to
+              sa koje mu strane vozilo nailazi, osim ako saobraćajnim znakom nije drukčije određeno.
+            </p>
+            <p id="clan40-stav04">
+              Vozač koji ulazi vozilom na put koji je saobraćajnim znakom označen kao put sa prvenstvom prolaza dužan je da propusti sva
+              vozila koja se kreću tim putem.
+            </p>
+            <p id="clan40-stav05">
+              Vozač je dužan da propusti sva vozila koja se kreću putem na koji se uključuje i kad taj put nije saobraćajnim znakom
+              označen kao put sa prvenstvom prolaza, ako vozilom ulazi sa zemljanog puta na put sa asfaltnim zastorom ili ako na put ulazi sa
+              površine na kojoj se ne vrši saobraćaj.
+            </p>
+            <p id="clan40-stav06">
+              Vozač koji prilikom skretanja vozila presijeca biciklističku stazu ili traku dužan je da propusti vozila koja se kreću stazom,
+              odnosno trakom.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje07">
+          <num>7. </num>
+          <title>Saobraćaj na raskrsnici</title>
+          <clause id="clan41">
+            <num>Član 41</num>
+            <p id="clan41-stav01">
+              Vozač koji se približava raskrsnici dužan je da prilagodi vožnju uslovima saobraćaja na raskrsnici, kao i da vozi brzinom pri kojoj
+              može da se zaustavi i propusti vozila koja na raskrsnici imaju prvenstvo prolaza.
+            </p>
+            <p id="clan41-stav02">
+              Vozač je dužan da, na dovoljnoj udaljenosti ispred raskrsnice, vozilom izvrši prestrojavanje i zauzme položaj na saobraćajnoj
+              traci predviđenoj za prolazak kroz raskrsnicu u smjeru u kojem želi da nastavi kretanje.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje08">
+          <num>8. </num>
+          <title>Polukružno okretanje</title>
+          <clause id="clan44">
+            <num>Član 44</num>
+            <p id="clan44-stav01">
+              Vozač ne smije da vrši polukružno okretanje vozila u tunelu, na mostu, vijaduktu, podvožnjaku, nadvožnjaku, kao i u uslovima
+              smanjene vidljivosti, odnosno na mjestu gdje je nedovoljna preglednost, na dijelu puta koji nema dovoljnu širinu za polukružno
+              okretanje vozila, kao i na mjestima gdje je to saobraćajnim znakom zabranjeno.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje09">
+          <num>9. </num>
+          <title>Mimoilaženje</title>
+          <clause id="clan45">
+            <num>Član 45</num>
+            <p id="clan45-stav01">
+              Prilikom mimoilaženja vozač je dužan da sa svoje lijeve strane ostavi dovoljno rastojanja između svog vozila i vozila sa kojim
+              se mimoilazi, a po potrebi i da vozilo pomjeri ka desnoj ivici kolovoza.
+            </p>
+            <p id="clan45-stav02">
+              Prilikom mimoilaženja sa pješakom, vozač je dužan da drži bezbjedno rastojanje između vozila i pješaka, tako da ne ugrožava
+              pješaka.
+            </p>
+            <p id="clan45-stav03">
+              Ukoliko zbog prepreke na putu ili drugih učesnika u saobraćaju vozač ne može da postupi u skladu sa stavom 1 ovog člana,
+              dužan je da uspori kretanje svog vozila i da ga, po potrebi, zaustavi da bi propustio vozilo iz suprotnog smjera.
+            </p>
+            <p id="clan45-stav04">
+              Ukoliko je zbog nedovoljne širine puta ili prepreke mimoilaženje onemogućeno, vozač kojem je to, s obzirom na karakteristike i
+              stanje puta i okolnosti saobraćaja, lakše da izvede, dužan je da se prvi zaustavi i, po potrebi, kretanjem unazad ili na drugi način,
+              pomjeri svoje vozilo i na putu zauzme položaj koji omogućava mimoilaženje.
+            </p>
+            <p id="clan45-stav05">
+              Kad na raskrsnici vozila dolaze iz suprotnih smjerova i skreću ulijevo, vozač mimoilazi vozilo iz suprotnog smjera tako što ga
+              propušta sa svoje desne strane.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje15">
+          <num>15. </num>
+          <title>Mimoilaženje</title>
+          <clause id="clan76">
+            <num>Član 76</num>
+            <p id="clan76-stav01">
+              Vozač mora da drži potrebno odstojanje od vozila koje se kreće ispred njega, tako da može blagovremeno da uspori ili da se
+              zaustavi, ako vozilo ispred njega uspori ili se zaustavi.
+            </p>
+          </clause>
+        </article>
+        <article id="glava3-poglavlje21">
+          <num>21. </num>
+          <title>Obaveze vozača prema pješacima</title>
+          <clause id="clan97">
+            <num>Član 97</num>
+            <p id="clan97-stav01">
+              Ako je saobraćaj na pješačkom prelazu regulisan svjetlosnim saobraćajnim znakovima ili znacima ovlašćenog policijskog
+              službenika, vozač je dužan da vozilo zaustavi ispred pješačkog prelaza kad mu je datim znakom zabranjen prolaz, a ako mu je
+              na takvom prelazu datim znakom dozvoljen prolaz, vozač je dužan da propusti pješaka koji je već stupio na pješački prelaz.
+            </p>
+            <p id="clan97-stav02">
+              Ako se pješački prelaz iz stava 1 ovog člana nalazi na ulazu na bočni put, vozač koji skreće na taj put dužan je da skretanje
+              izvrši na bezbjedan način i da propusti pješaka koji je već stupio ili stupa na pješački prelaz ili pokazuje namjeru da će stupiti na
+              pješački prelaz, a po potrebi, da zaustavi svoje vozilo.
+            </p>
+            <p id="clan97-stav03">
+              Ako na pješačkom prelazu saobraćaj nije regulisan uređajima za davanje svijetlosnih saobraćajnih znakova niti znacima
+              policijskih službenika, vozač je dužan da prilagodi brzinu vozila tako da u svakoj situaciji koju vidi ili ima razloga da predvidi može
+              bezbjedno da zaustavi vozilo ispred pješačkog prelaza i propusti pješaka koji je već stupio ili stupa na pješački prelaz ili pokazuje
+              namjeru da će stupiti na pješački prelaz.
+            </p>
+            <p id="clan97-stav04">
+              Vozač koji skreće na bočni put na čijem ulazu ne postoji pješački prelaz dužan je da propusti pješake koji su već stupili ili
+              stupaju na kolovoz.
+            </p>
+            <p id="clan97-stav05">
+              Ako su u slučajevima iz st. <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan97-stav01">1</ref> do <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan97-stav04">4</ref> ovog člana pješaci djeca, nemoćna lica, slijepa lica koja se kreću uz upotrebu bijelog štapa
+              i/ili psa vodiča, lica sa invaliditetom koja se kreću u invalidskim kolicima ili za kretanje koriste druga ortotičko-protetička pomagala,
+              vozač je obavezan da zaustavi vozilo i da ih propusti.
+            </p>
+            <p id="clan97-stav06">
+              Vozač ne smije vozilom da presijeca organizovanu kolonu pješaka koja se kreće po kolovozu.
+            </p>
+          </clause>
+        </article>
+      </chapter>
+    </body>
+    <conclusions>...</conclusion>
+    <attachments>...</attachments>
+    <components>...</components>
+  </act>
+</akomaNtoso>
