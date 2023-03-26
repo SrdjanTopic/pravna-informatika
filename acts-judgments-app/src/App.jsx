@@ -1,23 +1,19 @@
-import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import axios from "axios";
-import xml from "./assets/xmldata/AkomaNtoso-KZ.xml";
-import XMLParser from "react-xml-parser";
+import Home from "./pages/Home/Home";
+import Laws from "./pages/Laws/Laws";
 
 function App() {
-  useEffect(() => {
-    axios
-      .get(xml, {
-        "Content-Type": "application/xml; charset=utf-8",
-      })
-      .then((res) => {
-        const jsonDataFromXml = new XMLParser().parseFromString(res.data);
-        console.log(jsonDataFromXml);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Routes>
+        <Route path="" element={<Home />}></Route>
+        <Route path="laws">
+          <Route path=":lawname" element={<Laws />}></Route>
+        </Route>
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

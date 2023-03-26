@@ -1,0 +1,20 @@
+.paragraph {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+p {
+}
+
+.point {
+  padding-left: 1em;
+}
+
+.paragraphWrapper {
+  display: flex;
+  margin: 0.2em 0 0.2em 0;
+}
+
+.paragraphNumber {
+  margin-right: 0.2em;
+}
