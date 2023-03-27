@@ -1,8 +1,8 @@
 import { Fragment } from "react";
+import Content from "../Content/Content";
 import styles from "./Paragraph.module.css";
 
 const Paragraph = ({ paragraph, number }) => {
-  console.log(paragraph);
   return (
     <div
       key={paragraph.attributes.eId}
@@ -23,10 +23,7 @@ const Paragraph = ({ paragraph, number }) => {
             >{`${paragraphChild.children[0].value} ${paragraphChild.children[1].children[0].value}`}</p>
           )}
           {paragraphChild.name === "content" && (
-            <div className={styles.paragraphWrapper}>
-              <p className={styles.paragraphNumber}>({number})</p>
-              <p>{paragraphChild.children[0].value}</p>
-            </div>
+            <Content content={paragraphChild} number={number} />
           )}
         </Fragment>
       ))}

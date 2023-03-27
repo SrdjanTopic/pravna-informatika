@@ -1,9 +1,9 @@
 <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
   <act>
     <meta>
-      <eIdentification source="#mki">
+      <identification source="#mki">
         <FRBRWork>
-          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/main"/>
+          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/!main"/>
           <FRBRuri value="/akn/me/act/2012-06-28/33-2012"/>
           <FRBRalias value="/eli/me/xxx" name=""/>
           <FRBRdate date="2012-06-28" name="Generation"/>
@@ -15,20 +15,20 @@
           <FRBRauthoritative value="true"/>
         </FRBRWork>
         <FRBRExpression>
-          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/cnr@/main"/>
+          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/cnr@/!main"/>
           <FRBRuri value="/akn/me/act/2012-06-28/33-2012/cnr@"/>
           <FRBRdate date="05-01-2013" name="Generation"/>
           <FRBRauthor href="#mki" as="#editor"/>
           <FRBRlanguage language="me"/>
         </FRBRExpression>
         <FRBRManifestation>
-          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml"/>
-          <FRBRuri value="/akn/me/act/2012-06-28/33-2012/cnr@.akn"/>
+          <FRBRthis value="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml"/>
+          <FRBRuri value="/akn/me/act/2012-06-28/33-2012/cnr@./!main.akn"/>
           <FRBRdate date="05-01-2013" name="Generation"/>
           <FRBRauthor href="#mki" as="#editor"/>
           <FRBRformat value="xml"/>
         </FRBRManifestation>
-      </eIdentification>
+      </identification>
       <references source="#mki">
         <TLCOrganization eId="mki" href="https://www.gov.me/mki" showAs="Ministarstvo kapitalnih investicija"/>
         <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
@@ -122,7 +122,7 @@
             <paragraph eId="clan29-stav03">
               <content>
                 <p>
-              Izuzetno od stava 2 ovog člana, na putu u naselju sa najmanje dvije saobraćajne trake za isti smjer, vozač može da se
+              Izuzetno od <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan29-stav02">stava 2</ref> ovog člana, na putu u naselju sa najmanje dvije saobraćajne trake za isti smjer, vozač može da se
               kreće vozilom saobraćajnom trakom koja se ne nalazi uz desnu ivicu kolovoza, ako time ne ometa vozila koja se kreću iza vozila
               kojim on upravlja.
                 </p>
@@ -131,7 +131,7 @@
             <paragraph eId="clan29-stav04">
               <content>
                 <p>
-              Odredba stava 3 ovog člana ne odnosi se na vozača teretnog vozila čija je najveća dozvoljena masa veća od 3.500 kg,
+              Odredba <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan29-stav03">stava 3</ref> ovog člana ne odnosi se na vozača teretnog vozila čija je najveća dozvoljena masa veća od 3.500 kg,
               vozača vozila koje na ravnom putu ne može razviti brzinu veću od 40 km/h i na vozača vozila koje nije motorno vozilo, osim na
               dijelu puta ispred raskrsnice ili drugog mjesta na kojem vozilo skreće ulijevo, odnosno kad vrši preticanje ili obilaženje.
                 </p>
@@ -275,7 +275,7 @@
             <paragraph eId="clan40-stav03">
               <content>
                 <p>
-              Izuzetno od st. <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan40-stav01">1</ref> i <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan40-stav02">2</ref> ovog člana, vozilo koje se kreće po šinama u svim slučajevima ima prvenstvo prolaza, bez obzira na to
+              Izuzetno od <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan40-stav01">st. 1</ref> i <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan40-stav02">2</ref> ovog člana, vozilo koje se kreće po šinama u svim slučajevima ima prvenstvo prolaza, bez obzira na to
               sa koje mu strane vozilo nailazi, osim ako saobraćajnim znakom nije drukčije određeno.
                 </p>
               </content>
@@ -426,7 +426,7 @@
             <paragraph eId="clan97-stav02">
               <content>
                 <p>
-              Ako se pješački prelaz iz stava 1 ovog člana nalazi na ulazu na bočni put, vozač koji skreće na taj put dužan je da skretanje
+              Ako se pješački prelaz iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan97-stav01">stava 1</ref> ovog člana nalazi na ulazu na bočni put, vozač koji skreće na taj put dužan je da skretanje
               izvrši na bezbjedan način i da propusti pješaka koji je već stupio ili stupa na pješački prelaz ili pokazuje namjeru da će stupiti na
               pješački prelaz, a po potrebi, da zaustavi svoje vozilo.
                 </p>
@@ -453,7 +453,7 @@
             <paragraph eId="clan97-stav05">
               <content>
                 <p>
-              Ako su u slučajevima iz st. <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan97-stav01">1</ref> do <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan97-stav04">4</ref> ovog člana pješaci djeca, nemoćna lica, slijepa lica koja se kreću uz upotrebu bijelog štapa
+              Ako su u slučajevima iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan97-stav01">st. 1</ref> do <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/!main.xml#clan97-stav04">4</ref> ovog člana pješaci djeca, nemoćna lica, slijepa lica koja se kreću uz upotrebu bijelog štapa
               i/ili psa vodiča, lica sa invaleIditetom koja se kreću u invaleIdskim kolicima ili za kretanje koriste druga ortotičko-protetička pomagala,
               vozač je obavezan da zaustavi vozilo i da ih propusti.
                 </p>

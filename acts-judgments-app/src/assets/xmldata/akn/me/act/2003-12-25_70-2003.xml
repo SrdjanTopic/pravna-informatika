@@ -3,7 +3,7 @@
     <meta>
       <identification source="#mek">
         <FRBRWork>
-          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/main"/>
+          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/!main"/>
           <FRBRuri value="/akn/me/act/2003-12-25/70-2003"/>
           <FRBRalias value="/eli/me/xxx" name=""/>
           <FRBRdate date="2003-12-25" name="Generation"/>
@@ -15,15 +15,15 @@
           <FRBRauthoritative value="true"/>
         </FRBRWork>
         <FRBRExpression>
-          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/cnr@/main"/>
+          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/cnr@/!main"/>
           <FRBRuri value="/akn/me/act/2003-12-25/70-2003/cnr@"/>
           <FRBRdate date="01-01-2004" name="Generation"/>
           <FRBRauthor href="#mek" as="#editor"/>
           <FRBRlanguage language="cnr"/>
         </FRBRExpression>
         <FRBRManifestation>
-          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml"/>
-          <FRBRuri value="/akn/me/act/2003-12-25/70-2003/cnr@.akn"/>
+          <FRBRthis value="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml"/>
+          <FRBRuri value="/akn/me/act/2003-12-25/70-2003/cnr@./!main.akn"/>
           <FRBRdate date="01-01-2004" name="Generation"/>
           <FRBRauthor href="#mek" as="#editor"/>
           <FRBRformat value="xml"/>
@@ -281,7 +281,7 @@
               <content>
                 <p>
               Sudsku opomenu sud može izreći za više krivičnih djela učinjenih u sticaju, ako za svako od tih djela postoje 
-              uslovi iz st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan65-stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan65-stav02">2</ref> ovog člana.
+              uslovi iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#clan65-stav01">st. 1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#clan65-stav02">2</ref> ovog člana.
                 </p>
               </content>
             </paragraph>
@@ -334,7 +334,7 @@
           <paragraph eId="stav03">
             <content>
               <p>
-              Ako je djelo iz st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav02">2</ref> ovog člana učinjeno iz nehata,
+              Ako je djelo iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav01">st. 1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav02">2</ref> ovog člana učinjeno iz nehata,
               učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
               </p>
             </content>
@@ -346,7 +346,8 @@
           <paragraph eId="clan348-stav01">
             <content>
               <p>
-              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">2</ref>, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila teška 
+              Ako je usljed djela iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#clan339">čl. 339</ref>
+                <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav01">st. 1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav01">2</ref>, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila teška 
               tjelesna povreda nekog lica ili imovinska šteta koja prelazi iznos od četrdeset hiljada eura,
               učinilac će se kazniti zatvorom od jedne do osam godina.
               </p>
@@ -355,7 +356,8 @@
           <paragraph eId="clan348-stav02">
             <content>
               <p>
-              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> st. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav01">2</ref>, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila smrt 
+              Ako je usljed djela iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#clan339">čl. 339</ref>
+                <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav01">st. 1</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav01">2</ref>, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila smrt 
               jednog ili više lica,
               učinilac će se kazniti zatvorom od dvije do dvanaest godina.
               </p>
@@ -364,7 +366,8 @@
           <paragraph eId="clan348-stav03">
             <content>
               <p>
-              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> stav <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav03">3</ref>, 340 stav 3, 341 stav 2 i 346 stav 3 ovog zakonika nastupila teška tjelesna 
+              Ako je usljed djela iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#clan339">čl. 339</ref>
+                <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav03">stav 3</ref>, 340 stav 3, 341 stav 2 i 346 stav 3 ovog zakonika nastupila teška tjelesna 
               povreda nekog lica ili imovinska šteta koja prelazi iznos od četrdeset hiljada eura,
               učinilac će se kazniti zatvorom do četiri godine.
               </p>
@@ -373,7 +376,8 @@
           <paragraph eId="clan348-stav03">
             <content>
               <p>
-              Ako je usljed djela iz čl. <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">339</ref> stav <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#stav03">3</ref>, 340 stav 3, 341 stav 2 i 346 stav 3 ovog zakonika nastupila smrt jednog ili više lica,
+              Ako je usljed djela iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#clan339">čl. 339</ref>
+                <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/!main.xml#stav03">stav 3</ref>, 340 stav 3, 341 stav 2 i 346 stav 3 ovog zakonika nastupila smrt jednog ili više lica,
               učinilac će se kazniti zatvorom od jedne do osam godina.
               </p>
             </content>

@@ -1,17 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home/Home";
-import Laws from "./pages/Laws/Laws";
+import { lazy, Suspense } from "react";
+const Laws = lazy(() => import("./pages/Laws/Laws"));
+const Home = lazy(() => import("./pages/Home/Home"));
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="" element={<Home />}></Route>
-        <Route path="laws">
-          <Route path=":lawname" element={<Laws />}></Route>
-        </Route>
-      </Routes>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Routes>
+          <Route path="" element={<Home />}></Route>
+          <Route path="/akn/me/">
+            <Route path="act/:lawname" element={<Laws />}></Route>
+          </Route>
+        </Routes>
+      </Suspense>
     </div>
   );
 }
