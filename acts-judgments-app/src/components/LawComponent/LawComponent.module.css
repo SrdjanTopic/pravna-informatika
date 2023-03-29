@@ -1,6 +1,7 @@
 .act {
+  align-self: center;
   padding: 1em 3em 1em 3em;
-  width: 100%;
+  width: 80%;
   text-align: center;
   font-size: 2.5rem;
 }

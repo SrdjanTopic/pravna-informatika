@@ -1,0 +1,135 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#osbr">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-br/2020-07-29/k-177-20/main"/>
+          <FRBRuri value="/akn/me/judgement/os-br/2020-07-29/k-177-20"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2020-07-29" name="Generation"/>
+          <FRBRauthor href="#osbr" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-177-20"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-br/2020-07-29/k-177-20/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-br/2020-07-29/k-177-20/cnr@"/>
+          <FRBRdate date="2020-07-29" name="Generation"/>
+          <FRBRauthor href="#osbr" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-br/2020-07-29/k-177-20/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-br/2020-07-29/k-177-20/cnr@.akn"/>
+          <FRBRdate date="2020-07-29" name="Generation"/>
+          <FRBRauthor href="#osbr" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#osbr">
+        <TLCOrganization eId="osbr" href="https://sudovi.me/osbr" showAs="Osnovni sud u Baru"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#osbr">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-br/2020-07-29/k-177-20"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#spasojevic">Tamara Spasojević</judge>
+      <party refersTo="#ra" as="#Defendant">R.A.</party>
+      <party refersTo="#djp" as="#Plaintiff">Đikanović Predrag</party>
+      <neutralCitation>[2020] OSBR K 177</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U BARU, kao prvostepeni krivični, sudija <judge id="jud01" refersTo="#spasojevic">Tamara Spasojević</judge>, kao sudija pojedinac, sa zapisničarom Anom Stanišić, u krivičnom predmetu okrivljenog <party id="p1" refersTo="#ra" as="#Defendant">R. A.</party> , zbog krivičnog djela ugrožavanje javnog saobraćaja <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu Osnovnog državnog tužilaštva u Baru Kt br. 369/20 od <date date="2020-07-06">06.07.2020.</date>godine, nakon održanog glavnog javnog pretresa u prisustvu zastupnika optužbe <party id="p2" refersTo="#djp" as="#Plaintiff">Đikanović Predraga</party> savjetnika kod Osnovnog državnog tužilaštva u Baru, a u odsustvu okrivljenog, <date date="2020-07-29">dana 29.07.2020.</date> godine donio je i javno objavio
+        </p>
+        <p style="text-align: center;">
+          PRESUDU
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Okrivljeni:
+        </p>
+        <p>
+          <party id="p3" refersTo="#ra" as="#Defendant">R. A.</party> , JMB .... , od oca M. i majke H., rođene Z., rođen ... .godine u B. P., sa prebivalištem u B., ..... ., .... C. , penzioner, oženjen, otac četvoro djece, završio osnovnu školu, srednjeg imovnog stanja, osuđivan od strane Države Sijera Leone presudom br. 54/85 koja je postala pravosnažna dana 27.03.1987.godine, zbog krivičnog djela iz čl. 25130 kojom mu je izrečena uslovna osuda i utvrđena kazna zatvora u trajanju od 2 mjeseca, uslovno na 1 godinu.
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          Kriv je
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2020-06-03">03.06.2020.</date> godine oko 21,00 čas, ispred pekare "Bijeli Golub" u Sutomoru, Opština Bar, upravljajući u saobraćaju PMV marke BMW X3, reg.oznaka .... , ne pridržavajući se saobraćajnih propisa, ugrozio saobraćaj i doveo u opasnost život i tijelo oštećenog M. N. , olako držeći da do posljedice neće doći, što je postupao protivno odredbi <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan27">čl. 27</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan27-stav01">st. 1</ref> i <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan44">čl. 44</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a na putevima</ref> ("Sl. List CG br. 33/12) na način što se sa totoara gdje je vozilo bilo parkirano uključio na put gdje se vršio saobraćaj a da se nije uvjerio da neće ometati ostale učesnike u saobraćaju kojom prilikom je započeo polukružno okretanje na mjestu gdje je to zabranjeno, jer je kolovoz podijeljen neisprekidanom razdjelnom linijom kojom prilikom je stvorio prepreku na putu motociklu marke "Kymco", bez reg.oznaka kojim je upravljao M. N. , koji se kretao iz pravca Bara u pravcu Sutomora desnom saobraćajnom trakom gledano iz pravca kretanja motocikla, usled čega dolazi do kontakta prednjeg dijela motocikla sa lijevom bočnom stranom vozila marke "BMW" kojom prilikom je oštećeni M. N. zadobio lake tjelesne povrede u vidu nekoliko oguljotina kože u predjelu desnog lakta, dužine od 0,2 cm do 1 m i širine 0,3 cm, krvni podliv u predjelu naddlanene strane lijeve šake veličine oraha, krvni podliv u predjelu desnog koljena kože u predjelu desne potkoljenice - duž desne goljenjače veličine od 0,5 cm do 2 cm, krvni podliv u predjelu lijeve potkoljenice - lijeve goljenjače veličine 4 x 0,4 cm.
+        </p>
+        <p>
+          - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>,
+        </p>
+        <p>
+          Pa mu sud primjenom čl. 2, 4, 15, 36, 42, 45, 46, 52, 53 i 54 Krivičnog zakonika Crne Gore i čl. 226, 229 i 374 Zakonika o krivičnom postupku, izriče
+        </p>
+        <p style="text-align: center;">
+          USLOVNU OSUDU
+        </p>
+        <p>
+          Kojom mu utvrđuje kaznu zatvora u trajanju od 2 (dva) mjeseca i istovremeno određuje da se kazna neće izvršiti ukoliko okrivljeni u roku od 1 (jedne) godine po pravosnažnosti presude ne izvrši novo krivično djelo.
+        </p>
+        <p>
+          Oštećeni M. N. se radi ostvarivanja imovinsko pravnog zahtjeva upućuje na parnični postupak.
+        </p>
+        <p>
+          Okrivljeni je dužan da plati troškove krivičnog postupka u iznosu od 154,00 eura, a na ime sudskog paušala iznos od 30,00 eura, u roku od 15 dana od dana pravosnažnosti presude, pod prijetnjom prinudnog izvršenja.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+          Obrazloženje
+        </p>
+        <p>
+          <omissis>
+            ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Odluka o imovinsko pravnom zahtjevu zasniva se na odredbi čl. 239 st. 2 Zakonika o krivičnom postupku. Oštećeni M. N. je postavio imovinsko pravni zahtjev, ali isti nije precizirao. Sud je oštećenog radi ostvarivanja imovinsko pravnog zahtjeva uputio na parnični postupak, na osnovu čl. 239 st.2 ZKP jer je postavio imovinsko pravni zahtjev, koji nije precizirao, a o osnovanosti zahtjeva sud nije imao podataka za odlučivanje ni djelimično ni u cjelini.
+        </p>
+        <p>
+          Odluka o troškovima zasniva se na odredbi čl. 229 ZKP-a. Dosuđeni iznos se odnosi na plaćanje troškova vještaćenja po vještaku Krstu Nikoliću u iznosu od 71,50€, troškove vještačenja po vještaku saobraćajne struke Pavlu Medenici u iznosu od 82,50€ i troškove za rad suda koji su određeni prema trajanju, složenosti krivičnog postupka i imovinskim prilikama okrivljenog.
+        </p>
+        <p>
+          Na osnovu izloženog odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

@@ -1,0 +1,130 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#oszb">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-zb/2021-10-04/k-14-21/main"/>
+          <FRBRuri value="/akn/me/judgement/os-zb/2021-10-04/k-14-21"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2021-10-04" name="Generation"/>
+          <FRBRauthor href="#oszb" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-14-21"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-zb/2021-10-04/k-14-21/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-zb/2021-10-04/k-14-21/cnr@"/>
+          <FRBRdate date="2021-10-04" name="Generation"/>
+          <FRBRauthor href="#oszb" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-zb/2021-10-04/k-14-21/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-zb/2021-10-04/k-14-21/cnr@.akn"/>
+          <FRBRdate date="2021-10-04" name="Generation"/>
+          <FRBRauthor href="#oszb" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#oszb">
+        <TLCOrganization eId="oszb" href="https://sudovi.me/oszb" showAs="Osnovni sud u Žabljaku"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#oszb">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-zb/2021-10-04/k-14-21"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#andjelic">Anđelić Mihailo</judge>
+      <party refersTo="#zm" as="#Defendant">Z.M.</party>
+      <party refersTo="#gi" as="#Plaintiff">Gačević Ivan</party>
+      <neutralCitation>[2022] OSzb K 14</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U ŽABLJAKU, kao prvostepeni krivični, po predsjedniku suda <judge id="jud01" refersTo="#andjelic">Anđelić Mihailu</judge>, uz sudjelovanje zapisničara Knežević Ranke, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#zm" as="#Defendant">Z. M.</party> iz Ž., zbog krivičnog djela Ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore (KZ CG)</ref>, po optužnom predlogu ODT iz Pljevalja Kt.br.122/21 od <date date="2021-09-16">16.09.2021.</date>godine, nakon usmenog, javnog i glavnog pretresa održanog <date date="2021-10-04">04.10.2021.</date>godine u prisustvu ODT iz Pljevalja <party id="p2" refersTo="#gi" as="#Plaintiff">Gačević Ivana</party>, okrivljenog i oštećenog Sokić Vukote iz Pljevalja, donio je i istog dana u odsustvu stranaka javno objavio
+        </p>
+        <p style="text-align: center;">
+          P R E S U D U
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Okrivljeni: <party id="p3" refersTo="#zm" as="#Defendant">Z. M.</party>, od oca M. i majke G., rođene Ž., rođen ….godine u P., JMB …, sa prebivalištem u Ž., ul.S. S. br…., državljanin Crne Gore, govori Crnogorskim jezikom, završio Srednju ugostiteljsku školu, neoženjen, bez đece,nezaposlen, lošeg imovnog stanja, povremeno obavlja sezonske poslove, ranije neosuđivan, ne nalazi se pod istragom za drugo krivično djelo,
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          K r i v j e
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2021-06-07">07.06.2021.<date>godine, oko 19:00 h, na raskrsnici ulica N. H. i V. K. na Ž., upravljajući PMV marke "Golf II", reg.oznaka ŽB ** ***, krećući se ulicom V. K., iz pravca autobuske stanice prema centru grada, zbog nepridržavanja saobraćajnih propisa, ugrozio saobraćaj i doveo u opasnost život i tijelo ljudi, na način što je suprotno odredbi <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan41">čl.41</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a</ref> na putevima, vozilom upravljao pod dejstvom alkohola u koncetraciji od 2,21 %(pro mille), pa je na prilazu raskrsnici, neustupanjem prvenstva prolaza PMV marke "Golf 1,9 TDI", reg.oznaka PV ** ***, kojim je upravljao S. V. iz P., koje u raskrsnicu nailazi sa desne strane krećući se ulicom N. H. iz pravca hotela "P." prema centru grada, usled čega je na raskrsnici došlo do čeono-bočnog sudara, čeonom desnom stranom njegovog vozila i čeono-bočne lijeve strane vozila PV ** ***, kojom prilikom je vozač- oštećeni S. V. zadobio lake tjelesne povrede u vidu otoka i crvenila i dvije ogrebotine u predjelu donje trećine desne podlaktice, pri čemu je okrivljeni postupao sa eventualnim umišljajem, jer je bio svjestan da tako može ugroziti javni saobraćaj i time dovesti u opasnost život i tijelo ljudi, pa je na to pristao,
+        </p>
+        <p>
+            - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore /KZCG/</ref>
+        </p>
+        <p>
+           pa ga sud primjenom navedenog zakonskog propisa i čl. 4, 5, 13, 15, 32, 41, 42 KZ CG i čl.226 st.2 tačka 9 i st.3, čl.229 i čl.374 Zakonika o krivičnom postupku(ZKP-a)
+        </p>
+        <p style="text-align: center;">
+            O S U Đ U J E
+        </p>
+        <p>
+            Na kaznu rada u javnom interesu u trajanju od 180 (stoosamdeset) časova za vrijeme od 3(tri) mjeseca, s tim što ne može biti duža od 60 (šezdeset) časova u toku jednog mjeseca, a ukoliko okrivljeni ne vrši rad u javnom interesu ova kazna će se zamijeniti kaznom zatvora, tako što će se za svakih 60 (šezdeset) časova rada u javnom interesu zamijeniti kaznom zatvora u trajanju od jednog mjeseca.
+        </p>
+        <p>
+            Okrivljeni je dužan platiti troškove krivičnog postupka u iznosu od 244,00 €, na žiro-račun Osnovnog suda u Žabljaku br.535-18321-18, dok se oslobađa plaćanja paušala, a gornje sve u roku od 15 dana po pravosnažnosti presude.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+            Obrazloženje
+        </p>
+        <p>
+          <omissis>
+              ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Pravnom ocjenom ovako utvrđenog činjeničnog stanja, sud nalazi da se u radnji okrivljenog stiču svi bitni elementi krivičnog djela Ugrožavanje javnog saobraćaja iz čl.339 st.1 KZ CG, koje djelo čini svaki onaj "učesnik u saobraćaju na putevima koji se ne pridržava saobraćajnih propisa i time tako ugrozi saobraćaj da dovede u opasnost život ili tijelo ljudi ili imovinu čija vrijednost prelazi iznos od 20.000 €, pa usled toga kod drugog nastupi laka tjelesna povrijeda ili drugom prouzrokuje imovinsku štetu koja prelazi iznos od 3.000 €". U konkretnom slučaju, radi se o blanketnom krivičnom djelu a ovo jer je okrivljeni postupio suprotno odredbi čl.182 st.4 ZOBS-a, prema kojoj "pod dejstvom alkohola je vozač, odnosno lice za koje se analizom odgovarajućeg uzorka krvi utvrdi sadržaj alkohola veći od 0,3 g/kg, ili ako je prisustvo alkohola u krvi utvrđeno odgovarajućim sredstvima ili aparatima za mjerenje alkoholisanosti (alkometrom i dr.) veće od 0,3 g/kg. Okrivljeni je takođe postupio suprotno odredbi čl.41 ZOBS-a prema kojem "vozač koji se približava raskrsnici dužan je da prilagodi vožnju uslovima saobraćaja na raskrsnici, kao i da vozi brzinom, pri kojoj može da se zaustavi i propušti vozila koja na raskrsnici imaju prvenstvo prolaza". Okrivljeni je djelo učinio sa eventualnim umišljajem kao predviđenim oblikom vinosti a ovo sa razloga, jer je bio svjestan da vožnjom pod uticajem alkohola u organizmu, u naznačenoj količini, brzinu kretanja vozila nije prilagodio karakteristikama i stanju puta, pa je pristajući na takvu vožnju, došlo do ugrožavanja saobraćaja obzirom da nije u potezu raskrsnice prilagodio vožnju uslovima saobraćaja na raskrsnici, tj.da vozi brzinom pri kojoj može da zaustavi ili propušti vozilo koje u raskrsnici ima prvenstvo prolaza, a kojom prilikom je svojim vozilom udario u vozilo oštećenog, te je zbog fizičkog kontakta njegovog vozila i vozila oštećenog, oštećeni zadobio lake tjelesne povrede bliže opisane izrekom presude.
+        </p>
+        <p>
+          Prilikom odlučivanja o vrsti i mjeri krivične sankcije, sud je imao u vidu okolnosti iz čl.42 KZ CG, a posebno je cijenio okolnosti koje se tiču ličnosti okrivljenog, pa je od olakšavajućih okolnosti uzeo, da se radi o mladoj osobi, da je izrazio žaljenje zbog učinjenog i uputio izvinjenje oštećenom, te izrazio spremnost da oštećenom nadoknadi štetu nastalu na vozilu, odnosno, da je u cjelosti priznao krivicu i počinjeno krivično djelo, pa dalje, da je lošeg imovnog stanja, da je nazaposlen i da povremeno obavlja sezonske poslove, dok otežavajućih okolnosti nije bilo, pa je sud okrivljenom polazeći od stepena krivice, kao i drugih okolnosti iz čl.42 KZ CG, a na osnovu pristanka u smislu čl.41 st.1 tačka 3 KZ CG, okrivljenom izrekao kaznu rada u javnom interesu u trajanju od 180 (stoosamdeset) časova za vrijeme od 3 mjeseca, s tim što ne može biti duža od 60 (šezdeset) časova u toku jednog mjeseca, a ukoliko okrivljeni ne vrši rad u javnom interesu ova kazna će se zamijeniti kaznom zatvora, tako što će se za svakih 60 (šezdeset) časova rada u javnom interesu zamijeniti kaznom zatvora u trajanju od jednog mjeseca, a gornje sve imajući u vidu vrstu i težinu učinjenog krivičnog djela i ličnost učinioca shodno čl.41 st.5 KZ CG, pri ubjeđenju da će se sa izrečenom kaznom ostvariti svrha kažnjavanja u smislu čl.4 i čl.32 KZ CG.
+          Oglašavajući okrivljenog krivim sud ga je obavezao da plati troškove krivičnog postupka u iznosu od 244,00 €, a koji troškovi se odnose na nagradu i troškove vještačenja po vještaku saobraćajne struke u iznosu od 126,50 € i vještaku medicinske struke u iznosu od 60,50 €, te za utvrđivanje prisustva alkohola u krvi od strane KC CG iznos 57,00 €, a sve ovo shodno čl.229 ZKP-a, dok ga je oslobodio plaćanja paušala, a ovo shodno čl.226 st.2 tačka 9 i st.3 ZKP-a a imajući u vidu trajanje, složenost postupka i loše imovno stanje okrivljenog.
+        </p>
+        <p>
+          Sa iznijetog odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

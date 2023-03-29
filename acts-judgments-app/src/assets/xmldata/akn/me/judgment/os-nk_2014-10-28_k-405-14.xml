@@ -1,0 +1,140 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#osnk">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-nk/2014-10-28/k-405-14/main"/>
+          <FRBRuri value="/akn/me/judgement/os-nk/2014-10-28/k-405-14"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2014-10-28" name="Generation"/>
+          <FRBRauthor href="#osnk" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-405-14"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-nk/2014-10-28/k-405-14/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-nk/2014-10-28/k-405-14/cnr@"/>
+          <FRBRdate date="2014-10-28" name="Generation"/>
+          <FRBRauthor href="#osnk" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-nk/2014-10-28/k-405-14/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-nk/2014-10-28/k-405-14/cnr@.akn"/>
+          <FRBRdate date="2014-10-28" name="Generation"/>
+          <FRBRauthor href="#osnk" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#osnk">
+        <TLCOrganization eId="osnk" href="https://sudovi.me/osnk" showAs="Osnovni sud u Nikšiću"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#osnk">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-nk/2014-10-28/k-405-14"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#perovic">Perović Ivan</judge>
+      <party refersTo="#djm" as="#Defendant">Đ. M.</party>
+      <party refersTo="#sv" as="#Plaintiff">Sinđić Vanja</party>
+      <neutralCitation>[2014] OSNK K 405</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U NIKŠIĆU, sudija <judge id="jud01" refersTo="#perovic">Perović Ivan</judge>, uz sudjelovanje Ćuzović Plane kao zapisničara, u krivičnom predmetu protiv optuženog <party id="p1" refersTo="#djm" as="#Defendant">Đ. M.A</party> zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl.348</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav01">st.1</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl.339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st.1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">KZ</ref>, postupajući po optužnici ODT-a Nikšić Kt.br.318/14 od <date date="2014-09-24">24.09.2014.</date>g., nakon dovršenog javnog glavnog pretresa dana <date date="2014-10-28">28.10.2014.</date>g. u prisustvu zamjenika ODT-a <party id="p2" refersTo="#sv" as="#Plaintiff">Sinđić Vanje</party> i optuženog <party id="p3" refersTo="#djm" as="#Defendant">Đ. M.a</party>, donio je i istog dana javno objavio
+        </p>
+        <p style="text-align: center;">
+          P R E S U D U
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Optuženi: 
+        </p>
+        <p>
+          <party id="p4" refersTo="#djm" as="#Defendant">Đ. M.</party> od oca Ž i majke Dra rođ.S ić, rođen .g. u Nikšiću, nastanjen u mjestu rođenja - Št m bb, državljanin Crne Gore, oženjen, nezaposlen, završio srednju školu, lošeg imovnog stanja, ranije neosuđivan
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          K r i v j e
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2014-06-11">11.06.2014.</date>g. oko 01:05 časova u Nikšiću u mjestu Stubica, magistralnim putnim pravcem Nikšić - Podgorica, ne pridržavajući se saobraćajnih propisa, svjestan da time može ugroziti saobraćaj i dovesti u opasnost život i tijelo učesnika u saobraćaju, na što je i pristao, bez položenog vozačkog ispita za upravljanje vozilima „B“ kategorije, upravljao putničkim motornim vozilom marke „ “, reg.br. NK-BH-728, u pravcu Bogetića i time tako ugrozio saobraćaj da je doveo u opasnost život i tijelo oštećenih M. M., D. B.a, K. R.a i D. M.a, na način što je preduzeo radnju polukružnog okretanja na potezu navedene saobraćajnice gdje je ova radnja postavljenom horizontalnom signalizacijom, udvojenom punom razdjelnom linijom imperativno zabranjena, pa je vozeći ovako, protivno odredbama <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan44">čl.44</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">Zakona o bezbjednosti saobraćaja na putevima</ref> Crne Gore, vozilom prešao sa prostora svoje desne kolovozne površine posmatrano iz pravca Nikšića, na prostor lijeve saobraćajne trake desne kolovozne površine, gledano iz pravca Bogetića, čime je svoje vozilo doveo u poziciju fizičke prepreke putničkom motornom vozilu marke „VW Golf“ reg.br. PG-DF-431 kojim je iz pravca Nikšića svojom desnom kolovoznom površinom upravljao oštećeni K. R.o, koji je, a kako bi izbjegao kontakt sa vozilom kojim je upravljao okrivljeni, korigovao putanju kretanja svog vozila ulijevo, kada je prednjim krajem svog vozila na lijevoj saobraćajnoj traci desne kolovozne površine, gledano iz pravca Bogetića, udario u prednji lijevi bočni kraj putničkog motornog vozila kojim je upravljao optuženi, kojom prilikom su saputnici u vozilu optuženog oštećeni M. V. i D. B. zadobili lake tjelesne povrede i to M. V. u vidu nagnječenja u predjelu lijevog kuka, a D. B. u vidu nagnječenja u predjelu desne strane grudnog koša, dok je oštećeni K. R.o zadobio laku tjelesnu povredu u vidu nagnječenja u predjelu desne strane čela, a saputnik u njegovom vozilu oštećeni D. M. tešku tjelesnu povredu u vidu preloma desne golenjače u donjoj trećini, krvnog podliva i oguljotine donje usne, sa oguljotinama kože u predjelu desne potkoljenice i lijevog skočnog zgloba,
+        </p>
+        <p>
+            - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav01">st. 1</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika</ref>.
+        </p>
+        <p>
+            Sud optuženom Đ. M.u primjenom čl.4 st.2, čl.42, čl.45 st.1 tač.3, čl.46 st.1 tač.4, čl.52, čl.53 i čl.54 Krivičnog zakonika i čl.374 Zakonika o krivičnom postupku, izriče
+        </p>
+        <p style="text-align: center;">
+            USLOVNU OSUDU
+        </p>
+        <p>
+          Kojom mu utvrđuje kaznu zatvora u trajanju od 6 /šest/ mjeseci i istovremeno određuje da se ista neće izvršiti ako optuženi u roku od 2 (dvije) godine po pravosnažnosti presude ne učini novo krivično djelo.
+        </p>
+        <p>
+          Optuženom <party id="p5" refersTo="#djm" as="#Defendant">Đ. M.u</party> sud na osnovu čl.74 Krivičnog zakonika izriče mjeru bezbjednosti zabrane upravljanja motornim vozilima »B« kategorije u trajanju od 3 /tri/ mjeseca počev od dana pravosnažnosti presude.
+        </p>
+        <p>
+          Dužan je optuženi na ime troškova krivičnog postupka uplatiti na žiro račun ovoga suda broj 832-152-32 iznos od 162,00(stotinušezdesetdva)eura, u roku od 15 dana po pravosnažnosti presude pod prijetnjom prinudnog izvršenja.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+            Obrazloženje
+        </p>
+        <p>
+          <omissis>
+              ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Prilikom odlučivanja o krivičnoj sankciji, sud je shodno čl. 42 KZ, kao olakšavajuće okolnosti optuženom cijenio ispoljeno kajanje, činjenicu da se radi o oženjenom licu, nezaposlenom i lošeg imovnog stanja, činjenicu da se oštećeni K. R.o i D. M. nijesu pridružili krivičnom gonjenju, kao i raniju neosuđivanost utvrđenu iz izvoda iz kaznene evidencije, dok otežavajućih okolnosti nije našao pa je sud u konačnom cijeneći da su ispunjeni uslovi iz čl.53 i 54 KZ optuženom izrekao uslovnu osudu uz utvrđivanje kazne zatvora od 6 mjeseci (sud je našao da na strani optuženog postoje naročito olakšavajuće okolnosti pa je osnovom čl.45 st.1 tač.3 i čl.46 st.1 tač.4 KZ istome utvrdio kaznu ispod zakonom propisanog minimuma za ovo krivično djelo) koja se neće izvršiti ako optuženi u roku od dvije godine po pravosnažnosti presude ne učini novo krivično djelo, jer je sud mišljenja da će se u konkretnom slučaju postići svrha uslovne osude iz čl.52 KZ, u okviru opšte svrhe propisivanja i izricanja krivičnih sankcija iz čl.4 st.2 KZ.
+        </p>
+        <p>
+            Optuženom je sud na osnovu čl.74 KZ izrekao mjeru bezbjednosti zabrane upravljanja motornim vozilima »B« kategorije u trajanju od 3 mjeseca počev od dana pravosnažnosti presude a ovo cijeneći težinu učinjenog djela (izraženu kroz visinu zaprijećene kazne) i okolnosti pod kojima je djelo učinjeno (optuženi upravlja vozilom bez adekvatne dozvole) kao i posledice istog (više lica je povrijeđeno).
+        </p>
+        <p>
+            Sud je optuženog shodno čl. 226 i 229 ZKP-a obavezao na plaćanje troškova krivičnog postupka u iznosu od 162,00 eura pri čemu se iznos od 88,00 eura, odnosi na naknadu vještaku saobraćajne struke ing.Šl M , iznos od 44,00 eura na naknadu vještaku medicinske struke dr.B V i iznos od 30,00 eura na sudski paušal srazmjeran složenosti i trajanju krivičnog postupka, te imovnim prilikama optuženog.
+        </p>
+        <p>
+            Na osnovu iznijetog, shodno čl. 374 ZKP-a, odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

@@ -1,0 +1,10 @@
+.motivation p,
+a {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+.motivation .centeredText {
+  text-align: center;
+  display: block;
+}

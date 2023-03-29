@@ -1,0 +1,141 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#ospv">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-pv/2014-12-09/k-127-14/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pv/2014-12-09/k-127-14"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2014-12-09" name="Generation"/>
+          <FRBRauthor href="#ospv" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-127-14"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-pv/2014-12-09/k-127-14/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pv/2014-12-09/k-127-14/cnr@"/>
+          <FRBRdate date="2014-12-09" name="Generation"/>
+          <FRBRauthor href="#ospv" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-pv/2014-12-09/k-127-14/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-pv/2014-12-09/k-127-14/cnr@.akn"/>
+          <FRBRdate date="2014-12-09" name="Generation"/>
+          <FRBRauthor href="#ospv" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#ospv">
+        <TLCOrganization eId="ospv" href="https://sudovi.me/ospv" showAs="Osnovni sud u Pljevljima"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#ospv">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-pv/2014-12-09/k-127-14"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#popovic">Ljiljana Popović</judge>
+      <party refersTo="#gm" as="#Defendant">G.M.</party>
+      <party refersTo="#gb" as="#Plaintiff">Gačević Božidarka</party>
+      <neutralCitation>[2014] OSPV K 127</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          Osnovni sud u Pljevljima, kao prvostepeni krivični sud po sudiji <judge id="jud01" refersTo="#popovic">Ljiljani Popović</judge> uz sudjelovanje zapisničara Leković Zore, u krivičnom predmetu protiv optuženog <party id="p1" refersTo="#gm" as="#Defendant">G.M.</party> iz P. zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref> po optužnom predlogu ODT Pljevlja Kt.br.282/14 od <date date="2014-11-13">13.11.2014.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zamjenika ODT Pljevlja <party id="p2" refersTo="#gb" as="#Plaintiff">Gačević Božidarke</party> i optuženog <party id="p3" refersTo="#gm" as="#Defendant">G.M.</party>, dana <date date="2014-12-09">09.12.2014.</date> godine donio je i javno objavio
+        </p>
+        <p style="text-align: center;">
+          P R E S U D U
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Optuženi: <party id="p4" refersTo="#gm" as="#Defendant">G.M.</party>, JMBG ...., od oca P. i majke B. rodjene D., rodjen u P. dana ....godine, sa prebivalištem u mjestu K. opština P., državljanin CG,oženjen, bez djece,penzioner, govori srpskim jezikom, razumije crnogorski jezik, pismen, završio srednju školu, lošeg imovnog stanja, neosudjivan.
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          K R I V J E
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2014-08-29">29.08.2014.</date>godine oko 12,45 časova upravljajućši svojim PMP marke "G.II" reg.br. PV ... krećući se ulicom R. vojnih invalida iz pravca P.- V. i dolaskom u raskrsnicu ulica R.v. i. i saobraćajnice obilaznice koja spaja magistralni putni pravac T.-P. i regionalni putni pravac P.-Dj.T.suprotno odredbi <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan41">čl.41</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a na putevima</ref> brzinu kretanja vozila nije prilagodio uslovima saobraćaja na raskrsnici i nije ustupio prvenstvo prolaza vozilu motociklu "K." koje se kretalo glavnom saobraćajnicom iz pravca Trlica-benzinska pumpa a bio je obaviješten i znakom STOP, da se sa sporedne saobraćajnice uključuje u saobraćaj na glavnoj saobraćajnici, iako je bio svjestan da svojom radnjom može učiniti djelo ali je olako držao da do toga neće doći ili da će to moći spriječiti, pa je pri takvoj vožnji udario u motocikl "K." kojim je propisno iz pravca T.-benzinska pumpa upravljao oštećeni J. S. koji je tom prilikom zadobio lake tjelesne povrede u vidu: kontuzija lijevog ramena i lijevog koljena i kontuzija sa površnom oguljotinom kože desnog kažiprsta,
+        </p>
+        <p>
+            - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>,
+        </p>
+        <p>
+            pa mu sud na osnovu već citiranog zakonskog propisa te primjenom članova 4,13,16,32 33,36,42,52,53 i 54 Krivičnog zakonika Crne Gore te čl.226,229 i 374 ZKP-a
+        </p>
+        <p>
+          i z r i č e
+        </p>
+        <p style="text-align: center;">
+            USLOVNU OSUDU
+        </p>
+        <p>
+          Sa kojom se optuženom <party id="p5" refersTo="#gm" as="#Defendant">G.MI.</party> utvrdjuje kazna zatvora u trajanju od 2(dva)mjeseca i istovremeno odredjuje da se ista neće izvršiti ako optuženi u roku od godinu dana od pravosnažnosti ove presude ne izvrši novo krivično djelo.
+        </p>
+        <p>
+          Optuženi je dužan platiti Budžetu Crne Gore na ime troškova krivičnog postupka iznos od 236,50 € kao i na ime paušala iznos od 27,50 €
+        </p>
+        <p>
+          A sve ovo u roku od 15 dana po pravnosnažnosti presude pod prijetnjom prinudnog izvršenja.
+        </p>
+        <p>
+          Imovinsko pravnog zahtjeva nije bilo.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+            Obrazloženje
+        </p>
+        <p>
+          <omissis>
+              ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Dakle, u postupku je na osnovu priznanja optuženog G., iz navoda oštećenog J.,svjedoka G.a kao i nalazom i mišljenjem vještaka saobraćajne struke R., nalazom i mišljenjem vještaka medicinske struke dr. P.kao i ostalim dokazima izvedenim u postupku utvrdjeno da je optuženi G.M. izvršio krivično djelo ugrožavanje javnog saobraćaja iz čl.339 st.3 u vezi st.1 Krivičnog zakonika Crne Gore kako mu se to javnom optužbom i stavlja na teret pa je sud optuženog kao nehatnog učinioca,obzirom da je bio svjestan da brzinu kretanja vozila nije prilagodio uslovima saobraćaja na raskrsnici i nije ustupio prvenstvo prolaza vozilu-motociklu kojim je upravljao oštećeni J. i koji se motocikl kretao glavnom saobraćajnicom iz pravca T.-B. pumpa a bio je obaviješten i znakom STOP da se sa sporedne saobraćajnice uključuje u saobraćaj na glavnoj saobraćajnici, iako je bio svjestan da svojom radnjom može učiniti djelo ali je olako držao da do toga neće doći ili da će to moći spriječiti, nije postupao u skladu sa čl.41 ZOBS-a na putevima pa je pri takvoj vožnji udario u motocikl K.kojim je propisno iz pravca T.-B. pumpa upravljao oštećeni J. koji je tom prilikom zadobio povrede bliže opisane izrekom ove presude.Dakle optuženi G. postupao je sa nehatom pa ga je sud kao nehatnog učinioca oglasio krivim i osudio po zakonu jer u ovim njegovim radnjama stoje svi bitni elementi bića krivičnog djela ugrožavanje javnog saobraćaja iz čl.339 st.3 u vezi st.1 Krivičnog zakonika Crne Gore.
+        </p>
+        <p>
+            Prilikom odlučivanja o vrsti i visini kazne sud je cijenio sve okolnosti u smislu čl.42 Krivičnog zakonika Crne Gore koje utiču kako na vrstu tako i na visinu kazne. Optuženi G. je priznao izvršenje djela i krivicu.Radi se o porodičnom čovjeku, penzioneru. Oštećeni se nije pridružio krivičnom gonjenju. Optuženi G. do sada nije osudjivan što je utvrdjeno iz izvoda iz KE i što upućuje na zaključak da se ne radi o osobi sklonoj vršenju krivičnih djela. Djelo je izvršio sa nezhatom.Sve ove okolnosti na strani optuženog sud je cijenio kao olakšavajuće okolnosti.Imajući u vidu navedene olakšavajuće okolnosti sud je mišljenja da u konkretnom slučaju a radi krivično pravne zaštite prema ovom optuženom nije nužno izricati kaznu zatvora već je mišljenja da se i samim upozorenjem uz prijetnju kaznom može dovoljno uticati na ovog okrivljenog da više ne vrši krivična djela pa mu je sud utvrdio kaznu zatvora u trajanju od dva mjeseca i shodno čl.52,53 i 54 Krivičnog zakonika Crne Gore odredio da se ista neće izvršiti ako okrivljeni u roku od jedne godine dana po pravosnažnosti ove presude na izvrši novo krivično djelo te da će se na taj način u cjelosti postići svrha kažnjavanja.
+        </p>
+        <p>
+            Shodno čl.226 i 229 ZKP-a sud je obavezao optuženog da na ime troškova krivičnog postupka koji čine troškovi za saobraćajno i medecinsko vještačenje plati Budžetu Crne Gore iznos od 236,50 € kao i da na ime paušala Budžetu Crne Gore plati iznos od 27,50 € koji iznos je odmjeren obzirom na dužinu trajanja i složenost krivičnog postupka te imovno stanje optuženog.
+        </p>
+        <p>
+            Imovinsko pravnog zahtjeva nije bilo.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

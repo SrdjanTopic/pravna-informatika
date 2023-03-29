@@ -1,0 +1,27 @@
+.meta {
+  text-align: center;
+  background-color: #fafafa;
+  width: 100%;
+  padding: 1.5em 0 1.5em 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.courtName {
+  font-size: 0.8rem;
+}
+
+.judgmentNumber {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #245474;
+}
+
+.judgmentDate {
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.judgmentNumberRight {
+  text-align: right;
+  width: 85%;
+}

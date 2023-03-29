@@ -1,0 +1,138 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#ospg">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-pg/2016-06-03/k-61-16/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2016-06-03/k-61-16"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2016-06-03" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-61-16"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-pg/2016-06-03/k-61-16/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2016-06-03/k-61-16/cnr@"/>
+          <FRBRdate date="2016-06-03" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-pg/2016-06-03/k-61-16/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2016-06-03/k-61-16/cnr@.akn"/>
+          <FRBRdate date="2016-06-03" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#ospg">
+        <TLCOrganization eId="ospg" href="https://sudovi.me/ospg" showAs="Osnovni sud u Podgorici"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#ospg">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-pg/2016-06-03/k-61-16"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#mijuskovic-stamatovic">Larisa Mijušković-Stamatović</judge>
+      <party refersTo="#mm" as="#Defendant">G.B.</party>
+      <party refersTo="#mv" as="#Plaintiff">Mihailović Vladan</party>
+      <neutralCitation>[2017] OSPG K 61</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U PODGORICI kao prvostepeni, krivični, po sudiji <judge id="jud01" refersTo="#mijuskovic-stamatovic">Larisi Mijušković- Stamatović</judge>, uz učešće Valentine Vukašinović, kao zapisničara u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#gb" as="#Defendant">G.B.</party> iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu ODT-a Podgorica
+          <ref href="/me/judgment/os-pg/2016-02-03/kt-1010-15">Kt.br. 1010/15</ref> od <date date="2016-02-03">03.02.2016.</date> godine, kojeg je na glavnom pretresu zastupao <party id="p2" refersTo="#mv" as="#Plaintiff">Mihailović Vladan</party>, savjetnik na radu kod ODT-a Podgorica, nakon glavnog i javnog pretresa održanog dana <date date="2016-05-31">31.05.2016.</date> godine u prisustvu stranaka, donio je, a dana <date date="2016-06-03">03.06.2016.</date> godine i javno objavio,
+        </p>
+        <p style="text-align: center;">
+          PRESUDU
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Okrivljeni:
+        </p>
+        <p>
+          <party id="p3" refersTo="#gb" as="#Defendant">G.B.</party>, od oca N. majke S. rođene G. rođen ... godine u Podgorici, sa prebivalištem u mjestu rođenja, Ul. ... br. xxxx, državljanin Crne Gore, pismen, završio osnovnu školu, zaposlen kao vozač, oženjen, otac troje djece, lošeg imovnog stanja, ranije osuđivan i to presudom Osnovnog suda u Podgorici K.br. 09/1075 od <date date="2009-09-29">29.09.2009.</date> godine zbog krivičnog djela iz čl. 239 st. 1 Krivičnog Zakonika kojom je osuđen na 30 dana zatvora uslovno na jednu godinu ;
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          KRIV JE
+        </p>
+        <p>
+          Što je :
+        </p>
+        <p>
+          Dana ..... godine, oko ..... časova, u P, na pješačkom trotoaru u M ulici, ne pridržavajući se saobraćajnih propisa iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan26">čl. 26</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan26-stav02">st. 2</ref> i <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan28">28</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan28-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">Zakona o bezbjednosti saobraćaja na putevima</ref>, ugrozio saobraćaj tako da je doveo u opasnost život i tijelo ljudi na način što je, upravljajući vozilom marke „Iveco” registarskih oznaka PG...xxx, pješačkim trotoarom - površinom koja nije namijenjena za kretanje vozila, otpočeo vožnju unazad, a da se prethodno nije uvjerio da takvu radnju može da učini na bezbjedan način, usljed čega je zadnjim dijelom vozila udario pješaka - oštećenu R.L., koja se kretala trotoarom iza vozila, od kojeg udarca je ista zadobila lake tjelesne povrede u vidu nagnječenja predjela lijevog koljena sa nagnječno - razdernom ranom u predjelu lijevog koljena, nagnječenja predjela desnog koljena, nagnječenje predjela zgloba desnog ramena, tj. predjela zgloba između desne ramenjače i desne lopatice i nagnječenja predjela gornjeg zgloba desnog ručja, tj. predjela zgloba između desne žbice i kostiju desnog ručja: desne čunaste, desne polumjesečaste i desne troroge kosti, pri čemu je okrivljeni bio svjestan da takvom radnjom može ugroziti javni saobraćaj i dovesti u opasnost život i tijelo ljudi, ali je olako držao da do toga neće doći
+        </p>
+        <p>
+          - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>,
+        </p>
+        <p>
+          - pa mu Sud, primjenom citiranog zakonskog propisa, te čl. 3, 4, 5, 13, 16, 32, 33, 36, 42, 52, 53 i 54 Krivičnog Zakonika Crne Gore, te čl. 226, 227, 229 i 374 Zakonika o krivičnom postupku izriče
+        </p>
+        <p style="text-align: center;">
+          USLOVNU OSUDU
+        </p>
+        <p>
+          Kojom mu utvrđuje kaznu zatvora u trajanju od 3 (tri) mjeseca i istovremeno određuje da se ista neće izvršiti ako okrivljeni u roku od 1 (jedne) godine po pravnosnažnosti presude ne izvrši novo krivično djelo.
+        </p>
+        <p>
+          Obavezuje se okrivljeni da na ime troškova krivičnog postupka uplati na račun budžetskih sredstava Crne Gore iznos od 143,00 € (stotinučetrdesettrieura), kao i iznos od 50,00 € (pedeseteura) na ime sudskog paušala, sve prednje u roku od 15 (petnaest) dana po pravnosnažnosti presude, pod prijetnjom prinudne naplate.
+        </p>
+        <p>
+          Oštećena R.L. se radi ostvarivanja imovinsko - pravnog zahtjeva upućuje na redovnu građansku parnicu.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+          Obrazloženje
+        </p>
+        <p>
+          <omissis>
+            ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Odluku o troškovima krivičnog postupka Sud je donio na osnovu čl. 226, 227 i 229 Zakonika o krivičnom postupku, a isti se odnose na troškove vještačenja po vještaku saobraćajne struke u iznosu od 82,50 €, te troškove vještačenja po vještaku medicinske struke u iznosu od 60,50 €, što čini ukupan iznos troškova postupka od 143,00 €, kao i iznos od 50,00 € na ime sudskog paušala, koji je odmjeren prema trajanju i složenosti postupka, te imovinskim prilikama okrivljenog.
+        </p>
+        <p>
+          Oštećenu R. L. Sud je, radi ostvarivanja imovinsko-pravnog zahtjeva, temeljom čl. 239 Zakonika o krivičnom postupku, uputio na parnični postupak, budući da ista nije precizirala iznos odštetnog zahtjeva, a dokazi provedeni na glavnom pretresu nijesu dali pouzdan osnov za njegovo utvrđenje i dosuđenje, dok bi pribavljanje drugih dokaza vodilo isključivo odugovlačenju ovog postupka, a sve pri činjenici da se oštećena izjasnila da će imovinsko - pravni zahtjev ostvariti u drugom sudskom postupku.
+        </p>
+        <p>
+          Na osnovu izloženog, u skladu sa čl. 374 Zakonika o krivičnom postupku, odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

@@ -1,0 +1,9 @@
+* {
+  font-family: Source Sans Pro, sans-serif;
+}
+.judgment {
+  align-self: center;
+  /* padding: 1em 3em 1em 3em; */
+  width: 85%;
+  text-align: left;
+}

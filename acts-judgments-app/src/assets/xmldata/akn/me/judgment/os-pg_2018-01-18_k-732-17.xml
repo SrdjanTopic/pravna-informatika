@@ -1,0 +1,130 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#ospg">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-pg/2018-01-18/k-732-17/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2018-01-18/k-732-17"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2018-01-18" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-732-17"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-pg/2018-01-18/k-732-17/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2018-01-18/k-732-17/cnr@"/>
+          <FRBRdate date="2018-01-18" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-pg/2018-01-18/k-732-17/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2018-01-18/k-732-17/cnr@.akn"/>
+          <FRBRdate date="2018-01-18" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#ospg">
+        <TLCOrganization eId="ospg" href="https://sudovi.me/ospg" showAs="Osnovni sud u Podgorici"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#ospg">
+        <judicial>
+          <result type="deny"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-pg/2018-01-18/k-732-17"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#vujanovic">Nenad Vujanović</judge>
+      <party refersTo="#mm" as="#Defendant">M.M.</party>
+      <party refersTo="#np" as="#Plaintiff">N.P.</party>
+      <neutralCitation>[2017] OSPG K 732</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#vujanovic">Nenad Vujanović</judge>, uz učešće Nataše Paunović kao zapisničara, u krivičnom postupku protiv okrivljenog <party id="p1" refersTo="#mm" as="#Defendant">M.M.</party>, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, rješavajući po optužnom predlogu ODT-a Podgorica
+          Kt.br. 1159/17 od <date date="2017-11-08">08.11.2017.</date> godine, nakon održanog glavnog i javnog pretresa, u prisustvu zastupnika optužbe <party id="p2" refersTo="#np" as="#Plaintiff">N.P.</party>, savjetnika na radu kod ODT-a Podgorica i okrivljenog <party id="p3" refersTo="#mm" as="#Defendant">M.M.</party>, dana <date date="2018-01-18">18.01.2018.</date> godine donio je i istog dana, javno objavio,
+        </p>
+        <p style="text-align: center;">
+          PRESUDU
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          OKRIVLJENI:
+        </p>
+        <p>
+          <party id="p4" refersTo="#mm" as="#Defendant">M.M.</party>, JMBG................ od oca M. i majke S., rođene V., rođen .... godine u P., sa prebivalištem u P., ul. P. Š. br. .., državljanin Crne Gore, po zanimanju vozač, oženjen, otac troje djece, završio srednju mašinsku školu, lošeg imovnog stanja, neosuđivan.
+        </p>
+        <p>
+          Na osnovu čl. 373 tač. 2 Zakonika o krivičnom postupku
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          OSLOBAĐA SE OD OPTUŽBE
+        </p>
+        <p>
+          Kojom je predstavljeno da je:
+        </p>
+        <p>
+          Dana 04.01.2017. godine, oko 13,40 časova, u P., svjestan da svojom nepropisnom vožnjom može ugroziti javni saobraćaj i prouzrokovati zabranjenu posljedicu, ali je olako držao da do toga neće doći, ne pridržavajući se saobraćajnog propisa iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan26">čl. 26</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan26-stav02">st. 2</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">Zakona o bezbjednosti saobraćaja na putevima</ref>, ugrozio saobraćaj i doveo u opasnost život i tijelo ljudi, na način što je, upravljajući putničkim motornim vozilom marke "Škoda octavia", reg. oznake PG XX ..., asfaltnom površinom lociranom nakon završetka M. i V.ulice, dolaskom na raskrsnicu sa Ul. M. P., skrenuo ulijevo prema pekari "T. p.", a da se prethodno nije uvjerio da to može da učini na bezbjedan način, usljed čega je čeonim desnim dijelom vozila udario u bočnu zadnju desnu stranu putničkog motornog vozila marke "VW Golf", reg. oznake PG xx ..., kojim je Ul. M.P. iz smjera pekare "T. p." u smjeru N. p., propisno upravljao N. Č., kojom prilikom je saputnik u vozilu "VW Golf", oštećena K. D. zadobila laku tjelesnu povredu u vidu istegnuća mekih tkiva vrata.
+        </p>
+        <p>
+          -čime bi učinio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>.
+        </p>
+        <p>
+          Troškovi krivičnog postupka padaju na teret budžetskih sredstava suda.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+          Obrazloženje
+        </p>
+        <p>
+          <omissis>
+            ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Imajući u vidu naprijed navedeno, sud je u sumnji o postojanju svih činjenica, koje čine obilježje krivičnog djela, shodno čl. 3 st. 3 Zakonika o krivičnom postupku, odlučio na način kako je to povoljnije za okrivljenog i istog shodno čl. 373 tač. 2 Zakonika o krivičnom postupku, oslobodio od optužbe, jer nije dokazano da je isti učinio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>. U prilog prednjeg zaključka suda je i pretpostavka nevinosti, propisana članom 6 st. 2 EKLJP-a, koja predviđa da i ako nakon cjelokupnog dokaznog postupka koji je zakonito sproveden preostane samo sumnja u prilog postojanja krivice, mora se primijeniti rezonovanje po pravilu "in dubio pro reo", odnosno tada će se smatrati da pretpostavka nevinosti nije oborena.
+        </p>
+        <p>
+          Kako je okrivljeni oslobođen od optužbe, to troškovi krivičnog postupka koji se odnose na troškove saobraćajnog i medicinskog vještačenja i pristupa vještaka saobraćajne struke na glavni pretres, padaju na teret budžetskih sredstava suda, shodno čl. 230 st. 1 Zakonika o krivičnom postupku.
+        </p>
+        <p>
+          Sa iznijetih razloga, a shodno čl. 373 tač. 2 Zakonika o krivičnom postupku odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

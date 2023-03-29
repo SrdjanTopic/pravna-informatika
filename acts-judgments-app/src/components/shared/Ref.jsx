@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getFinalHref } from "../../utils/functions";
 
 const Ref = ({ refObject }) => {
   const [finalRef, setFinalRef] = useState("");
@@ -6,14 +7,6 @@ const Ref = ({ refObject }) => {
     setFinalRef(getFinalHref(refObject.attributes.href));
   }, []);
 
-  function getFinalHref(href) {
-    let finalHref = href;
-    finalHref = finalHref.replace("/cnr@/!main.xml", "");
-    let lIndex = finalHref.lastIndexOf("/");
-    finalHref =
-      finalHref.substring(0, lIndex) + "_" + finalHref.substring(lIndex + 1);
-    return finalHref;
-  }
   return (
     <p>
       <a href={finalRef}>{`${refObject.value}`}</a>

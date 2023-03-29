@@ -1,0 +1,135 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#oshn">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-hn/2017-05-19/k-43-17/main"/>
+          <FRBRuri value="/akn/me/judgement/os-hn/2017-05-19/k-43-17"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2017-05-19" name="Generation"/>
+          <FRBRauthor href="#oshn" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-43-17"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-hn/2017-05-19/k-43-17/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-hn/2017-05-19/k-43-17/cnr@"/>
+          <FRBRdate date="2017-05-19" name="Generation"/>
+          <FRBRauthor href="#oshn" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-hn/2017-05-19/k-43-17/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-hn/2017-05-19/k-43-17/cnr@.akn"/>
+          <FRBRdate date="2017-05-19" name="Generation"/>
+          <FRBRauthor href="#oshn" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#oshn">
+        <TLCOrganization eId="oshn" href="https://sudovi.me/oshn" showAs="Osnovni sud u Herceg Novom"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#oshn">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-hn/2017-05-19/k-43-17"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#dabetic">Dabetić Zorica</judge>
+      <party refersTo="#tm" as="#Defendant">T.M.</party>
+      <party refersTo="#sn" as="#Plaintiff">Samardžić Nikola</party>
+      <lawyer refersTo="#zp" as="#Defendant">Z.P.</lawyer>
+      <neutralCitation>[2017] OSHN K 43</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE!
+        </p>
+        <p>
+          OSNOVNI SUD U HERCEG NOVOM, po sudiji <judge id="jud01" refersTo="#dabetic">Dabetić Zorici</judge>, uz učestvovanje zapisničara Milović Tereze, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#tm" as="#Defendant">T.M.</party>, zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnog predloga Osnovnog državnog tužilaštva Herceg Novi Kt.br.274/2016 od <date date="2017-03-30">30.03.2017.</date> godine, nakon održanog usmenog i javnog glavnog pretresa, u prisustvu državnog tužioca ODT Herceg Novi <party id="p2" refersTo="#sn" as="#Plaintiff">Samardžić Nikole</party>, branioca okrivljenog advokata <lawyer id="lyr1" refersTo="#zp" as="#DefendantLawyer">Z.P.</lawyer> iz HN i oštećenih V.M. i V.M1., u odsustvu uredno pozvanog okrivljenog <party id="p3" refersTo="#tm" as="#Defendant">T.M.</party>, dana 19.05.2017.godine donio je i javno objavio,
+        </p>
+        <p style="text-align: center;">
+          P R E S U D U!
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Okrivljeni <party id="p4" refersTo="#tm" as="#Defendant">T.M.E</party>, JMBG ..., od oca V. i majke R. rođ. R., rođen ....godine u selu D.L., opština Z., BIH, stalno nastanjen u C., ...., po zanimanju vozač, oženjen, otac troje punoljetne djece, državljanin Bosne i Hercegovine, neosuđivan
+        </p>
+      </background>
+
+      <decision style="text-align: center;">
+        <p>
+          K r i v j e
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2016-08-22">22.avgusta 2016.</date>godine oko 08:40 časova na dijelu magistralnog puta Meljine-Sitnica u mjestu Mokrine,ne pridržavajući se saobraćajnih propisa iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan35">čl.35</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan35-stav01">st.1 <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a na putevima</ref>,ugrozio saobraćaj i doveo u opasnost život i tijelo ljudi,tako što upravljajući vozilom marke "Volvo",model "XC 90" reg.oznake ZH ... i krećući se svojom kolovoznom trakom iz pravca graničnog prelaza prema Meljinama brzinom od najmanje 69,5 km/h,prilikom nailaska na oštru desnu krivinu nije prilagodio brzinu kretanja vozila stepenu zakrivljenosti puta i stanju kolovoza koji je bio mokar usljed kiše koja je padala neposredno prije nezgode,iako je bio svjestan da takvom vožnjom može izazvati udes ali je olako držao da do toga neće doći ili da će to moći spriječiti,usljed čega je prilikom prolaska kroz krivinu došlo do potiskivanja vozila u lijevu stranu i prelaska u suprotnu kolovoznu traku,u kojoj je prednjim dijelom svoga vozila udario u prednji dio vozila "Ford",model "Focus",reg.oznkae ...K...,kojim je upravljao oštećeni V.M.o iz BL i kretao se iz pravca Meljina,kojom prilikom je oštećeni V.M.o zadobio teške tjelesne povrede u vidu krvnog podliva i otoka kapaka i vežnjače lijevog oka,praćen zamućenjem i kompletnim oštećenjem površnog sloja rožnjače,nagnječenja lijevog skočnog zgloba i iščašenja palca lijevog stopala,oguljotine u čeonom predjelu i krvnog podliva u lijevom natključnom predjelu,a njegova saputnica V.M1. teške tjelesne povede u vidu preloma prvog slabinskog pršljena,preloma donjeg okrajka lijeve žbice,preloma 4.kosti doručja desne šake i nagnječenja u desnoj polovini čeonog predjela,
+          </p>
+          <p>
+            - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
+            <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+            <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+            <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>,
+          </p>
+          <p>
+            pa mu sud, na osnovu citiranih zakonskih propisa i primjenom čl. 4,32,36,42,52,53 i 54 KZ CG, te čl.374,229.stav 1 i čl.239 st.2 izriče
+          </p>
+          <p style="text-align: center;">
+            USLOVNU OSUDU
+          </p>
+          <p>
+            Kojom mu utvrđuje kaznu zatvora u trajanju od 6 (šest) mjeseci i istovremeno određuje da se ova kazna neće izvršiti ukoliko okrivljeni u roku od 2 (dvije) godine od pravosnažnosti presude ne izvrši novo krivično djelo.
+          </p>
+          <p>
+            Okrivljeni se obavezuje da plati troškove krivičnog postupka u iznosu od 214,50 eura, kao i paušalni iznos od 50,00 eura u korist budžeta Crne Gore na žiro račun 832-158-14 u roku od 15 dana od pravosnažnosti presude.
+          </p>
+          <p>
+            Oštećeni V.M.o i V.M1. sa imovinskopravnim zahtjevom se upućuju na parnicu.
+          </p>
+        </decision>
+
+        <motivation>
+          <p style="text-align: center;">
+            Obrazloženje
+          </p>
+          <p>
+            <omissis>
+              ... Some of the content was deleted to not have a too long text ...
+            </omissis>
+          </p>
+          <p>
+            Odlučujući o vrsti i visini krivične sankcije koju okrivljenom treba izreći za počinjeno krivično djelo, sud je cijenio sve okolnosti iz člana 42 Krivičnog zakonika Crne Gore. Od olakšavajućih okolnosti, sud je na strani okrivljenog cijenio činjenicu da se radi o neosuđivanom licu srednje životne dobi, kao i činjenicu da je okrivljeni porodičan čovjek, te da je kritičnom prilikom nakon nezgode bio u bolnici i komunicirao sa oštećenim. Sud je takođe cijenio i druge okolnosti pod kojima je djelo izvršeno i to doprinos oštećenog V.M., obzirom da se isti iz suprotnog pravca, neposredno u trenutku sudara sa vozilom okrivljenog, upravljajući vozilom Ford kretao brzinom od oko 60 km/h, što je veća brzina od brzine od 40 km/h koja je na toj dionici puta propisana saobraćajnim znakom. Otežavajućih okolnosti na strani okrivljenog sud nije našao. Ocjena je suda, imajući u vidu ličnost okrivljenog, kao i okolnosti pod kojima je djelo izvršeno, te stepen ugrožavanja zaštićenog dobra, da nije nužno radi krivično pravne zaštite prema okrivljenom primijeniti kaznu, jer se osnovano može očekivati da će i samo upozorenje uz prijetnju kaznom dovoljno uticati na okrivljenog da ubuduće ne vrši krivična djela. Iz navedenih razloga, sud je okrivljenom izrekao uslovnu osudu kojom mu je utvrdio kaznu zatvora u trajanju od 6 (šest) mjeseci i istovremeno odredio da se ova kazna neće izvršiti ukoliko okrivljeni u roku od 2 (dvije) godine od pravosnažnosti presude ne izvrši novo krivično djelo. Sud je uvjerenja da je ovako izrečena uslovna osuda adekvatna težini počinjenog krivičnog djela i stepenu krivice okrivljenog T.M. kao počinioca, te da će se istom, u okviru opšte svrhe izricanja krivičnih sankcija iz čl. 4 st. 2 KZ CG ostvariti i svrha izricanja uslovne osude iz čl. 52 st. 2 KZ CG.
+          </p>
+          <p>
+            Sud je oštećene V.M. i V.M1., na osnovu čl. 239 st. 2 ZKP-a, uputio da imovinskopravni zahtjev u cjelini ostvaruje u parničnom postupku, obzirom da činjenice utvrđene u ovom krivičnom postupku ne pružaju pouzdan osnov ni za potpuno ni za djelimično presuđenje, a njihovo utvrđivanje bi vodilo znatnom odugovlačenju postupka.
+          </p>
+          <p>
+            Odluka o troškovima krivičnog postupka zasniva se na članu 229 stav 1 ZKP-a, te je sud, obzirom da je okrivljenog oglasio krivim, istog obavezao da naknadi troškove krivičnog postupka u iznosu od 214,50 €, a isti se sastoje od troškova saobraćajnog vještačenja po vještaku P.Č. u iznosu od 126,50 €, i medicinskog vještačenja po vještaku dr R.N. u iznosu od 88,00 €, kao i da naknadi troškove krivičnog postupka u paušalnom iznosu od 50,00€ koji iznos je određen prema trajanju i složenosti postupka i imovnom stanju okrivljenog kao lica obaveznog da plati taj iznos.
+          </p>
+        </motivation>
+      </judgmentBody>
+    </judgment>
+  </akomaNtoso>

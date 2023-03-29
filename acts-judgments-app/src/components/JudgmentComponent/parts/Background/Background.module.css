@@ -1,0 +1,10 @@
+.background p,
+a {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+.background .centeredText {
+  text-align: center;
+  display: block;
+}

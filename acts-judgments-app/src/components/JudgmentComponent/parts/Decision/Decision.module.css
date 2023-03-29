@@ -1,0 +1,10 @@
+.decision p,
+a {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+.decision .centeredText {
+  text-align: center;
+  display: block;
+}

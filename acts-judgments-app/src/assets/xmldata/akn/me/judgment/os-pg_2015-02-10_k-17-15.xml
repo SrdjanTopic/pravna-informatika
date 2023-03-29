@@ -1,0 +1,140 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#ospg">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-pg/2015-02-10/k-17-15/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2015-02-10/k-17-15"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2015-02-10" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-17-15"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-pg/2015-02-10/k-17-15/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2015-02-10/k-17-15/cnr@"/>
+          <FRBRdate date="2015-02-10" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-pg/2015-02-10/k-17-15/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2015-02-10/k-17-15/cnr@.akn"/>
+          <FRBRdate date="2015-02-10" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#ospg">
+        <TLCOrganization eId="ospg" href="https://sudovi.me/ospg" showAs="Osnovni sud u Podgorici"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#ospg">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-pg/2015-02-10/k-17-15"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#jovovic">Jovović Željka</judge>
+      <party refersTo="#mi" as="#Defendant">M.I.</party>
+      <party refersTo="#jj" as="#Plaintiff">Julija Jaganjac</party>
+      <neutralCitation>[2015] OSPG K 17</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U PODGORICI, po sudiji <judge id="jud01" refersTo="#jovovic">Jovović Željki</judge>, uz učešće Rajković Danijele kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#mi" as="#Defendant">M. I.</party>, zbog krivičnog ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu Osnovnog državnog tužioca u Podgorici Kt. br. 29/15 od <date date="2015-01-13">13. 01. 2015.</date> godine, nakon glavnog i javnog pretresa održanog dana <date date="2015-02-10">10. 02. 2015.</date> godine u prisustvu zastupnika optužbe <party id="p2" refersTo="#jj" as="#Plaintiff">Julije Jaganjac</party> i okrivljenog, donio je i istog dana javno objavio
+        </p>
+        <p style="text-align: center;">
+          PRESUDU
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Okrivljeni:
+        </p>
+        <p>
+          <party id="p1" refersTo="#mi" as="#Defendant">M. I.</party>, JMB xxxxxxxxxxxxx, od oca D. i majke A., rođene H., rođen 16. 06. 19xx. godine u Podgorici, sa prebivalištem u mjestu rođenja Ul. Nikole Đurkovića br. xx, državljanin Crne Gore, završio srednju školu, nezaposlen, neoženjen, bez djece, lošeg imovnog stanja, neosuđivan.
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          Kriv je
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2014-10-07">07. 10. 2014.</date> godine, oko 09,30 časova, u ulici V Proleterske, u Podgorici, ne pridržavajući se saobraćajnih propisa iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan76">čl. 76</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a na putevima</ref> ugrozio saobraćaj i doveo u opasnost život i tijelo ljudi, na način što je upravljajući putničkim vozilom marke “Audi A4“ reg. oznake PG EE xxx, ulicom V Proleterske iz pravca ulice V. Martinovića nije držao potrebno odstojanje kada se kretao iza putničkog vozila marke “Ford Fiesta“ reg. oznake PG BJ xxx, kojim je u istom smjeru upravljao oštećeni Ranko Globarević, a koje se nalazilo zaustavljeno ispred semafora, tako da može blagovremeno da se zaustavi, usljed čega je prednjim dijelom svoga vozila udario u zadnji dio vozila marke “Ford Fiesta“, kojom prilikom su oštećeni R. G. i saputnik u njegovom vozilu, oštećeni M. K. zadobili lake tjelesne povrede u vidu istegnuća mekih tkiva vrata, pri čemu je okrivljeni bio svjestan da svojom nepropisnom vožnjom može ugroziti javni saobraćaj i dovesti u opasnost život i tijelo ljudi, ali je olako držao da do toga neće doći ili da će to moći spriječi,
+        </p>
+        <p>
+            - čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>,
+        </p>
+        <p>
+            Pa mu Sud za navedeno krivično djelo primjenom čl. 4 st. 2, čl. 42 st. 1, čl. 52 st. 2, čl. 53 i 54 Krivičnog zakonika i čl. 226, 229, 239 i 374 Zakonika o krivičnom postupku, izriče
+        </p>
+        <p style="text-align: center;">
+            USLOVNU OSUDU
+        </p>
+        <p>
+            Kojom mu utvrđuje kaznu zatvora u trajanju od 30 (trideset) dana i istovremeno određuje da se ista neće izvršiti, ako okrivljeni u roku od 1 (jedne) godine po pravosnažnosti presude ne izvrši novo krivično djelo.
+        </p>
+        <p>
+            Obavezuje se okrivljeni da plati na ime troškova krivičnog postupka iznos od 173,00€, u roku od 15 dana po pravosnažnosti presude, pod prijetnjom prinudnog izvršenja.
+        </p>
+        <p>
+            Oštećeni M. K. se radi ostvarivanja imovinsko pravnog zahtjeva upućuje na parnični postupak.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+          Obrazloženje
+        </p>
+        <p>
+          <omissis>
+            ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Prilikom izbora krivične sankcije sud je cijenio sve okolnosti predvidjene čl. 42 Krivičnog zakonika Crne Gore, koje utiču na odmjeravanje kazne, pa je od olakšavajućih okolnosti na strani okrivljenog cijenio njegovo ranije dobro ponašanje i s tim u vezi činjenicu da ranije nije osuđivan, što je utvrđeno iz Izvoda iz kaznene evidencije na ime okrivljenog, izraženi osjećaj odgovornosti za nastanak predmetne saobraćajne nezgode i žaljenja zbog učinjenog, činjenicu da se oštećeni R. G. nije pridružio krivičnom gonjenju, dok otežavajućih okolnosti van elemenata bića krivičnog djela nije bilo, pa je sud okrivljenom prethodno utvrdio kaznu zatvora u trajanju od 30 (trideset) dana, nalazeći, da je ista adekvatna težini krivičnog djela i okrivljenog kao izvršioca. Međutim, sud je mišljenja da radi krivično pravne zaštite, nije neophodno da okrivljeni ovu kazna izdržava, jer se po nalaženju suda radi o licu na koje se i blažom sankcijom može uticati da u buduće ne vrši krivična djela, pa je primjenom čl. 53 i 54 Krivičnog zakonika Crne Gore, okrivljenom izrekao uslovnu osudu. Rok provjeravanja od 1 (jedne) godine, uz prijetnju kaznom od 30 (trideset) dana je po nalaženju ovog suda dovoljno dug, da u cjelosti ostvari svrhu izricanja ove sankcije, čime će se sa uspjehom ostvariti svrha uslovne osude iz čl. 52 st. 2 Krivičnog zakonika, u okviru opšte svrhe izricanja krivičnih sankcija u smislu čl. 4 st. 2 Krivičnog zakonika.
+        </p>
+        <p>
+          Shodno čl. 239 Zakonika o krivičnom postupku, sud je oštećenog M. K. radi eventualnog ostvarivanja imovinsko pravnog zahtjeva uputio na parnični postupak.
+        </p>
+        <p>
+          Odluka o troškovima krivičnog postupka zasnovana je na odredbi čl. 226 u vezi čl. 229 Zakonika o krivičnom postupku, na osnovu kojih je sud okrivljenog obavezao da na ime troškova krivičnog postupka plati iznos od 173,00 €, od čega se iznos 82,50 € odnosi na nagradu za izradu nalaza sudskom vještaku saobraćajne struke, 60,50 € na ime vještačenja po vještaku medicinske struke, dok je paušal u iznosu od 30,00 € odmjeren srazmjerno dužini trajanja postupka, složenosti predmeta i imovinskim prilikama okrivljenog.
+        </p>
+        <p>
+          Na osnovu navedenog, a u smislu čl. 374 Zakonika o krivičnom postupku, odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>
