@@ -1,5 +1,4 @@
-.introduction p,
-a {
+.introduction p {
   display: inline;
   font-size: 0.9rem;
 }

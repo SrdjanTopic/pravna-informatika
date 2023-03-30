@@ -23,7 +23,8 @@ const Motivation = ({ motivation }) => {
           {motivationChild.value &&
             motivationChild.name === "p" &&
             !motivationChild.attributes.style &&
-            motivation.children[id - 1]?.name === "p" && (
+            motivation.children[id - 1]?.name === "p" &&
+            motivation.children[id + 1]?.name !== "p" && (
               <>
                 <br />
                 <p>{`${motivationChild.value} `}</p>
@@ -32,7 +33,8 @@ const Motivation = ({ motivation }) => {
           {motivationChild.value &&
             motivationChild.name === "p" &&
             !motivationChild.attributes.style &&
-            motivation.children[id + 1]?.name === "p" && (
+            motivation.children[id + 1]?.name === "p" &&
+            motivation.children[id - 1]?.name !== "p" && (
               <>
                 <p>{`${motivationChild.value} `}</p>
                 <br />

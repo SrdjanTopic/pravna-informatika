@@ -3,7 +3,6 @@
 }
 .judgment {
   align-self: center;
-  /* padding: 1em 3em 1em 3em; */
-  width: 85%;
+  padding: 1em 3em 1em 3em;
   text-align: left;
 }

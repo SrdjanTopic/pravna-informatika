@@ -1,5 +1,42 @@
 .app {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.main {
+  width: 80%;
+}
+.sideBar {
+  font-size: 2.5rem;
+  font-family: Roboto, -apple-system, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  background-color: #f7f7f9;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-left: 2px solid hsl(42, 54%, 57%);
+  box-shadow: 0 0 5px #8e8e8e;
+  padding: 1rem;
+}
+
+.sideBar h3 {
+  font-size: 1.5rem;
+}
+
+.link {
+  color: hsl(42, 54%, 30%);
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.link:hover {
+  color: hsl(42, 61%, 60%);
+}
+.link::before {
+  content: " - ";
 }
