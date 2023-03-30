@@ -8,30 +8,17 @@ const Home = lazy(() => import("./pages/Home/Home"));
 function App() {
   return (
     <div className="app">
-      <div className="main">
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <Routes>
-            <Route path="" element={<Home />}></Route>
-            <Route path="/akn/me/">
-              <Route path="act/:lawName" element={<Laws />}></Route>
-              <Route
-                path="judgment/:judgmentName"
-                element={<Judgments />}
-              ></Route>
-            </Route>
-          </Routes>
-        </Suspense>
-      </div>
       <div className="sideBar">
-        <h3>Acts</h3>
+        <img src="/../src/assets/icons/gavel.png"></img>
+        <h3>Zakoni</h3>
         <a href="/akn/me/act/2012-06-28_33-2012" className="link">
           Zakon o bezbjednost saobraćaja na putevima
         </a>
         <a href="/akn/me/act/2003-12-25_70-2003" className="link">
           Krivični Zakonik
         </a>
-        <br />
-        <h3>Judgments</h3>
+        <div className="line"></div>
+        <h3>Presude</h3>
         <a href="/akn/me/judgment/os-ba_2019-02-06_k-4-19" className="link">
           os-ba_2019-02-06_k-4-19
         </a>
@@ -76,7 +63,23 @@ function App() {
         </a>
         <a href="/akn/me/judgment/os-zb_2021-10-04_k-14-21" className="link">
           os-zb_2021-10-04_k-14-21
-        </a>
+      </a>
+      <div className="line"></div>
+      <h3>Novi slucaj</h3>
+      </div>
+      <div className="main">
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Routes>
+            <Route path="" element={<Home />}></Route>
+            <Route path="/akn/me/">
+              <Route path="act/:lawName" element={<Laws />}></Route>
+              <Route
+                path="judgment/:judgmentName"
+                element={<Judgments />}
+              ></Route>
+            </Route>
+          </Routes>
+        </Suspense>
       </div>
     </div>
   );
