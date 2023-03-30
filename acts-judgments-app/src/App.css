@@ -4,7 +4,9 @@
   align-items: center;
 }
 .main {
+  height: 100vh;
   width: 80%;
+  overflow-y: auto;
 }
 .sideBar {
   font-size: 2.5rem;
