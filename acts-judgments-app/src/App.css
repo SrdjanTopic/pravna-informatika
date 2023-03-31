@@ -12,25 +12,35 @@
   font-size: 2.5rem;
   font-family: Roboto, -apple-system, Helvetica Neue, Helvetica, Arial,
     sans-serif;
-  position: fixed;
   width: 20%;
   height: 100vh;
-  background-color: #f7f7f9;
-  top: 0;
-  right: 0;
+  background-color:#245474;
   display: flex;
   flex-direction: column;
-  border-left: 2px solid hsl(42, 54%, 57%);
+  border-right: 2px solid hsl(42, 54%, 57%);
   box-shadow: 0 0 5px #8e8e8e;
   padding: 1rem;
 }
 
+.sideBar img{
+  width:60px;
+  align-self: center;
+  margin-bottom: 50px;
+}
+
 .sideBar h3 {
   font-size: 1.5rem;
+  color:#5CB4DD;
+}
+
+.line{
+  width: 100%;
+  border: 1.5px solid hsl(42, 54%, 57%);
+  margin:10px 0px;
 }
 
 .link {
-  color: hsl(42, 54%, 30%);
+  color: white;
   font-weight: bold;
   text-decoration: none;
   line-height: 1.5rem;
