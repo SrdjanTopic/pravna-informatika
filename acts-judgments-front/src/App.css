@@ -9,37 +9,70 @@
   overflow-y: auto;
 }
 .sideBar {
+  text-align: left;
   font-size: 2.5rem;
   font-family: Roboto, -apple-system, Helvetica Neue, Helvetica, Arial,
     sans-serif;
   width: 20%;
   height: 100vh;
-  background-color:#245474;
-  display: flex;
-  flex-direction: column;
+  background-color: #245474;
   border-right: 2px solid hsl(42, 54%, 57%);
   box-shadow: 0 0 5px #8e8e8e;
   padding: 1rem;
+  position: relative;
 }
-
-.sideBar img{
-  width:60px;
+.headings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebarLists {
+  transition: height 0.5s;
+}
+.zakoniExpanded {
+  height: 20%;
+  overflow-y: auto;
+}
+.zakoniCollapsed {
+  height: 0;
+  overflow-y: hidden;
+}
+.presudeExpanded {
+  height: 40%;
+  overflow-y: auto;
+}
+.presudeCollapsed {
+  height: 0;
+  overflow-y: hidden;
+}
+.imgDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sideBar img {
+  width: 60px;
   align-self: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .sideBar h3 {
   font-size: 1.5rem;
-  color:#5CB4DD;
+  color: #5cb4dd;
+  display: block;
+}
+.sideBar h3:hover {
+  cursor: pointer;
 }
 
-.line{
+.line {
   width: 100%;
   border: 1.5px solid hsl(42, 54%, 57%);
-  margin:10px 0px;
+  margin: 10px 0px;
 }
 
 .link {
+  display: block;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -51,4 +84,25 @@
 }
 .link::before {
   content: " - ";
+}
+
+.sideBar .arrowTop {
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  transition: rotate 0.5s;
+  rotate: 180deg;
+}
+
+.sideBar .arrowTop:hover {
+  cursor: pointer;
+}
+
+.sideBar .rotateArrowTop {
+  rotate: 0deg;
+}
+
+svg {
+  stroke: #862c2c !important;
+  fill: #862c2c !important;
 }
