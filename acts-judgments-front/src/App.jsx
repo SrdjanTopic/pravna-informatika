@@ -130,18 +130,16 @@ function App() {
         <h3>Novi slucaj</h3>
       </div>
       <div className="main">
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <Routes>
-            <Route path="" element={<Home />}></Route>
-            <Route path="/akn/me/">
-              <Route path="act/:lawName" element={<Laws />}></Route>
-              <Route
-                path="judgment/:judgmentName"
-                element={<Judgments />}
-              ></Route>
-            </Route>
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="" element={<Home />}></Route>
+          <Route path="/akn/me/">
+            <Route path="act/:lawName" element={<Laws />}></Route>
+            <Route
+              path="judgment/:judgmentName"
+              element={<Judgments />}
+            ></Route>
+          </Route>
+        </Routes>
       </div>
     </div>
   );

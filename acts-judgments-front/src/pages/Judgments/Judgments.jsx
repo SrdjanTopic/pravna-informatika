@@ -38,14 +38,6 @@ const Judgments = () => {
         .scrollIntoView({ behavior: "smooth" });
     }
   }, [judgment]);
-  return (
-    <>
-      {judgment ? (
-        <JudgmentComponent judgment={judgment} />
-      ) : (
-        <h2>loading Judgment...</h2>
-      )}
-    </>
-  );
+  return <>{judgment ? <JudgmentComponent judgment={judgment} /> : null}</>;
 };
 export default Judgments;

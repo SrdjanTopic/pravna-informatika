@@ -40,6 +40,6 @@ const Laws = () => {
       }, 500);
     }
   }, [law]);
-  return <>{law ? <LawComponent law={law} /> : <h2>loading Law...</h2>}</>;
+  return <>{law ? <LawComponent law={law} /> : null}</>;
 };
 export default Laws;
