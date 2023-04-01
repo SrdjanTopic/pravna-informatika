@@ -1,4 +1,4 @@
-package com.springboot.project.service.cbr;
+package com.springboot.project;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

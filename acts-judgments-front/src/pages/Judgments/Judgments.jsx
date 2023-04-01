@@ -9,24 +9,18 @@ const Judgments = () => {
   let { judgmentName } = useParams();
   const [judgment, setJudgment] = useState();
   useEffect(() => {
-    import(`../../assets/xmldata/akn/me/judgment/${judgmentName}.xml`)
-      .then((judgmentlink) =>
-        axios
-          .get(judgmentlink.default, {
-            "Content-Type": "application/xml; charset=utf-8",
-          })
-          .then((res) => {
-            const jsonDataFromXml = new XMLParser().parseFromString(
-              getJudgmentString(res.data)
-            );
-            setJudgment({
-              meta: jsonDataFromXml.children[0].children[0],
-              header: jsonDataFromXml.children[0].children[1],
-              judgmentBody: jsonDataFromXml.children[0].children[2],
-            });
-          })
-          .catch((err) => console.log(err))
-      )
+    axios
+      .get(`http://localhost:8080/cbr/judgments/${judgmentName}`)
+      .then((res) => {
+        const jsonDataFromXml = new XMLParser().parseFromString(
+          getJudgmentString(res.data)
+        );
+        setJudgment({
+          meta: jsonDataFromXml.children[0].children[0],
+          header: jsonDataFromXml.children[0].children[1],
+          judgmentBody: jsonDataFromXml.children[0].children[2],
+        });
+      })
       .catch((err) => console.log(err));
   }, []);
 

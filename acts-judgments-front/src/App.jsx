@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { lazy, Suspense, useState } from "react";
+import { lazy, useState } from "react";
 import Judgments from "./pages/Judgments/Judgments";
 const Laws = lazy(() => import("./pages/Laws/Laws"));
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -8,6 +8,7 @@ import arrowTopSvg from "./assets/svgs/arrow_top.svg";
 
 function App() {
   const [expandList, setExpandList] = useState("");
+
   return (
     <div className="app">
       <div className="sideBar">
@@ -29,6 +30,11 @@ function App() {
             className={`arrowTop ${
               expandList === "zakoni" ? "rotateArrowTop" : ""
             }`}
+            onClick={() => {
+              expandList === "zakoni"
+                ? setExpandList("")
+                : setExpandList("zakoni");
+            }}
           />
         </div>
         <div
@@ -72,6 +78,11 @@ function App() {
             className={`arrowTop ${
               expandList === "presude" ? "rotateArrowTop" : ""
             }`}
+            onClick={() => {
+              expandList === "presude"
+                ? setExpandList("")
+                : setExpandList("presude");
+            }}
           />
         </div>
         <div

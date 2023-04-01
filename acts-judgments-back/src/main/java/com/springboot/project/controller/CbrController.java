@@ -9,15 +9,18 @@ import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRQuery;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Connector;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -139,4 +142,23 @@ public class CbrController  {
                 .body(Files.readAllBytes(path));
     }
 
+    @GetMapping("/judgments/{judgmentName}")
+    public String getJudgment(@PathVariable String judgmentName) {
+        try {
+            String content = FileUtils.readFileToString(ResourceUtils.getFile("classpath:judgments/" + judgmentName + ".xml"), String.valueOf(StandardCharsets.UTF_8));
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @GetMapping("/acts/{actName}")
+    public String getAct(@PathVariable String actName) {
+        try {
+            String content = FileUtils.readFileToString(ResourceUtils.getFile("classpath:acts/" + actName + ".xml"), String.valueOf(StandardCharsets.UTF_8));
+            return content;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

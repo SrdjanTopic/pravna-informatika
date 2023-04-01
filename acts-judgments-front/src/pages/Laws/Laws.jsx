@@ -9,24 +9,18 @@ const Laws = () => {
   let { lawName } = useParams();
   const [law, setLaw] = useState();
   useEffect(() => {
-    import(`../../assets/xmldata/akn/me/act/${lawName}.xml`)
-      .then((lawlink) =>
-        axios
-          .get(lawlink.default, {
-            "Content-Type": "application/xml; charset=utf-8",
-          })
-          .then((res) => {
-            const jsonDataFromXml = new XMLParser().parseFromString(
-              getLawString(res.data)
-            );
-            setLaw({
-              meta: jsonDataFromXml.children[0].children[0],
-              preface: jsonDataFromXml.children[0].children[1],
-              body: jsonDataFromXml.children[0].children[2],
-            });
-          })
-          .catch((err) => console.log(err))
-      )
+    axios
+      .get(`http://localhost:8080/cbr/acts/${lawName}`)
+      .then((res) => {
+        const jsonDataFromXml = new XMLParser().parseFromString(
+          getLawString(res.data)
+        );
+        setLaw({
+          meta: jsonDataFromXml.children[0].children[0],
+          preface: jsonDataFromXml.children[0].children[1],
+          body: jsonDataFromXml.children[0].children[2],
+        });
+      })
       .catch((err) => console.log(err));
   }, []);
 

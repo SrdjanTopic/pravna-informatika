@@ -9,6 +9,7 @@ public class ActsJudgmentsBack {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ActsJudgmentsBack.class, args);
+
 	}
 
 }
