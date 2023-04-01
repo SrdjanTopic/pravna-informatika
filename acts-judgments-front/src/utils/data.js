@@ -17,3 +17,4 @@ export const sudovi = [
   "Osnovni Sud u Žabljaku"
 ]
 export const imovnaStanja = ["Loše", "Srednje", "Dobro"]
+export const zakoni = ["KZ", "ZOBSNP"]
