@@ -20,7 +20,7 @@ const Background = ({ background }) => {
               <br />
             </>
           )}
-          {backgroundChild.name === "p" &&
+          {backgroundChild.name !== "ref" &&
             !backgroundChild.attributes.style && (
               <p>{`${backgroundChild.value} `}</p>
             )}

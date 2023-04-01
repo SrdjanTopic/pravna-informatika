@@ -4,6 +4,7 @@ import Ref from "../../../shared/Ref";
 import { includesWords } from "../../../../utils/functions";
 
 const Decision = ({ decision }) => {
+  console.log(decision);
   return (
     <div className={styles.decision} id="decision">
       {decision.children.map((decisionChild, id) => (
@@ -19,12 +20,12 @@ const Decision = ({ decision }) => {
               <br />
             </>
           )}
-          {decisionChild.name === "p" &&
+          {decisionChild.name !== "ref" &&
             !decisionChild.attributes.style &&
             !includesWords(decisionChild.value) && (
               <p>{`${decisionChild.value} `}</p>
             )}
-          {decisionChild.name === "p" &&
+          {decisionChild.name !== "ref" &&
             !decisionChild.attributes.style &&
             includesWords(decisionChild.value) && (
               <>

@@ -21,7 +21,7 @@ const Introduction = ({ introduction }) => {
                 <br />
               </>
             )}
-          {introductionChild.name === "p" &&
+          {introductionChild.name !== "ref" &&
             !introductionChild.attributes.style && (
               <p>{`${introductionChild.value} `}</p>
             )}
