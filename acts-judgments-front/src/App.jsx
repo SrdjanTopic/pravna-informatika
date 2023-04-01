@@ -5,6 +5,7 @@ import Judgments from "./pages/Judgments/Judgments";
 const Laws = lazy(() => import("./pages/Laws/Laws"));
 const Home = lazy(() => import("./pages/Home/Home"));
 import arrowTopSvg from "./assets/svgs/arrow_top.svg";
+import NewCase from "./pages/NewCase/NewCase";
 
 function App() {
   const [expandList, setExpandList] = useState("");
@@ -126,18 +127,34 @@ function App() {
         </div>
 
         <div className="line"></div>
-        <h3>Novi slucaj</h3>
+        <a className="noviSlucajHeading" href="/case/new">
+          Novi slucaj
+          <svg
+            style={{ marginRight: "2.5px" }}
+            fill="#5cb4dd"
+            width="20px"
+            height="20px"
+            viewBox="0 0 349.03 349.031"
+          >
+            <g>
+              <path
+                d="M349.03,141.226v66.579c0,5.012-4.061,9.079-9.079,9.079H216.884v123.067c0,5.019-4.067,9.079-9.079,9.079h-66.579
+		c-5.009,0-9.079-4.061-9.079-9.079V216.884H9.079c-5.016,0-9.079-4.067-9.079-9.079v-66.579c0-5.013,4.063-9.079,9.079-9.079
+		h123.068V9.079c0-5.018,4.069-9.079,9.079-9.079h66.579c5.012,0,9.079,4.061,9.079,9.079v123.068h123.067
+		C344.97,132.147,349.03,136.213,349.03,141.226z"
+              />
+            </g>
+          </svg>
+        </a>
       </div>
       <div className="main">
         <Routes>
-          <Route path="" element={<Home />}></Route>
+          <Route path="" element={<Home />} />
           <Route path="/akn/me/">
-            <Route path="act/:lawName" element={<Laws />}></Route>
-            <Route
-              path="judgment/:judgmentName"
-              element={<Judgments />}
-            ></Route>
+            <Route path="act/:lawName" element={<Laws />} />
+            <Route path="judgment/:judgmentName" element={<Judgments />} />
           </Route>
+          <Route path="/case/new" element={<NewCase />} />
         </Routes>
       </div>
     </div>

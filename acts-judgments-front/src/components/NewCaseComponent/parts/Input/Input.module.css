@@ -1,0 +1,67 @@
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+  border: 2px solid grey;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  user-select: none;
+  height: 3rem;
+}
+
+.label {
+  color: grey;
+  transition: 0.5s;
+  translate: 0 -5px;
+  /* z-index: 5; */
+}
+
+.labelWrapper:has(input:focus) .label {
+  color: hsl(42, 61%, 50%);
+  font-size: small;
+  position: absolute;
+  translate: 0 -18px;
+}
+
+.labelWrapper:has(input:not(:placeholder-shown)) .label {
+  color: hsl(42, 61%, 50%);
+  font-size: small;
+  position: absolute;
+  translate: 0 -18px;
+}
+
+.selectedValue {
+  font-size: 1rem;
+  color: hsl(0, 0%, 15%);
+}
+
+.labelWrapper input {
+  border: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.7rem 0.5rem 0.1rem 0.5rem;
+}
+
+.labelWrapper input:focus {
+  outline: none;
+}
+
+::placeholder {
+  opacity: 0; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  opacity: 0; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  opacity: 0; /* Firefox */
+}

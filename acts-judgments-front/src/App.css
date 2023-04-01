@@ -60,9 +60,28 @@
   font-size: 1.5rem;
   color: #5cb4dd;
   display: block;
+  margin-bottom: 5px;
 }
 .sideBar h3:hover {
   cursor: pointer;
+}
+.sideBar .noviSlucajHeading {
+  font-size: 1.5rem;
+  color: #5cb4dd;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sideBar .noviSlucajHeading:hover {
+  color: hsl(42, 61%, 60%);
+}
+
+.sideBar .noviSlucajHeading:hover svg {
+  fill: hsl(42, 61%, 60%);
 }
 
 .line {
@@ -76,7 +95,7 @@
   color: white;
   font-weight: bold;
   text-decoration: none;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   font-size: 1rem;
 }
 .link:hover {
@@ -87,8 +106,8 @@
 }
 
 .sideBar .arrowTop {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   margin: 0;
   transition: rotate 0.5s;
   rotate: 180deg;
@@ -100,9 +119,4 @@
 
 .sideBar .rotateArrowTop {
   rotate: 0deg;
-}
-
-svg {
-  stroke: #862c2c !important;
-  fill: #862c2c !important;
 }

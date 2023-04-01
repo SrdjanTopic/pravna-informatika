@@ -1,0 +1,51 @@
+h2 {
+  text-align: center;
+  margin: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.formElements {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+button {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: hsl(42, 61%, 50%);
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: hsl(42, 61%, 40%);
+}
+.elements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.osudjivanWrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+input {
+  width: calc(100px - 0.5rem);
+  padding-left: 1rem;
+  font-size: 1rem;
+  border: 2px solid grey;
+  border-radius: 0.3rem;
+}
+input:focus {
+  outline: none;
+}
