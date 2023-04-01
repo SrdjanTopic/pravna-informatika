@@ -10,13 +10,19 @@ public class CaseDescription implements CaseComponent {
     private int id;
     private String sud;
     private String poslovniBroj;
+    private String datum;
     private String sudija;
     private String tuzilac;
     private String okrivljeni;
-    private String krivicnoDelo;
-    private Integer vrednostDuvana;
+    private String krivicnoDjelo;
+    private List<String> prekrseniPropisi = new ArrayList<String>();
+    private List<String> tjelesnePovrede = new ArrayList<String>();
+    private Boolean osudjivan;
+    private Integer brojOsudjivanja;
+    private String imovnoStanje;
+    private Integer brojDjece;
     private String vrstaPresude;
-    private List<String> primenjeniPropisi = new ArrayList<String>();
+    private List<String> primijenjeniPropisi = new ArrayList<String>();
 
     public int getId() {
         return id;
@@ -60,11 +66,63 @@ public class CaseDescription implements CaseComponent {
         this.okrivljeni = okrivljeni;
     }
 
-    public String getKrivicnoDelo() {
-        return krivicnoDelo;
+    public String getKrivicnoDjelo() {
+        return krivicnoDjelo;
     }
-    public void setKrivicnoDelo(String krivicnoDelo) {
-        this.krivicnoDelo = krivicnoDelo;
+    public void setKrivicnoDjelo(String krivicnoDjelo) {
+        this.krivicnoDjelo = krivicnoDjelo;
+    }
+
+    public List<String> getPrekrseniPropisi() {
+        return prekrseniPropisi;
+    }
+    public void setPrekrseniPropisi(List<String> prekrseniPropisi) {
+        this.prekrseniPropisi = prekrseniPropisi;
+    }
+    public String getDatum() {
+        return datum;
+    }
+    public void setDatum(String datum) {
+        this.datum = datum;
+    }
+    public List<String> getTjelesnePovrede() {
+        return tjelesnePovrede;
+    }
+
+    public void setTjelesnePovrede(List<String> tjelesnePovrede) {
+        this.tjelesnePovrede = tjelesnePovrede;
+    }
+
+    public Boolean getOsudjivan() {
+        return osudjivan;
+    }
+
+    public void setOsudjivan(Boolean osudjivan) {
+        this.osudjivan = osudjivan;
+    }
+
+    public Integer getBrojOsudjivanja() {
+        return brojOsudjivanja;
+    }
+
+    public void setBrojOsudjivanja(Integer brojOsudjivanja) {
+        this.brojOsudjivanja = brojOsudjivanja;
+    }
+
+    public String getImovnoStanje() {
+        return imovnoStanje;
+    }
+
+    public void setImovnoStanje(String imovnoStanje) {
+        this.imovnoStanje = imovnoStanje;
+    }
+
+    public Integer getBrojDjece() {
+        return brojDjece;
+    }
+
+    public void setBrojDjece(Integer brojDjece) {
+        this.brojDjece = brojDjece;
     }
 
     public String getVrstaPresude() {
@@ -74,30 +132,33 @@ public class CaseDescription implements CaseComponent {
         this.vrstaPresude = vrstaPresude;
     }
 
-    public List<String> getPrimenjeniPropisi() {
-        return primenjeniPropisi;
+    public List<String> getPrimijenjeniPropisi() {
+        return primijenjeniPropisi;
     }
-    public void setPrimenjeniPropisi(List<String> primenjeniPropisi) {
-        this.primenjeniPropisi = primenjeniPropisi;
+    public void setPrimijenjeniPropisi(List<String> primijenjeniPropisi) {
+        this.primijenjeniPropisi = primijenjeniPropisi;
     }
 
-    public Integer getVrednostDuvana() {		return vrednostDuvana;	}
-    public void setVrednostDuvana(Integer vrednostDuvana) {		this.vrednostDuvana = vrednostDuvana;	}
 
     @Override
     public String toString() {
-        return "CaseDescription{" +
-                "id=" + id +
-                ", sud='" + sud + '\'' +
-                ", poslovniBroj='" + poslovniBroj + '\'' +
-                ", sudija='" + sudija + '\'' +
-                ", tuzilac='" + tuzilac + '\'' +
-                ", okrivljeni='" + okrivljeni + '\'' +
-                ", krivicnoDelo='" + krivicnoDelo + '\'' +
-                ", vrednostDuvana=" + vrednostDuvana +
-                ", vrstaPresude='" + vrstaPresude + '\'' +
-                ", primenjeniPropisi=" + primenjeniPropisi +
-                '}';
+        return "CaseDescription [id=" + id +
+                ", sud=" + sud +
+                ", poslovniBroj=" + poslovniBroj +
+                ", datum=" + datum +
+                ", sudija=" + sudija +
+                ", tuzilac=" + tuzilac +
+                ", okrivljeni=" + okrivljeni +
+                ", krivicnoDjelo=" + krivicnoDjelo +
+                ", prekrseniPropisi=" + prekrseniPropisi +
+                ", tjelesnePovrede=" + tjelesnePovrede +
+                ", osudjivan=" + osudjivan +
+                ", broj osudjivanja=" + brojOsudjivanja +
+                ", imovnoStanje=" + imovnoStanje +
+                ", brojDjece=" + brojDjece +
+                ", vrstaPresude=" + vrstaPresude +
+                ", primenjeniPropisi=" + primijenjeniPropisi +
+                "]";
     }
 
     @Override

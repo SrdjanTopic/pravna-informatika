@@ -53,8 +53,7 @@ public class CbrController  {
             CBRQuery query = new CBRQuery();
             CaseDescription caseDescription = new CaseDescription();
 
-            caseDescription.setKrivicnoDelo("cl.239st.1 KZ");
-            caseDescription.setVrednostDuvana(5000);
+            caseDescription.setKrivicnoDjelo("cl.239st.1 KZ");
 
             query.setDescription( caseDescription );
 

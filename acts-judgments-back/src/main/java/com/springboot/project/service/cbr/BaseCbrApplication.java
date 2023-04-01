@@ -14,6 +14,7 @@ import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRCaseBase;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRQuery;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Connector;
 import es.ucm.fdi.gaia.jcolibri.exception.ExecutionException;
+import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Equal;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.RetrievalResult;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
@@ -36,15 +37,23 @@ public class BaseCbrApplication implements StandardCBRApplication {
         simConfig = new NNConfig(); // KNN configuration
         simConfig.setDescriptionSimFunction(new Average());  // global similarity function = average
 
-        //simConfig.addMapping(new Attribute("krivicnoDelo", CaseDescription.class), new Equal());
-        TabularSimilarity slicnostKrivicnogDela = new TabularSimilarity(Arrays.asList(
-                "cl.284st.3 KZ",
-                "cl.265.st.2 KZ",
-                "cl.239st.1 KZ"));
-        slicnostKrivicnogDela.setSimilarity("cl.284st.3 KZ", "cl.265.st.2 KZ", 0.5);
-        slicnostKrivicnogDela.setSimilarity("cl.265.st.2 KZ", "cl.239st.1 KZ", 0.8);
-        slicnostKrivicnogDela.setSimilarity("cl.284st.3 KZ", "cl.239st.1 KZ", 0.8);
-        simConfig.addMapping(new Attribute("krivicnoDelo", CaseDescription.class), slicnostKrivicnogDela);
+        simConfig.addMapping(new Attribute("krivicnoDjelo", CaseDescription.class), new Equal());
+        TabularSimilarity slicnostPrekrsenihPropisa = new TabularSimilarity(Arrays.asList(
+                "cl.26 st.2 ZOBSNP",
+                "cl.27 st.1 ZOBSNP",
+                "cl.28 st.1 ZOBSNP",
+                "cl.29 st.1 ZOBSNP",
+                "cl.30 st.4 ZOBSNP",
+                "cl.31 st.1 ZOBSNP",
+                "cl.35 st.1 ZOBSNP",
+                "cl.45 st.4 ZOBSNP",
+                "cl.97 st.3 ZOBSNP",
+                "cl.44 ZOBSNP",
+                "cl.76 ZOBSNP"
+                ));
+        slicnostPrekrsenihPropisa.setSimilarity("cl.26 st.2 ZOBSNP", "cl.27 st.1 ZOBSNP", 0.8);
+        slicnostPrekrsenihPropisa.setSimilarity("cl.35 st.1 ZOBSNP", "cl.97 st.3 ZOBSNP", 0.5);
+        slicnostPrekrsenihPropisa.setSimilarity("cl.45 st.4 ZOBSNP", "cl.44 ZOBSNP", 0.5);
 
         simConfig.addMapping(new Attribute("vrednostDuvana", CaseDescription.class), new Interval(20000));
 

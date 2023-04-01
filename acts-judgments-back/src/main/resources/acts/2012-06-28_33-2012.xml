@@ -79,6 +79,22 @@
             </paragraph>
           </article>
         </section>
+        <section eId="glava3-poglavlje02">
+          <num>2. </num>
+          <heading>Uključivanje vozila u saobraćaj</heading>
+          <article eId="clan27">
+            <num>Član 27</num>
+            <paragraph eId="clan27-stav01">
+              <content>
+                <p>
+                  Vozač može da se uključi vozilom u saobraćaj na putu sa površine na kojoj se ne vrši saobraćaj ili sa mjesta na kojem je
+                  vozilo bilo zaustavljeno ili parkirano samo ako se uvjerio da time neće ometati ostale učesnike u saobraćaju i ako je o tome na
+                  propisan način obavijestio druge učesnike u saobraćaju.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+        </section>
         <section eId="glava3-poglavlje03">
           <num>3. </num>
           <heading> Kretanje vozila po putu</heading>
@@ -396,7 +412,7 @@
         </section>
         <section eId="glava3-poglavlje15">
           <num>15. </num>
-          <heading>Mimoilaženje</heading>
+          <heading>Odstojanje između vozila</heading>
           <article eId="clan76">
             <num>Član 76</num>
             <paragraph eId="clan76-stav01">
