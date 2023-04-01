@@ -4,7 +4,6 @@ import Ref from "../../../shared/Ref";
 import { includesWords } from "../../../../utils/functions";
 
 const Decision = ({ decision }) => {
-  console.log(decision);
   return (
     <div className={styles.decision} id="decision">
       {decision.children.map((decisionChild, id) => (

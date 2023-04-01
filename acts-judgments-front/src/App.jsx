@@ -48,18 +48,6 @@ function App() {
           <a href="/akn/me/act/2003-12-25_70-2003" className="link">
             Krivični Zakonik
           </a>
-          <a href="/akn/me/act/2012-06-28_33-2012" className="link">
-            Zakon o bezbjednost saobraćaja na putevima
-          </a>
-          <a href="/akn/me/act/2003-12-25_70-2003" className="link">
-            Krivični Zakonik
-          </a>
-          <a href="/akn/me/act/2012-06-28_33-2012" className="link">
-            Zakon o bezbjednost saobraćaja na putevima
-          </a>
-          <a href="/akn/me/act/2003-12-25_70-2003" className="link">
-            Krivični Zakonik
-          </a>
         </div>
 
         <div className="line"></div>
