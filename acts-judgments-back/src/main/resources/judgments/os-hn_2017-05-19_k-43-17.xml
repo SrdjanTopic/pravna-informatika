@@ -50,7 +50,7 @@
       <judge refersTo="#dabetic">Dabetić Zorica</judge>
       <party refersTo="#tm" as="#Defendant">T.M.</party>
       <party refersTo="#sn" as="#Plaintiff">Samardžić Nikola</party>
-      <lawyer refersTo="#zp" as="#Defendant">Z.P.</lawyer>
+      <lawyer refersTo="#zp" as="#DefendantLawyer">Z.P.</lawyer>
       <neutralCitation>[2017] OSHN K 43</neutralCitation>
       <courtType>Basic Court</courtType>
     </header>
