@@ -21,12 +21,12 @@ import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.global.Average;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.selection.SelectCases;
+import org.w3c.dom.Attr;
 
 public class BaseCbrApplication implements StandardCBRApplication {
 
     Connector _connector;  /** Connector object */
     CBRCaseBase _caseBase;  /** CaseBase object */
-
     NNConfig simConfig;  /** KNN configuration */
 
     public void configure() throws ExecutionException {
@@ -37,8 +37,11 @@ public class BaseCbrApplication implements StandardCBRApplication {
         simConfig = new NNConfig(); // KNN configuration
         simConfig.setDescriptionSimFunction(new Average());  // global similarity function = average
 
-        simConfig.addMapping(new Attribute("krivicnoDjelo", CaseDescription.class), new Equal());
+        //definisanje krivicnih djela
+        Attribute krivicnoDjelo=new Attribute("krivicnoDjelo", CaseDescription.class);
+        simConfig.addMapping(krivicnoDjelo, new Equal());
 
+        //prekrseni propisi
         TabularSimilarity slicnostPrekrsenihPropisa = new TabularSimilarity(Arrays.asList(
                 "cl.26 st.2 ZOBSNP",
                 "cl.27 st.1 ZOBSNP",
@@ -47,6 +50,8 @@ public class BaseCbrApplication implements StandardCBRApplication {
                 "cl.30 st.4 ZOBSNP",
                 "cl.31 st.1 ZOBSNP",
                 "cl.35 st.1 ZOBSNP",
+                "cl.40 st.2 ZOBSNP",
+                "cl.41 ZOBSNP",
                 "cl.45 st.4 ZOBSNP",
                 "cl.97 st.3 ZOBSNP",
                 "cl.44 ZOBSNP",
@@ -60,22 +65,35 @@ public class BaseCbrApplication implements StandardCBRApplication {
         slicnostPrekrsenihPropisa.setSimilarity("cl.30 st.4 ZOBSNP", "cl.31 st.1 ZOBSNP", 0.5);
         slicnostPrekrsenihPropisa.setSimilarity("cl.31 st.1 ZOBSNP", "cl.76 ZOBSNP", 0.5);
         slicnostPrekrsenihPropisa.setSimilarity("cl.35 st.1 ZOBSNP", "cl.76 ZOBSNP", 0.5);
-        simConfig.addMapping(new Attribute("prekrseniPropisi", CaseDescription.class), slicnostPrekrsenihPropisa);
+        slicnostPrekrsenihPropisa.setSimilarity("cl.97 st.3 ZOBSNP", "cl.41 ZOBSNP", 0.7);
 
+        Attribute prekrseniPropisi=new Attribute("prekrseniPropisi", CaseDescription.class);
+        simConfig.addMapping(prekrseniPropisi, slicnostPrekrsenihPropisa);
+
+        //tjelesne povrede
         TabularSimilarity slicnostPovreda = new TabularSimilarity(Arrays.asList(new String[] {"lake", "teske"}));
         slicnostPovreda.setSimilarity("lake", "teske", 0.5);
-        simConfig.addMapping(new Attribute("tjelesnePovrede", CaseDescription.class), slicnostPovreda);
+        Attribute tjelesnePovrede=new Attribute("tjelesnePovrede", CaseDescription.class);
+        simConfig.addMapping(tjelesnePovrede, slicnostPovreda);
 
+        //imovno stanje
         TabularSimilarity slicnostImovnogStanja = new TabularSimilarity(Arrays.asList(new String[] {"dobro", "srednje", "lose"}));
         slicnostImovnogStanja.setSimilarity("dobro", "srednje", 0.5);
         slicnostImovnogStanja.setSimilarity("srednje", "lose", 0.5);
-        simConfig.addMapping(new Attribute("imovnoStanje", CaseDescription.class), slicnostImovnogStanja);
+        Attribute imovnoStanje=new Attribute("imovnoStanje", CaseDescription.class);
+        simConfig.addMapping(imovnoStanje, slicnostImovnogStanja);
 
-        simConfig.addMapping(new Attribute("osudjivan", CaseDescription.class), new Equal());
+        //da li je okrivljeni osudjivan ranije i koliko puta
+        Attribute osudjivan=new Attribute("osudjivan", CaseDescription.class);
+        simConfig.addMapping(osudjivan, new Equal());
 
-        simConfig.addMapping(new Attribute("brojOsudjivanja", CaseDescription.class), new Interval(4));
+        Attribute brojOsudjivanja=new Attribute("brojOsudjivanja", CaseDescription.class);
+        simConfig.addMapping(brojOsudjivanja, new Interval(4));
 
-
+        //podesavanje tezina za svaki od atributa po kojima se gleda slicnost
+        simConfig.setWeight(krivicnoDjelo, 3.0) ;
+        simConfig.setWeight(prekrseniPropisi, 5.0) ;
+        simConfig.setWeight(tjelesnePovrede, 2.0) ;
 
         // Equal - returns 1 if both individuals are equal, otherwise returns 0
         // Interval - returns the similarity of two number inside an interval: sim(x,y) = 1-(|x-y|/interval)
@@ -89,6 +107,7 @@ public class BaseCbrApplication implements StandardCBRApplication {
     }
 
     public void cycle(CBRQuery query) throws ExecutionException {
+
         System.out.println("Query:"+query);
         Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
         eval = SelectCases.selectTopKRR(eval, 5);

@@ -48,7 +48,8 @@ public class CsvConnector implements Connector {
                 caseDescription.setOsudjivan(Boolean.parseBoolean(values[10]));
                 caseDescription.setBrojOsudjivanja(Integer.parseInt(values[11]));
                 caseDescription.setImovnoStanje(values[12]);
-                caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[13].split(",")));
+                caseDescription.setVrstaPresude(values[13]);
+                caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[14].split(",")));
 
                 cbrCase.setDescription(caseDescription);
                 cases.add(cbrCase);

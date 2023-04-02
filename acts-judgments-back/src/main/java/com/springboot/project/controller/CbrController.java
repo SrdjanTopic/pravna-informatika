@@ -1,6 +1,7 @@
 package com.springboot.project.controller;
 
 
+import com.springboot.project.dto.SimilarCaseDto;
 import com.springboot.project.service.cbr.BaseCbrApplication;
 import com.springboot.project.service.cbr.CaseDescription;
 import es.ucm.fdi.gaia.jcolibri.cbraplications.StandardCBRApplication;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ResourceUtils;
@@ -42,42 +44,46 @@ public class CbrController  {
 
     @Autowired
     ResourcePatternResolver resourceResolver;
-    @GetMapping("/recommend-similar-cases")
-    public ResponseEntity<?> recommendCaseSolution() {
+
+
+    @PostMapping(value="/recommend-similar-cases",produces = {
+            MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+    public ResponseEntity<List<String>> recommendSimilarCases(@RequestBody SimilarCaseDto caseDto){
         StandardCBRApplication recommender = new BaseCbrApplication();
         try {
             recommender.configure();
-
             recommender.preCycle();
 
             CBRQuery query = new CBRQuery();
             CaseDescription caseDescription = new CaseDescription();
 
-            caseDescription.setKrivicnoDjelo("cl.339 st.1 KZ");
+            caseDescription.setKrivicnoDjelo(caseDto.getKrivicnoDjelo());
 
             List<String> prekrseniPropisi = new ArrayList();
-            prekrseniPropisi.add("cl.41 ZOBSNP");
+            for (String propis : caseDto.getPrekrseniPropisi()) {
+                prekrseniPropisi.add(propis);
+            }
             caseDescription.setPrekrseniPropisi(prekrseniPropisi);
 
             List<String> tjelesnePovrede = new ArrayList();
-            tjelesnePovrede.add("lake");
+            for (String povreda : caseDto.getTjelesnePovrede()) {
+                tjelesnePovrede.add(povreda);
+            }
             caseDescription.setTjelesnePovrede(tjelesnePovrede);
 
-            caseDescription.setImovnoStanje("lose");
+            caseDescription.setImovnoStanje(caseDto.getImovnoStanje());
 
-            caseDescription.setOsudjivan(false);
+            caseDescription.setOsudjivan(caseDto.getOsudjivan());
 
-            caseDescription.setBrojOsudjivanja(0);
+            caseDescription.setBrojOsudjivanja(caseDto.getBrojOsudjivanja());
 
             query.setDescription( caseDescription );
-
             recommender.cycle(query);
             recommender.postCycle();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return ResponseEntity.ok(null);
+        return new ResponseEntity<>(new ArrayList<>(),HttpStatus.OK);
     }
 
     @GetMapping("/judgments/{judgmentName}")
