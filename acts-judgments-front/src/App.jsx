@@ -1,15 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { lazy, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import Judgments from "./pages/Judgments/Judgments";
 const Laws = lazy(() => import("./pages/Laws/Laws"));
 const Home = lazy(() => import("./pages/Home/Home"));
 import arrowTopSvg from "./assets/svgs/arrow_top.svg";
 import NewCase from "./pages/NewCase/NewCase";
+import axios from "axios";
 
 function App() {
   const [expandList, setExpandList] = useState("");
-
+  const [judgmentNames, setJudgmentNames] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/cbr/judgments")
+      .then((res) =>
+        setJudgmentNames(res.data.map((name) => name.replace(".xml", "")))
+      )
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <div className="app">
       <div className="sideBar">
@@ -79,51 +88,12 @@ function App() {
             expandList === "presude" ? "presudeExpanded" : "presudeCollapsed"
           }`}
         >
-          <a href="/akn/me/judgment/os-ba_2019-02-06_k-4-19" className="link">
-            os-ba_2019-02-06_k-4-19
-          </a>
-          <a href="/akn/me/judgment/os-bp_2011-09-16_k-355-11" className="link">
-            os-bp_2011-09-16_k-355-11
-          </a>
-          <a href="/akn/me/judgment/os-br_2018-06-11_k-89-18" className="link">
-            os-br_2018-06-11_k-89-18
-          </a>
-          <a href="/akn/me/judgment/os-br_2020-07-29_k-177-20" className="link">
-            os-br_2020-07-29_k-177-20
-          </a>
-          <a href="/akn/me/judgment/os-hn_2017-05-19_k-43-17" className="link">
-            os-hn_2017-05-19_k-43-17
-          </a>
-          <a href="/akn/me/judgment/os-nk_2014-10-28_k-405-14" className="link">
-            os-nk_2014-10-28_k-405-14
-          </a>
-          <a href="/akn/me/judgment/os-pg_2015-02-10_k-17-15" className="link">
-            os-pg_2015-02-10_k-17-15
-          </a>
-          <a href="/akn/me/judgment/os-pg_2015-03-17_k-78-15" className="link">
-            os-pg_2015-03-17_k-78-15
-          </a>
-          <a href="/akn/me/judgment/os-pg_2016-06-03_k-61-16" className="link">
-            os-pg_2016-06-03_k-61-16
-          </a>
-          <a href="/akn/me/judgment/os-pg_2017-09-06_k-444-17" className="link">
-            os-pg_2017-09-06_k-444-17
-          </a>
-          <a href="/akn/me/judgment/os-pg_2018-01-18_k-732-17" className="link">
-            os-pg_2018-01-18_k-732-17
-          </a>
-          <a href="/akn/me/judgment/os-pg_2019-03-18_k-87-19" className="link">
-            os-pg_2019-03-18_k-87-19
-          </a>
-          <a href="/akn/me/judgment/os-pg_2022-03-16_k-722-19" className="link">
-            os-pg_2022-03-16_k-722-19
-          </a>
-          <a href="/akn/me/judgment/os-pv_2014-12-09_k-127-14" className="link">
-            os-pv_2014-12-09_k-127-14
-          </a>
-          <a href="/akn/me/judgment/os-zb_2021-10-04_k-14-21" className="link">
-            os-zb_2021-10-04_k-14-21
-          </a>
+          {judgmentNames.length > 0 &&
+            judgmentNames.map((name, id) => (
+              <a href={`/akn/me/judgment/${name}`} className="link" key={id}>
+                {name}
+              </a>
+            ))}
         </div>
 
         <div className="line"></div>
