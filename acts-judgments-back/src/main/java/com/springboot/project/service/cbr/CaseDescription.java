@@ -20,7 +20,6 @@ public class CaseDescription implements CaseComponent {
     private Boolean osudjivan;
     private Integer brojOsudjivanja;
     private String imovnoStanje;
-    private Integer brojDjece;
     private String vrstaPresude;
     private List<String> primijenjeniPropisi = new ArrayList<String>();
 
@@ -117,14 +116,6 @@ public class CaseDescription implements CaseComponent {
         this.imovnoStanje = imovnoStanje;
     }
 
-    public Integer getBrojDjece() {
-        return brojDjece;
-    }
-
-    public void setBrojDjece(Integer brojDjece) {
-        this.brojDjece = brojDjece;
-    }
-
     public String getVrstaPresude() {
         return vrstaPresude;
     }
@@ -153,11 +144,10 @@ public class CaseDescription implements CaseComponent {
                 ", prekrseniPropisi=" + prekrseniPropisi +
                 ", tjelesnePovrede=" + tjelesnePovrede +
                 ", osudjivan=" + osudjivan +
-                ", broj osudjivanja=" + brojOsudjivanja +
+                ", brojOsudjivanja=" + brojOsudjivanja +
                 ", imovnoStanje=" + imovnoStanje +
-                ", brojDjece=" + brojDjece +
                 ", vrstaPresude=" + vrstaPresude +
-                ", primenjeniPropisi=" + primijenjeniPropisi +
+                ", primijenjeniPropisi=" + primijenjeniPropisi +
                 "]";
     }
 

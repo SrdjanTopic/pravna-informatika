@@ -13,6 +13,7 @@ import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRCase;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CaseBaseFilter;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Connector;
 import es.ucm.fdi.gaia.jcolibri.exception.InitializingException;
+import org.mindswap.pellet.utils.Bool;
 
 public class CsvConnector implements Connector {
 
@@ -37,12 +38,17 @@ public class CsvConnector implements Connector {
                 caseDescription.setId(Integer.parseInt(values[0]));
                 caseDescription.setSud(values[1]);
                 caseDescription.setPoslovniBroj(values[2]);
-                caseDescription.setSudija(values[3]);
-                caseDescription.setTuzilac(values[4]);
-                caseDescription.setOkrivljeni(values[5]);
-                caseDescription.setKrivicnoDjelo(values[6]);
-                caseDescription.setVrstaPresude(values[8]);
-                caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[9].split(",")));
+                caseDescription.setDatum(values[3]);
+                caseDescription.setSudija(values[4]);
+                caseDescription.setTuzilac(values[5]);
+                caseDescription.setOkrivljeni(values[6]);
+                caseDescription.setKrivicnoDjelo(values[7]);
+                caseDescription.setPrekrseniPropisi(Arrays.asList(values[8].split(",")));
+                caseDescription.setTjelesnePovrede(Arrays.asList(values[9].split(",")));
+                caseDescription.setOsudjivan(Boolean.parseBoolean(values[10]));
+                caseDescription.setBrojOsudjivanja(Integer.parseInt(values[11]));
+                caseDescription.setImovnoStanje(values[12]);
+                caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[13].split(",")));
 
                 cbrCase.setDescription(caseDescription);
                 cases.add(cbrCase);
