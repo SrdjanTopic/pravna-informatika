@@ -10,7 +10,7 @@ const Judgments = () => {
   const [judgment, setJudgment] = useState();
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/cbr/judgments/${judgmentName}`)
+      .get(`http://localhost:8080/judgments/${judgmentName}`)
       .then((res) => {
         const jsonDataFromXml = new XMLParser().parseFromString(
           getJudgmentString(res.data)

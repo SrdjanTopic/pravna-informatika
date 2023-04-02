@@ -13,7 +13,7 @@ function App() {
   const [judgmentNames, setJudgmentNames] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/cbr/judgments")
+      .get("http://localhost:8080/judgments")
       .then((res) =>
         setJudgmentNames(res.data.map((name) => name.replace(".xml", "")))
       )

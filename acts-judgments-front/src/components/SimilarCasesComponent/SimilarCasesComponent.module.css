@@ -1,0 +1,52 @@
+.cardsWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.caseCard {
+  padding: 1rem;
+  width: 90%;
+  background-color: hsl(0, 0%, 95%);
+  align-self: center;
+  border-radius: 1rem;
+}
+
+.caseCard h3 {
+  align-self: center;
+}
+
+.caseInfoWrapper {
+  height: 200px;
+  overflow-y: auto;
+}
+
+b {
+  color: hsl(0, 0%, 40%);
+  font-weight: 600;
+}
+
+.vrstaPresude {
+  margin-top: 0.5rem;
+  color: hsl(0, 0%, 40%);
+}
+
+.oslobadjajuca {
+  color: hsl(120, 100%, 25%);
+}
+
+.uslovna {
+  color: rgb(216, 140, 0);
+}
+
+.osudjujuca {
+  color: rgb(180, 0, 0);
+}
+
+.propis br + * {
+  padding-left: 1rem;
+}
