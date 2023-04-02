@@ -1,0 +1,142 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+      <identification source="#ospg">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-pg/2019-06-24/k-307-19/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2019-06-24/k-307-19"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2019-06-24" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-307-19"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-pg/2019-06-24/k-307-19/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2019-06-24/k-307-19/cnr@"/>
+          <FRBRdate date="2019-06-24" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-pg/2019-06-24/k-307-19/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-pg/2019-06-24/k-307-19/cnr@.akn"/>
+          <FRBRdate date="2019-06-24" name="Generation"/>
+          <FRBRauthor href="#ospg" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#ospg">
+        <TLCOrganization eId="ospg" href="https://sudovi.me/ospg" showAs="Osnovni sud u Podgorici"/>
+        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#ospg">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/me/judgement/os-pg/2019-06-24/k-307-19"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#vujanovic">Nenad Vujanović</judge>
+      <party refersTo="#ap" as="#Defendant">A.P.</party>
+      <party refersTo="#rg" as="#Plaintiff">Ranka Gospić</party>
+      <lawyer refersTo="#bm">B.M.</lawyer>
+      <neutralCitation>[2019] OSPG K 307</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#vujanovic">Nenad Vujanović</judge>, uz učešće Nataše Paunović, kao zapisničara, u krivičnom postupku protiv okrivljenog <party id="p1" refersTo="#ap" as="#Defendant">A. P.</party>, koga brani advokat <lawyer id="lyr1" refersTo="#bm">B. M.</lawyer> iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt.br. 1980/18 od <date date="2019-05-24">24.05.2019.</date> godine, nakon održanog glavnog i javnog pretresa dana <date date="2019-05-24">24.06.2019.</date> godine, u prisustvu zastupnika optužbe savjetnika na radu kod ODT-a u Podgorici <party id="p2" refersTo="#rg" as="#Plaintiff">Ranke Gospić</party>, okrivljenog i njegovog branioca, istog dana donio je i javno objavio
+        </p>
+        <p style="text-align: center;">
+          PRESUDU
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Okrivljeni:
+        </p>
+        <p>
+          <party id="p3" refersTo="#ap" as="#Defendant">A. P.</party>, JMBG xxxxxxxxxxxxx, od oca Z. i majke G., rodjene Đ., rodjen xx.xx.19xx. godine u Podgorici, sa prebivalištem u mjestu rođenja, državljanin Crne Gore, po zanimanju frizer, nezaposlen, pismen, završio srednju školu, neoženjen, bez djece, srednjeg imovnog stanja, osuđivan presudom Višeg suda u Podgorici K.br. 119/18 od 05.03.2019. godine, zbog krivičnog djela iz čl. 300 st. 1 u vezi čl. 23 st. 2 Krivičnog zakonika Crne Gore, na kaznu zatvora u trajanju od 7 mjeseci i novčanu kaznu u iznosu od 3.750,00 €.
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          KRIV JE
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2018-08-10">08.10.2018.</date> godine, oko 19,30 časova u Podgorici, u Ulici Mitra Bakića, ne pridržavajući se saobraćajnog propisa iz <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan26">čl. 26</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan26-stav02">st. 2</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a na putevima</ref> (,,Sl.list CG", br. 33/12 i 58/14), ugrozio saobraćaj tako da je doveo u opasnost život i tijelo ljudi, na način što je upravljajući putničkim vozilom marke "Renault Scenic", registarskih oznaka PG FA xxx, desnom saobraćajnom trakom desne kolovozne trake označene ulice iz pravca ulice Vlada Martinovića u pravcu Bulevara Ibrahima Dreševića, otpočeo radnju mijenjanja saobraćajne trake, a da se prethodno nije uvjerio da to može da učini na bezbjedan način, prelazeći vozilom iz desne u lijevu saobraćajnu traku kojom se u istom smjeru kretao oštećeni A. S., upravljajući putničkim vozilom marke "Fiat Punto" registarskih oznaka PG AT xxx, usljed kojeg propusta u vožnji je bočnom lijevom prednjom stranom svog vozila udario u čeono-bočnu desnu stranu vozila marke "Fiat Punto" registarskih oznaka PG AT xxx, usljed čega je oštećeni A. S. zadobio laku tjelesnu povredu u vidu nagnječenja desne strane čela promjera oko 1x0,5 cm i oguljotine desnog koljena promjera oko 0,5x0,5 cm, pri čemu je okrivljeni bio svjestan da takvom nepropisnom vožnjom može ugroziti javni saobraćaj i dovesti u opasnost život i tijelo ljudi, ali je olako držao da do toga neće doći,
+        </p>
+        <p>
+          -čime bi učinio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>.
+        </p>
+        <p>
+          Pa sud okrivljenog, primjenom citirane zakonske odredbe, te odredbe čl. 4 st. 2, čl. 32, čl. 41 i čl. 42 Krivičnog zakonika Crne Gore, te odredbe čl. 226, 229 i 374 Zakonika o krivičnom postupku,
+        </p>
+        <p>
+            I z r i č e:
+        </p>
+        <p style="text-align: center;">
+            O S U Đ U J E
+        </p>
+        <p>
+          Na kaznu rada u javnom interesu u trajanju od 80 (osamdeset) časova, koja će se izvršiti za vrijeme od 2 (dva) mjeseca, s tim što ne može biti duža od 60 (šezdeset) časova u toku jednog mjeseca.
+        </p>
+        <p>
+          Ukoliko okrivljeni ne bude vršio rad u javnom interesu, ova kazna će se zamijeniti kaznom zatvora, tako što će se svakih započetih 60 (šezdeset) časova rada u javnom interesu zamijeniti kaznom zatvora u trajanju od 1 (jednog) mjeseca.
+        </p>
+        <p>
+          Obavezuje se okrivljeni da na ime troškova krivičnog postupka plati ovom sudu iznos od 173,00 eura, u roku od 15 dana po pravosnažnosti presude, pod prijetnjom izvršenja.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+            OBRAZLOŽENJE
+        </p>
+        <p>
+          <omissis>
+            ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Cijeneći naprijed utvrđeno činjenično stanje, sud nalazi da su se u radnjama okrivljenog A. P., stekli svi objektivni elementi bića krivičnog djela ugrožavanje javnog saobraćaja iz čl. 339 st. 3 u vezi st. 1 Krivičnog zakonika Crne Gore. Naime, okrivljeni je postupajući na naprijed navedeni način, suprotno čl. 26 st. 2 Zakona o bezbjednosti saobraćaja na putevima, ugrozio javni saobraćaj i doveo u opasnost život i tijelo ljudi, prouzrokujući saobraćajnu nezgodu u kojoj je oštećeni A. S. zadobio laku tjelesnu povredu, pri čemu je okrivljeni ne pridržavajući se obaveze da prethodno provjeri da li može na bezbjedan način prelaziti vozilom iz jedne trake u drugu, bio svjestan da može ugroziti saobraćaj i dovesti u opasnost život i tijelo ljudi, ali je olako držao da do toga neće doći, postupajući sa svjesnim nehatom, čime su se pored objektivnih stekli i svi subjektivni elementi bića navedenog krivičnog djela.
+        </p>
+        <p>
+          Odlučujući o vrsti i visini krivične sankcije, sud je imao u vidu sve okolnosti koje su od značaja za njen izbor i visinu, pa je u smislu čl. 42 Krivičnog zakonika Crne Gore, od olakšavajućih okolnosti na strani okrivljenog A. P. cijenio prihvatanje odgovornosti i izraženo kajanje, dok je od otežavajućih okolnosti cijenio njegov raniji život, odnosno da je isti osuđivan, a što je sud utvrdio iz Uvjerenja iz kaznene evidencije na ime okrivljenog A. P. izdato od strane ovog suda pod brojem KE 829/19 od 03.06.2019. godine (ali ne za istovrsno krivično djelo), pa ga je sud primjenom čl. 41 Krivičnog zakonika Crne Gore, imajući u vidu njegov pristanak, osudio na kaznu rada u javnom interesu u trajanju od 80 (osamdeset) časova, koja se ima izvršiti u roku od 2 (dva) mjeseca, pri čemu ne može biti duža od 60 (šezdeset) časova u jednom mjesecu, a ukoliko okrivljeni ne bude vršio rad u javnom interesu, ova kazna će se zamijeniti kaznom zatvora tako što će se svakih započetih 60 (šezdeset) časova rada u javnom interesu zamijeniti kaznom zatvora u trajanju od jednog mjeseca. Sud je uvjeren da će se kaznom rada u javnom interesu ostvariti svrha kažnjavanja iz čl. 32 Krivičnog zakonika Crne Gore, u okviru opšte svrhe krivičnih sankcija iz čl. 4 st. 2 Krivičnog zakonika Crne Gore.
+        </p>
+        <p>
+          Kako je okrivljeni oglašen krivim, sud ga je shodno odredbi čl. 226 i 229 Zakonika o krivičnom postupku obavezao na plaćanje troškova krivičnog postupka u ukupnom iznosu od 173,00 eura, a koji troškovi se odnose na nagradu za rad vještaka saobraćajne struke M. Č. u iznosu od 82,50 eura, nagradu za rad vještaka medicinske struke dr M. Š. u iznosu od 60,50 eura dok je paušal u iznosu od 30,00 eura odmjeren shodno trajanju i složenosti postupka, kao i imovnom stanju okrivljenog, koje troškove je okrivljeni dužan platiti ovom sudu u roku od 15 dana po pravosnažnosti presude, pod prijetnjom izvršenja.
+        </p>
+        <p>
+          Na osnovu izloženog, a shodno čl. 374 Zakonika o krivičnom postupku odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

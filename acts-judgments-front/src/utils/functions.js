@@ -23,7 +23,7 @@ export function getJudgmentString(loadedString) {
     "</p><date "
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
-    "</date> ",
+    "</date>",
     "</date><p>"
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
@@ -45,6 +45,14 @@ export function getJudgmentString(loadedString) {
   adjustedStringXml = adjustedStringXml.replaceAll(
     "</judge> ",
     "</judge><p>"
+  );
+  adjustedStringXml = adjustedStringXml.replaceAll(
+    "<lawyer id",
+    "</p><lawyer id"
+  );
+  adjustedStringXml = adjustedStringXml.replaceAll(
+    "</lawyer> ",
+    "</lawyer><p>"
   );
   return adjustedStringXml;
 }
