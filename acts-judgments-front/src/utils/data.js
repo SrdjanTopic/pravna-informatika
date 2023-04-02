@@ -1,4 +1,4 @@
-export const vrstePovreda = ["Lake", "Teške"]
+export const vrstePovreda = ["lake", "teske"]
 export const sudovi = [
   "Osnovni Sud u Baru",
   "Osnovni Sud u Beranama",
@@ -16,5 +16,5 @@ export const sudovi = [
   "Osnovni Sud u Ulcinju",
   "Osnovni Sud u Žabljaku"
 ]
-export const imovnaStanja = ["Loše", "Srednje", "Dobro"]
+export const imovnaStanja = ["lose", "srednje", "dobro"]
 export const zakoni = ["KZ", "ZOBSNP"]

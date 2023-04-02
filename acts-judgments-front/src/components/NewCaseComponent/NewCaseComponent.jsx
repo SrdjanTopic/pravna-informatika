@@ -87,19 +87,20 @@ const NewCaseComponent = ({ handleSubmit }) => {
             sudija: sudija.current.value,
             okrivljeni: okrivljeni.current.value,
             tuzilac: tuzilac.current.value,
-            vrstaPovrede: vrstaPovrede.current.innerText,
+            tjelesnePovrede: [vrstaPovrede.current.innerText],
             osudjivan: osudjivan.current.innerText === "Da" ? true : false,
-            brOsudjavanja:
+            imovnoStanje: imovnoStanje.current.innerText,
+            brojOsudjivanja:
               osudjivan.current.innerText === "Da"
                 ? parseInt(brOsudjivanja.current.value)
                 : 0,
             primenjeniPropisi: primenjeniPropisi,
             prekrseniPropisi: primenjeniPrekrsaji,
-            krivicnoDjelo: {
-              zakon: zakonKrivDjelo.current.innerText,
-              clan: clanKrivDjelo.current.value,
-              stav: stavKrivDjelo.current.value,
-            },
+            krivicnoDjelo: `cl.${clanKrivDjelo.current.value} ${
+              stavKrivDjelo.current.value !== "0"
+                ? "st.".concat(stavKrivDjelo.current.value)
+                : ""
+            } ${zakonKrivDjelo.current.innerText}`,
           })
         }
       >
