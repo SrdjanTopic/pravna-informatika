@@ -33,13 +33,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/cbr")
 public class CbrController  {
-
-    Connector _connector;  /** Connector object */
-    CBRCaseBase _caseBase;  /** CaseBase object */
-    NNConfig simConfig;  /** KNN configuration */
-
-    @Autowired ResourceLoader resourceLoader;
-
+    @Autowired
+    ResourceLoader resourceLoader;
     @Autowired
     ResourcePatternResolver resourceResolver;
     @GetMapping("/recommend-similar-cases")
@@ -78,43 +73,5 @@ public class CbrController  {
         }
 
         return ResponseEntity.ok(null);
-    }
-
-    @GetMapping("/judgments/{judgmentName}")
-    public String getJudgment(@PathVariable String judgmentName) {
-        try {
-            String content = FileUtils.readFileToString(ResourceUtils.getFile("classpath:judgments/" + judgmentName + ".xml"), String.valueOf(StandardCharsets.UTF_8));
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @GetMapping("judgments")
-    public List<String> getJudgmentNames(){
-        List<String> results = new ArrayList<String>();
-
-        try {
-            File[] files = ResourceUtils.getFile("classpath:judgments/").listFiles();
-            assert files != null;
-            for (File file : files) {
-                if (file.isFile()) {
-                    results.add(file.getName());
-                }
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        return results;
-    }
-
-    @GetMapping("/acts/{actName}")
-    public String getAct(@PathVariable String actName) {
-        try {
-            String content = FileUtils.readFileToString(ResourceUtils.getFile("classpath:acts/" + actName + ".xml"), String.valueOf(StandardCharsets.UTF_8));
-            return content;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

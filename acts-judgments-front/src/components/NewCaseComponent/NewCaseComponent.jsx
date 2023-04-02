@@ -6,8 +6,10 @@ import Select from "./parts/Select/Select";
 const NewCaseComponent = ({ handleSubmit }) => {
   const [isOsudjivan, setIsOsudjivan] = useState(false);
   const [selectedZakonPropis, setSelectedZakonPropis] = useState("");
+  const [selectedZakonPrekrsaj, setSelectedZakonPrekrsaj] = useState("");
   const [selectedZakonKrivDjelo, setSelectedZakonKrivDjelo] = useState("");
   const [primenjeniPropisi, setPrimenjeniPropisi] = useState([]);
+  const [primenjeniPrekrsaji, setPrimenjeniPrekrsaji] = useState([]);
 
   const poslovniBroj = useRef();
   const sud = useRef();
@@ -21,6 +23,9 @@ const NewCaseComponent = ({ handleSubmit }) => {
   const zakonPropis = useRef();
   const clanPropis = useRef();
   const stavPropis = useRef();
+  const zakonPrekrsaj = useRef();
+  const clanPrekrsaj = useRef();
+  const stavPrekrsaj = useRef();
   const zakonKrivDjelo = useRef();
   const clanKrivDjelo = useRef();
   const stavKrivDjelo = useRef();
@@ -32,10 +37,13 @@ const NewCaseComponent = ({ handleSubmit }) => {
   function triggerZakonPropis(value) {
     setSelectedZakonPropis(value);
   }
+  function triggerZakonPrekrsaj(value) {
+    setSelectedZakonPrekrsaj(value);
+  }
   function triggerZakonKrivDjelo(value) {
     setSelectedZakonKrivDjelo(value);
   }
-  function dodajBtnHandle() {
+  function dodajBtnHandlePropis() {
     const propis = {
       zakonPropis: zakonPropis.current.innerText,
       clanPropis: clanPropis.current.value,
@@ -49,6 +57,23 @@ const NewCaseComponent = ({ handleSubmit }) => {
   }
   function removePrimjenjeniPropis(id) {
     setPrimenjeniPropisi(primenjeniPropisi.filter((pp, index) => index !== id));
+  }
+  function dodajBtnHandlePrekrsaj() {
+    const prekrsaj = {
+      zakonPrekrsaj: zakonPrekrsaj.current.innerText,
+      clanPrekrsaj: clanPrekrsaj.current.value,
+      stavPrekrsaj: stavPrekrsaj.current.value,
+    };
+    const prekrsajString = `cl.${prekrsaj.clanPrekrsaj} ${
+      prekrsaj.stavPrekrsaj !== "0" ? "st.".concat(prekrsaj.stavPrekrsaj) : ""
+    } ${prekrsaj.zakonPrekrsaj}`;
+    if (primenjeniPrekrsaji.indexOf(prekrsajString) === -1)
+      setPrimenjeniPrekrsaji((prev) => [...prev, prekrsajString]);
+  }
+  function removePrimjenjeniPrekrsaj(id) {
+    setPrimenjeniPrekrsaji(
+      primenjeniPrekrsaji.filter((pp, index) => index !== id)
+    );
   }
   return (
     <>
@@ -69,6 +94,7 @@ const NewCaseComponent = ({ handleSubmit }) => {
                 ? parseInt(brOsudjivanja.current.value)
                 : 0,
             primenjeniPropisi: primenjeniPropisi,
+            prekrseniPropisi: primenjeniPrekrsaji,
             krivicnoDjelo: {
               zakon: zakonKrivDjelo.current.innerText,
               clan: clanKrivDjelo.current.value,
@@ -83,13 +109,13 @@ const NewCaseComponent = ({ handleSubmit }) => {
         <div className={styles.formElements}>
           <div className={styles.elements}>
             <Input ref={okrivljeni} label={"Okrivljeni"} />
-            <Input ref={tuzilac} label={"Tužilac"} />
             <Select
               width={"300px"}
-              ref={vrstaPovrede}
-              label={"Vrsta povrede"}
-              options={vrstePovreda}
+              ref={imovnoStanje}
+              label={"Imovno stanje"}
+              options={imovnaStanja}
             />
+
             <div className={styles.osudjivanWrapper}>
               <Select
                 width={"200px"}
@@ -106,17 +132,19 @@ const NewCaseComponent = ({ handleSubmit }) => {
                 disabled={!isOsudjivan}
               />
             </div>
+            <Select
+              width={"300px"}
+              ref={vrstaPovrede}
+              label={"Vrsta povrede"}
+              options={vrstePovreda}
+            />
           </div>
           <div className={styles.elements}>
             <Input ref={poslovniBroj} label={"Poslovni broj"} />
             <Input ref={sudija} label={"Sudija"} />
             <Select ref={sud} label={"Sud"} options={sudovi} width={"300px"} />
-            <Select
-              width={"300px"}
-              ref={imovnoStanje}
-              label={"Imovno stanje"}
-              options={imovnaStanja}
-            />
+
+            <Input ref={tuzilac} label={"Tužilac"} />
           </div>
           <div className={styles.elements}>
             <h4 style={{ marginTop: "-1.65rem" }}>Krivično djelo</h4>
@@ -144,6 +172,56 @@ const NewCaseComponent = ({ handleSubmit }) => {
                 disabled={selectedZakonKrivDjelo === ""}
                 style={{ width: "70px" }}
               />
+            </div>
+            <h4>Prekršeni propisi</h4>
+            <div className={styles.osudjivanWrapper}>
+              <Select
+                width={"200px"}
+                ref={zakonPrekrsaj}
+                label={"Zakon"}
+                options={zakoni}
+                triggerFunction={triggerZakonPrekrsaj}
+              />
+              <input
+                type="number"
+                min={0}
+                ref={clanPrekrsaj}
+                defaultValue={0}
+                disabled={selectedZakonPrekrsaj === ""}
+                style={{ width: "70px" }}
+              />
+              <input
+                type="number"
+                min={0}
+                ref={stavPrekrsaj}
+                defaultValue={0}
+                disabled={selectedZakonPrekrsaj === ""}
+                style={{ width: "70px" }}
+              />
+              <button
+                type="button"
+                className={styles.dodajBtn}
+                onClick={dodajBtnHandlePrekrsaj}
+                disabled={selectedZakonPrekrsaj === ""}
+              >
+                Dodaj
+              </button>
+            </div>
+            <div className={styles.primjenjeniPropisiList}>
+              {primenjeniPrekrsaji.map((primenjeniPrekrsaj, id) => (
+                <div className={styles.primenjeniPropisDiv} key={id}>
+                  <p>{primenjeniPrekrsaj}</p>
+                  <div
+                    className={styles.svgDiv}
+                    onClick={() => removePrimjenjeniPrekrsaj(id)}
+                  >
+                    <svg viewBox="0 0 100 100" className={styles.xSvg}>
+                      <line x1="10" y1="10" x2="90" y2="90" />
+                      <line x1="10" y1="90" x2="90" y2="10" />
+                    </svg>
+                  </div>
+                </div>
+              ))}
             </div>
             <h4>Primjenjeni propisi</h4>
             <div className={styles.osudjivanWrapper}>
@@ -173,7 +251,7 @@ const NewCaseComponent = ({ handleSubmit }) => {
               <button
                 type="button"
                 className={styles.dodajBtn}
-                onClick={dodajBtnHandle}
+                onClick={dodajBtnHandlePropis}
                 disabled={selectedZakonPropis === ""}
               >
                 Dodaj

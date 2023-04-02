@@ -10,7 +10,7 @@ const Laws = () => {
   const [law, setLaw] = useState();
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/cbr/acts/${lawName}`)
+      .get(`http://localhost:8080/acts/${lawName}`)
       .then((res) => {
         const jsonDataFromXml = new XMLParser().parseFromString(
           getLawString(res.data)
