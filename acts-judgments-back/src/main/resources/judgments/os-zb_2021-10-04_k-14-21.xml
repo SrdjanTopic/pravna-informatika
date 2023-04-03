@@ -60,9 +60,9 @@
           U IME CRNE GORE
         </p>
         <p>
-          OSNOVNI SUD U ŽABLJAKU, kao prvostepeni krivični, po predsjedniku suda <judge id="jud01" refersTo="#andjelic">Anđelić Mihailu</judge>, uz sudjelovanje zapisničara Knežević Ranke, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#zm" as="#Defendant">Z. M.</party> iz Ž., zbog krivičnog djela Ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          OSNOVNI SUD U ŽABLJAKU, kao prvostepeni krivični, po predsjedniku suda <judge id="jud01" refersTo="#andjelic">Anđelić Mihailu</judge> , uz sudjelovanje zapisničara Knežević Ranke, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#zm" as="#Defendant">Z. M.</party> iz Ž., zbog krivičnog djela Ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore (KZ CG)</ref>, po optužnom predlogu ODT iz Pljevalja Kt.br.122/21 od <date date="2021-09-16">16.09.2021.</date>godine, nakon usmenog, javnog i glavnog pretresa održanog <date date="2021-10-04">04.10.2021.</date>godine u prisustvu ODT iz Pljevalja <party id="p2" refersTo="#gi" as="#Plaintiff">Gačević Ivana</party>, okrivljenog i oštećenog Sokić Vukote iz Pljevalja, donio je i istog dana u odsustvu stranaka javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore (KZ CG)</ref>, po optužnom predlogu ODT iz Pljevalja Kt.br.122/21 od <date date="2021-09-16">16.09.2021.</date>godine, nakon usmenog, javnog i glavnog pretresa održanog <date date="2021-10-04">04.10.2021.</date>godine u prisustvu ODT iz Pljevalja <party id="p2" refersTo="#gi" as="#Plaintiff">Gačević Ivana</party> , okrivljenog i oštećenog Sokić Vukote iz Pljevalja, donio je i istog dana u odsustvu stranaka javno objavio
         </p>
         <p style="text-align: center;">
           P R E S U D U
@@ -71,7 +71,7 @@
 
       <background>
         <p>
-          Okrivljeni: <party id="p3" refersTo="#zm" as="#Defendant">Z. M.</party>, od oca M. i majke G., rođene Ž., rođen ….godine u P., JMB …, sa prebivalištem u Ž., ul.S. S. br…., državljanin Crne Gore, govori Crnogorskim jezikom, završio Srednju ugostiteljsku školu, neoženjen, bez đece,nezaposlen, lošeg imovnog stanja, povremeno obavlja sezonske poslove, ranije neosuđivan, ne nalazi se pod istragom za drugo krivično djelo,
+          Okrivljeni: <party id="p3" refersTo="#zm" as="#Defendant">Z. M.</party> , od oca M. i majke G., rođene Ž., rođen ….godine u P., JMB …, sa prebivalištem u Ž., ul.S. S. br…., državljanin Crne Gore, govori Crnogorskim jezikom, završio Srednju ugostiteljsku školu, neoženjen, bez đece,nezaposlen, lošeg imovnog stanja, povremeno obavlja sezonske poslove, ranije neosuđivan, ne nalazi se pod istragom za drugo krivično djelo,
         </p>
       </background>
 

@@ -32,19 +32,23 @@ export function getJudgmentString(loadedString) {
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
     "</party> ",
-    "</party><p>"
+    "</party><p> "
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
     "</party>,",
-    "</party><p>"
+    "</party>,<p>"
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
     "<judge id",
     "</p><judge id"
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
+    "</judge>,",
+    "</judge>,<p> "
+  );
+  adjustedStringXml = adjustedStringXml.replaceAll(
     "</judge> ",
-    "</judge><p>"
+    "</judge><p> "
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
     "<lawyer id",
@@ -52,7 +56,11 @@ export function getJudgmentString(loadedString) {
   );
   adjustedStringXml = adjustedStringXml.replaceAll(
     "</lawyer> ",
-    "</lawyer><p>"
+    "</lawyer><p> "
+  );
+  adjustedStringXml = adjustedStringXml.replaceAll(
+    "</lawyer>,",
+    "</lawyer>,<p> "
   );
   return adjustedStringXml;
 }

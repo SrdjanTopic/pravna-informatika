@@ -60,7 +60,7 @@
           U IME CRNE GORE
         </p>
         <p>
-          OSNOVNI SUD U PODGORICI, po sudiji <judge id="jud01" refersTo="#jovovic">Jovović Željki</judge>, uz učešće Rajković Danijele kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#hd" as="#Defendant">H. D.</party> iz P., zbog krivičnog ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          OSNOVNI SUD U PODGORICI, po sudiji <judge id="jud01" refersTo="#jovovic">Jovović Željki</judge> , uz učešće Rajković Danijele kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#hd" as="#Defendant">H. D.</party> iz P., zbog krivičnog ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, rješavajući po optužnom predlogu ODT Podgorica Kt. br. 100/15 od <date date="2015-02-06">06. 02. 2015.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zastupnika optužbe <party id="p2" refersTo="#mv" as="#Plaintiff">Mihailović Vladana</party> i okrivljenog, dana <date date="2015-03-17">17. 03. 2015.</date> godine donio je i istog dana javno objavio,
         </p>
@@ -74,7 +74,7 @@
           Okrivljeni:
         </p>
         <p>
-          <party id="p1" refersTo="#hd" as="#Defendant">H. D.</party>, JMB xxxxxxxxxxxxx, od oca D. i majke A., rođene H., rođen 16. 06. 19xx. godine u Podgorici, sa prebivalištem u mjestu rođenja Ul. Nikole Đurkovića br. xx, državljanin Crne Gore, završio srednju školu, nezaposlen, neoženjen, bez djece, lošeg imovnog stanja, neosuđivan.
+          <party id="p1" refersTo="#hd" as="#Defendant">H. D.</party> , JMB xxxxxxxxxxxxx, od oca D. i majke A., rođene H., rođen 16. 06. 19xx. godine u Podgorici, sa prebivalištem u mjestu rođenja Ul. Nikole Đurkovića br. xx, državljanin Crne Gore, završio srednju školu, nezaposlen, neoženjen, bez djece, lošeg imovnog stanja, neosuđivan.
         </p>
       </background>
 

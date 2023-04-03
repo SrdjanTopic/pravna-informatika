@@ -62,7 +62,7 @@
         <p>
           Osnovni sud u Pljevljima, kao prvostepeni krivični sud po sudiji <judge id="jud01" refersTo="#popovic">Ljiljani Popović</judge> uz sudjelovanje zapisničara Leković Zore, u krivičnom predmetu protiv optuženog <party id="p1" refersTo="#gm" as="#Defendant">G.M.</party> iz P. zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref> po optužnom predlogu ODT Pljevlja Kt.br.282/14 od <date date="2014-11-13">13.11.2014.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zamjenika ODT Pljevlja <party id="p2" refersTo="#gb" as="#Plaintiff">Gačević Božidarke</party> i optuženog <party id="p3" refersTo="#gm" as="#Defendant">G.M.</party>, dana <date date="2014-12-09">09.12.2014.</date> godine donio je i javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref> po optužnom predlogu ODT Pljevlja Kt.br.282/14 od <date date="2014-11-13">13.11.2014.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zamjenika ODT Pljevlja <party id="p2" refersTo="#gb" as="#Plaintiff">Gačević Božidarke</party> i optuženog <party id="p3" refersTo="#gm" as="#Defendant">G.M.</party> , dana <date date="2014-12-09">09.12.2014.</date> godine donio je i javno objavio
         </p>
         <p style="text-align: center;">
           P R E S U D U
@@ -71,7 +71,7 @@
 
       <background>
         <p>
-          Optuženi: <party id="p4" refersTo="#gm" as="#Defendant">G.M.</party>, JMBG ...., od oca P. i majke B. rodjene D., rodjen u P. dana ....godine, sa prebivalištem u mjestu K. opština P., državljanin CG,oženjen, bez djece,penzioner, govori srpskim jezikom, razumije crnogorski jezik, pismen, završio srednju školu, lošeg imovnog stanja, neosudjivan.
+          Optuženi: <party id="p4" refersTo="#gm" as="#Defendant">G.M.</party> , JMBG ...., od oca P. i majke B. rodjene D., rodjen u P. dana ....godine, sa prebivalištem u mjestu K. opština P., državljanin CG,oženjen, bez djece,penzioner, govori srpskim jezikom, razumije crnogorski jezik, pismen, završio srednju školu, lošeg imovnog stanja, neosudjivan.
         </p>
       </background>
 

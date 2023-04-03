@@ -1,34 +1,15 @@
 package com.springboot.project.controller;
 
-
-import com.hp.hpl.jena.graph.query.Expression;
 import com.springboot.project.dto.SimilarCaseDto;
 import com.springboot.project.service.cbr.BaseCbrApplication;
 import com.springboot.project.service.cbr.CaseDescription;
-import es.ucm.fdi.gaia.jcolibri.cbraplications.StandardCBRApplication;
-import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRCaseBase;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRQuery;
-import es.ucm.fdi.gaia.jcolibri.cbrcore.Connector;
-import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.ResourcePatternResolver;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 

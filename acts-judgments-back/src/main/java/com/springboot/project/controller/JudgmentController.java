@@ -1,7 +1,11 @@
 package com.springboot.project.controller;
 
+import com.springboot.project.service.judgment.JudgmentService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
+@AllArgsConstructor
 @RequestMapping("/judgments")
 public class JudgmentController {
+    private final JudgmentService judgmentService;
     @GetMapping("")
     public List<String> getJudgmentNames(){
         List<String> results = new ArrayList<String>();
@@ -36,8 +41,9 @@ public class JudgmentController {
     @GetMapping("/{judgmentName}")
     public String getJudgment(@PathVariable String judgmentName) {
         try {
-            String content = FileUtils.readFileToString(ResourceUtils.getFile("classpath:judgments/" + judgmentName + ".xml"), String.valueOf(StandardCharsets.UTF_8));
-            return content;
+            String xmlcontent = FileUtils.readFileToString(ResourceUtils.getFile("classpath:judgments/" + judgmentName + ".xml"), String.valueOf(StandardCharsets.UTF_8));
+            judgmentService.getJudgmentDescriptionWithRegex(judgmentName);
+            return xmlcontent;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -30,7 +30,7 @@
         </FRBRManifestation>
       </identification>
       <references source="#osba">
-        <TLCOrganization eId="osba" href="https://sudovi.me/osba" showAs="Osnovni sud u Beranama"/>
+        <TLCOrganization eId="osba" href="https://sudovi.me/osba" showAs="Osnovni sud u Herceg Novom"/>
         <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
         <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
       </references>
@@ -61,10 +61,10 @@
           U IME CRNE GORE
         </p>
         <p>
-          OSNOVNI SUD U HERCEG NOVOM, po sudiji <judge id="jud1" refersTo="#dabetic">Dabetić Zorici</judge>, uz učestvovanje zapisničara Bosanac Vjere, u krivičnom predmetu protiv okrivljenog <party id="p01" refersTo="#vm" as="#Defendant">V.M.</party>, zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
+          OSNOVNI SUD U HERCEG NOVOM, po sudiji <judge id="jud1" refersTo="#dabetic">Dabetić Zorici</judge> , uz učestvovanje zapisničara Bosanac Vjere, u krivičnom predmetu protiv okrivljenog <party id="p01" refersTo="#vm" as="#Defendant">V.M.</party> , zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnice Osnovnog državnog tužilaštva Herceg Novi Kt.br.9/2016 od <date date="2016-02-25">25.02.2016.</date> godine, nakon održanog usmenog i javnog glavnog pretresa dana <date date="2016-07-18">18.07.2016.</date> godine u prisustvu rukovodioca ODT Herceg Novi <party id="p03" refersTo="#zs" as="#Plaintiff">Zejnilagić Snježane</party>, okrivljenog <party id="p02" refersTo="#vm" as="#Defendant">V.M.</party>, branioca okrivljenog advokata <lawyer id="lwyr1" refersTo="#cs" as="#DefendantLawyer">Ć.S.</lawyer> iz Herceg Novog i punomoćnika oštećene porodice advokata <lawyer id="lwyr2" refersTo="#im" as="#PlaintiffLawyer">I.M.</lawyer> iz Podgorice, dana <date date="2016-07-20">20.07.2016.</date> godine donio je i javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnice Osnovnog državnog tužilaštva Herceg Novi Kt.br.9/2016 od <date date="2016-02-25">25.02.2016.</date> godine, nakon održanog usmenog i javnog glavnog pretresa dana <date date="2016-07-18">18.07.2016.</date> godine u prisustvu rukovodioca ODT Herceg Novi <party id="p03" refersTo="#zs" as="#Plaintiff">Zejnilagić Snježane</party> , okrivljenog <party id="p02" refersTo="#vm" as="#Defendant">V.M.</party> , branioca okrivljenog advokata <lawyer id="lwyr1" refersTo="#cs" as="#DefendantLawyer">Ć.S.</lawyer> iz Herceg Novog i punomoćnika oštećene porodice advokata <lawyer id="lwyr2" refersTo="#im" as="#PlaintiffLawyer">I.M.</lawyer> iz Podgorice, dana <date date="2016-07-20">20.07.2016.</date> godine donio je i javno objavio,
         </p>
         <p style="text-align: center;">
           P R E S U D U
@@ -73,7 +73,7 @@
 
       <background>
         <p>
-          Okrivljeni <party id="p4" refersTo="#vm" as="#Defendant">V. M.</party>, jmbg ..., od oca Č. i majke D. rođene R., rođen .... godine u KO, stalno nastanjen u HN, B., ...., po zanimanju frigomehaničar, bez stalnog zaposlenja, ostvaruje prihode od povremenog rada, neoženjen, bez djece, neosuđivan, ne vodi se drugi krivični postupak protiv njega, državljanin Crne Gore
+          Okrivljeni <party id="p4" refersTo="#vm" as="#Defendant">V. M.</party> , jmbg ..., od oca Č. i majke D. rođene R., rođen .... godine u KO, stalno nastanjen u HN, B., ...., po zanimanju frigomehaničar, bez stalnog zaposlenja, ostvaruje prihode od povremenog rada, neoženjen, bez djece, neosuđivan, ne vodi se drugi krivični postupak protiv njega, državljanin Crne Gore
         </p>
       </background>
 

@@ -60,9 +60,9 @@
           U IME CRNE GORE
         </p>
         <p>
-          OSNOVNI SUD U BERANAMA po sudiji pojedincu <judge id="jud01" refersTo="#culafic">Aleksandru Ćulafiću</judge> uz učešće samostalnog referenta Milice Milanović, kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#bz" as="#Defendant">B. Z.</party>, iz B., zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          OSNOVNI SUD U BERANAMA po sudiji pojedincu <judge id="jud01" refersTo="#culafic">Aleksandru Ćulafiću</judge> uz učešće samostalnog referenta Milice Milanović, kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#bz" as="#Defendant">B. Z.</party> , iz B., zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu Osnovnog državnog tužilaštava u Beranama Kt.br. 326/18 od <date date="2018-12-24">24.12.2018.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu Državnog tužioca ODT-a u Beranama <party id="p2" refersTo="#bm" as="#Plaintiff">Bojović Marka</party> i okrivljenog <party id="p3" refersTo="#bz" as="#Defendant">B. Z.</party>, dana <date date="2019-02-06">06.02.2019.</date> godine, donio je i javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu Osnovnog državnog tužilaštava u Beranama Kt.br. 326/18 od <date date="2018-12-24">24.12.2018.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu Državnog tužioca ODT-a u Beranama <party id="p2" refersTo="#bm" as="#Plaintiff">Bojović Marka</party> i okrivljenog <party id="p3" refersTo="#bz" as="#Defendant">B. Z.</party> , dana <date date="2019-02-06">06.02.2019.</date> godine, donio je i javno objavio
         </p>
         <p style="text-align: center;">
           P R E S U D U
@@ -71,7 +71,7 @@
 
       <background>
         <p>
-          Okrivljeni <party id="p4" refersTo="#bz" as="#Defendant">B. Z.</party>, JMB ..., od oca R. i majke P., rođene Z., rođen .... godine u B., sa prebivalištem u selu Z., opština B., državljanin Crne Gore, oženjen, otac 2 djece, pismen sa završenom OŠ, nezaposlen, lošeg imovnog stanja, osuđivan presudom Osnovnog suda u Beranama K.br. 97/09 od 01.06.2009. godine zbog krivičnog djela iz čl. 412 st. 2 KZCG, i izrečena mu kazna zatvora u trajanju od 4 mjeseca uslovno za jednu godinu i presudom Osnovnog suda u Beranama K.br. 307/91 od 27.11.1991. godine, zbog krivičnog djela iz čl. 143 st. 1 KZCG, i osuđen na novčanu kaznu u iznosu od 3.000,00 dinara.
+          Okrivljeni <party id="p4" refersTo="#bz" as="#Defendant">B. Z.</party> , JMB ..., od oca R. i majke P., rođene Z., rođen .... godine u B., sa prebivalištem u selu Z., opština B., državljanin Crne Gore, oženjen, otac 2 djece, pismen sa završenom OŠ, nezaposlen, lošeg imovnog stanja, osuđivan presudom Osnovnog suda u Beranama K.br. 97/09 od 01.06.2009. godine zbog krivičnog djela iz čl. 412 st. 2 KZCG, i izrečena mu kazna zatvora u trajanju od 4 mjeseca uslovno za jednu godinu i presudom Osnovnog suda u Beranama K.br. 307/91 od 27.11.1991. godine, zbog krivičnog djela iz čl. 143 st. 1 KZCG, i osuđen na novčanu kaznu u iznosu od 3.000,00 dinara.
         </p>
       </background>
 

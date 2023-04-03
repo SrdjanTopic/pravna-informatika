@@ -60,9 +60,9 @@
           U IME CRNE GORE
         </p>
         <p>
-          OSNOVNI SUD U PODGORICI, po sudiji <judge id="jud01" refersTo="#djukovic">Đuković Goranu</judge>, uz učešće namještenika suda Radević Sanje, kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#kv" as="#Defendant">K. V.</party>, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          OSNOVNI SUD U PODGORICI, po sudiji <judge id="jud01" refersTo="#djukovic">Đuković Goranu</judge> , uz učešće namještenika suda Radević Sanje, kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#kv" as="#Defendant">K. V.</party> , zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt. br. 161/19, od <date date="2018-02-05">05. februara 2018.</date> godine, koje je zastupala savjetnica Osnovnog državnog tužilaštva <party id="p2" refersTo="#ta" as="#Plaintiff">Tmušić Ana</party>, nakon glavnog i javnog pretresa, održanog dana <date date="2019-03-18">18.03.2019.</date> godine, u prisustvu stranaka i svjedoka oštećenog M. N., donio je i istog dana javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt. br. 161/19, od <date date="2018-02-05">05. februara 2018.</date> godine, koje je zastupala savjetnica Osnovnog državnog tužilaštva <party id="p2" refersTo="#ta" as="#Plaintiff">Tmušić Ana</party> , nakon glavnog i javnog pretresa, održanog dana <date date="2019-03-18">18.03.2019.</date> godine, u prisustvu stranaka i svjedoka oštećenog M. N., donio je i istog dana javno objavio
         </p>
         <p style="text-align: center;">
           PRESUDU
@@ -74,7 +74,7 @@
           Okrivljeni:
         </p>
         <p>
-          <party id="p3" refersTo="#kv" as="#Defendant">K. V.</party>, sa JMB: ..., od oca S. i majke O., rođene M., rođen ...1950. godine u D., sa prebivališten u P., ul. V. D. br. ..., državljanin Crne Gore, oženjen, otac četvoro djece, sa završenom srednjom školom, lošeg imovnog stanja, neosuđivan,
+          <party id="p3" refersTo="#kv" as="#Defendant">K. V.</party> , sa JMB: ..., od oca S. i majke O., rođene M., rođen ...1950. godine u D., sa prebivališten u P., ul. V. D. br. ..., državljanin Crne Gore, oženjen, otac četvoro djece, sa završenom srednjom školom, lošeg imovnog stanja, neosuđivan,
         </p>
       </background>
 

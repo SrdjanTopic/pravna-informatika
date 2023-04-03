@@ -63,7 +63,7 @@
         <p>
           OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#djukovic">Đuković Goran</judge> uz učešće Sanje Radević, kao zapisničara, u krivičnom predmetu protiv okrivljene <party id="p1" refersTo="#nb" as="#Defendant">N. B.</party> iz P., zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, te čl. 228, 229 i 374 Krivičnog zakonika Crne Gore, rješavajući po optužnom predlogu ODT Podgorica Kt.br. 476/17 od <date date="2017-04-13">13.04.2017.</date> godine, nakon održanog glavnog i javnog pretresa, u prisustvu zastupnika optužbe, savjetnika ODT-a Podgorica <party id="p2" refersTo="#id" as="#Plaintiff">Ivanović Danijele</party>, branioca okrivljene, adv.  <lawyer id="lyr1" refersTo="#ss" as="PlaintiffLawyer">S. S.</lawyer> i okrivljene, dana <date date="2018-02-02">02.02.2018.</date> godine, donio je i istog dana javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, te čl. 228, 229 i 374 Krivičnog zakonika Crne Gore, rješavajući po optužnom predlogu ODT Podgorica Kt.br. 476/17 od <date date="2017-04-13">13.04.2017.</date> godine, nakon održanog glavnog i javnog pretresa, u prisustvu zastupnika optužbe, savjetnika ODT-a Podgorica <party id="p2" refersTo="#id" as="#Plaintiff">Ivanović Danijele</party> , branioca okrivljene, adv.  <lawyer id="lyr1" refersTo="#ss" as="PlaintiffLawyer">S. S.</lawyer> i okrivljene, dana <date date="2018-02-02">02.02.2018.</date> godine, donio je i istog dana javno objavio,
         </p>
         <p style="text-align: center;">
           PRESUDU
@@ -75,7 +75,7 @@
           Prema okrivljenoj:
         </p>
         <p>
-          <party id="p4" refersTo="#nb" as="#Defendant">N.B.</party>, JMBG ..., od oca P. i majke A., rođene B., rođena ...1987. godine u B., sa prebivalištem u B., ul. ..., državljanka C. G., neudata, bez djece, srednjeg imovnog stanja, neosudjivana,
+          <party id="p4" refersTo="#nb" as="#Defendant">N.B.</party> , JMBG ..., od oca P. i majke A., rođene B., rođena ...1987. godine u B., sa prebivalištem u B., ul. ..., državljanka C. G., neudata, bez djece, srednjeg imovnog stanja, neosudjivana,
         </p>
         <p>
           Na osnovu čl. 372 st. 1 tač. 1 Zakonika o krivičnom postupku,

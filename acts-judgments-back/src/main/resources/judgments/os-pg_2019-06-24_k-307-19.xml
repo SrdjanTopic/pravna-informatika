@@ -60,9 +60,9 @@
           U IME CRNE GORE
         </p>
         <p>
-          OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#vujanovic">Nenad Vujanović</judge>, uz učešće Nataše Paunović, kao zapisničara, u krivičnom postupku protiv okrivljenog <party id="p1" refersTo="#ap" as="#Defendant">A. P.</party>, koga brani advokat <lawyer id="lyr1" refersTo="#bm">B. M.</lawyer> iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#vujanovic">Nenad Vujanović</judge> , uz učešće Nataše Paunović, kao zapisničara, u krivičnom postupku protiv okrivljenog <party id="p1" refersTo="#ap" as="#Defendant">A. P.</party> , koga brani advokat <lawyer id="lyr1" refersTo="#bm">B. M.</lawyer> iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt.br. 1980/18 od <date date="2019-05-24">24.05.2019.</date> godine, nakon održanog glavnog i javnog pretresa dana <date date="2019-05-24">24.06.2019.</date> godine, u prisustvu zastupnika optužbe savjetnika na radu kod ODT-a u Podgorici <party id="p2" refersTo="#rg" as="#Plaintiff">Ranke Gospić</party>, okrivljenog i njegovog branioca, istog dana donio je i javno objavio
+          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt.br. 1980/18 od <date date="2019-05-24">24.05.2019.</date> godine, nakon održanog glavnog i javnog pretresa dana <date date="2019-05-24">24.06.2019.</date> godine, u prisustvu zastupnika optužbe savjetnika na radu kod ODT-a u Podgorici <party id="p2" refersTo="#rg" as="#Plaintiff">Ranke Gospić</party> , okrivljenog i njegovog branioca, istog dana donio je i javno objavio
         </p>
         <p style="text-align: center;">
           PRESUDU
@@ -74,7 +74,7 @@
           Okrivljeni:
         </p>
         <p>
-          <party id="p3" refersTo="#ap" as="#Defendant">A. P.</party>, JMBG xxxxxxxxxxxxx, od oca Z. i majke G., rodjene Đ., rodjen xx.xx.19xx. godine u Podgorici, sa prebivalištem u mjestu rođenja, državljanin Crne Gore, po zanimanju frizer, nezaposlen, pismen, završio srednju školu, neoženjen, bez djece, srednjeg imovnog stanja, osuđivan presudom Višeg suda u Podgorici K.br. 119/18 od 05.03.2019. godine, zbog krivičnog djela iz čl. 300 st. 1 u vezi čl. 23 st. 2 Krivičnog zakonika Crne Gore, na kaznu zatvora u trajanju od 7 mjeseci i novčanu kaznu u iznosu od 3.750,00 €.
+          <party id="p3" refersTo="#ap" as="#Defendant">A. P.</party> , JMBG xxxxxxxxxxxxx, od oca Z. i majke G., rodjene Đ., rodjen xx.xx.19xx. godine u Podgorici, sa prebivalištem u mjestu rođenja, državljanin Crne Gore, po zanimanju frizer, nezaposlen, pismen, završio srednju školu, neoženjen, bez djece, srednjeg imovnog stanja, osuđivan presudom Višeg suda u Podgorici K.br. 119/18 od 05.03.2019. godine, zbog krivičnog djela iz čl. 300 st. 1 u vezi čl. 23 st. 2 Krivičnog zakonika Crne Gore, na kaznu zatvora u trajanju od 7 mjeseci i novčanu kaznu u iznosu od 3.750,00 €.
         </p>
       </background>
 
