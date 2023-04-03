@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import styles from "./SimilarCasesComponent.module.css";
 
 const SimilarCasesComponent = ({ similarCases }) => {
@@ -12,7 +13,8 @@ const SimilarCasesComponent = ({ similarCases }) => {
           <div className={styles.cardsWrapper}>
             {similarCases.map((similarCase, index) => (
               <div className={styles.caseCard} key={index}>
-                <h3>{`${similarCase.sud} ${similarCase.poslovniBroj}`}</h3>
+                <h3>{similarCase.sud}</h3>
+                <h3>{similarCase.poslovniBroj}</h3>
                 <br />
                 <div className={styles.caseInfoWrapper}>
                   <p>
@@ -25,17 +27,17 @@ const SimilarCasesComponent = ({ similarCases }) => {
                       {similarCase.prekrseniPropisi.map((propis, id) => {
                         if (id === similarCase.prekrseniPropisi.length - 1)
                           return (
-                            <>
+                            <Fragment key={id}>
                               <br />
                               <span>{`${propis}`}</span>
-                            </>
+                            </Fragment>
                           );
                         else
                           return (
-                            <>
+                            <Fragment key={id}>
                               <br />
                               <span>{`${propis}, `}</span>
-                            </>
+                            </Fragment>
                           );
                       })}
                     </b>
@@ -46,17 +48,17 @@ const SimilarCasesComponent = ({ similarCases }) => {
                       {similarCase.primjenjeniPropisi.map((propis, id) => {
                         if (id === similarCase.primjenjeniPropisi.length - 1)
                           return (
-                            <>
+                            <Fragment key={id}>
                               <br />
                               <span>{`${propis}`}</span>
-                            </>
+                            </Fragment>
                           );
                         else
                           return (
-                            <>
+                            <Fragment key={id}>
                               <br />
                               <span>{`${propis}, `}</span>
-                            </>
+                            </Fragment>
                           );
                       })}
                     </b>
@@ -99,21 +101,26 @@ const SimilarCasesComponent = ({ similarCases }) => {
                     <b>{similarCase.tuzilac}</b>
                   </p>
                 </div>
-                <h4
-                  className={`${styles.vrstaPresude} ${
-                    similarCase.vrstaPresude === "Oslobađajuća"
-                      ? styles.oslobadjajuca
-                      : ""
-                  } ${
-                    similarCase.vrstaPresude === "Osuđujuća"
-                      ? styles.osudjujuca
-                      : ""
-                  } ${
-                    similarCase.vrstaPresude === "Uslovna" ? styles.uslovna : ""
-                  }`}
-                >
-                  {similarCase.vrstaPresude}
-                </h4>
+                <div className={styles.cardFooter}>
+                  <h4
+                    className={`${styles.vrstaPresude} ${
+                      similarCase.vrstaPresude === "oslobadjajuca"
+                        ? styles.oslobadjajuca
+                        : ""
+                    } ${
+                      similarCase.vrstaPresude === "osudjujuca"
+                        ? styles.osudjujuca
+                        : ""
+                    } ${
+                      similarCase.vrstaPresude === "uslovna"
+                        ? styles.uslovna
+                        : ""
+                    }`}
+                  >
+                    {similarCase.vrstaPresude}
+                  </h4>
+                  <h5>Slicnost: ~{Math.round(similarCase.slicnost * 100)}%</h5>
+                </div>
               </div>
             ))}
           </div>

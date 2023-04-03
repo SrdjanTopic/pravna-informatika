@@ -82,3 +82,24 @@ export function includesWords(string) {
   if (string.includes("i z r i č e")) return "i z r i č e"
   return null
 }
+
+export function getCaseObjectFromString(caseString) {
+  const caseSplit = caseString.split(";");
+  const caseObject = {
+    sud: caseSplit[1],
+    poslovniBroj: caseSplit[2],
+    sudija: caseSplit[3],
+    tuzilac: caseSplit[4],
+    okrivljeni: caseSplit[5],
+    krivicnoDjelo: caseSplit[6],
+    prekrseniPropisi: caseSplit[7].slice(0, -1).split(","),
+    tjelesnePovrede: caseSplit[8].split(",")[0],
+    osudjivan: caseSplit[9] ? "Da" : "Ne",
+    brOsudjivanja: caseSplit[10],
+    imovnoStanje: caseSplit[11],
+    vrstaPresude: caseSplit[12],
+    primjenjeniPropisi: caseSplit[13].slice(0, -1).split(","),
+    slicnost: parseFloat(caseSplit[14].slice(0, 4))
+  }
+  return caseObject;
+}

@@ -31,7 +31,6 @@ b {
 }
 
 .vrstaPresude {
-  margin-top: 0.5rem;
   color: hsl(0, 0%, 40%);
 }
 
@@ -49,4 +48,11 @@ b {
 
 .propis br + * {
   padding-left: 1rem;
+}
+
+.cardFooter {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
