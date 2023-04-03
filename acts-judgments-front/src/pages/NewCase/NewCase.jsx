@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NewCaseComponent from "../../components/NewCaseComponent/NewCaseComponent";
 import SimilarCasesComponent from "../../components/SimilarCasesComponent/SimilarCasesComponent";
+import axios from "axios";
 
 const NewCase = () => {
   const [showSimilarCases, setShowSimilarCases] = useState(true);
@@ -85,6 +86,10 @@ const NewCase = () => {
   function handleSubmit(e, form) {
     e.preventDefault();
     console.log(form);
+    axios
+      .post("http://localhost:8080/cbr/recommend-similar-cases", form)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
   }
   return (
     <>
