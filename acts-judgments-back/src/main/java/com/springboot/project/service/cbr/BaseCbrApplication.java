@@ -4,10 +4,8 @@ import es.ucm.fdi.gaia.jcolibri.cbraplications.StandardCBRApplication;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import es.ucm.fdi.gaia.jcolibri.casebase.LinealCaseBase;
-import es.ucm.fdi.gaia.jcolibri.cbraplications.StandardCBRApplication;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRCase;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRCaseBase;
@@ -21,7 +19,6 @@ import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.global.Average;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.selection.SelectCases;
-import org.w3c.dom.Attr;
 
 public class BaseCbrApplication implements StandardCBRApplication {
 
@@ -112,8 +109,25 @@ public class BaseCbrApplication implements StandardCBRApplication {
         Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
         eval = SelectCases.selectTopKRR(eval, 5);
         System.out.println("Retrieved cases:");
-        for (RetrievalResult nse : eval)
-            System.out.println(nse.get_case().getDescription() + " -> " + nse.getEval());
+        ArrayList<String> cases=new ArrayList<>();
+        for (RetrievalResult nse : eval) {
+            cases.add(nse.get_case().getDescription() + ";" + nse.getEval());
+            System.out.println(nse.get_case().getDescription() + ";" + nse.getEval());
+        }
+    }
+
+    public ArrayList<String> calculateSimilarity(CBRQuery query) throws ExecutionException {
+
+        System.out.println("Query:"+query);
+        Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
+        eval = SelectCases.selectTopKRR(eval, 5);
+        System.out.println("Retrieved cases:");
+        ArrayList<String> cases=new ArrayList<>();
+        for (RetrievalResult nse : eval) {
+            cases.add(nse.get_case().getDescription() + ";" + nse.getEval());
+            System.out.println(nse.get_case().getDescription() + ";" + nse.getEval());
+        }
+        return cases;
     }
 
     public void postCycle() throws ExecutionException {

@@ -1,6 +1,7 @@
 package com.springboot.project.controller;
 
 
+import com.hp.hpl.jena.graph.query.Expression;
 import com.springboot.project.dto.SimilarCaseDto;
 import com.springboot.project.service.cbr.BaseCbrApplication;
 import com.springboot.project.service.cbr.CaseDescription;
@@ -43,8 +44,8 @@ public class CbrController  {
 
     @PostMapping(value="/recommend-similar-cases",produces = {
             MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
-    public ResponseEntity<List<String>> recommendSimilarCases(@RequestBody SimilarCaseDto caseDto){
-        StandardCBRApplication recommender = new BaseCbrApplication();
+    public ArrayList<String> recommendSimilarCases(@RequestBody SimilarCaseDto caseDto){
+        BaseCbrApplication recommender = new BaseCbrApplication();
         try {
             recommender.configure();
             recommender.preCycle();
@@ -73,11 +74,11 @@ public class CbrController  {
             caseDescription.setBrojOsudjivanja(caseDto.getBrojOsudjivanja());
 
             query.setDescription( caseDescription );
-            recommender.cycle(query);
-            recommender.postCycle();
+            return recommender.calculateSimilarity(query);
+            //ecommender.postCycle();
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return new ResponseEntity<>(new ArrayList<>(),HttpStatus.OK);
     }
 }

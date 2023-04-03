@@ -133,22 +133,34 @@ public class CaseDescription implements CaseComponent {
 
     @Override
     public String toString() {
-        return "CaseDescription [id=" + id +
-                ", sud=" + sud +
-                ", poslovniBroj=" + poslovniBroj +
-                ", datum=" + datum +
-                ", sudija=" + sudija +
-                ", tuzilac=" + tuzilac +
-                ", okrivljeni=" + okrivljeni +
-                ", krivicnoDjelo=" + krivicnoDjelo +
-                ", prekrseniPropisi=" + prekrseniPropisi +
-                ", tjelesnePovrede=" + tjelesnePovrede +
-                ", osudjivan=" + osudjivan +
-                ", brojOsudjivanja=" + brojOsudjivanja +
-                ", imovnoStanje=" + imovnoStanje +
-                ", vrstaPresude=" + vrstaPresude +
-                ", primijenjeniPropisi=" + primijenjeniPropisi +
-                "]";
+        String povrede="";
+        for (String povreda:tjelesnePovrede) {
+            povrede+=povreda+",";
+        }
+        povrede=povrede.substring(0,povrede.length()-1);
+        String prekrseni="";
+        for (String propis:prekrseniPropisi) {
+            prekrseni+=propis+",";
+        }
+        prekrseni=prekrseni.substring(0,prekrseni.length()-1);
+        String primijenjeni="";
+        for (String propis1:primijenjeniPropisi) {
+            primijenjeni+=propis1+",";
+        }
+        return id +";"
+                + sud +";"
+                + poslovniBroj + ";"
+                + sudija +";"
+                + tuzilac +";"
+                + okrivljeni +";"
+                + krivicnoDjelo +";"
+                + prekrseni +";"
+                + povrede +";"
+                + osudjivan +";"
+                + brojOsudjivanja +";"
+                + imovnoStanje +";"
+                + vrstaPresude +";"
+                + primijenjeni;
     }
 
     @Override
