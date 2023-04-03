@@ -137,12 +137,10 @@ public class CaseDescription implements CaseComponent {
         for (String povreda:tjelesnePovrede) {
             povrede+=povreda+",";
         }
-        povrede=povrede.substring(0,povrede.length()-1);
         String prekrseni="";
         for (String propis:prekrseniPropisi) {
-            prekrseni+=propis+",";
+            prekrseni += propis + ",";
         }
-        prekrseni=prekrseni.substring(0,prekrseni.length()-1);
         String primijenjeni="";
         for (String propis1:primijenjeniPropisi) {
             primijenjeni+=propis1+",";
