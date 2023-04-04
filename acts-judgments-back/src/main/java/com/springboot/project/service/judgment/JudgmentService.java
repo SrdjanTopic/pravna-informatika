@@ -15,20 +15,20 @@ import java.util.regex.Pattern;
 
 @Service
 public class JudgmentService {
-    public void getJudgmentDescriptionWithRegex(String judgmentName) throws IOException {
+    public CaseDescriptionFromRegexDto getJudgmentDescriptionWithRegex(String judgmentName) throws IOException {
         File pdfFile = ResourceUtils.getFile("classpath:judgmentPdfs/" + judgmentName + ".pdf");
         PDDocument document = PDDocument.load(pdfFile);
         //Instantiate PDFTextStripper class
         PDFTextStripper pdfStripper = new PDFTextStripper();
         //Retrieving text from PDF document
         String pdfcontent = pdfStripper.getText(document);
-        if(pdfcontent.indexOf("Obrazloženje") != -1)
+        if(pdfcontent.contains("Obrazloženje"))
             pdfcontent = pdfcontent.substring(0, pdfcontent.indexOf("Obrazloženje"));
-        if(pdfcontent.indexOf("O b r a z l o ž e nj e") != -1)
+        if(pdfcontent.contains("O b r a z l o ž e nj e"))
             pdfcontent = pdfcontent.substring(0, pdfcontent.indexOf("O b r a z l o ž e nj e"));
-        if(pdfcontent.indexOf("O b r a z l o ž e n j e") != -1)
+        if(pdfcontent.contains("O b r a z l o ž e n j e"))
             pdfcontent = pdfcontent.substring(0, pdfcontent.indexOf("O b r a z l o ž e n j e"));
-        System.out.println(pdfcontent);
+//        System.out.println(pdfcontent);
         //Closing the document
         document.close();
 
@@ -213,7 +213,7 @@ public class JudgmentService {
         propisiString = pdfcontent.substring(idxfrom, idxto);
 
         System.out.println("Prekrseni propisi: ");
-        Pattern prekrseniPropisiPattern = Pattern.compile("((odredb[a-z]+)|(propisa iz))(([ \\n\\r]?([1-9a-zšđžćč.,]+)[ \\n\\r]?)+)", Pattern.DOTALL|Pattern.MULTILINE);
+        Pattern prekrseniPropisiPattern = Pattern.compile("((odredb[a-z]+)|(propisa iz))(([ \\n\\r]?([0-9a-zšđžćč.,]+)[ \\n\\r]?)+)", Pattern.DOTALL|Pattern.MULTILINE);
         matcher = prekrseniPropisiPattern.matcher(propisiString);
         if (matcher.find()) {
             String resultStr = matcher.group(4).replace("\n", " ").replace("\r", " ").replace("  ", " ").trim();
@@ -254,29 +254,30 @@ public class JudgmentService {
         else System.out.print("---\n");
 
         System.out.println("Primijenjeni propisi: ");
-        Pattern primijenjeniPropisiKZPattern = Pattern.compile("primjenom [a-zšđžćčA-ZŠĐČĆŽ ,\\n\\r]*((čl[a-z.]*)(([ \\n\\r]?([1-9a-zšđžćč.,]+)[ \\n\\r]?)+))K", Pattern.DOTALL|Pattern.MULTILINE);
+        Pattern primijenjeniPropisiKZPattern = Pattern.compile("(primjenom|na osnovu) [a-zšđžćčA-ZŠĐČĆŽ ,\\n\\r]*((čl[a-z.]*)(([ \\n\\r]?([0-9a-zšđžćč.,]+)[ \\n\\r]?)+))K", Pattern.DOTALL|Pattern.MULTILINE);
         matcher = primijenjeniPropisiKZPattern.matcher(propisiString);
         if (matcher.find()) {
-            String resultStr = matcher.group(1).replace("\n", " ").replace("\r", " ").replace("  ", " ").trim();
+            String resultStr = matcher.group(2).replace("\n", " ").replace("\r", " ").replace("  ", " ").trim();
             resultStr = resultStr.replaceAll("([0-9]+)\\.","$1 ");
             resultStr = resultStr.replaceAll("([a-zšđžćč]+)(\\.)(.)","$1$2 $3");
             resultStr = resultStr.replaceAll("([0-9]+)([a-zA-z])","$1 $2");
             resultStr = resultStr.replace("  ", " ");
-            System.out.println(matcher.group(1));
+            resultStr = resultStr.replaceAll(",([0-9]+)", ", $1");
+            resultStr = resultStr.replaceAll("([a-z,])( [0-9]+)", "$1 čl.$2");
 
             List<String> primijenjeniPropisi = new ArrayList<>();
             String[] propisiArr = resultStr.split(", ");
             if(propisiArr.length>1){
                 for(int i=0; i<propisiArr.length; i++){
                     if(i!=propisiArr.length-1)
-                        primijenjeniPropisi.add(propisiArr[i] + " KZ");
+                        primijenjeniPropisi.add((propisiArr[i] + " KZ").replace("  ", " "));
                     else{
                         if(propisiArr[i].split(" i ").length==1){
-                            primijenjeniPropisi.add(propisiArr[i].split(" i ")[0] + " KZ");
+                            primijenjeniPropisi.add((propisiArr[i].split(" i ")[0].trim() + " KZ").replace("  ", " "));
                         }
                         else{
-                            primijenjeniPropisi.add(propisiArr[i].split(" i ")[0] + " KZ");
-                            primijenjeniPropisi.add(propisiArr[i].split(" i ")[1] + " KZ");
+                            primijenjeniPropisi.add((propisiArr[i].split(" i ")[0].trim() + " KZ").replace("  ", " "));
+                            primijenjeniPropisi.add((propisiArr[i].split(" i ")[1].trim() + " KZ").replace("  ", " "));
 
                         }
                     }
@@ -284,62 +285,81 @@ public class JudgmentService {
             }
             else{
                 if(propisiArr[0].split(" i ").length==1){
-                    primijenjeniPropisi.add(propisiArr[0].split(" i ")[0] + " KZ");
+                    primijenjeniPropisi.add((propisiArr[0].split(" i ")[0].trim() + " KZ").replace("  ", " "));
                 }
                 else{
-                    primijenjeniPropisi.add(propisiArr[0].split(" i ")[0] + " KZ");
-                    primijenjeniPropisi.add(propisiArr[0].split(" i ")[1] + " KZ");
+                    primijenjeniPropisi.add((propisiArr[0].split(" i ")[0].trim() + " KZ").replace("  ", " "));
+                    primijenjeniPropisi.add((propisiArr[0].split(" i ")[1].trim() + " KZ").replace("  ", " "));
                 }
             }
 
-            caseDescription.setPrekrseniPropisi(primijenjeniPropisi);
-            primijenjeniPropisi.forEach(System.out::println);
+            caseDescription.setPrimijenjeniPropisi(primijenjeniPropisi);
         }
         else System.out.print("---\n");
 
         Pattern primijenjeniPropisiZKPPattern = Pattern.compile("(čl[a-z0-9 ,\\.\\n\\r]*)(Zakonika|ZKP)", Pattern.DOTALL|Pattern.MULTILINE);
         matcher = primijenjeniPropisiZKPPattern.matcher(propisiString);
         if (matcher.find()) {
-//            String resultStr = matcher.group(1).replace("\n", " ").replace("\r", " ").replace("  ", " ").trim();
-//            resultStr = resultStr.replaceAll("([0-9]+)\\.","$1 ");
-//            resultStr = resultStr.replaceAll("([a-zšđžćč]+)(\\.)(.)","$1$2 $3");
-//            resultStr = resultStr.replaceAll("([0-9]+)([a-zA-z])","$1 $2");
-//            resultStr = resultStr.replace("  ", " ");
-//            System.out.println(matcher.group(1));
+            String resultStr = matcher.group(1).replace("\n", " ").replace("\r", " ").replace("  ", " ").trim();
+            resultStr = resultStr.replaceAll("([0-9]+)\\.","$1 ");
+            resultStr = resultStr.replaceAll("([a-zšđžćč]+)(\\.)(.)","$1$2 $3");
+            resultStr = resultStr.replaceAll("([0-9]+)([a-zA-z])","$1 $2");
+            resultStr = resultStr.replace("  ", " ");
+            resultStr = resultStr.replaceAll(",([0-9]+)", ", $1");
+            resultStr = resultStr.replaceAll("([a-z,])( [0-9]+)", "$1 čl.$2");
 
-//            List<String> primijenjeniPropisi = new ArrayList<>();
-//            String[] propisiArr = resultStr.split(", ");
-//            if(propisiArr.length>1){
-//                for(int i=0; i<propisiArr.length; i++){
-//                    if(i!=propisiArr.length-1)
-//                        primijenjeniPropisi.add(propisiArr[i] + " ZKP");
-//                    else{
-//                        if(propisiArr[i].split(" i ").length==1){
-//                            primijenjeniPropisi.add(propisiArr[i].split(" i ")[0] + " ZKP");
-//                        }
-//                        else{
-//                            primijenjeniPropisi.add(propisiArr[i].split(" i ")[0] + " ZKP");
-//                            primijenjeniPropisi.add(propisiArr[i].split(" i ")[1] + " ZKP");
-//
-//                        }
-//                    }
-//                }
-//            }
-//            else{
-//                if(propisiArr[0].split(" i ").length==1){
-//                    primijenjeniPropisi.add(propisiArr[0].split(" i ")[0] + " ZKP");
-//                }
-//                else{
-//                    primijenjeniPropisi.add(propisiArr[0].split(" i ")[0] + " ZKP");
-//                    primijenjeniPropisi.add(propisiArr[0].split(" i ")[1] + " ZKP");
-//                }
-//            }
-//
-//            caseDescription.setPrekrseniPropisi(primijenjeniPropisi);
-//            primijenjeniPropisi.forEach(System.out::println);
+            List<String> primijenjeniPropisi = new ArrayList<>();
+            String[] propisiArr = resultStr.split(", ");
+            if(propisiArr.length>1){
+                for(int i=0; i<propisiArr.length; i++){
+                    if(i!=propisiArr.length-1)
+                        primijenjeniPropisi.add((propisiArr[i] + " ZKP").replace("  ", " "));
+                    else{
+                        if(propisiArr[i].split(" i ").length==1){
+                            primijenjeniPropisi.add((propisiArr[i].split(" i ")[0].trim() + " ZKP").replace("  ", " "));
+                        }
+                        else{
+                            primijenjeniPropisi.add((propisiArr[i].split(" i ")[0].trim() + " ZKP").replace("  ", " "));
+                            primijenjeniPropisi.add((propisiArr[i].split(" i ")[1].trim() + " ZKP").replace("  ", " "));
+
+                        }
+                    }
+                }
+            }
+            else{
+                if(propisiArr[0].split(" i ").length==1){
+                    primijenjeniPropisi.add((propisiArr[0].split(" i ")[0].trim() + " ZKP").replace("  ", " "));
+                }
+                else{
+                    primijenjeniPropisi.add((propisiArr[0].split(" i ")[0].trim() + " ZKP").replace("  ", " "));
+                    primijenjeniPropisi.add((propisiArr[0].split(" i ")[1].trim() + " ZKP").replace("  ", " "));
+                }
+            }
+            List<String> finalPropisi =new ArrayList<>(caseDescription.getPrimijenjeniPropisi());
+            finalPropisi.addAll(primijenjeniPropisi);
+            caseDescription.setPrekrseniPropisi(finalPropisi);
+
+            finalPropisi.forEach(System.out::println);
+        }
+        else System.out.print("---\n");
+
+        System.out.print("Tjelesne povrede: ");
+        Pattern vrstePovredePattern = Pattern.compile("(lak|lak|lak|tešk|tešk|tešk)[a-z][ \\n\\r,]tjelesn", Pattern.DOTALL|Pattern.MULTILINE);
+        matcher = vrstePovredePattern.matcher(propisiString);
+        if (matcher.find()) {
+            if(matcher.group(1).equals("lak")){
+                System.out.println("lake");
+                caseDescription.setTjelesnePovrede("lake");
+            }
+            else{
+                System.out.println("teske");
+                caseDescription.setTjelesnePovrede("teske");
+            }
         }
         else System.out.print("---\n");
 
         System.out.print("_____________\n");
+
+        return caseDescription;
     }
 }

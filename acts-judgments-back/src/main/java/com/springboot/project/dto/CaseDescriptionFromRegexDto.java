@@ -21,10 +21,10 @@ public class CaseDescriptionFromRegexDto {
     private String okrivljeni; //*
     private String krivicnoDjelo; //*
     private List<String> prekrseniPropisi; //*
-    private String tjelesnePovrede;
+    private String tjelesnePovrede; //*
     private String osudjivan; //*
     private Integer brojOsudjivanja; //*
     private String imovnoStanje; //*
     private String vrstaPresude; //*
-    private List<String> primijenjeniPropisi;
+    private List<String> primijenjeniPropisi; //*
 }
