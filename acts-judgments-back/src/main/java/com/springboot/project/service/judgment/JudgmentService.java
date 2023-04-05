@@ -76,7 +76,7 @@ public class JudgmentService {
         }
         else System.out.print("---\n");
 
-        Pattern sudijaPattern = Pattern.compile("(sudija|sudiji)(([a-z]* )*)(([A-ZŠĐČĆŽ][a-zšđžćč]+[ ,])+)", Pattern.DOTALL);
+        Pattern sudijaPattern = Pattern.compile("(sudija|sudiji|suda)(([a-z]* )*)(([A-ZŠĐČĆŽ][a-zšđžćč]+[ ,-]*)+)", Pattern.DOTALL);
         matcher = sudijaPattern.matcher(pdfcontent);
         System.out.print("Sudija: ");
         if (matcher.find()) {
@@ -85,7 +85,7 @@ public class JudgmentService {
         }
         else System.out.print("---\n");
 
-        Pattern tuzilacPattern = Pattern.compile("(Osnovn[a-z \\n\\r]*državno[a-z \\n\\r]*tužil[a-zš \\n\\r]*|ODT-a[ \\n\\r]|ODT-u[ \\n\\r]|ODT[ \\n\\r])([a-z]+[ \\n\\r])*(([A-ZŠĐČĆŽ][a-zšđžćč]{3,}[ \\n\\r])+)", Pattern.DOTALL);
+        Pattern tuzilacPattern = Pattern.compile("(Osnovn[a-z \\n\\r]*državno[a-z \\n\\r]*tuži[a-zš \\n\\r]*|ODT-a[ \\n\\r]|ODT-u[ \\n\\r]|ODT[ \\n\\r])([a-z]+[ \\n\\r])*(([A-ZŠĐČĆŽ][a-zšđžćč]{3,}[ \\n\\r])+)", Pattern.DOTALL);
         matcher = tuzilacPattern.matcher(pdfcontent);
         System.out.print("Tuzilac: ");
         if (matcher.find()) {
@@ -145,7 +145,10 @@ public class JudgmentService {
                 caseDescription.setImovnoStanje("srednje");
             }
         }
-        else System.out.print("---\n");
+        else {
+            System.out.print("lose" + "\n");
+            caseDescription.setImovnoStanje("lose");
+        }
 
         Pattern krivicnoDjeloPattern = Pattern.compile("(javnog[ \\n\\r]saobraćaja[ \\n\\r]iz)(([ \\n\\r]?([1-9a-zšđžćč.]+)[ \\n\\r]?)+)", Pattern.DOTALL);
         matcher = krivicnoDjeloPattern.matcher(pdfcontent);
@@ -254,7 +257,7 @@ public class JudgmentService {
         else System.out.print("---\n");
 
         System.out.println("Primijenjeni propisi: ");
-        Pattern primijenjeniPropisiKZPattern = Pattern.compile("(primjenom|na osnovu) [a-zšđžćčA-ZŠĐČĆŽ ,\\n\\r]*((čl[a-z.]*)(([ \\n\\r]?([0-9a-zšđžćč.,]+)[ \\n\\r]?)+))K", Pattern.DOTALL|Pattern.MULTILINE);
+        Pattern primijenjeniPropisiKZPattern = Pattern.compile("(primjenom|na osnovu) [a-zšđžćčA-ZŠĐČĆŽ ,\\n\\r]*((čl[a-z.]*)(([ \\n\\r]*([0-9a-zšđžćč.,]+)[ \\n\\r]*)+))K", Pattern.DOTALL|Pattern.MULTILINE);
         matcher = primijenjeniPropisiKZPattern.matcher(propisiString);
         if (matcher.find()) {
             String resultStr = matcher.group(2).replace("\n", " ").replace("\r", " ").replace("  ", " ").trim();
@@ -344,7 +347,7 @@ public class JudgmentService {
         else System.out.print("---\n");
 
         System.out.print("Tjelesne povrede: ");
-        Pattern vrstePovredePattern = Pattern.compile("(lak|lak|lak|tešk|tešk|tešk)[a-z][ \\n\\r,]tjelesn", Pattern.DOTALL|Pattern.MULTILINE);
+        Pattern vrstePovredePattern = Pattern.compile("(lak|tešk)[a-z][ \\n\\r,]*tjelesn", Pattern.DOTALL|Pattern.MULTILINE);
         matcher = vrstePovredePattern.matcher(propisiString);
         if (matcher.find()) {
             if(matcher.group(1).equals("lak")){

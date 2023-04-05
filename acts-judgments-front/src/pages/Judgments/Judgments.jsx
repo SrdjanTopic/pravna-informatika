@@ -12,8 +12,9 @@ const Judgments = () => {
     axios
       .get(`http://localhost:8080/judgments/${judgmentName}`)
       .then((res) => {
+        console.log(res.data.caseDescription);
         const jsonDataFromXml = new XMLParser().parseFromString(
-          getJudgmentString(res.data)
+          getJudgmentString(res.data.xmlContent)
         );
         setJudgment({
           meta: jsonDataFromXml.children[0].children[0],
