@@ -79,7 +79,7 @@ const SimilarCasesComponent = ({ similarCases }) => {
                   </p>
                   <p>
                     {`Osuđivan: `}
-                    <b>{similarCase.osudjivan ? "Da" : "Ne"}</b>
+                    <b>{similarCase.osudjivan === "true" ? "Da" : "Ne"}</b>
                   </p>
                   <p>
                     {`Br. Osuđivanja: `}

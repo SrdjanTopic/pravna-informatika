@@ -3,6 +3,7 @@ package com.springboot.project.service.cbr;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.springboot.project.dto.CaseDescriptionFromRegexDto;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CaseComponent;
 
@@ -10,7 +11,6 @@ public class CaseDescription implements CaseComponent {
     private int id;
     private String sud;
     private String poslovniBroj;
-    private String datum;
     private String sudija;
     private String tuzilac;
     private String okrivljeni;
@@ -22,6 +22,10 @@ public class CaseDescription implements CaseComponent {
     private String imovnoStanje;
     private String vrstaPresude;
     private List<String> primijenjeniPropisi = new ArrayList<String>();
+
+    public CaseDescription() {
+
+    }
 
     public int getId() {
         return id;
@@ -77,12 +81,6 @@ public class CaseDescription implements CaseComponent {
     }
     public void setPrekrseniPropisi(List<String> prekrseniPropisi) {
         this.prekrseniPropisi = prekrseniPropisi;
-    }
-    public String getDatum() {
-        return datum;
-    }
-    public void setDatum(String datum) {
-        this.datum = datum;
     }
     public List<String> getTjelesnePovrede() {
         return tjelesnePovrede;
@@ -164,5 +162,23 @@ public class CaseDescription implements CaseComponent {
     @Override
     public Attribute getIdAttribute() {
         return new Attribute("id", this.getClass());
+    }
+
+    public CaseDescription(int id, CaseDescriptionFromRegexDto description){
+        this.id = id;
+        this.sud = description.getSud();
+        this.poslovniBroj = description.getPoslovniBroj();
+        this.sudija = description.getSudija();
+        this.tuzilac = description.getTuzilac();
+        this.okrivljeni = description.getOkrivljeni();
+        this.krivicnoDjelo = description.getKrivicnoDjelo();
+        this.prekrseniPropisi = description.getPrekrseniPropisi();
+        this.tjelesnePovrede = new ArrayList<>();
+        this.tjelesnePovrede.add(description.getTjelesnePovrede());
+        this.osudjivan = description.getOsudjivan().equals("da");
+        this.brojOsudjivanja = description.getBrojOsudjivanja();
+        this.imovnoStanje = description.getImovnoStanje();
+        this.vrstaPresude = description.getVrstaPresude();
+        this.primijenjeniPropisi = description.getPrimijenjeniPropisi();
     }
 }
