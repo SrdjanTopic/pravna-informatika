@@ -1,8 +1,100 @@
 * {
   font-family: Source Sans Pro, sans-serif;
 }
+
+.judmgnentWrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.judgmentMain {
+  width: 76%;
+}
+
 .judgment {
   align-self: center;
   padding: 1em 3em 1em 3em;
   text-align: left;
+}
+
+.judgmentDescriptionWrapper {
+  /* font-size: 2.5rem; */
+  font-family: Roboto, -apple-system, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  width: 22%;
+  height: 100vh;
+  background-color: #fafafa;
+  z-index: 5;
+  position: fixed;
+  right: 0;
+  border-left: 1px solid #ececec;
+}
+.judgmentDescriptionHeading {
+  text-align: center;
+  background-color: #fafafa;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 116px;
+}
+.judgmentDescriptionHeading h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #245474;
+}
+
+.judmentDescription {
+  padding: 1rem;
+  height: calc(100vh - 116px);
+  overflow-y: scroll;
+}
+
+.textWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.textWrapper p {
+  /* width: max-content; */
+}
+
+.textWrapper b {
+  text-align: right;
+}
+
+.propisiDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.vrstaPropisa {
+  width: fit-content;
+}
+
+.propisiList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.underline {
+  /* border-bottom: 1px solid black; */
+}
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid black;
+  margin: 10px 0px;
+}
+
+.clanZakona {
+  width: 40%;
 }

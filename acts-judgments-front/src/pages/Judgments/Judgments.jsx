@@ -8,11 +8,11 @@ import { getJudgmentString } from "../../utils/functions";
 const Judgments = () => {
   let { judgmentName } = useParams();
   const [judgment, setJudgment] = useState();
+  const [judgmentDescription, setJudgmentDescription] = useState({});
   useEffect(() => {
     axios
       .get(`http://localhost:8080/judgments/${judgmentName}`)
       .then((res) => {
-        console.log(res.data.caseDescription);
         const jsonDataFromXml = new XMLParser().parseFromString(
           getJudgmentString(res.data.xmlContent)
         );
@@ -21,6 +21,7 @@ const Judgments = () => {
           header: jsonDataFromXml.children[0].children[1],
           judgmentBody: jsonDataFromXml.children[0].children[2],
         });
+        setJudgmentDescription(res.data.caseDescription);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -33,6 +34,15 @@ const Judgments = () => {
         .scrollIntoView({ behavior: "smooth" });
     }
   }, [judgment]);
-  return <>{judgment ? <JudgmentComponent judgment={judgment} /> : null}</>;
+  return (
+    <>
+      {judgment ? (
+        <JudgmentComponent
+          judgment={judgment}
+          judgmentDescription={judgmentDescription}
+        />
+      ) : null}
+    </>
+  );
 };
 export default Judgments;

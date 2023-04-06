@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { lazy, useEffect, useState } from "react";
 import Judgments from "./pages/Judgments/Judgments";
@@ -11,6 +11,7 @@ import axios from "axios";
 function App() {
   const [expandList, setExpandList] = useState("");
   const [judgmentNames, setJudgmentNames] = useState([]);
+  const location = useLocation();
   useEffect(() => {
     axios
       .get("http://localhost:8080/judgments")
@@ -52,10 +53,30 @@ function App() {
             expandList === "zakoni" ? "zakoniExpanded" : "zakoniCollapsed"
           }`}
         >
-          <a href="/akn/me/act/2012-06-28_33-2012" className="link">
+          <a
+            href="/akn/me/act/2012-06-28_33-2012"
+            className={`link ${
+              "2012-06-28_33-2012" ===
+              location.pathname.substring(
+                location.pathname.lastIndexOf("/") + 1
+              )
+                ? "opennedLink"
+                : ""
+            }`}
+          >
             Zakon o bezbjednost saobraćaja na putevima
           </a>
-          <a href="/akn/me/act/2003-12-25_70-2003" className="link">
+          <a
+            href="/akn/me/act/2003-12-25_70-2003"
+            className={`link ${
+              "2003-12-25_70-2003" ===
+              location.pathname.substring(
+                location.pathname.lastIndexOf("/") + 1
+              )
+                ? "opennedLink"
+                : ""
+            }`}
+          >
             Krivični Zakonik
           </a>
         </div>
@@ -90,7 +111,18 @@ function App() {
         >
           {judgmentNames.length > 0 &&
             judgmentNames.map((name, id) => (
-              <a href={`/akn/me/judgment/${name}`} className="link" key={id}>
+              <a
+                href={`/akn/me/judgment/${name}`}
+                className={`link ${
+                  name ===
+                  location.pathname.substring(
+                    location.pathname.lastIndexOf("/") + 1
+                  )
+                    ? "opennedLink"
+                    : ""
+                }`}
+                key={id}
+              >
                 {name}
               </a>
             ))}
@@ -109,9 +141,9 @@ function App() {
             <g>
               <path
                 d="M349.03,141.226v66.579c0,5.012-4.061,9.079-9.079,9.079H216.884v123.067c0,5.019-4.067,9.079-9.079,9.079h-66.579
-		c-5.009,0-9.079-4.061-9.079-9.079V216.884H9.079c-5.016,0-9.079-4.067-9.079-9.079v-66.579c0-5.013,4.063-9.079,9.079-9.079
-		h123.068V9.079c0-5.018,4.069-9.079,9.079-9.079h66.579c5.012,0,9.079,4.061,9.079,9.079v123.068h123.067
-		C344.97,132.147,349.03,136.213,349.03,141.226z"
+		              c-5.009,0-9.079-4.061-9.079-9.079V216.884H9.079c-5.016,0-9.079-4.067-9.079-9.079v-66.579c0-5.013,4.063-9.079,9.079-9.079
+		              h123.068V9.079c0-5.018,4.069-9.079,9.079-9.079h66.579c5.012,0,9.079,4.061,9.079,9.079v123.068h123.067
+		              C344.97,132.147,349.03,136.213,349.03,141.226z"
               />
             </g>
           </svg>

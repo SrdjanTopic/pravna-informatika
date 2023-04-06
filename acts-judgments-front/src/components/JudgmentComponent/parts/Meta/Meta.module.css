@@ -3,7 +3,8 @@
   background-color: #fafafa;
   width: 100%;
   padding: 1.5em 0 1.5em 0;
-  border-bottom: 1px solid #ececec;
+  /* border-bottom: 1px solid #ececec; */
+  height: 116px;
 }
 
 .courtName {
