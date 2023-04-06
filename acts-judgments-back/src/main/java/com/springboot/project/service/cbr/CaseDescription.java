@@ -136,13 +136,19 @@ public class CaseDescription implements CaseComponent {
             povrede+=povreda+",";
         }
         String prekrseni="";
-        for (String propis:prekrseniPropisi) {
-            prekrseni += propis + ",";
+        if(prekrseniPropisi!=null) {
+            for (String propis : prekrseniPropisi) {
+                prekrseni += propis + ",";
+            }
         }
+        else prekrseni=",";
         String primijenjeni="";
-        for (String propis1:primijenjeniPropisi) {
-            primijenjeni+=propis1+",";
+        if(primijenjeniPropisi!=null) {
+            for (String propis1 : primijenjeniPropisi) {
+                primijenjeni += propis1 + ",";
+            }
         }
+        else primijenjeni=",";
         return id +";"
                 + sud +";"
                 + poslovniBroj + ";"

@@ -27,9 +27,21 @@ const NewCase = () => {
       })
       .catch((err) => console.log(err));
   }
+
+  function handleDodajSlucaj(caseInfo) {
+    axios
+      .post("http://localhost:8080/judgments", caseInfo)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  }
   return (
     <>
-      <NewCaseComponent handleSubmit={handleSubmit} />
+      <NewCaseComponent
+        handleSubmit={handleSubmit}
+        handleDodajSlucaj={handleDodajSlucaj}
+      />
       {showSimilarCases && (
         <SimilarCasesComponent similarCases={similarCases} />
       )}

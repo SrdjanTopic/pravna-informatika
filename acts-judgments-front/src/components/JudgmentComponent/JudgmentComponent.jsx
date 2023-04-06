@@ -92,13 +92,15 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
               <p>{`Prekršeni propisi: `}</p>
             </div>
             <div className={styles.propisiList}>
-              {judgmentDescription.prekrseniPropisi.map((propis, id) => {
-                return (
-                  <Fragment key={id}>
-                    <b className={styles.underline}>{`${propis}`}</b>
-                  </Fragment>
-                );
-              })}
+              {judgmentDescription.prekrseniPropisi
+                ? judgmentDescription.prekrseniPropisi.map((propis, id) => {
+                    return (
+                      <Fragment key={id}>
+                        <b className={styles.underline}>{`${propis}`}</b>
+                      </Fragment>
+                    );
+                  })
+                : "---"}
             </div>
           </div>
 
@@ -107,13 +109,15 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
               <p>{`Primijenjeni propisi: `}</p>
             </div>
             <div className={styles.propisiList}>
-              {judgmentDescription.primijenjeniPropisi.map((propis, id) => {
-                return (
-                  <Fragment key={id}>
-                    <b className={styles.underline}>{`${propis}`}</b>
-                  </Fragment>
-                );
-              })}
+              {judgmentDescription.primijenjeniPropisi
+                ? judgmentDescription.primijenjeniPropisi.map((propis, id) => {
+                    return (
+                      <Fragment key={id}>
+                        <b className={styles.underline}>{`${propis}`}</b>
+                      </Fragment>
+                    );
+                  })
+                : "---"}
             </div>
           </div>
           <div className={styles.line}></div>

@@ -3,7 +3,7 @@ import { imovnaStanja, sudovi, vrstePovreda, zakoni } from "../../utils/data";
 import styles from "./NewCaseComponent.module.css";
 import Input from "./parts/Input/Input";
 import Select from "./parts/Select/Select";
-const NewCaseComponent = ({ handleSubmit }) => {
+const NewCaseComponent = ({ handleSubmit, handleDodajSlucaj }) => {
   const [isOsudjivan, setIsOsudjivan] = useState(false);
   const [selectedZakonPropis, setSelectedZakonPropis] = useState("");
   const [selectedZakonPrekrsaj, setSelectedZakonPrekrsaj] = useState("");
@@ -94,7 +94,7 @@ const NewCaseComponent = ({ handleSubmit }) => {
               osudjivan.current.innerText === "Da"
                 ? parseInt(brOsudjivanja.current.value)
                 : 0,
-            primenjeniPropisi: primenjeniPropisi,
+            primijenjeniPropisi: primenjeniPropisi,
             prekrseniPropisi: primenjeniPrekrsaji,
             krivicnoDjelo: `cl.${clanKrivDjelo.current.value} ${
               stavKrivDjelo.current.value !== "0"
@@ -276,7 +276,35 @@ const NewCaseComponent = ({ handleSubmit }) => {
             </div>
           </div>
         </div>
-        <button>Potvrdi</button>
+        <button>Nađi slične presude</button>
+        <button
+          type="button"
+          onClick={() => {
+            handleDodajSlucaj({
+              poslovniBroj: poslovniBroj.current.value,
+              sud: sud.current.innerText,
+              sudija: sudija.current.value,
+              okrivljeni: okrivljeni.current.value,
+              tuzilac: tuzilac.current.value,
+              tjelesnePovrede: vrstaPovrede.current.innerText,
+              osudjivan: osudjivan.current.innerText === "Da" ? true : false,
+              imovnoStanje: imovnoStanje.current.innerText,
+              brojOsudjivanja:
+                osudjivan.current.innerText === "Da"
+                  ? parseInt(brOsudjivanja.current.value)
+                  : 0,
+              primijenjeniPropisi: primenjeniPropisi,
+              prekrseniPropisi: primenjeniPrekrsaji,
+              krivicnoDjelo: `cl.${clanKrivDjelo.current.value} ${
+                stavKrivDjelo.current.value !== "0"
+                  ? "st.".concat(stavKrivDjelo.current.value)
+                  : ""
+              } ${zakonKrivDjelo.current.innerText}`,
+            });
+          }}
+        >
+          Dodaj slučaj
+        </button>
       </form>
     </>
   );
