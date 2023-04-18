@@ -1,0 +1,146 @@
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+
+      <identification source="#ospv">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgement/os-pv/2015-12-07/k-72-15/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pv/2015-12-07/k-72-15"/>
+          <FRBRalias value="/eli/me/xxx" name=""/>
+          <FRBRdate date="2015-12-07" name="Generation"/>
+          <FRBRauthor href="#ospv" as="#author"/>
+          <FRBRcountry value="me"/>
+          <FRBRnumber value="k-72-15"/>
+          <FRBRname value="publicLaw"/>
+          <FRBRprescriptive value="true"/>
+          <FRBRauthoritative value="true"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/me/judgement/os-pv/2015-12-07/k-72-15/cnr@/main"/>
+          <FRBRuri value="/akn/me/judgement/os-pv/2015-12-07/k-72-15/cnr@"/>
+          <FRBRdate date="2015-12-07" name="Generation"/>
+          <FRBRauthor href="#ospv" as="#editor"/>
+          <FRBRlanguage language="me"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/me/judgement/os-pv/2015-12-07/k-72-15/cnr@/main.xml"/>
+          <FRBRuri value="/akn/me/judgement/os-pv/2015-12-07/k-72-15/cnr@.akn"/>
+          <FRBRdate date="2015-12-07" name="Generation"/>
+          <FRBRauthor href="#ospv" as="#editor"/>
+          <FRBRformat value="xml"/>
+        </FRBRManifestation>
+      </identification>
+      <references source="#ospv">
+        <TLCOrganization eId="ospv" href="/akn/me/ontology/organisation/ospv" showAs="Osnovni sud u Pljevljima"/>
+        <TLCOrganization eId="odtpv" href="/akn/me/ontology/organisation/odtpv" showAs="Osnovno državno tužilaštvo Pljevlja"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+      </references>
+      <analysis source="#ospv">
+        <judicial>
+          <result type="approve"/>
+          <supports id="jdc01">
+            <source href="#casesReferences"/>
+            <destination href="/akn/me/judgement/os-pv/2015-12-07/k-72-15"/>
+          </supports>
+        </judicial>
+      </analysis>
+    </meta>
+
+    <header>
+      <judge refersTo="#pejovic">Branko Pejović</judge>
+      <party refersTo="#vz" as="#Defendant">V.Ž.</party>
+      <party refersTo="#odtpv" as="#Plaintiff">Osnovno državno tužilaštvo Pljevlja</party>
+      <lawyer refersTo="#jr" as="#DefendantLawyer">J. R.</lawyer>
+      <neutralCitation>[2015] OSPV K 72</neutralCitation>
+      <courtType>Basic Court</courtType>
+    </header>
+
+    <judgmentBody>
+      <introduction>
+        <p style="text-align: center;">
+          U IME CRNE GORE
+        </p>
+        <p>
+          Osnovni sud u Pljevljima, kao prvostepeni krivični sud po sudiji <judge id="jud01" refersTo="#popovic">Ljiljani Popović</judge> uz sudjelovanje zapisničara Leković Zore, u krivičnom predmetu protiv optuženog <party id="p1" refersTo="#gm" as="#Defendant">G.M.</party> iz P. zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref> po optužnom predlogu ODT Pljevlja Kt.br.282/15 od <date date="2015-11-13">13.11.2015.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zamjenika ODT Pljevlja <party id="p2" refersTo="#gb" as="#Plaintiff">Gačević Božidarke</party> i optuženog <party id="p3" refersTo="#gm" as="#Defendant">G.M.</party> , dana <date date="2015-12-07">07.12.2015.</date> godine donio je i javno objavio
+        
+          Osnovni sud u Pljevljima kao prvostepeni krivični sud po sudiji <judge id="jud01" refersTo="#pejovic">Branku Pejoviću</judge> iz sudjelovanje zapisničara Đondović Milenke, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#vz" as="#Defendant">V. Ž.</party> iz P.,koga brani advokat <lawyer id="lyr1" refersTo="#jr" as="#DefendantLawyer">J. R.</lawyer> iz istog mjesta, zbog krivičnog djela teška djela protiv bezbjednosti javnog saobraćaja <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu <party id="p2" refersTo="#odtpv" as="#Plaintiff">ODT Pljevlja</party> Kt.br. 57/15 od <date date="2015-09-29">29.09.2015.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu rukovodioca ODT Pljevlja Tomčić Milivoja, okrivljenog, njegovog branioca kao i zastupnika oštećene porodice D. R., dana 07.12.2015.godine donio je i javno objavio
+        </p>
+        <p style="text-align: center;">
+          P R E S U D U
+        </p>
+      </introduction>
+
+      <background>
+        <p>
+          Optuženi: <party id="p4" refersTo="#vz" as="#Defendant">V. Ž.</party> JMBG ...., od oca D. i majke M. rođ. B., rodjen .... godine u P. gdje i živi, selo K., opština P., državljanin CG, govori srpskim jezikom, razumije crnogorski jezik, pismen, završio školu za KV radnike, zaposlen u AD R. u. P., kao vozač, oženjen, otac dvoje djece, srednjeg imovnog stanja, ranije ne osudjivan.
+        </p>
+      </background>
+
+      <decision>
+        <p style="text-align: center;">
+          K R I V J E
+        </p>
+        <p>
+          Što je:
+        </p>
+        <p>
+          Dana <date date="2015-03-10">10.03.2015.</date>godine oko 11,00 časova u ul. Narodne revolucije u Pljevljima upravljajući radnom mašinom - viljuškarom marke "L.", vlasništvo R. u. AD P., krećući se iz kruga R. u. od novog magacina prema starom magacinu koji se nalazi preko ulice Narodne revolucije, usled nepridržavanja saobraćajnih propisa ugrozio javni saobraćaj i doveo u opasnost život i tijelo ljudi na način što suprotno odredbi <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml#clan27">čl.27</ref>
+          <ref href="/akn/me/act/2012-06-28/33-2012/cnr@/main.xml">ZOBS-a na putevima</ref>, se ne bezbjedno uključivao u saobraćaj na ulicu u uslovima nedovoljne preglednosti, a bio je dužan da bezbjedno uključenje izvede uz pomoć lica koje se nalazi na pogodnom mjestu van vozila i koje mu daje odgovarajuće znakove, pa je pri takvoj vožnji prilikom uključivanja viljuškara na ul. Narodne revolucije, sa viljuškama mašine ostvario fizički kontakt sa PMV marke "F. p. 1,2" reg.br. PV ...., kojim je iz pravca površinskog kopa prema kružnom putu upravljao D. R. i ako je bio svjestan da takvom svojom radnjom može učiniti djelo ali je olako držao da do toga neće doći ili da će to moći spriječiti, pri čemu je vozač D. R. zadobio teške tjelesne povrede - povredu trbuha u vidu nagnječene kože, oguljotine kože i krvnog podliva kože i mekog potkožnog tkiva u području lijevog donjeg kvadranta trbuha, te povredu u vidu rascjepa opornjaka silaznog dijela debelog crijeva,
+        </p>
+        <p>
+          -čime bi učinio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>.
+        </p>
+        <p>
+            pa mu sud na osnovu već citiranog zakonskog propisa, a primjenom čl. 4,5,13,16,32,33,36,42,53 i 54 Krivičnog zakonika Crne Gore te čl. 226 i 229 ZKP CG
+        </p>
+        <p>
+          i z r i č e
+        </p>
+        <p style="text-align: center;">
+            USLOVNU OSUDU
+        </p>
+        <p>
+          S tim da mu utvrdjuje kaznu zatvora u trajanju od 6 (šest) mjeseci i istovremeno odredjuje da se ista neće izvršiti ukoliko okrivljeni u roku od 2 (dvije) godine po pravnosnažnosti presude ne izvrši novo krivično djelo.
+        </p>
+        <p>
+          Okrivljeni se obavezuje da na ime troškova vodjenja krivičnog postupka plati Budžetu RCG iznos od 1.410,50 €, a na ime paušala iznos od 55,00 €.
+        </p>
+        <p>
+          Troškove krivičnog postupka i paušal okrivljeni će platiti Budžetu RCG u roku od 15 dana po pravnosnažnosti presude pod prijetnjom prinudnog izvršenja.
+        </p>
+      </decision>
+
+      <motivation>
+        <p style="text-align: center;">
+            Obrazloženje
+        </p>
+        <p>
+          <omissis>
+              ... Some of the content was deleted to not have a too long text ...
+          </omissis>
+        </p>
+        <p>
+          Kod ovakvog činjeničnog stanja na osnovu svih izvedenih dokaza sud je utvrdio da je okrivljeni V. Ž. iz P. izvršio krivično djelo koje muje optužnim predlogom stavljeno na teret, a na način, mjesto i vrijeme kako je to bliže opisano u izreci presude, pa ga je sud kao nehatnog izvršioca oglasio krivim i osudio po zakonu. Dakle, izvedenim dokazima sud se pouzdano uvjerio a posebno na osnovu nalaza i mišljenja grupe vještaka Fakulteta za saobraćaj, komunikacije i logistiku iz Berana da je okrivljeni prilikom upravljanja radnom mašinom - viljuškarom suprotno odredbi čl. 27 ZOBS-a na putevima se nebezbjedno uključivao u saobraćaj na ulicu u uslovima nedovoljne preglednosti iako je bio dužan da bezbjedno uključenje izvede uz pomoć lica koje se nalazi na pogodnom mjestu van vozila i koje mu daje odgovarajuće znakove, što on to nije uradio, pa je pri takvoj vožnji prilikom uključianja viljuškara na ulicu Narodne revolucije sa viljuškama viljuškara ostvario fizički kontakt sa PMV marke "Fijat punto 1,2" reg.br. PV AJ 516 kojim je propisno iz pravca površinskog kopa prema krupnom putu upravljao sada poč. D. R. Pri tome okrivljeni je bio svjestan da takvom svojom radnjom može učiniti djelo, ali je olako držao da do toga neće doći, ili da će to moći spriječiti, pri čemu je došlo do saobraćajne nezgode kojom prilikom je vozač D. R. zadobio teške tjelesne povrede od kojih je nakon izvjesnog vremena preminuo. Dakle, u radnjama okrivljenog stekli su se svi bitni elementi bića krivičnog djela koje mu se stavlja na teret pa ga je sud kao nehatnog izvršioca oglasio krivim i osudio po zakonu.
+        </p>
+        <p>
+          Prilikom odredjivanja vrste kazne i prilikom odmjeravanja njene visine sud je u okviru opšte svrhe krivičnih sankcija cijenio i svrhu uslovne osude, pa je sud mišljenja da radi krivično pravne zaštite protiv okrivljenog nije bilo neophodno izricati drugu vrstu krivične sankcije osim uslovne osude jer je sud ubijedjen da će se prema okrivljenom i sa uslovnom osudom postući svrha kažnjavanja predvidjena u čl. 32 Krivičnog zakonika Crna Gore, te da će se istom krivičnom sankcijom ostvariti kako specijalna tako i generalna prevencija. Pri tome sud je kao olakšavajuće okolnosti okrivljenom uzeo u obzir činjenicu da se radi o porodičnom čovjeku, koji nije ranije dolazio u sukob sa zakonom, da je izrazio žaljenje što se ovo desilo, jer je bio dobar prijatelj sa oštećenim, sada poč. D. R., pa je na kraju sud mišljenja da je izrečena krivična sankcija okrivljenom adekvatna i primjerena stepenu društvene opasnosti, težini učinjenog djela kao i nastalim posledicama, te da ista po mišljenju suda upravo predstavlja onu mjeru koja je neophodna da bi se postigla svrha kažnjavanja.
+        </p>
+        <p>
+          U smislu čl. 226 i 229 ZKP CG sud je obavezao okrivljenog da na ime troškova vodjenja krivičnog postupka plati Budžetu RCG iznos od 1.410,50 €, a isti iznos predstavlja naknadu i nagradu vještacima saobraćajne struke za uzvršeno vještačenje, kao i vještaku specijalisti sudske medicine kako za izradu pismenog nalaza i mišljenja tako i nagrade za pristup na glavni pretres, a iznos paušala od 55,00 € sud je odredio imajući u vidu dužinu trajanja i složenost krivičnog postupka kao i imovno stanje okrivljenog.
+        </p>
+        <p>
+          Sa iznijetih razloga odlučeno je kao u izreci presude.
+        </p>
+      </motivation>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>
