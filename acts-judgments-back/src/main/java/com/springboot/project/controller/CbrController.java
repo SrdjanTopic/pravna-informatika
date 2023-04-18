@@ -34,19 +34,25 @@ public class CbrController  {
             CBRQuery query = new CBRQuery();
             CaseDescription caseDescription = new CaseDescription();
 
-            caseDescription.setKrivicnoDjelo(caseDto.getKrivicnoDjelo());
+            caseDescription.setUgrozenSaobracaj(caseDto.getUgrozenSaobracaj());
 
-            List<String> prekrseniPropisi = new ArrayList();
-            for (String propis : caseDto.getPrekrseniPropisi()) {
-                prekrseniPropisi.add(propis);
+            List<String> radnjeBezPrethodnogUvjerenja = new ArrayList();
+            for (String radnja : caseDto.getRadnjeBezPrethodnogUvjerenja()) {
+                radnjeBezPrethodnogUvjerenja.add(radnja);
             }
-            caseDescription.setPrekrseniPropisi(prekrseniPropisi);
+            caseDescription.setRadnjeBezPrethodnogUvjerenja(radnjeBezPrethodnogUvjerenja);
 
-            List<String> tjelesnePovrede = new ArrayList();
-            for (String povreda : caseDto.getTjelesnePovrede()) {
-                tjelesnePovrede.add(povreda);
+            List<String> radnjeBezPrilagodjavanjaBrzine = new ArrayList();
+            for (String radnja : caseDto.getRadnjeBezPrilagodjavanjaBrzine()) {
+                radnjeBezPrilagodjavanjaBrzine.add(radnja);
             }
-            caseDescription.setTjelesnePovrede(tjelesnePovrede);
+            caseDescription.setRadnjeBezPrilagodjavanjaBrzine(radnjeBezPrilagodjavanjaBrzine);
+
+            caseDescription.setNedozvoljenoPolukruznoOkretanje(caseDto.getNedozvoljenoPolukruznoOkretanje());
+
+            caseDescription.setPrekrsenaPravilaNaRaskrsnici(caseDto.getPrekrsenaPravilaNaRaskrsnici());
+
+            caseDescription.setPrekrsenoPrvenstvoProlaza(caseDto.getPrekrsenoPrvenstvoProlaza());
 
             caseDescription.setImovnoStanje(caseDto.getImovnoStanje());
 

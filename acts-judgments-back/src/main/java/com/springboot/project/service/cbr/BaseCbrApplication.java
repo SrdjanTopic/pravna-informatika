@@ -4,6 +4,7 @@ import es.ucm.fdi.gaia.jcolibri.cbraplications.StandardCBRApplication;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import es.ucm.fdi.gaia.jcolibri.casebase.LinealCaseBase;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
@@ -35,43 +36,50 @@ public class BaseCbrApplication implements StandardCBRApplication {
         simConfig.setDescriptionSimFunction(new Average());  // global similarity function = average
 
         //definisanje krivicnih djela
+        TabularSimilarity slicnostKrivicnogDjela = new TabularSimilarity(Arrays.asList(
+                "svjesno lake", //clan 339 st1
+                "nehat lake", //clan 339 st3 u vezi st1
+                "nehat teske", //clan 348 st3 u vezi 339 st3 u vezi st1
+                "svjesno teske")); //clan 348 sy1 u vezi cl 339 st1
+        slicnostKrivicnogDjela.setSimilarity("svjesno lake", "nehat lake", 0.7);
+        slicnostKrivicnogDjela.setSimilarity("svjesno lake", "svjesno teske", 0.5);
+        slicnostKrivicnogDjela.setSimilarity("svjesno lake", "nehat teske", 0.2);
+        slicnostKrivicnogDjela.setSimilarity("svjesno teske", "nehat teske", 0.7);
+        slicnostKrivicnogDjela.setSimilarity("svjesno teske", "nehat lake", 0.2);
+        slicnostKrivicnogDjela.setSimilarity("nehat lake", "nehat teske", 0.5);
         Attribute krivicnoDjelo=new Attribute("krivicnoDjelo", CaseDescription.class);
-        simConfig.addMapping(krivicnoDjelo, new Equal());
+        simConfig.addMapping(krivicnoDjelo, slicnostKrivicnogDjela);
 
-        //prekrseni propisi
-        TabularSimilarity slicnostPrekrsenihPropisa = new TabularSimilarity(Arrays.asList(
-                "cl.26 st.2 ZOBSNP",
-                "cl.27 st.1 ZOBSNP",
-                "cl.28 st.1 ZOBSNP",
-                "cl.29 st.1 ZOBSNP",
-                "cl.30 st.4 ZOBSNP",
-                "cl.31 st.1 ZOBSNP",
-                "cl.35 st.1 ZOBSNP",
-                "cl.40 st.2 ZOBSNP",
-                "cl.41 ZOBSNP",
-                "cl.45 st.4 ZOBSNP",
-                "cl.97 st.3 ZOBSNP",
-                "cl.44 ZOBSNP",
-                "cl.76 ZOBSNP"
-                ));
-        slicnostPrekrsenihPropisa.setSimilarity("cl.26 st.2 ZOBSNP", "cl.27 st.1 ZOBSNP", 0.8);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.26 st.2 ZOBSNP", "cl.44  ZOBSNP", 0.6);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.35 st.1 ZOBSNP", "cl.97 st.3 ZOBSNP", 0.5);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.45 st.4 ZOBSNP", "cl.44 ZOBSNP", 0.5);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.30 st.4 ZOBSNP", "cl.29 st.1 ZOBSNP", 0.7);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.30 st.4 ZOBSNP", "cl.31 st.1 ZOBSNP", 0.5);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.31 st.1 ZOBSNP", "cl.76 ZOBSNP", 0.5);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.35 st.1 ZOBSNP", "cl.76 ZOBSNP", 0.5);
-        slicnostPrekrsenihPropisa.setSimilarity("cl.97 st.3 ZOBSNP", "cl.41 ZOBSNP", 0.7);
+        //prekrseni propisi -clan 26 i 27
+        TabularSimilarity slicnostRadnjiBezPrethodnogUvjerenja = new TabularSimilarity(Arrays.asList(
+                "u saobracaju", //clan 26
+                "pri ukljucenju u saobracaj") //clan 27
+        );
+        slicnostRadnjiBezPrethodnogUvjerenja.setSimilarity("u saobracaju", "pri ukljucenju u saobracaj", 0.5);
+        Attribute radnjeBezPrethodnogUvjerenja=new Attribute("radnjeBezPrethodnogUvjerenja", CaseDescription.class);
+        simConfig.addMapping(radnjeBezPrethodnogUvjerenja, slicnostRadnjiBezPrethodnogUvjerenja);
 
-        Attribute prekrseniPropisi=new Attribute("prekrseniPropisi", CaseDescription.class);
-        simConfig.addMapping(prekrseniPropisi, slicnostPrekrsenihPropisa);
+        //prekrseni propisi -clan 35,97
+        TabularSimilarity slicnostRadnjiBezPrilagodjenjaBrzine = new TabularSimilarity(Arrays.asList(
+                "pred pjesacki", //clan 97
+                "prema stanju puta"//clan 35
+        ));
+        slicnostRadnjiBezPrilagodjenjaBrzine.setSimilarity("pred pjesacki", "prema stanju puta", 0.5);
+        Attribute radnjeBezPrilagodjenjaBrzine=new Attribute("radnjeBezPrilagodjenjaBrzine", CaseDescription.class);
+        simConfig.addMapping(radnjeBezPrilagodjenjaBrzine, slicnostRadnjiBezPrilagodjenjaBrzine);
 
-        //tjelesne povrede
-        TabularSimilarity slicnostPovreda = new TabularSimilarity(Arrays.asList(new String[] {"lake", "teske"}));
-        slicnostPovreda.setSimilarity("lake", "teske", 0.5);
-        Attribute tjelesnePovrede=new Attribute("tjelesnePovrede", CaseDescription.class);
-        simConfig.addMapping(tjelesnePovrede, slicnostPovreda);
+
+        //prekrseni propisi -clan 44
+        Attribute nedozvoljenoPolukruznoOkretanje=new Attribute("nedozvoljenoPolukruznoOkretanje", CaseDescription.class);
+        simConfig.addMapping(nedozvoljenoPolukruznoOkretanje, new Equal());
+
+        //prekrseni propisi- clan 41
+        Attribute prekrsenaPravilaNaRaskrsnici=new Attribute("prekrsenaPravilaNaRaskrsnici", CaseDescription.class);
+        simConfig.addMapping(prekrsenaPravilaNaRaskrsnici, new Equal());
+
+        //prekrseni propisi- clan 40
+        Attribute prekrsenoPrvenstvoProlaza=new Attribute("prekrsenoPrvenstvoProlaza", CaseDescription.class);
+        simConfig.addMapping(prekrsenoPrvenstvoProlaza, new Equal());
 
         //imovno stanje
         TabularSimilarity slicnostImovnogStanja = new TabularSimilarity(Arrays.asList(new String[] {"dobro", "srednje", "lose"}));
@@ -87,10 +95,6 @@ public class BaseCbrApplication implements StandardCBRApplication {
         Attribute brojOsudjivanja=new Attribute("brojOsudjivanja", CaseDescription.class);
         simConfig.addMapping(brojOsudjivanja, new Interval(4));
 
-        //podesavanje tezina za svaki od atributa po kojima se gleda slicnost
-        simConfig.setWeight(krivicnoDjelo, 3.0) ;
-        simConfig.setWeight(prekrseniPropisi, 5.0) ;
-        simConfig.setWeight(tjelesnePovrede, 2.0) ;
 
         // Equal - returns 1 if both individuals are equal, otherwise returns 0
         // Interval - returns the similarity of two number inside an interval: sim(x,y) = 1-(|x-y|/interval)
@@ -143,3 +147,4 @@ public class BaseCbrApplication implements StandardCBRApplication {
     }
 
 }
+

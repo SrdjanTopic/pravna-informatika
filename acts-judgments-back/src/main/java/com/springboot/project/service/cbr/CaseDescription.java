@@ -1,139 +1,60 @@
 package com.springboot.project.service.cbr;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.springboot.project.dto.CaseDescriptionFromRegexDto;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CaseComponent;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class CaseDescription implements CaseComponent {
     private int id;
     private String sud;
     private String poslovniBroj;
+    private Date datum;
     private String sudija;
     private String tuzilac;
     private String okrivljeni;
     private String krivicnoDjelo;
     private List<String> prekrseniPropisi = new ArrayList<String>();
-    private List<String> tjelesnePovrede = new ArrayList<String>();
+    private List<String> primijenjeniPropisi = new ArrayList<String>();
+    private String vrstaPresude;
+
+    //atributi za slicnost
+    private String ugrozenSaobracaj;
+    private List<String> radnjeBezPrethodnogUvjerenja = new ArrayList<String>();
+    private List<String> radnjeBezPrilagodjavanjaBrzine= new ArrayList<String>();
+    private Boolean nedozvoljenoPolukruznoOkretanje;
+    private Boolean prekrsenaPravilaNaRaskrsnici;
+    private Boolean prekrsenoPrvenstvoProlaza;
     private Boolean osudjivan;
     private Integer brojOsudjivanja;
     private String imovnoStanje;
-    private String vrstaPresude;
-    private List<String> primijenjeniPropisi = new ArrayList<String>();
 
     public CaseDescription() {
 
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getSud() {
-        return sud;
-    }
-    public void setSud(String sud) {
-        this.sud = sud;
-    }
-
-    public String getPoslovniBroj() {
-        return poslovniBroj;
-    }
-    public void setPoslovniBroj(String poslovniBroj) {
-        this.poslovniBroj = poslovniBroj;
-    }
-
-    public String getSudija() {
-        return sudija;
-    }
-    public void setSudija(String sudija) {
-        this.sudija = sudija;
-    }
-
-    public String getTuzilac() {
-        return tuzilac;
-    }
-    public void setTuzilac(String tuzilac) {
-        this.tuzilac = tuzilac;
-    }
-
-    public String getOkrivljeni() {
-        return okrivljeni;
-    }
-    public void setOkrivljeni(String okrivljeni) {
-        this.okrivljeni = okrivljeni;
-    }
-
-    public String getKrivicnoDjelo() {
-        return krivicnoDjelo;
-    }
-    public void setKrivicnoDjelo(String krivicnoDjelo) {
-        this.krivicnoDjelo = krivicnoDjelo;
-    }
-
-    public List<String> getPrekrseniPropisi() {
-        return prekrseniPropisi;
-    }
-    public void setPrekrseniPropisi(List<String> prekrseniPropisi) {
-        this.prekrseniPropisi = prekrseniPropisi;
-    }
-    public List<String> getTjelesnePovrede() {
-        return tjelesnePovrede;
-    }
-
-    public void setTjelesnePovrede(List<String> tjelesnePovrede) {
-        this.tjelesnePovrede = tjelesnePovrede;
-    }
-
-    public Boolean getOsudjivan() {
-        return osudjivan;
-    }
-
-    public void setOsudjivan(Boolean osudjivan) {
-        this.osudjivan = osudjivan;
-    }
-
-    public Integer getBrojOsudjivanja() {
-        return brojOsudjivanja;
-    }
-
-    public void setBrojOsudjivanja(Integer brojOsudjivanja) {
-        this.brojOsudjivanja = brojOsudjivanja;
-    }
-
-    public String getImovnoStanje() {
-        return imovnoStanje;
-    }
-
-    public void setImovnoStanje(String imovnoStanje) {
-        this.imovnoStanje = imovnoStanje;
-    }
-
-    public String getVrstaPresude() {
-        return vrstaPresude;
-    }
-    public void setVrstaPresude(String vrstaPresude) {
-        this.vrstaPresude = vrstaPresude;
-    }
-
-    public List<String> getPrimijenjeniPropisi() {
-        return primijenjeniPropisi;
-    }
-    public void setPrimijenjeniPropisi(List<String> primijenjeniPropisi) {
-        this.primijenjeniPropisi = primijenjeniPropisi;
-    }
-
 
     @Override
     public String toString() {
-        String povrede="";
-        for (String povreda:tjelesnePovrede) {
-            povrede+=povreda+",";
+        String prethodnaUvjerenja="";
+        if(radnjeBezPrethodnogUvjerenja!=null) {
+            for (String radnja:radnjeBezPrethodnogUvjerenja) {
+                prethodnaUvjerenja+=radnja+",";
+            }
+        }
+        String prilagodjenjaBrzine="";
+        if(radnjeBezPrilagodjavanjaBrzine!=null) {
+            for (String radnja:radnjeBezPrilagodjavanjaBrzine) {
+                prilagodjenjaBrzine+=radnja+",";
+            }
         }
         String prekrseni="";
         if(prekrseniPropisi!=null) {
@@ -141,28 +62,33 @@ public class CaseDescription implements CaseComponent {
                 prekrseni += propis + ",";
             }
         }
-        else prekrseni=",";
         String primijenjeni="";
         if(primijenjeniPropisi!=null) {
             for (String propis1 : primijenjeniPropisi) {
                 primijenjeni += propis1 + ",";
             }
         }
-        else primijenjeni=",";
         return id +";"
                 + sud +";"
                 + poslovniBroj + ";"
+                + datum.toString() + ";"
                 + sudija +";"
                 + tuzilac +";"
                 + okrivljeni +";"
                 + krivicnoDjelo +";"
                 + prekrseni +";"
-                + povrede +";"
+                + primijenjeni+";"
+                + vrstaPresude +";"
+                + ugrozenSaobracaj +";"
+                + radnjeBezPrethodnogUvjerenja +";"
+                + radnjeBezPrilagodjavanjaBrzine +";"
+                + nedozvoljenoPolukruznoOkretanje +";"
+                + prekrsenaPravilaNaRaskrsnici +";"
+                + prekrsenoPrvenstvoProlaza +";"
                 + osudjivan +";"
                 + brojOsudjivanja +";"
-                + imovnoStanje +";"
-                + vrstaPresude +";"
-                + primijenjeni;
+                + imovnoStanje +";";
+
     }
 
     @Override
@@ -174,17 +100,24 @@ public class CaseDescription implements CaseComponent {
         this.id = id;
         this.sud = description.getSud();
         this.poslovniBroj = description.getPoslovniBroj();
+        this.datum=description.getDatum();
         this.sudija = description.getSudija();
         this.tuzilac = description.getTuzilac();
         this.okrivljeni = description.getOkrivljeni();
         this.krivicnoDjelo = description.getKrivicnoDjelo();
         this.prekrseniPropisi = description.getPrekrseniPropisi();
-        this.tjelesnePovrede = new ArrayList<>();
-        this.tjelesnePovrede.add(description.getTjelesnePovrede());
+        this.primijenjeniPropisi = description.getPrimijenjeniPropisi();
+        this.vrstaPresude = description.getVrstaPresude();
+        this.ugrozenSaobracaj=description.getUgrozenSaobracaj();
+        this.radnjeBezPrethodnogUvjerenja=description.getRadnjeBezPrethodnogUvjerenja();
+        this.radnjeBezPrilagodjavanjaBrzine=description.getRadnjeBezPrilagodjavanjaBrzine();
+        this.nedozvoljenoPolukruznoOkretanje=description.getNedozvoljenoPolukruznoOkretanje();
+        this.prekrsenaPravilaNaRaskrsnici=description.getPrekrsenaPravilaNaRaskrsnici();
+        this.prekrsenoPrvenstvoProlaza=description.getPrekrsenoPrvenstvoProlaza();
         this.osudjivan = description.getOsudjivan().equals("da");
         this.brojOsudjivanja = description.getBrojOsudjivanja();
         this.imovnoStanje = description.getImovnoStanje();
-        this.vrstaPresude = description.getVrstaPresude();
-        this.primijenjeniPropisi = description.getPrimijenjeniPropisi();
+
+
     }
 }

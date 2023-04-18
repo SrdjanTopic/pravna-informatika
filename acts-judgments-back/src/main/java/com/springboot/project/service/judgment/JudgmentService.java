@@ -131,10 +131,10 @@ public class JudgmentService {
         System.out.print("Osudjivan: ");
         if (matcher.find()) {
             System.out.print("ne" + "\n");
-            caseDescription.setOsudjivan("ne");
+            caseDescription.setOsudjivan(false);
         } else {
             System.out.print("da" + "\n");
-            caseDescription.setOsudjivan("da");
+            caseDescription.setOsudjivan(true);
         }
 
         Pattern imovnoStanjePattern = Pattern.compile("([a-zšđžćč]+)[ \\n\\r]+imovnog[ \\n\\r]+stanja", Pattern.DOTALL);
@@ -346,10 +346,10 @@ public class JudgmentService {
         if (matcher.find()) {
             if (matcher.group(1).equals("lak")) {
                 System.out.println("lake");
-                caseDescription.setTjelesnePovrede("lake");
+               // caseDescription.setTjelesnePovrede("lake");
             } else {
                 System.out.println("teske");
-                caseDescription.setTjelesnePovrede("teske");
+               // caseDescription.setTjelesnePovrede("teske");
             }
         } else System.out.print("---\n");
 
@@ -376,7 +376,7 @@ public class JudgmentService {
         File file = new File(ResourceUtils.getFile("classpath:testPresude.csv/").toURI());
         try {
             FileWriter myWriter = new FileWriter(file);
-            myWriter.write("#id;Sud;Poslovni broj;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Tjelesne povrede;Osudjivan;#Broj osudjivanja;Imovno stanje;Vrsta presude;Primijenjeni propisi\n");
+            myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;Prekrseno prvenstvo prolaza;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
             cases.forEach(caseDescription -> {
                 try {
                     myWriter.write(caseDescription.toString() + "\n");
@@ -411,7 +411,7 @@ public class JudgmentService {
                 caseDescription.setOkrivljeni(values[5]);
                 caseDescription.setKrivicnoDjelo(values[6]);
                 caseDescription.setPrekrseniPropisi(Arrays.asList(values[7].split(",")));
-                caseDescription.setTjelesnePovrede(Arrays.asList(values[8].split(",")));
+               // caseDescription.setTjelesnePovrede(Arrays.asList(values[8].split(",")));
                 caseDescription.setOsudjivan(values[9].equals("da"));
                 caseDescription.setBrojOsudjivanja(Integer.parseInt(values[10]));
                 caseDescription.setImovnoStanje(values[11]);
@@ -427,7 +427,7 @@ public class JudgmentService {
             File file = new File(ResourceUtils.getFile("classpath:testPresude.csv/").toURI());
             try {
                 FileWriter myWriter = new FileWriter(file);
-                myWriter.write("#id;Sud;Poslovni broj;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Tjelesne povrede;Osudjivan;#Broj osudjivanja;Imovno stanje;Vrsta presude;Primijenjeni propisi\n");
+                myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;Prekrseno prvenstvo prolaza;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
                 cases.forEach(caseDescription -> {
                     try {
                         myWriter.write(caseDescription.toString() + "\n");
