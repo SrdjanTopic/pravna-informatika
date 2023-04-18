@@ -30,9 +30,9 @@
         </FRBRManifestation>
       </identification>
       <references source="#mki">
-        <TLCOrganization eId="mki" href="https://www.gov.me/mki" showAs="Ministarstvo kapitalnih investicija"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="mki" href="/akn/me/ontology/organisation/mki" showAs="Ministarstvo kapitalnih investicija"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
       </references>
     </meta>
     <preface>

@@ -30,9 +30,9 @@
         </FRBRManifestation>
       </identification>
       <references source="#mek">
-        <TLCOrganization eId="mek" href="https://www.gov.me/mek" showAs="Ministarstvo ekonomskog razvoja i turizma"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="mek" href="/akn/me/ontology/organisation/mek" showAs="Ministarstvo ekonomskog razvoja i turizma"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
       </references>
     </meta>
     <preface>
