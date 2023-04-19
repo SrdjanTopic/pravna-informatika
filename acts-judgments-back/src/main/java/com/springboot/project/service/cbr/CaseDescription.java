@@ -68,10 +68,14 @@ public class CaseDescription implements CaseComponent {
                 primijenjeni += propis1 + ",";
             }
         }
+        String datum_ispis="";
+        if (datum!=null) {
+            datum_ispis = datum.toString();
+        }
         return id +";"
                 + sud +";"
                 + poslovniBroj + ";"
-                + datum.toString() + ";"
+                + datum_ispis  + ";"
                 + sudija +";"
                 + tuzilac +";"
                 + okrivljeni +";"

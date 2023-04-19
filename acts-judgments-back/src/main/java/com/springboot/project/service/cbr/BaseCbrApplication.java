@@ -60,13 +60,13 @@ public class BaseCbrApplication implements StandardCBRApplication {
         simConfig.addMapping(radnjeBezPrethodnogUvjerenja, slicnostRadnjiBezPrethodnogUvjerenja);
 
         //prekrseni propisi -clan 35,97
-        TabularSimilarity slicnostRadnjiBezPrilagodjenjaBrzine = new TabularSimilarity(Arrays.asList(
+        TabularSimilarity slicnostRadnjiBezPrilagodjavanjaBrzine = new TabularSimilarity(Arrays.asList(
                 "pred pjesacki", //clan 97
                 "prema stanju puta"//clan 35
         ));
-        slicnostRadnjiBezPrilagodjenjaBrzine.setSimilarity("pred pjesacki", "prema stanju puta", 0.5);
-        Attribute radnjeBezPrilagodjenjaBrzine=new Attribute("radnjeBezPrilagodjenjaBrzine", CaseDescription.class);
-        simConfig.addMapping(radnjeBezPrilagodjenjaBrzine, slicnostRadnjiBezPrilagodjenjaBrzine);
+        slicnostRadnjiBezPrilagodjavanjaBrzine.setSimilarity("pred pjesacki", "prema stanju puta", 0.5);
+        Attribute radnjeBezPrilagodjavanjaBrzine=new Attribute("radnjeBezPrilagodjavanjaBrzine", CaseDescription.class);
+        simConfig.addMapping(radnjeBezPrilagodjavanjaBrzine, slicnostRadnjiBezPrilagodjavanjaBrzine);
 
 
         //prekrseni propisi -clan 44
