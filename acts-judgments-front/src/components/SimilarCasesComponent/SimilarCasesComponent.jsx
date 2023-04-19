@@ -4,7 +4,7 @@ import styles from "./SimilarCasesComponent.module.css";
 const SimilarCasesComponent = ({ similarCases }) => {
   console.log(similarCases);
   return (
-    <>
+    <div>
       {similarCases.length === 0 ? (
         <h2>Nema sličnih slučajeva</h2>
       ) : (
@@ -126,7 +126,7 @@ const SimilarCasesComponent = ({ similarCases }) => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 export default SimilarCasesComponent;

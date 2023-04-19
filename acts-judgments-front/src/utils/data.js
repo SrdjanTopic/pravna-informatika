@@ -18,3 +18,9 @@ export const sudovi = [
 ]
 export const imovnaStanja = ["lose", "srednje", "dobro"]
 export const zakoni = ["KZ", "ZOBSNP"]
+export const naciniUgrozavanjaSaobracaja = [
+  "iz nehata, lake tjelesne povrede",
+  "iz nehata, teske tjelesne povrede",
+  "svjesno, lake tjelesne povrede",
+  "svjesno, teske tjelesne povrede"
+]

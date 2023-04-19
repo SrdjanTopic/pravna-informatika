@@ -123,7 +123,9 @@ function App() {
                 }`}
                 key={id}
               >
-                {name}
+                {`${name.slice(0, 5).toUpperCase()} ${name
+                  .slice(17, name.length)
+                  .toUpperCase()}`}
               </a>
             ))}
         </div>
