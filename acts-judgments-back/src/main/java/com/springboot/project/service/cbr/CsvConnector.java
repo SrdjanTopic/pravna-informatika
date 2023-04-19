@@ -47,10 +47,19 @@ public class CsvConnector implements Connector {
                 caseDescription.setPrekrseniPropisi(Arrays.asList(values[8].split(",")));
                 caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[9].split(",")));
                 caseDescription.setVrstaPresude(values[10]);
-
                 caseDescription.setUgrozenSaobracaj(values[11]);
-                caseDescription.setRadnjeBezPrethodnogUvjerenja(Arrays.asList(values[12].split(",")));
-                caseDescription.setRadnjeBezPrilagodjavanjaBrzine(Arrays.asList(values[13].split(",")));
+                if(values[12].isEmpty()){
+                    caseDescription.setRadnjeBezPrethodnogUvjerenja(Arrays.asList());
+                }
+                else{
+                    caseDescription.setRadnjeBezPrethodnogUvjerenja(Arrays.asList(values[12].split(",")));
+                }
+                if(values[13].isEmpty()){
+                    caseDescription.setRadnjeBezPrilagodjavanjaBrzine(Arrays.asList());
+                }
+                else{
+                    caseDescription.setRadnjeBezPrilagodjavanjaBrzine(Arrays.asList(values[13].split(",")));
+                }
                 caseDescription.setNedozvoljenoPolukruznoOkretanje(values[14].equals("da"));
                 caseDescription.setPrekrsenaPravilaNaRaskrsnici(values[15].equals("da"));
                 caseDescription.setPrekrsenoPrvenstvoProlaza(values[16].equals("da"));

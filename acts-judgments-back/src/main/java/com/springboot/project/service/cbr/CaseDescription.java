@@ -91,7 +91,7 @@ public class CaseDescription implements CaseComponent {
                 + prekrsenoPrvenstvoProlaza +";"
                 + osudjivan +";"
                 + brojOsudjivanja +";"
-                + imovnoStanje +";";
+                + imovnoStanje;
 
     }
 

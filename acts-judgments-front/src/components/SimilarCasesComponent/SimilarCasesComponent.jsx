@@ -63,10 +63,7 @@ const SimilarCasesComponent = ({ similarCases }) => {
                       })}
                     </b>
                   </p>
-                  <p>
-                    {`Tjelesne povrede: `}
-                    <b>{similarCase.tjelesnePovrede}</b>
-                  </p>
+                  
                   <br />
                   <p>
                     {`Okrivljeni: `}

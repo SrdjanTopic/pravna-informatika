@@ -47,8 +47,8 @@ public class BaseCbrApplication implements StandardCBRApplication {
         slicnostKrivicnogDjela.setSimilarity("svjesno teske", "nehat teske", 0.7);
         slicnostKrivicnogDjela.setSimilarity("svjesno teske", "nehat lake", 0.2);
         slicnostKrivicnogDjela.setSimilarity("nehat lake", "nehat teske", 0.5);
-        Attribute krivicnoDjelo=new Attribute("krivicnoDjelo", CaseDescription.class);
-        simConfig.addMapping(krivicnoDjelo, slicnostKrivicnogDjela);
+        Attribute ugrozenSaobracaj=new Attribute("ugrozenSaobracaj", CaseDescription.class);
+        simConfig.addMapping(ugrozenSaobracaj, slicnostKrivicnogDjela);
 
         //prekrseni propisi -clan 26 i 27
         TabularSimilarity slicnostRadnjiBezPrethodnogUvjerenja = new TabularSimilarity(Arrays.asList(

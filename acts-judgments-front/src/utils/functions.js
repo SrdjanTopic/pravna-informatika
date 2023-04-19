@@ -96,18 +96,24 @@ export function getCaseObjectFromString(caseString) {
   const caseObject = {
     sud: caseSplit[1],
     poslovniBroj: caseSplit[2],
-    sudija: caseSplit[3],
-    tuzilac: caseSplit[4],
-    okrivljeni: caseSplit[5],
-    krivicnoDjelo: caseSplit[6],
-    prekrseniPropisi: caseSplit[7].slice(0, -1).split(","),
-    tjelesnePovrede: caseSplit[8].split(",")[0],
-    osudjivan: caseSplit[9] ? "Da" : "Ne",
-    brOsudjivanja: caseSplit[10],
-    imovnoStanje: caseSplit[11],
-    vrstaPresude: caseSplit[12],
-    primjenjeniPropisi: caseSplit[13].slice(0, -1).split(","),
-    slicnost: parseFloat(caseSplit[14].slice(0, 4))
+    datum:caseSplit[3],
+    sudija: caseSplit[4],
+    tuzilac: caseSplit[5],
+    okrivljeni: caseSplit[6],
+    krivicnoDjelo: caseSplit[7],
+    prekrseniPropisi: caseSplit[8].slice(0, -1).split(","),
+    primijenjeniPropisi: caseSplit[9].slice(0, -1).split(","),
+    vrstaPresude: caseSplit[10],
+    ugrozenSaobracaj:caseSplit[11],
+    radnjeBezPrethodnogUvjerenja: caseSplit[12].slice(0, -1).split(","),
+    radnjeBezPilagodjavanjaBrzine: caseSplit[13].slice(0, -1).split(","),
+    nedozvoljenoPolukreuznoOkretanje:caseSplit[14]? "Da":"Ne",
+    prekrsenaPravilaNaRaskrsnici:caseSplit[15]? "Da":"Ne",
+    prekrsenoPrevestvoProlaza:caseSplit[16]? "Da":"Ne",
+    osudjivan: caseSplit[17]? "Da" : "Ne",
+    brOsudjivanja: caseSplit[18],
+    imovnoStanje: caseSplit[19],
+    slicnost: parseFloat(caseSplit[20].slice(0, 4))
   }
   return caseObject;
 }

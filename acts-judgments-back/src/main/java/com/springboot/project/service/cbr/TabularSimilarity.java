@@ -2,6 +2,7 @@ package com.springboot.project.service.cbr;
 
 import java.util.List;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import es.ucm.fdi.gaia.jcolibri.exception.NoApplicableSimilarityFunctionException;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.LocalSimilarityFunction;
 
