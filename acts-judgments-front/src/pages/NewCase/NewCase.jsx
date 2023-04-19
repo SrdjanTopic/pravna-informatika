@@ -19,7 +19,6 @@ const NewCase = () => {
         console.log(similarCasesStrings);
         let similarCasesObjects = [];
         similarCasesStrings.forEach((caseString) => {
-          // console.log(caseSplit);
           const caseObject = getCaseObjectFromString(caseString);
           similarCasesObjects.push(caseObject);
         });
@@ -30,6 +29,7 @@ const NewCase = () => {
   }
 
   function handleDodajSlucaj(caseInfo) {
+    console.log(caseInfo);
     axios
       .post("http://localhost:8080/judgments", caseInfo)
       .then((res) => {

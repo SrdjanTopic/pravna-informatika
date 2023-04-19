@@ -45,8 +45,8 @@ const SimilarCasesComponent = ({ similarCases }) => {
                   <p>
                     {`Primjenjeni propisi: `}
                     <b className={styles.propis}>
-                      {similarCase.primjenjeniPropisi.map((propis, id) => {
-                        if (id === similarCase.primjenjeniPropisi.length - 1)
+                      {similarCase.primijenjeniPropisi.map((propis, id) => {
+                        if (id === similarCase.primijenjeniPropisi.length - 1)
                           return (
                             <Fragment key={id}>
                               <br />
@@ -63,7 +63,7 @@ const SimilarCasesComponent = ({ similarCases }) => {
                       })}
                     </b>
                   </p>
-                  
+
                   <br />
                   <p>
                     {`Okrivljeni: `}
