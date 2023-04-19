@@ -32,7 +32,7 @@ public class CaseDescription implements CaseComponent {
     private List<String> radnjeBezPrilagodjavanjaBrzine= new ArrayList<String>();
     private Boolean nedozvoljenoPolukruznoOkretanje;
     private Boolean prekrsenaPravilaNaRaskrsnici;
-    private Boolean prekrsenoPrvenstvoProlaza;
+    private Boolean prekrsenoKretanjeDesnomStranom;
     private Boolean osudjivan;
     private Integer brojOsudjivanja;
     private String imovnoStanje;
@@ -88,7 +88,7 @@ public class CaseDescription implements CaseComponent {
                 + radnjeBezPrilagodjavanjaBrzine +";"
                 + nedozvoljenoPolukruznoOkretanje +";"
                 + prekrsenaPravilaNaRaskrsnici +";"
-                + prekrsenoPrvenstvoProlaza +";"
+                + prekrsenoKretanjeDesnomStranom +";"
                 + osudjivan +";"
                 + brojOsudjivanja +";"
                 + imovnoStanje;
@@ -117,7 +117,7 @@ public class CaseDescription implements CaseComponent {
         this.radnjeBezPrilagodjavanjaBrzine=description.getRadnjeBezPrilagodjavanjaBrzine();
         this.nedozvoljenoPolukruznoOkretanje=description.getNedozvoljenoPolukruznoOkretanje();
         this.prekrsenaPravilaNaRaskrsnici=description.getPrekrsenaPravilaNaRaskrsnici();
-        this.prekrsenoPrvenstvoProlaza=description.getPrekrsenoPrvenstvoProlaza();
+        this.prekrsenoKretanjeDesnomStranom=description.getPrekrsenoKretanjeDesnomStranom();
         this.osudjivan = description.getOsudjivan().equals("da");
         this.brojOsudjivanja = description.getBrojOsudjivanja();
         this.imovnoStanje = description.getImovnoStanje();

@@ -421,7 +421,7 @@ public class JudgmentService {
                 caseDescription.setRadnjeBezPrilagodjavanjaBrzine(Arrays.asList(values[13].split(",")));
                 caseDescription.setNedozvoljenoPolukruznoOkretanje(values[14].equals("da"));
                 caseDescription.setPrekrsenaPravilaNaRaskrsnici(values[15].equals("da"));
-                caseDescription.setPrekrsenoPrvenstvoProlaza(values[16].equals("da"));
+                caseDescription.setPrekrsenoKretanjeDesnomStranom(values[16].equals("da"));
                 caseDescription.setOsudjivan(values[17].equals("da"));
                 caseDescription.setBrojOsudjivanja(Integer.parseInt(values[18]));
                 caseDescription.setImovnoStanje(values[19]);

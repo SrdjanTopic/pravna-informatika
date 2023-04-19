@@ -52,7 +52,7 @@ public class CbrController  {
 
             caseDescription.setPrekrsenaPravilaNaRaskrsnici(caseDto.getPrekrsenaPravilaNaRaskrsnici());
 
-            caseDescription.setPrekrsenoPrvenstvoProlaza(caseDto.getPrekrsenoPrvenstvoProlaza());
+            caseDescription.setPrekrsenoKretanjeDesnomStranom(caseDto.getPrekrsenoKretanjeDesnomStranom());
 
             caseDescription.setImovnoStanje(caseDto.getImovnoStanje());
 

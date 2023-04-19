@@ -77,9 +77,9 @@ public class BaseCbrApplication implements StandardCBRApplication {
         Attribute prekrsenaPravilaNaRaskrsnici=new Attribute("prekrsenaPravilaNaRaskrsnici", CaseDescription.class);
         simConfig.addMapping(prekrsenaPravilaNaRaskrsnici, new Equal());
 
-        //prekrseni propisi- clan 40
-        Attribute prekrsenoPrvenstvoProlaza=new Attribute("prekrsenoPrvenstvoProlaza", CaseDescription.class);
-        simConfig.addMapping(prekrsenoPrvenstvoProlaza, new Equal());
+        //prekrseni propisi- clan 29 st1
+        Attribute prekrsenoKretanjeDesnomStranom=new Attribute("prekrsenoKretanjeDesnomStranom", CaseDescription.class);
+        simConfig.addMapping(prekrsenoKretanjeDesnomStranom, new Equal());
 
         //imovno stanje
         TabularSimilarity slicnostImovnogStanja = new TabularSimilarity(Arrays.asList(new String[] {"dobro", "srednje", "lose"}));

@@ -14,7 +14,7 @@ public class SimilarCaseDto {
     private List<String> radnjeBezPrilagodjavanjaBrzine = new ArrayList<String>();
     private Boolean nedozvoljenoPolukruznoOkretanje;
     private Boolean prekrsenaPravilaNaRaskrsnici;
-    private Boolean prekrsenoPrvenstvoProlaza;
+    private Boolean prekrsenoKretanjeDesnomStranom;
     private Boolean osudjivan;
     private Integer brojOsudjivanja;
     private String imovnoStanje;
