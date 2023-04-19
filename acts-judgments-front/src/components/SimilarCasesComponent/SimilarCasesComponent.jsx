@@ -15,44 +15,44 @@ const SimilarCasesComponent = ({ similarCases }) => {
               <div className={styles.caseCard} key={index}>
                 <h3>{similarCase.sud}</h3>
                 <h3>{similarCase.poslovniBroj}</h3>
-                <br />
-                <p>Ključni atributi</p>
-                <b className={styles.propis}>
-                  - {similarCase.ugrozenSaobracaj}
-                </b>
-                <br />
-                {similarCase.radnjeBezPrethodnogUvjerenja.length > 0 &&
-                  similarCase.radnjeBezPrethodnogUvjerenja[0] != "" &&
-                  similarCase.radnjeBezPrethodnogUvjerenja.map((radnja, id) => (
-                    <Fragment key={id}>
-                      <b>{`- neuvjeravanje ${radnja}`}</b>
-                      <br />
-                    </Fragment>
-                  ))}
-                {similarCase.radnjeBezPilagodjavanjaBrzine.length > 0 &&
-                  similarCase.radnjeBezPilagodjavanjaBrzine[0] != "" &&
-                  similarCase.radnjeBezPilagodjavanjaBrzine.map(
-                    (radnja, id) => (
-                      <Fragment key={id}>
-                        <b>{`- neprilagođavanje brzine ${radnja}`}</b>
-                        <br />
-                      </Fragment>
-                    )
-                  )}
-                {similarCase.nedozvoljenoPolukreuznoOkretanje == "Da" && (
-                  <b>{`- nedozvoljeno polukružno okretanje`}</b>
-                )}
-                <br />
-                {similarCase.prekrsenaPravilaNaRaskrsnici == "Da" && (
-                  <b>{`- nepridržavanje pravila na raskrsnici`}</b>
-                )}
-                <br />
-                {similarCase.prekrsenoKretanjeDesnomStranom == "Da" && (
-                  <b>{`- prekršeno pravilo kretanja desnomstranom`}</b>
-                )}
-                <br />
-                <br />
                 <div className={styles.caseInfoWrapper}>
+                  <p>Ključni atributi</p>
+                  <b className={styles.propis}>
+                    - {similarCase.ugrozenSaobracaj}
+                  </b>
+                  <br />
+                  {similarCase.radnjeBezPrethodnogUvjerenja.length > 0 &&
+                    similarCase.radnjeBezPrethodnogUvjerenja[0] != "" &&
+                    similarCase.radnjeBezPrethodnogUvjerenja.map(
+                      (radnja, id) => (
+                        <Fragment key={id}>
+                          <b>{`- neuvjeravanje ${radnja}`}</b>
+                          <br />
+                        </Fragment>
+                      )
+                    )}
+                  {similarCase.radnjeBezPilagodjavanjaBrzine.length > 0 &&
+                    similarCase.radnjeBezPilagodjavanjaBrzine[0] != "" &&
+                    similarCase.radnjeBezPilagodjavanjaBrzine.map(
+                      (radnja, id) => (
+                        <Fragment key={id}>
+                          <b>{`- neprilagođavanje brzine ${radnja}`}</b>
+                          <br />
+                        </Fragment>
+                      )
+                    )}
+                  {similarCase.nedozvoljenoPolukreuznoOkretanje == "Da" && (
+                    <b>{`- nedozvoljeno polukružno okretanje`}</b>
+                  )}
+                  <br />
+                  {similarCase.prekrsenaPravilaNaRaskrsnici == "Da" && (
+                    <b>{`- nepridržavanje pravila na raskrsnici`}</b>
+                  )}
+                  <br />
+                  {similarCase.prekrsenoKretanjeDesnomStranom == "Da" && (
+                    <b>{`- prekršeno pravilo kretanja desnomstranom`}</b>
+                  )}
+                  <br />
                   <p>
                     {`Krivično djelo: `}
                     <b>{similarCase.krivicnoDjelo}</b>
