@@ -45,19 +45,19 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
           </div>
           <div className={styles.textWrapper}>
             <p>{`Sudija: `}</p>
-            <b>{judgmentDescription.sudija.replace(",", "")}</b>
+            <b>{judgmentDescription.sudija?.replace(",", "")}</b>
           </div>
           <div className={styles.line}></div>
 
           <div className={styles.textWrapper}>
             <p>{`Tužilac: `}</p>
-            <b>{judgmentDescription.tuzilac.replace(",", "")}</b>
+            <b>{judgmentDescription.tuzilac?.replace(",", "")}</b>
           </div>
           <div className={styles.line}></div>
 
           <div className={styles.textWrapper}>
             <p>{`Okrivljeni: `}</p>
-            <b>{judgmentDescription.okrivljeni.replace(",", "")}</b>
+            <b>{judgmentDescription.okrivljeni?.replace(",", "")}</b>
           </div>
           <div className={styles.textWrapper}>
             <p>{`Imovno Stanje: `}</p>

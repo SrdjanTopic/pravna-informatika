@@ -8,10 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -406,17 +405,26 @@ public class JudgmentService {
                 caseDescription.setId(Integer.parseInt(values[0]));
                 caseDescription.setSud(values[1]);
                 caseDescription.setPoslovniBroj(values[2]);
-                caseDescription.setSudija(values[3]);
-                caseDescription.setTuzilac(values[4]);
-                caseDescription.setOkrivljeni(values[5]);
-                caseDescription.setKrivicnoDjelo(values[6]);
-                caseDescription.setPrekrseniPropisi(Arrays.asList(values[7].split(",")));
-               // caseDescription.setTjelesnePovrede(Arrays.asList(values[8].split(",")));
-                caseDescription.setOsudjivan(values[9].equals("da"));
-                caseDescription.setBrojOsudjivanja(Integer.parseInt(values[10]));
-                caseDescription.setImovnoStanje(values[11]);
-                caseDescription.setVrstaPresude(values[12]);
-                caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[13].split(",")));
+                DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+                Date datum = df.parse(values[3]);
+                caseDescription.setDatum(datum);
+                caseDescription.setSudija(values[4]);
+                caseDescription.setTuzilac(values[5]);
+                caseDescription.setOkrivljeni(values[6]);
+                caseDescription.setKrivicnoDjelo(values[7]);
+                caseDescription.setPrekrseniPropisi(Arrays.asList(values[8].split(",")));
+                caseDescription.setPrimijenjeniPropisi(Arrays.asList(values[9].split(",")));
+                caseDescription.setVrstaPresude(values[10]);
+
+                caseDescription.setUgrozenSaobracaj(values[11]);
+                caseDescription.setRadnjeBezPrethodnogUvjerenja(Arrays.asList(values[12].split(",")));
+                caseDescription.setRadnjeBezPrilagodjavanjaBrzine(Arrays.asList(values[13].split(",")));
+                caseDescription.setNedozvoljenoPolukruznoOkretanje(values[14].equals("da"));
+                caseDescription.setPrekrsenaPravilaNaRaskrsnici(values[15].equals("da"));
+                caseDescription.setPrekrsenoPrvenstvoProlaza(values[16].equals("da"));
+                caseDescription.setOsudjivan(values[17].equals("da"));
+                caseDescription.setBrojOsudjivanja(Integer.parseInt(values[18]));
+                caseDescription.setImovnoStanje(values[19]);
 
                 cases.add(caseDescription);
             }
