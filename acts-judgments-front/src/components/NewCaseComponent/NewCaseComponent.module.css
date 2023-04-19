@@ -9,7 +9,9 @@ form {
   align-items: center;
   gap: 0.5rem;
 }
+
 .formElements {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -37,7 +39,7 @@ button:hover {
 }
 
 .elements h4 {
-  margin-bottom: -0.5rem;
+  /* margin-bottom: -0.5rem; */
 }
 
 .osudjivanWrapper {

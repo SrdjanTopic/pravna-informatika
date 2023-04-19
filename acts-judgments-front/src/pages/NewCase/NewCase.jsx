@@ -3,6 +3,7 @@ import NewCaseComponent from "../../components/NewCaseComponent/NewCaseComponent
 import SimilarCasesComponent from "../../components/SimilarCasesComponent/SimilarCasesComponent";
 import axios from "axios";
 import { getCaseObjectFromString } from "../../utils/functions";
+import styles from "./NewCase.module.css";
 
 const NewCase = () => {
   const [showSimilarCases, setShowSimilarCases] = useState(true);
@@ -37,7 +38,7 @@ const NewCase = () => {
       .catch((err) => console.log(err));
   }
   return (
-    <>
+    <div className={styles.wrapper}>
       <NewCaseComponent
         handleSubmit={handleSubmit}
         handleDodajSlucaj={handleDodajSlucaj}
@@ -45,7 +46,7 @@ const NewCase = () => {
       {showSimilarCases && (
         <SimilarCasesComponent similarCases={similarCases} />
       )}
-    </>
+    </div>
   );
 };
 export default NewCase;
