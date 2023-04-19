@@ -17,7 +17,7 @@ public class CaseDescription implements CaseComponent {
     private int id;
     private String sud;
     private String poslovniBroj;
-    private Date datum;
+    private String datum;
     private String sudija;
     private String tuzilac;
     private String okrivljeni;
