@@ -1,6 +1,6 @@
 (import-rdf "facts.rdf")
 		(export-rdf export.rdf  
-				commited_cl26_st2 commited_cl27_st1 commited_cl29_st1 commited_cl35_st1 commited_cl41 commited_cl44 commited_cl339_st1 commited_cl339_st3 commited_cl348_st1 commited_cl348_st3 min_imprisonment max_imprisonment to_pay_min_26 to_pay_max_26 to_pay_min_27 to_pay_max_27 to_pay_min_29 to_pay_max_29 to_pay_min_35 to_pay_max_35 to_pay_min_44 to_pay_max_44
+				commited_cl26_st2 commited_cl27_st1 commited_cl29_st1 commited_cl35_st1 commited_cl41 commited_cl44 commited_cl97_st3 commited_cl339_st1 commited_cl339_st3 commited_cl348_st1 commited_cl348_st3 min_imprisonment max_imprisonment to_pay_min_26 to_pay_max_26 to_pay_min_27 to_pay_max_27 to_pay_min_29 to_pay_max_29 to_pay_min_35 to_pay_max_35 to_pay_min_44 to_pay_max_44 to_pay_min_97 to_pay_max_97
 			)
 		(export-proof proof.ruleml)
 		
@@ -76,14 +76,7 @@
 		 lc:defendant ?Defendant)
 	
 		(
-		 lc:speed_adjustment_according_to "road_condition")
-	)  
-	(lc:case 
-		(
-		 lc:defendant ?Defendant)
-	
-		(
-		 lc:has_adjusted_speed "no")
+		 lc:has_adjusted_speed_according_to_road_condition "no")
 	) 
   => 
 	 
@@ -122,6 +115,23 @@
   => 
 	 
 	(commited_cl44 
+		(
+		 defendant ?Defendant)
+	) 
+) 
+	
+(defeasiblerule rule_cl97_st3
+		 
+	(lc:case 
+		(
+		 lc:defendant ?Defendant)
+	
+		(
+		 lc:has_adjusted_speed_according_to_crosswalk "no")
+	) 
+  => 
+	 
+	(commited_cl97_st3 
 		(
 		 defendant ?Defendant)
 	) 
@@ -358,6 +368,34 @@
   => 
 	 
 	(to_pay_max_44 
+		(
+		 value 250)
+	) 
+) 
+	
+(defeasiblerule pen_cl97_st3_min
+		 
+	(commited_cl97_st3 
+		(
+		 defendant ?Defendant)
+	) 
+  => 
+	 
+	(to_pay_min_97 
+		(
+		 value 80)
+	) 
+) 
+	
+(defeasiblerule pen_cl97_st3_max
+		 
+	(commited_cl97_st3 
+		(
+		 defendant ?Defendant)
+	) 
+  => 
+	 
+	(to_pay_max_97 
 		(
 		 value 250)
 	) 

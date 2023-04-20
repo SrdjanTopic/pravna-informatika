@@ -42,7 +42,7 @@
 
 ([rule_cl35_st1] of defeasible-rule
    (rule-name rule_cl35_st1)
-   (original-rule "rule_cl35_st1 ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ) ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ) => ( commited_cl35_st1 ( defendant ?Defendant ) )")
+   (original-rule "rule_cl35_st1 ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ) => ( commited_cl35_st1 ( defendant ?Defendant ) )")
    (condition-classes)
    (conclusion-class commited_cl35_st1)
    (negated no)
@@ -80,6 +80,20 @@
    (system no)
    (support-rule rule_cl44-support)
    (defeasibly-rule rule_cl44-defeasibly)
+   (defeated-rule nil))
+
+([rule_cl97_st3] of defeasible-rule
+   (rule-name rule_cl97_st3)
+   (original-rule "rule_cl97_st3 ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ) => ( commited_cl97_st3 ( defendant ?Defendant ) )")
+   (condition-classes)
+   (conclusion-class commited_cl97_st3)
+   (negated no)
+   (superior)
+   (deductive-rule rule_cl97_st3-deductive)
+   (overruled-rule rule_cl97_st3-overruled)
+   (system no)
+   (support-rule rule_cl97_st3-support)
+   (defeasibly-rule rule_cl97_st3-defeasibly)
    (defeated-rule nil))
 
 ([rule_cl339_st1_injury] of defeasible-rule
@@ -276,6 +290,34 @@
    (system no)
    (support-rule pen_cl44_max-support)
    (defeasibly-rule pen_cl44_max-defeasibly)
+   (defeated-rule nil))
+
+([pen_cl97_st3_min] of defeasible-rule
+   (rule-name pen_cl97_st3_min)
+   (original-rule "pen_cl97_st3_min ( commited_cl97_st3 ( defendant ?Defendant ) ) => ( to_pay_min_97 ( value 80 ) )")
+   (condition-classes)
+   (conclusion-class to_pay_min_97)
+   (negated no)
+   (superior)
+   (deductive-rule pen_cl97_st3_min-deductive)
+   (overruled-rule pen_cl97_st3_min-overruled)
+   (system no)
+   (support-rule pen_cl97_st3_min-support)
+   (defeasibly-rule pen_cl97_st3_min-defeasibly)
+   (defeated-rule nil))
+
+([pen_cl97_st3_max] of defeasible-rule
+   (rule-name pen_cl97_st3_max)
+   (original-rule "pen_cl97_st3_max ( commited_cl97_st3 ( defendant ?Defendant ) ) => ( to_pay_max_97 ( value 250 ) )")
+   (condition-classes)
+   (conclusion-class to_pay_max_97)
+   (negated no)
+   (superior)
+   (deductive-rule pen_cl97_st3_max-deductive)
+   (overruled-rule pen_cl97_st3_max-overruled)
+   (system no)
+   (support-rule pen_cl97_st3_max-support)
+   (defeasibly-rule pen_cl97_st3_max-defeasibly)
    (defeated-rule nil))
 
 ([pen_cl339_st1_max] of defeasible-rule

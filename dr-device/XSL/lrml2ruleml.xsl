@@ -18,7 +18,7 @@
             <xsl:attribute name="proof">proof.ruleml</xsl:attribute>
             <xsl:attribute name="rdf_export">export.rdf</xsl:attribute>
             <xsl:attribute name="rdf_export_classes">
-				commited_cl26_st2 commited_cl27_st1 commited_cl29_st1 commited_cl35_st1 commited_cl41 commited_cl44 commited_cl339_st1 commited_cl339_st3 commited_cl348_st1 commited_cl348_st3 min_imprisonment max_imprisonment to_pay_min_26 to_pay_max_26 to_pay_min_27 to_pay_max_27 to_pay_min_29 to_pay_max_29 to_pay_min_35 to_pay_max_35 to_pay_min_44 to_pay_max_44
+				commited_cl26_st2 commited_cl27_st1 commited_cl29_st1 commited_cl35_st1 commited_cl41 commited_cl44 commited_cl97_st3 commited_cl339_st1 commited_cl339_st3 commited_cl348_st1 commited_cl348_st3 min_imprisonment max_imprisonment to_pay_min_26 to_pay_max_26 to_pay_min_27 to_pay_max_27 to_pay_min_29 to_pay_max_29 to_pay_min_35 to_pay_max_35 to_pay_min_44 to_pay_max_44 to_pay_min_97 to_pay_max_97
 			</xsl:attribute>
             <xsl:attribute name="rdf_import">&quot;facts.rdf&quot;</xsl:attribute>
             <xsl:apply-templates select="lrml:Statements"/>

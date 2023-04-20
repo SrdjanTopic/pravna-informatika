@@ -1,1075 +1,1204 @@
 ([pen_cl348_st3_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl348_st3_max-defeasibly-dot-gen286)
+   (pos-name pen_cl348_st3_max-defeasibly-dot-gen313)
    (depends-on declare max_imprisonment commited_cl348_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl348_st3_max] ) ) ) ?gen253 <- ( max_imprisonment ( value 4 ) ( positive 1 ) ( positive-derivator pen_cl348_st3_max $? ) ) ( test ( eq ( class ?gen253 ) max_imprisonment ) ) ( not ( and ?gen260 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen259 & : ( >= ?gen259 1 ) ) ) ?gen253 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen255 & : ( not ( member$ pen_cl348_st3_max $?gen255 ) ) ) ) ) ) => ?gen253 <- ( max_imprisonment ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl348_st3_max] ) ) ) ?gen277 <- ( max_imprisonment ( value 4 ) ( positive 1 ) ( positive-derivator pen_cl348_st3_max $? ) ) ( test ( eq ( class ?gen277 ) max_imprisonment ) ) ( not ( and ?gen284 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen283 & : ( >= ?gen283 1 ) ) ) ?gen277 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen279 & : ( not ( member$ pen_cl348_st3_max $?gen279 ) ) ) ) ) ) => ?gen277 <- ( max_imprisonment ( positive 0 ) )"))
 
 ([pen_cl348_st3_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl348_st3_max-defeasibly-gen288)
+   (pos-name pen_cl348_st3_max-defeasibly-gen315)
    (depends-on declare commited_cl348_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl348_st3_max] ) ) ) ?gen260 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen259 & : ( >= ?gen259 1 ) ) ) ?gen253 <- ( max_imprisonment ( value 4 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen255 & : ( not ( member$ pen_cl348_st3_max $?gen255 ) ) ) ) ( test ( eq ( class ?gen253 ) max_imprisonment ) ) => ?gen253 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl348_st3_max ?gen260 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl348_st3_max] ) ) ) ?gen284 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen283 & : ( >= ?gen283 1 ) ) ) ?gen277 <- ( max_imprisonment ( value 4 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen279 & : ( not ( member$ pen_cl348_st3_max $?gen279 ) ) ) ) ( test ( eq ( class ?gen277 ) max_imprisonment ) ) => ?gen277 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl348_st3_max ?gen284 ) )"))
 
 ([pen_cl348_st3_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl348_st3_max-overruled-dot-gen290)
+   (pos-name pen_cl348_st3_max-overruled-dot-gen317)
    (depends-on declare max_imprisonment commited_cl348_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl348_st3_max] ) ) ) ?gen253 <- ( max_imprisonment ( value 4 ) ( negative-support $?gen256 ) ( negative-overruled $?gen257 & : ( subseq-pos ( create$ pen_cl348_st3_max-overruled $?gen256 $$$ $?gen257 ) ) ) ) ( test ( eq ( class ?gen253 ) max_imprisonment ) ) ( not ( and ?gen260 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen259 & : ( >= ?gen259 1 ) ) ) ?gen253 <- ( max_imprisonment ( positive-defeated $?gen255 & : ( not ( member$ pen_cl348_st3_max $?gen255 ) ) ) ) ) ) => ( calc ( bind $?gen258 ( delete-member$ $?gen257 ( create$ pen_cl348_st3_max-overruled $?gen256 ) ) ) ) ?gen253 <- ( max_imprisonment ( negative-overruled $?gen258 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl348_st3_max] ) ) ) ?gen277 <- ( max_imprisonment ( value 4 ) ( negative-support $?gen280 ) ( negative-overruled $?gen281 & : ( subseq-pos ( create$ pen_cl348_st3_max-overruled $?gen280 $$$ $?gen281 ) ) ) ) ( test ( eq ( class ?gen277 ) max_imprisonment ) ) ( not ( and ?gen284 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen283 & : ( >= ?gen283 1 ) ) ) ?gen277 <- ( max_imprisonment ( positive-defeated $?gen279 & : ( not ( member$ pen_cl348_st3_max $?gen279 ) ) ) ) ) ) => ( calc ( bind $?gen282 ( delete-member$ $?gen281 ( create$ pen_cl348_st3_max-overruled $?gen280 ) ) ) ) ?gen277 <- ( max_imprisonment ( negative-overruled $?gen282 ) )"))
 
 ([pen_cl348_st3_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl348_st3_max-overruled-gen292)
+   (pos-name pen_cl348_st3_max-overruled-gen319)
    (depends-on declare commited_cl348_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl348_st3_max] ) ) ) ?gen260 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen259 & : ( >= ?gen259 1 ) ) ) ?gen253 <- ( max_imprisonment ( value 4 ) ( negative-support $?gen256 ) ( negative-overruled $?gen257 & : ( not ( subseq-pos ( create$ pen_cl348_st3_max-overruled $?gen256 $$$ $?gen257 ) ) ) ) ( positive-defeated $?gen255 & : ( not ( member$ pen_cl348_st3_max $?gen255 ) ) ) ) ( test ( eq ( class ?gen253 ) max_imprisonment ) ) => ( calc ( bind $?gen258 ( create$ pen_cl348_st3_max-overruled $?gen256 $?gen257 ) ) ) ?gen253 <- ( max_imprisonment ( negative-overruled $?gen258 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl348_st3_max] ) ) ) ?gen284 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive ?gen283 & : ( >= ?gen283 1 ) ) ) ?gen277 <- ( max_imprisonment ( value 4 ) ( negative-support $?gen280 ) ( negative-overruled $?gen281 & : ( not ( subseq-pos ( create$ pen_cl348_st3_max-overruled $?gen280 $$$ $?gen281 ) ) ) ) ( positive-defeated $?gen279 & : ( not ( member$ pen_cl348_st3_max $?gen279 ) ) ) ) ( test ( eq ( class ?gen277 ) max_imprisonment ) ) => ( calc ( bind $?gen282 ( create$ pen_cl348_st3_max-overruled $?gen280 $?gen281 ) ) ) ?gen277 <- ( max_imprisonment ( negative-overruled $?gen282 ) )"))
 
 ([pen_cl348_st3_max-support] of derived-attribute-rule
-   (pos-name pen_cl348_st3_max-support-gen294)
+   (pos-name pen_cl348_st3_max-support-gen321)
    (depends-on declare commited_cl348_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl348_st3_max] ) ) ) ?gen252 <- ( commited_cl348_st3 ( defendant ?Defendant ) ) ?gen253 <- ( max_imprisonment ( value 4 ) ( positive-support $?gen255 & : ( not ( subseq-pos ( create$ pen_cl348_st3_max ?gen252 $$$ $?gen255 ) ) ) ) ) ( test ( eq ( class ?gen253 ) max_imprisonment ) ) => ( calc ( bind $?gen258 ( create$ pen_cl348_st3_max ?gen252 $?gen255 ) ) ) ?gen253 <- ( max_imprisonment ( positive-support $?gen258 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl348_st3_max] ) ) ) ?gen276 <- ( commited_cl348_st3 ( defendant ?Defendant ) ) ?gen277 <- ( max_imprisonment ( value 4 ) ( positive-support $?gen279 & : ( not ( subseq-pos ( create$ pen_cl348_st3_max ?gen276 $$$ $?gen279 ) ) ) ) ) ( test ( eq ( class ?gen277 ) max_imprisonment ) ) => ( calc ( bind $?gen282 ( create$ pen_cl348_st3_max ?gen276 $?gen279 ) ) ) ?gen277 <- ( max_imprisonment ( positive-support $?gen282 ) )"))
 
 ([pen_cl348_st1_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl348_st1_max-defeasibly-dot-gen296)
+   (pos-name pen_cl348_st1_max-defeasibly-dot-gen323)
    (depends-on declare max_imprisonment commited_cl348_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl348_st1_max] ) ) ) ?gen244 <- ( max_imprisonment ( value 8 ) ( positive 1 ) ( positive-derivator pen_cl348_st1_max $? ) ) ( test ( eq ( class ?gen244 ) max_imprisonment ) ) ( not ( and ?gen251 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen250 & : ( >= ?gen250 1 ) ) ) ?gen244 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen246 & : ( not ( member$ pen_cl348_st1_max $?gen246 ) ) ) ) ) ) => ?gen244 <- ( max_imprisonment ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl348_st1_max] ) ) ) ?gen268 <- ( max_imprisonment ( value 8 ) ( positive 1 ) ( positive-derivator pen_cl348_st1_max $? ) ) ( test ( eq ( class ?gen268 ) max_imprisonment ) ) ( not ( and ?gen275 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen274 & : ( >= ?gen274 1 ) ) ) ?gen268 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen270 & : ( not ( member$ pen_cl348_st1_max $?gen270 ) ) ) ) ) ) => ?gen268 <- ( max_imprisonment ( positive 0 ) )"))
 
 ([pen_cl348_st1_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl348_st1_max-defeasibly-gen298)
+   (pos-name pen_cl348_st1_max-defeasibly-gen325)
    (depends-on declare commited_cl348_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl348_st1_max] ) ) ) ?gen251 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen250 & : ( >= ?gen250 1 ) ) ) ?gen244 <- ( max_imprisonment ( value 8 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen246 & : ( not ( member$ pen_cl348_st1_max $?gen246 ) ) ) ) ( test ( eq ( class ?gen244 ) max_imprisonment ) ) => ?gen244 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl348_st1_max ?gen251 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl348_st1_max] ) ) ) ?gen275 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen274 & : ( >= ?gen274 1 ) ) ) ?gen268 <- ( max_imprisonment ( value 8 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen270 & : ( not ( member$ pen_cl348_st1_max $?gen270 ) ) ) ) ( test ( eq ( class ?gen268 ) max_imprisonment ) ) => ?gen268 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl348_st1_max ?gen275 ) )"))
 
 ([pen_cl348_st1_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl348_st1_max-overruled-dot-gen300)
+   (pos-name pen_cl348_st1_max-overruled-dot-gen327)
    (depends-on declare max_imprisonment commited_cl348_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl348_st1_max] ) ) ) ?gen244 <- ( max_imprisonment ( value 8 ) ( negative-support $?gen247 ) ( negative-overruled $?gen248 & : ( subseq-pos ( create$ pen_cl348_st1_max-overruled $?gen247 $$$ $?gen248 ) ) ) ) ( test ( eq ( class ?gen244 ) max_imprisonment ) ) ( not ( and ?gen251 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen250 & : ( >= ?gen250 1 ) ) ) ?gen244 <- ( max_imprisonment ( positive-defeated $?gen246 & : ( not ( member$ pen_cl348_st1_max $?gen246 ) ) ) ) ) ) => ( calc ( bind $?gen249 ( delete-member$ $?gen248 ( create$ pen_cl348_st1_max-overruled $?gen247 ) ) ) ) ?gen244 <- ( max_imprisonment ( negative-overruled $?gen249 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl348_st1_max] ) ) ) ?gen268 <- ( max_imprisonment ( value 8 ) ( negative-support $?gen271 ) ( negative-overruled $?gen272 & : ( subseq-pos ( create$ pen_cl348_st1_max-overruled $?gen271 $$$ $?gen272 ) ) ) ) ( test ( eq ( class ?gen268 ) max_imprisonment ) ) ( not ( and ?gen275 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen274 & : ( >= ?gen274 1 ) ) ) ?gen268 <- ( max_imprisonment ( positive-defeated $?gen270 & : ( not ( member$ pen_cl348_st1_max $?gen270 ) ) ) ) ) ) => ( calc ( bind $?gen273 ( delete-member$ $?gen272 ( create$ pen_cl348_st1_max-overruled $?gen271 ) ) ) ) ?gen268 <- ( max_imprisonment ( negative-overruled $?gen273 ) )"))
 
 ([pen_cl348_st1_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl348_st1_max-overruled-gen302)
+   (pos-name pen_cl348_st1_max-overruled-gen329)
    (depends-on declare commited_cl348_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl348_st1_max] ) ) ) ?gen251 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen250 & : ( >= ?gen250 1 ) ) ) ?gen244 <- ( max_imprisonment ( value 8 ) ( negative-support $?gen247 ) ( negative-overruled $?gen248 & : ( not ( subseq-pos ( create$ pen_cl348_st1_max-overruled $?gen247 $$$ $?gen248 ) ) ) ) ( positive-defeated $?gen246 & : ( not ( member$ pen_cl348_st1_max $?gen246 ) ) ) ) ( test ( eq ( class ?gen244 ) max_imprisonment ) ) => ( calc ( bind $?gen249 ( create$ pen_cl348_st1_max-overruled $?gen247 $?gen248 ) ) ) ?gen244 <- ( max_imprisonment ( negative-overruled $?gen249 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl348_st1_max] ) ) ) ?gen275 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen274 & : ( >= ?gen274 1 ) ) ) ?gen268 <- ( max_imprisonment ( value 8 ) ( negative-support $?gen271 ) ( negative-overruled $?gen272 & : ( not ( subseq-pos ( create$ pen_cl348_st1_max-overruled $?gen271 $$$ $?gen272 ) ) ) ) ( positive-defeated $?gen270 & : ( not ( member$ pen_cl348_st1_max $?gen270 ) ) ) ) ( test ( eq ( class ?gen268 ) max_imprisonment ) ) => ( calc ( bind $?gen273 ( create$ pen_cl348_st1_max-overruled $?gen271 $?gen272 ) ) ) ?gen268 <- ( max_imprisonment ( negative-overruled $?gen273 ) )"))
 
 ([pen_cl348_st1_max-support] of derived-attribute-rule
-   (pos-name pen_cl348_st1_max-support-gen304)
+   (pos-name pen_cl348_st1_max-support-gen331)
    (depends-on declare commited_cl348_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl348_st1_max] ) ) ) ?gen243 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ?gen244 <- ( max_imprisonment ( value 8 ) ( positive-support $?gen246 & : ( not ( subseq-pos ( create$ pen_cl348_st1_max ?gen243 $$$ $?gen246 ) ) ) ) ) ( test ( eq ( class ?gen244 ) max_imprisonment ) ) => ( calc ( bind $?gen249 ( create$ pen_cl348_st1_max ?gen243 $?gen246 ) ) ) ?gen244 <- ( max_imprisonment ( positive-support $?gen249 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl348_st1_max] ) ) ) ?gen267 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ?gen268 <- ( max_imprisonment ( value 8 ) ( positive-support $?gen270 & : ( not ( subseq-pos ( create$ pen_cl348_st1_max ?gen267 $$$ $?gen270 ) ) ) ) ) ( test ( eq ( class ?gen268 ) max_imprisonment ) ) => ( calc ( bind $?gen273 ( create$ pen_cl348_st1_max ?gen267 $?gen270 ) ) ) ?gen268 <- ( max_imprisonment ( positive-support $?gen273 ) )"))
 
 ([pen_cl348_st1_min-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl348_st1_min-defeasibly-dot-gen306)
+   (pos-name pen_cl348_st1_min-defeasibly-dot-gen333)
    (depends-on declare min_imprisonment commited_cl348_st1 min_imprisonment)
    (implies min_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl348_st1_min] ) ) ) ?gen235 <- ( min_imprisonment ( value 1 ) ( positive 1 ) ( positive-derivator pen_cl348_st1_min $? ) ) ( test ( eq ( class ?gen235 ) min_imprisonment ) ) ( not ( and ?gen242 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen241 & : ( >= ?gen241 1 ) ) ) ?gen235 <- ( min_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen237 & : ( not ( member$ pen_cl348_st1_min $?gen237 ) ) ) ) ) ) => ?gen235 <- ( min_imprisonment ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl348_st1_min] ) ) ) ?gen259 <- ( min_imprisonment ( value 1 ) ( positive 1 ) ( positive-derivator pen_cl348_st1_min $? ) ) ( test ( eq ( class ?gen259 ) min_imprisonment ) ) ( not ( and ?gen266 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen265 & : ( >= ?gen265 1 ) ) ) ?gen259 <- ( min_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen261 & : ( not ( member$ pen_cl348_st1_min $?gen261 ) ) ) ) ) ) => ?gen259 <- ( min_imprisonment ( positive 0 ) )"))
 
 ([pen_cl348_st1_min-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl348_st1_min-defeasibly-gen308)
+   (pos-name pen_cl348_st1_min-defeasibly-gen335)
    (depends-on declare commited_cl348_st1 min_imprisonment)
    (implies min_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl348_st1_min] ) ) ) ?gen242 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen241 & : ( >= ?gen241 1 ) ) ) ?gen235 <- ( min_imprisonment ( value 1 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen237 & : ( not ( member$ pen_cl348_st1_min $?gen237 ) ) ) ) ( test ( eq ( class ?gen235 ) min_imprisonment ) ) => ?gen235 <- ( min_imprisonment ( positive 1 ) ( positive-derivator pen_cl348_st1_min ?gen242 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl348_st1_min] ) ) ) ?gen266 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen265 & : ( >= ?gen265 1 ) ) ) ?gen259 <- ( min_imprisonment ( value 1 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen261 & : ( not ( member$ pen_cl348_st1_min $?gen261 ) ) ) ) ( test ( eq ( class ?gen259 ) min_imprisonment ) ) => ?gen259 <- ( min_imprisonment ( positive 1 ) ( positive-derivator pen_cl348_st1_min ?gen266 ) )"))
 
 ([pen_cl348_st1_min-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl348_st1_min-overruled-dot-gen310)
+   (pos-name pen_cl348_st1_min-overruled-dot-gen337)
    (depends-on declare min_imprisonment commited_cl348_st1 min_imprisonment)
    (implies min_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl348_st1_min] ) ) ) ?gen235 <- ( min_imprisonment ( value 1 ) ( negative-support $?gen238 ) ( negative-overruled $?gen239 & : ( subseq-pos ( create$ pen_cl348_st1_min-overruled $?gen238 $$$ $?gen239 ) ) ) ) ( test ( eq ( class ?gen235 ) min_imprisonment ) ) ( not ( and ?gen242 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen241 & : ( >= ?gen241 1 ) ) ) ?gen235 <- ( min_imprisonment ( positive-defeated $?gen237 & : ( not ( member$ pen_cl348_st1_min $?gen237 ) ) ) ) ) ) => ( calc ( bind $?gen240 ( delete-member$ $?gen239 ( create$ pen_cl348_st1_min-overruled $?gen238 ) ) ) ) ?gen235 <- ( min_imprisonment ( negative-overruled $?gen240 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl348_st1_min] ) ) ) ?gen259 <- ( min_imprisonment ( value 1 ) ( negative-support $?gen262 ) ( negative-overruled $?gen263 & : ( subseq-pos ( create$ pen_cl348_st1_min-overruled $?gen262 $$$ $?gen263 ) ) ) ) ( test ( eq ( class ?gen259 ) min_imprisonment ) ) ( not ( and ?gen266 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen265 & : ( >= ?gen265 1 ) ) ) ?gen259 <- ( min_imprisonment ( positive-defeated $?gen261 & : ( not ( member$ pen_cl348_st1_min $?gen261 ) ) ) ) ) ) => ( calc ( bind $?gen264 ( delete-member$ $?gen263 ( create$ pen_cl348_st1_min-overruled $?gen262 ) ) ) ) ?gen259 <- ( min_imprisonment ( negative-overruled $?gen264 ) )"))
 
 ([pen_cl348_st1_min-overruled] of derived-attribute-rule
-   (pos-name pen_cl348_st1_min-overruled-gen312)
+   (pos-name pen_cl348_st1_min-overruled-gen339)
    (depends-on declare commited_cl348_st1 min_imprisonment)
    (implies min_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl348_st1_min] ) ) ) ?gen242 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen241 & : ( >= ?gen241 1 ) ) ) ?gen235 <- ( min_imprisonment ( value 1 ) ( negative-support $?gen238 ) ( negative-overruled $?gen239 & : ( not ( subseq-pos ( create$ pen_cl348_st1_min-overruled $?gen238 $$$ $?gen239 ) ) ) ) ( positive-defeated $?gen237 & : ( not ( member$ pen_cl348_st1_min $?gen237 ) ) ) ) ( test ( eq ( class ?gen235 ) min_imprisonment ) ) => ( calc ( bind $?gen240 ( create$ pen_cl348_st1_min-overruled $?gen238 $?gen239 ) ) ) ?gen235 <- ( min_imprisonment ( negative-overruled $?gen240 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl348_st1_min] ) ) ) ?gen266 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive ?gen265 & : ( >= ?gen265 1 ) ) ) ?gen259 <- ( min_imprisonment ( value 1 ) ( negative-support $?gen262 ) ( negative-overruled $?gen263 & : ( not ( subseq-pos ( create$ pen_cl348_st1_min-overruled $?gen262 $$$ $?gen263 ) ) ) ) ( positive-defeated $?gen261 & : ( not ( member$ pen_cl348_st1_min $?gen261 ) ) ) ) ( test ( eq ( class ?gen259 ) min_imprisonment ) ) => ( calc ( bind $?gen264 ( create$ pen_cl348_st1_min-overruled $?gen262 $?gen263 ) ) ) ?gen259 <- ( min_imprisonment ( negative-overruled $?gen264 ) )"))
 
 ([pen_cl348_st1_min-support] of derived-attribute-rule
-   (pos-name pen_cl348_st1_min-support-gen314)
+   (pos-name pen_cl348_st1_min-support-gen341)
    (depends-on declare commited_cl348_st1 min_imprisonment)
    (implies min_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl348_st1_min] ) ) ) ?gen234 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ?gen235 <- ( min_imprisonment ( value 1 ) ( positive-support $?gen237 & : ( not ( subseq-pos ( create$ pen_cl348_st1_min ?gen234 $$$ $?gen237 ) ) ) ) ) ( test ( eq ( class ?gen235 ) min_imprisonment ) ) => ( calc ( bind $?gen240 ( create$ pen_cl348_st1_min ?gen234 $?gen237 ) ) ) ?gen235 <- ( min_imprisonment ( positive-support $?gen240 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl348_st1_min] ) ) ) ?gen258 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ?gen259 <- ( min_imprisonment ( value 1 ) ( positive-support $?gen261 & : ( not ( subseq-pos ( create$ pen_cl348_st1_min ?gen258 $$$ $?gen261 ) ) ) ) ) ( test ( eq ( class ?gen259 ) min_imprisonment ) ) => ( calc ( bind $?gen264 ( create$ pen_cl348_st1_min ?gen258 $?gen261 ) ) ) ?gen259 <- ( min_imprisonment ( positive-support $?gen264 ) )"))
 
 ([pen_cl339_st3_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl339_st3_max-defeasibly-dot-gen316)
+   (pos-name pen_cl339_st3_max-defeasibly-dot-gen343)
    (depends-on declare max_imprisonment commited_cl339_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl339_st3_max] ) ) ) ?gen226 <- ( max_imprisonment ( value 1 ) ( positive 1 ) ( positive-derivator pen_cl339_st3_max $? ) ) ( test ( eq ( class ?gen226 ) max_imprisonment ) ) ( not ( and ?gen233 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen232 & : ( >= ?gen232 1 ) ) ) ?gen226 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen228 & : ( not ( member$ pen_cl339_st3_max $?gen228 ) ) ) ) ) ) => ?gen226 <- ( max_imprisonment ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl339_st3_max] ) ) ) ?gen250 <- ( max_imprisonment ( value 1 ) ( positive 1 ) ( positive-derivator pen_cl339_st3_max $? ) ) ( test ( eq ( class ?gen250 ) max_imprisonment ) ) ( not ( and ?gen257 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen256 & : ( >= ?gen256 1 ) ) ) ?gen250 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen252 & : ( not ( member$ pen_cl339_st3_max $?gen252 ) ) ) ) ) ) => ?gen250 <- ( max_imprisonment ( positive 0 ) )"))
 
 ([pen_cl339_st3_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl339_st3_max-defeasibly-gen318)
+   (pos-name pen_cl339_st3_max-defeasibly-gen345)
    (depends-on declare commited_cl339_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl339_st3_max] ) ) ) ?gen233 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen232 & : ( >= ?gen232 1 ) ) ) ?gen226 <- ( max_imprisonment ( value 1 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen228 & : ( not ( member$ pen_cl339_st3_max $?gen228 ) ) ) ) ( test ( eq ( class ?gen226 ) max_imprisonment ) ) => ?gen226 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl339_st3_max ?gen233 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl339_st3_max] ) ) ) ?gen257 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen256 & : ( >= ?gen256 1 ) ) ) ?gen250 <- ( max_imprisonment ( value 1 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen252 & : ( not ( member$ pen_cl339_st3_max $?gen252 ) ) ) ) ( test ( eq ( class ?gen250 ) max_imprisonment ) ) => ?gen250 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl339_st3_max ?gen257 ) )"))
 
 ([pen_cl339_st3_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl339_st3_max-overruled-dot-gen320)
+   (pos-name pen_cl339_st3_max-overruled-dot-gen347)
    (depends-on declare max_imprisonment commited_cl339_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl339_st3_max] ) ) ) ?gen226 <- ( max_imprisonment ( value 1 ) ( negative-support $?gen229 ) ( negative-overruled $?gen230 & : ( subseq-pos ( create$ pen_cl339_st3_max-overruled $?gen229 $$$ $?gen230 ) ) ) ) ( test ( eq ( class ?gen226 ) max_imprisonment ) ) ( not ( and ?gen233 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen232 & : ( >= ?gen232 1 ) ) ) ?gen226 <- ( max_imprisonment ( positive-defeated $?gen228 & : ( not ( member$ pen_cl339_st3_max $?gen228 ) ) ) ) ) ) => ( calc ( bind $?gen231 ( delete-member$ $?gen230 ( create$ pen_cl339_st3_max-overruled $?gen229 ) ) ) ) ?gen226 <- ( max_imprisonment ( negative-overruled $?gen231 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl339_st3_max] ) ) ) ?gen250 <- ( max_imprisonment ( value 1 ) ( negative-support $?gen253 ) ( negative-overruled $?gen254 & : ( subseq-pos ( create$ pen_cl339_st3_max-overruled $?gen253 $$$ $?gen254 ) ) ) ) ( test ( eq ( class ?gen250 ) max_imprisonment ) ) ( not ( and ?gen257 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen256 & : ( >= ?gen256 1 ) ) ) ?gen250 <- ( max_imprisonment ( positive-defeated $?gen252 & : ( not ( member$ pen_cl339_st3_max $?gen252 ) ) ) ) ) ) => ( calc ( bind $?gen255 ( delete-member$ $?gen254 ( create$ pen_cl339_st3_max-overruled $?gen253 ) ) ) ) ?gen250 <- ( max_imprisonment ( negative-overruled $?gen255 ) )"))
 
 ([pen_cl339_st3_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl339_st3_max-overruled-gen322)
+   (pos-name pen_cl339_st3_max-overruled-gen349)
    (depends-on declare commited_cl339_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl339_st3_max] ) ) ) ?gen233 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen232 & : ( >= ?gen232 1 ) ) ) ?gen226 <- ( max_imprisonment ( value 1 ) ( negative-support $?gen229 ) ( negative-overruled $?gen230 & : ( not ( subseq-pos ( create$ pen_cl339_st3_max-overruled $?gen229 $$$ $?gen230 ) ) ) ) ( positive-defeated $?gen228 & : ( not ( member$ pen_cl339_st3_max $?gen228 ) ) ) ) ( test ( eq ( class ?gen226 ) max_imprisonment ) ) => ( calc ( bind $?gen231 ( create$ pen_cl339_st3_max-overruled $?gen229 $?gen230 ) ) ) ?gen226 <- ( max_imprisonment ( negative-overruled $?gen231 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl339_st3_max] ) ) ) ?gen257 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive ?gen256 & : ( >= ?gen256 1 ) ) ) ?gen250 <- ( max_imprisonment ( value 1 ) ( negative-support $?gen253 ) ( negative-overruled $?gen254 & : ( not ( subseq-pos ( create$ pen_cl339_st3_max-overruled $?gen253 $$$ $?gen254 ) ) ) ) ( positive-defeated $?gen252 & : ( not ( member$ pen_cl339_st3_max $?gen252 ) ) ) ) ( test ( eq ( class ?gen250 ) max_imprisonment ) ) => ( calc ( bind $?gen255 ( create$ pen_cl339_st3_max-overruled $?gen253 $?gen254 ) ) ) ?gen250 <- ( max_imprisonment ( negative-overruled $?gen255 ) )"))
 
 ([pen_cl339_st3_max-support] of derived-attribute-rule
-   (pos-name pen_cl339_st3_max-support-gen324)
+   (pos-name pen_cl339_st3_max-support-gen351)
    (depends-on declare commited_cl339_st3 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl339_st3_max] ) ) ) ?gen225 <- ( commited_cl339_st3 ( defendant ?Defendant ) ) ?gen226 <- ( max_imprisonment ( value 1 ) ( positive-support $?gen228 & : ( not ( subseq-pos ( create$ pen_cl339_st3_max ?gen225 $$$ $?gen228 ) ) ) ) ) ( test ( eq ( class ?gen226 ) max_imprisonment ) ) => ( calc ( bind $?gen231 ( create$ pen_cl339_st3_max ?gen225 $?gen228 ) ) ) ?gen226 <- ( max_imprisonment ( positive-support $?gen231 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl339_st3_max] ) ) ) ?gen249 <- ( commited_cl339_st3 ( defendant ?Defendant ) ) ?gen250 <- ( max_imprisonment ( value 1 ) ( positive-support $?gen252 & : ( not ( subseq-pos ( create$ pen_cl339_st3_max ?gen249 $$$ $?gen252 ) ) ) ) ) ( test ( eq ( class ?gen250 ) max_imprisonment ) ) => ( calc ( bind $?gen255 ( create$ pen_cl339_st3_max ?gen249 $?gen252 ) ) ) ?gen250 <- ( max_imprisonment ( positive-support $?gen255 ) )"))
 
 ([pen_cl339_st1_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl339_st1_max-defeasibly-dot-gen326)
+   (pos-name pen_cl339_st1_max-defeasibly-dot-gen353)
    (depends-on declare max_imprisonment commited_cl339_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl339_st1_max] ) ) ) ?gen217 <- ( max_imprisonment ( value 3 ) ( positive 1 ) ( positive-derivator pen_cl339_st1_max $? ) ) ( test ( eq ( class ?gen217 ) max_imprisonment ) ) ( not ( and ?gen224 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen223 & : ( >= ?gen223 1 ) ) ) ?gen217 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen219 & : ( not ( member$ pen_cl339_st1_max $?gen219 ) ) ) ) ) ) => ?gen217 <- ( max_imprisonment ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl339_st1_max] ) ) ) ?gen241 <- ( max_imprisonment ( value 3 ) ( positive 1 ) ( positive-derivator pen_cl339_st1_max $? ) ) ( test ( eq ( class ?gen241 ) max_imprisonment ) ) ( not ( and ?gen248 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen247 & : ( >= ?gen247 1 ) ) ) ?gen241 <- ( max_imprisonment ( negative ~ 2 ) ( positive-overruled $?gen243 & : ( not ( member$ pen_cl339_st1_max $?gen243 ) ) ) ) ) ) => ?gen241 <- ( max_imprisonment ( positive 0 ) )"))
 
 ([pen_cl339_st1_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl339_st1_max-defeasibly-gen328)
+   (pos-name pen_cl339_st1_max-defeasibly-gen355)
    (depends-on declare commited_cl339_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl339_st1_max] ) ) ) ?gen224 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen223 & : ( >= ?gen223 1 ) ) ) ?gen217 <- ( max_imprisonment ( value 3 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen219 & : ( not ( member$ pen_cl339_st1_max $?gen219 ) ) ) ) ( test ( eq ( class ?gen217 ) max_imprisonment ) ) => ?gen217 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl339_st1_max ?gen224 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl339_st1_max] ) ) ) ?gen248 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen247 & : ( >= ?gen247 1 ) ) ) ?gen241 <- ( max_imprisonment ( value 3 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen243 & : ( not ( member$ pen_cl339_st1_max $?gen243 ) ) ) ) ( test ( eq ( class ?gen241 ) max_imprisonment ) ) => ?gen241 <- ( max_imprisonment ( positive 1 ) ( positive-derivator pen_cl339_st1_max ?gen248 ) )"))
 
 ([pen_cl339_st1_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl339_st1_max-overruled-dot-gen330)
+   (pos-name pen_cl339_st1_max-overruled-dot-gen357)
    (depends-on declare max_imprisonment commited_cl339_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl339_st1_max] ) ) ) ?gen217 <- ( max_imprisonment ( value 3 ) ( negative-support $?gen220 ) ( negative-overruled $?gen221 & : ( subseq-pos ( create$ pen_cl339_st1_max-overruled $?gen220 $$$ $?gen221 ) ) ) ) ( test ( eq ( class ?gen217 ) max_imprisonment ) ) ( not ( and ?gen224 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen223 & : ( >= ?gen223 1 ) ) ) ?gen217 <- ( max_imprisonment ( positive-defeated $?gen219 & : ( not ( member$ pen_cl339_st1_max $?gen219 ) ) ) ) ) ) => ( calc ( bind $?gen222 ( delete-member$ $?gen221 ( create$ pen_cl339_st1_max-overruled $?gen220 ) ) ) ) ?gen217 <- ( max_imprisonment ( negative-overruled $?gen222 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl339_st1_max] ) ) ) ?gen241 <- ( max_imprisonment ( value 3 ) ( negative-support $?gen244 ) ( negative-overruled $?gen245 & : ( subseq-pos ( create$ pen_cl339_st1_max-overruled $?gen244 $$$ $?gen245 ) ) ) ) ( test ( eq ( class ?gen241 ) max_imprisonment ) ) ( not ( and ?gen248 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen247 & : ( >= ?gen247 1 ) ) ) ?gen241 <- ( max_imprisonment ( positive-defeated $?gen243 & : ( not ( member$ pen_cl339_st1_max $?gen243 ) ) ) ) ) ) => ( calc ( bind $?gen246 ( delete-member$ $?gen245 ( create$ pen_cl339_st1_max-overruled $?gen244 ) ) ) ) ?gen241 <- ( max_imprisonment ( negative-overruled $?gen246 ) )"))
 
 ([pen_cl339_st1_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl339_st1_max-overruled-gen332)
+   (pos-name pen_cl339_st1_max-overruled-gen359)
    (depends-on declare commited_cl339_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl339_st1_max] ) ) ) ?gen224 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen223 & : ( >= ?gen223 1 ) ) ) ?gen217 <- ( max_imprisonment ( value 3 ) ( negative-support $?gen220 ) ( negative-overruled $?gen221 & : ( not ( subseq-pos ( create$ pen_cl339_st1_max-overruled $?gen220 $$$ $?gen221 ) ) ) ) ( positive-defeated $?gen219 & : ( not ( member$ pen_cl339_st1_max $?gen219 ) ) ) ) ( test ( eq ( class ?gen217 ) max_imprisonment ) ) => ( calc ( bind $?gen222 ( create$ pen_cl339_st1_max-overruled $?gen220 $?gen221 ) ) ) ?gen217 <- ( max_imprisonment ( negative-overruled $?gen222 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl339_st1_max] ) ) ) ?gen248 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive ?gen247 & : ( >= ?gen247 1 ) ) ) ?gen241 <- ( max_imprisonment ( value 3 ) ( negative-support $?gen244 ) ( negative-overruled $?gen245 & : ( not ( subseq-pos ( create$ pen_cl339_st1_max-overruled $?gen244 $$$ $?gen245 ) ) ) ) ( positive-defeated $?gen243 & : ( not ( member$ pen_cl339_st1_max $?gen243 ) ) ) ) ( test ( eq ( class ?gen241 ) max_imprisonment ) ) => ( calc ( bind $?gen246 ( create$ pen_cl339_st1_max-overruled $?gen244 $?gen245 ) ) ) ?gen241 <- ( max_imprisonment ( negative-overruled $?gen246 ) )"))
 
 ([pen_cl339_st1_max-support] of derived-attribute-rule
-   (pos-name pen_cl339_st1_max-support-gen334)
+   (pos-name pen_cl339_st1_max-support-gen361)
    (depends-on declare commited_cl339_st1 max_imprisonment)
    (implies max_imprisonment)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl339_st1_max] ) ) ) ?gen216 <- ( commited_cl339_st1 ( defendant ?Defendant ) ) ?gen217 <- ( max_imprisonment ( value 3 ) ( positive-support $?gen219 & : ( not ( subseq-pos ( create$ pen_cl339_st1_max ?gen216 $$$ $?gen219 ) ) ) ) ) ( test ( eq ( class ?gen217 ) max_imprisonment ) ) => ( calc ( bind $?gen222 ( create$ pen_cl339_st1_max ?gen216 $?gen219 ) ) ) ?gen217 <- ( max_imprisonment ( positive-support $?gen222 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl339_st1_max] ) ) ) ?gen240 <- ( commited_cl339_st1 ( defendant ?Defendant ) ) ?gen241 <- ( max_imprisonment ( value 3 ) ( positive-support $?gen243 & : ( not ( subseq-pos ( create$ pen_cl339_st1_max ?gen240 $$$ $?gen243 ) ) ) ) ) ( test ( eq ( class ?gen241 ) max_imprisonment ) ) => ( calc ( bind $?gen246 ( create$ pen_cl339_st1_max ?gen240 $?gen243 ) ) ) ?gen241 <- ( max_imprisonment ( positive-support $?gen246 ) )"))
+
+([pen_cl97_st3_max-defeasibly-dot] of derived-attribute-rule
+   (pos-name pen_cl97_st3_max-defeasibly-dot-gen363)
+   (depends-on declare to_pay_max_97 commited_cl97_st3 to_pay_max_97)
+   (implies to_pay_max_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl97_st3_max] ) ) ) ?gen232 <- ( to_pay_max_97 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl97_st3_max $? ) ) ( test ( eq ( class ?gen232 ) to_pay_max_97 ) ) ( not ( and ?gen239 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen238 & : ( >= ?gen238 1 ) ) ) ?gen232 <- ( to_pay_max_97 ( negative ~ 2 ) ( positive-overruled $?gen234 & : ( not ( member$ pen_cl97_st3_max $?gen234 ) ) ) ) ) ) => ?gen232 <- ( to_pay_max_97 ( positive 0 ) )"))
+
+([pen_cl97_st3_max-defeasibly] of derived-attribute-rule
+   (pos-name pen_cl97_st3_max-defeasibly-gen365)
+   (depends-on declare commited_cl97_st3 to_pay_max_97)
+   (implies to_pay_max_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl97_st3_max] ) ) ) ?gen239 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen238 & : ( >= ?gen238 1 ) ) ) ?gen232 <- ( to_pay_max_97 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen234 & : ( not ( member$ pen_cl97_st3_max $?gen234 ) ) ) ) ( test ( eq ( class ?gen232 ) to_pay_max_97 ) ) => ?gen232 <- ( to_pay_max_97 ( positive 1 ) ( positive-derivator pen_cl97_st3_max ?gen239 ) )"))
+
+([pen_cl97_st3_max-overruled-dot] of derived-attribute-rule
+   (pos-name pen_cl97_st3_max-overruled-dot-gen367)
+   (depends-on declare to_pay_max_97 commited_cl97_st3 to_pay_max_97)
+   (implies to_pay_max_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl97_st3_max] ) ) ) ?gen232 <- ( to_pay_max_97 ( value 250 ) ( negative-support $?gen235 ) ( negative-overruled $?gen236 & : ( subseq-pos ( create$ pen_cl97_st3_max-overruled $?gen235 $$$ $?gen236 ) ) ) ) ( test ( eq ( class ?gen232 ) to_pay_max_97 ) ) ( not ( and ?gen239 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen238 & : ( >= ?gen238 1 ) ) ) ?gen232 <- ( to_pay_max_97 ( positive-defeated $?gen234 & : ( not ( member$ pen_cl97_st3_max $?gen234 ) ) ) ) ) ) => ( calc ( bind $?gen237 ( delete-member$ $?gen236 ( create$ pen_cl97_st3_max-overruled $?gen235 ) ) ) ) ?gen232 <- ( to_pay_max_97 ( negative-overruled $?gen237 ) )"))
+
+([pen_cl97_st3_max-overruled] of derived-attribute-rule
+   (pos-name pen_cl97_st3_max-overruled-gen369)
+   (depends-on declare commited_cl97_st3 to_pay_max_97)
+   (implies to_pay_max_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl97_st3_max] ) ) ) ?gen239 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen238 & : ( >= ?gen238 1 ) ) ) ?gen232 <- ( to_pay_max_97 ( value 250 ) ( negative-support $?gen235 ) ( negative-overruled $?gen236 & : ( not ( subseq-pos ( create$ pen_cl97_st3_max-overruled $?gen235 $$$ $?gen236 ) ) ) ) ( positive-defeated $?gen234 & : ( not ( member$ pen_cl97_st3_max $?gen234 ) ) ) ) ( test ( eq ( class ?gen232 ) to_pay_max_97 ) ) => ( calc ( bind $?gen237 ( create$ pen_cl97_st3_max-overruled $?gen235 $?gen236 ) ) ) ?gen232 <- ( to_pay_max_97 ( negative-overruled $?gen237 ) )"))
+
+([pen_cl97_st3_max-support] of derived-attribute-rule
+   (pos-name pen_cl97_st3_max-support-gen371)
+   (depends-on declare commited_cl97_st3 to_pay_max_97)
+   (implies to_pay_max_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl97_st3_max] ) ) ) ?gen231 <- ( commited_cl97_st3 ( defendant ?Defendant ) ) ?gen232 <- ( to_pay_max_97 ( value 250 ) ( positive-support $?gen234 & : ( not ( subseq-pos ( create$ pen_cl97_st3_max ?gen231 $$$ $?gen234 ) ) ) ) ) ( test ( eq ( class ?gen232 ) to_pay_max_97 ) ) => ( calc ( bind $?gen237 ( create$ pen_cl97_st3_max ?gen231 $?gen234 ) ) ) ?gen232 <- ( to_pay_max_97 ( positive-support $?gen237 ) )"))
+
+([pen_cl97_st3_min-defeasibly-dot] of derived-attribute-rule
+   (pos-name pen_cl97_st3_min-defeasibly-dot-gen373)
+   (depends-on declare to_pay_min_97 commited_cl97_st3 to_pay_min_97)
+   (implies to_pay_min_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl97_st3_min] ) ) ) ?gen223 <- ( to_pay_min_97 ( value 80 ) ( positive 1 ) ( positive-derivator pen_cl97_st3_min $? ) ) ( test ( eq ( class ?gen223 ) to_pay_min_97 ) ) ( not ( and ?gen230 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen229 & : ( >= ?gen229 1 ) ) ) ?gen223 <- ( to_pay_min_97 ( negative ~ 2 ) ( positive-overruled $?gen225 & : ( not ( member$ pen_cl97_st3_min $?gen225 ) ) ) ) ) ) => ?gen223 <- ( to_pay_min_97 ( positive 0 ) )"))
+
+([pen_cl97_st3_min-defeasibly] of derived-attribute-rule
+   (pos-name pen_cl97_st3_min-defeasibly-gen375)
+   (depends-on declare commited_cl97_st3 to_pay_min_97)
+   (implies to_pay_min_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl97_st3_min] ) ) ) ?gen230 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen229 & : ( >= ?gen229 1 ) ) ) ?gen223 <- ( to_pay_min_97 ( value 80 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen225 & : ( not ( member$ pen_cl97_st3_min $?gen225 ) ) ) ) ( test ( eq ( class ?gen223 ) to_pay_min_97 ) ) => ?gen223 <- ( to_pay_min_97 ( positive 1 ) ( positive-derivator pen_cl97_st3_min ?gen230 ) )"))
+
+([pen_cl97_st3_min-overruled-dot] of derived-attribute-rule
+   (pos-name pen_cl97_st3_min-overruled-dot-gen377)
+   (depends-on declare to_pay_min_97 commited_cl97_st3 to_pay_min_97)
+   (implies to_pay_min_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl97_st3_min] ) ) ) ?gen223 <- ( to_pay_min_97 ( value 80 ) ( negative-support $?gen226 ) ( negative-overruled $?gen227 & : ( subseq-pos ( create$ pen_cl97_st3_min-overruled $?gen226 $$$ $?gen227 ) ) ) ) ( test ( eq ( class ?gen223 ) to_pay_min_97 ) ) ( not ( and ?gen230 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen229 & : ( >= ?gen229 1 ) ) ) ?gen223 <- ( to_pay_min_97 ( positive-defeated $?gen225 & : ( not ( member$ pen_cl97_st3_min $?gen225 ) ) ) ) ) ) => ( calc ( bind $?gen228 ( delete-member$ $?gen227 ( create$ pen_cl97_st3_min-overruled $?gen226 ) ) ) ) ?gen223 <- ( to_pay_min_97 ( negative-overruled $?gen228 ) )"))
+
+([pen_cl97_st3_min-overruled] of derived-attribute-rule
+   (pos-name pen_cl97_st3_min-overruled-gen379)
+   (depends-on declare commited_cl97_st3 to_pay_min_97)
+   (implies to_pay_min_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl97_st3_min] ) ) ) ?gen230 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive ?gen229 & : ( >= ?gen229 1 ) ) ) ?gen223 <- ( to_pay_min_97 ( value 80 ) ( negative-support $?gen226 ) ( negative-overruled $?gen227 & : ( not ( subseq-pos ( create$ pen_cl97_st3_min-overruled $?gen226 $$$ $?gen227 ) ) ) ) ( positive-defeated $?gen225 & : ( not ( member$ pen_cl97_st3_min $?gen225 ) ) ) ) ( test ( eq ( class ?gen223 ) to_pay_min_97 ) ) => ( calc ( bind $?gen228 ( create$ pen_cl97_st3_min-overruled $?gen226 $?gen227 ) ) ) ?gen223 <- ( to_pay_min_97 ( negative-overruled $?gen228 ) )"))
+
+([pen_cl97_st3_min-support] of derived-attribute-rule
+   (pos-name pen_cl97_st3_min-support-gen381)
+   (depends-on declare commited_cl97_st3 to_pay_min_97)
+   (implies to_pay_min_97)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl97_st3_min] ) ) ) ?gen222 <- ( commited_cl97_st3 ( defendant ?Defendant ) ) ?gen223 <- ( to_pay_min_97 ( value 80 ) ( positive-support $?gen225 & : ( not ( subseq-pos ( create$ pen_cl97_st3_min ?gen222 $$$ $?gen225 ) ) ) ) ) ( test ( eq ( class ?gen223 ) to_pay_min_97 ) ) => ( calc ( bind $?gen228 ( create$ pen_cl97_st3_min ?gen222 $?gen225 ) ) ) ?gen223 <- ( to_pay_min_97 ( positive-support $?gen228 ) )"))
 
 ([pen_cl44_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl44_max-defeasibly-dot-gen336)
+   (pos-name pen_cl44_max-defeasibly-dot-gen383)
    (depends-on declare to_pay_max_44 commited_cl44 to_pay_max_44)
    (implies to_pay_max_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl44_max] ) ) ) ?gen208 <- ( to_pay_max_44 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl44_max $? ) ) ( test ( eq ( class ?gen208 ) to_pay_max_44 ) ) ( not ( and ?gen215 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen214 & : ( >= ?gen214 1 ) ) ) ?gen208 <- ( to_pay_max_44 ( negative ~ 2 ) ( positive-overruled $?gen210 & : ( not ( member$ pen_cl44_max $?gen210 ) ) ) ) ) ) => ?gen208 <- ( to_pay_max_44 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl44_max] ) ) ) ?gen214 <- ( to_pay_max_44 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl44_max $? ) ) ( test ( eq ( class ?gen214 ) to_pay_max_44 ) ) ( not ( and ?gen221 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen220 & : ( >= ?gen220 1 ) ) ) ?gen214 <- ( to_pay_max_44 ( negative ~ 2 ) ( positive-overruled $?gen216 & : ( not ( member$ pen_cl44_max $?gen216 ) ) ) ) ) ) => ?gen214 <- ( to_pay_max_44 ( positive 0 ) )"))
 
 ([pen_cl44_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl44_max-defeasibly-gen338)
+   (pos-name pen_cl44_max-defeasibly-gen385)
    (depends-on declare commited_cl44 to_pay_max_44)
    (implies to_pay_max_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl44_max] ) ) ) ?gen215 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen214 & : ( >= ?gen214 1 ) ) ) ?gen208 <- ( to_pay_max_44 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen210 & : ( not ( member$ pen_cl44_max $?gen210 ) ) ) ) ( test ( eq ( class ?gen208 ) to_pay_max_44 ) ) => ?gen208 <- ( to_pay_max_44 ( positive 1 ) ( positive-derivator pen_cl44_max ?gen215 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl44_max] ) ) ) ?gen221 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen220 & : ( >= ?gen220 1 ) ) ) ?gen214 <- ( to_pay_max_44 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen216 & : ( not ( member$ pen_cl44_max $?gen216 ) ) ) ) ( test ( eq ( class ?gen214 ) to_pay_max_44 ) ) => ?gen214 <- ( to_pay_max_44 ( positive 1 ) ( positive-derivator pen_cl44_max ?gen221 ) )"))
 
 ([pen_cl44_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl44_max-overruled-dot-gen340)
+   (pos-name pen_cl44_max-overruled-dot-gen387)
    (depends-on declare to_pay_max_44 commited_cl44 to_pay_max_44)
    (implies to_pay_max_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl44_max] ) ) ) ?gen208 <- ( to_pay_max_44 ( value 250 ) ( negative-support $?gen211 ) ( negative-overruled $?gen212 & : ( subseq-pos ( create$ pen_cl44_max-overruled $?gen211 $$$ $?gen212 ) ) ) ) ( test ( eq ( class ?gen208 ) to_pay_max_44 ) ) ( not ( and ?gen215 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen214 & : ( >= ?gen214 1 ) ) ) ?gen208 <- ( to_pay_max_44 ( positive-defeated $?gen210 & : ( not ( member$ pen_cl44_max $?gen210 ) ) ) ) ) ) => ( calc ( bind $?gen213 ( delete-member$ $?gen212 ( create$ pen_cl44_max-overruled $?gen211 ) ) ) ) ?gen208 <- ( to_pay_max_44 ( negative-overruled $?gen213 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl44_max] ) ) ) ?gen214 <- ( to_pay_max_44 ( value 250 ) ( negative-support $?gen217 ) ( negative-overruled $?gen218 & : ( subseq-pos ( create$ pen_cl44_max-overruled $?gen217 $$$ $?gen218 ) ) ) ) ( test ( eq ( class ?gen214 ) to_pay_max_44 ) ) ( not ( and ?gen221 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen220 & : ( >= ?gen220 1 ) ) ) ?gen214 <- ( to_pay_max_44 ( positive-defeated $?gen216 & : ( not ( member$ pen_cl44_max $?gen216 ) ) ) ) ) ) => ( calc ( bind $?gen219 ( delete-member$ $?gen218 ( create$ pen_cl44_max-overruled $?gen217 ) ) ) ) ?gen214 <- ( to_pay_max_44 ( negative-overruled $?gen219 ) )"))
 
 ([pen_cl44_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl44_max-overruled-gen342)
+   (pos-name pen_cl44_max-overruled-gen389)
    (depends-on declare commited_cl44 to_pay_max_44)
    (implies to_pay_max_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl44_max] ) ) ) ?gen215 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen214 & : ( >= ?gen214 1 ) ) ) ?gen208 <- ( to_pay_max_44 ( value 250 ) ( negative-support $?gen211 ) ( negative-overruled $?gen212 & : ( not ( subseq-pos ( create$ pen_cl44_max-overruled $?gen211 $$$ $?gen212 ) ) ) ) ( positive-defeated $?gen210 & : ( not ( member$ pen_cl44_max $?gen210 ) ) ) ) ( test ( eq ( class ?gen208 ) to_pay_max_44 ) ) => ( calc ( bind $?gen213 ( create$ pen_cl44_max-overruled $?gen211 $?gen212 ) ) ) ?gen208 <- ( to_pay_max_44 ( negative-overruled $?gen213 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl44_max] ) ) ) ?gen221 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen220 & : ( >= ?gen220 1 ) ) ) ?gen214 <- ( to_pay_max_44 ( value 250 ) ( negative-support $?gen217 ) ( negative-overruled $?gen218 & : ( not ( subseq-pos ( create$ pen_cl44_max-overruled $?gen217 $$$ $?gen218 ) ) ) ) ( positive-defeated $?gen216 & : ( not ( member$ pen_cl44_max $?gen216 ) ) ) ) ( test ( eq ( class ?gen214 ) to_pay_max_44 ) ) => ( calc ( bind $?gen219 ( create$ pen_cl44_max-overruled $?gen217 $?gen218 ) ) ) ?gen214 <- ( to_pay_max_44 ( negative-overruled $?gen219 ) )"))
 
 ([pen_cl44_max-support] of derived-attribute-rule
-   (pos-name pen_cl44_max-support-gen344)
+   (pos-name pen_cl44_max-support-gen391)
    (depends-on declare commited_cl44 to_pay_max_44)
    (implies to_pay_max_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl44_max] ) ) ) ?gen207 <- ( commited_cl44 ( defendant ?Defendant ) ) ?gen208 <- ( to_pay_max_44 ( value 250 ) ( positive-support $?gen210 & : ( not ( subseq-pos ( create$ pen_cl44_max ?gen207 $$$ $?gen210 ) ) ) ) ) ( test ( eq ( class ?gen208 ) to_pay_max_44 ) ) => ( calc ( bind $?gen213 ( create$ pen_cl44_max ?gen207 $?gen210 ) ) ) ?gen208 <- ( to_pay_max_44 ( positive-support $?gen213 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl44_max] ) ) ) ?gen213 <- ( commited_cl44 ( defendant ?Defendant ) ) ?gen214 <- ( to_pay_max_44 ( value 250 ) ( positive-support $?gen216 & : ( not ( subseq-pos ( create$ pen_cl44_max ?gen213 $$$ $?gen216 ) ) ) ) ) ( test ( eq ( class ?gen214 ) to_pay_max_44 ) ) => ( calc ( bind $?gen219 ( create$ pen_cl44_max ?gen213 $?gen216 ) ) ) ?gen214 <- ( to_pay_max_44 ( positive-support $?gen219 ) )"))
 
 ([pen_cl44_min-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl44_min-defeasibly-dot-gen346)
+   (pos-name pen_cl44_min-defeasibly-dot-gen393)
    (depends-on declare to_pay_min_44 commited_cl44 to_pay_min_44)
    (implies to_pay_min_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl44_min] ) ) ) ?gen199 <- ( to_pay_min_44 ( value 80 ) ( positive 1 ) ( positive-derivator pen_cl44_min $? ) ) ( test ( eq ( class ?gen199 ) to_pay_min_44 ) ) ( not ( and ?gen206 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen205 & : ( >= ?gen205 1 ) ) ) ?gen199 <- ( to_pay_min_44 ( negative ~ 2 ) ( positive-overruled $?gen201 & : ( not ( member$ pen_cl44_min $?gen201 ) ) ) ) ) ) => ?gen199 <- ( to_pay_min_44 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl44_min] ) ) ) ?gen205 <- ( to_pay_min_44 ( value 80 ) ( positive 1 ) ( positive-derivator pen_cl44_min $? ) ) ( test ( eq ( class ?gen205 ) to_pay_min_44 ) ) ( not ( and ?gen212 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen211 & : ( >= ?gen211 1 ) ) ) ?gen205 <- ( to_pay_min_44 ( negative ~ 2 ) ( positive-overruled $?gen207 & : ( not ( member$ pen_cl44_min $?gen207 ) ) ) ) ) ) => ?gen205 <- ( to_pay_min_44 ( positive 0 ) )"))
 
 ([pen_cl44_min-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl44_min-defeasibly-gen348)
+   (pos-name pen_cl44_min-defeasibly-gen395)
    (depends-on declare commited_cl44 to_pay_min_44)
    (implies to_pay_min_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl44_min] ) ) ) ?gen206 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen205 & : ( >= ?gen205 1 ) ) ) ?gen199 <- ( to_pay_min_44 ( value 80 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen201 & : ( not ( member$ pen_cl44_min $?gen201 ) ) ) ) ( test ( eq ( class ?gen199 ) to_pay_min_44 ) ) => ?gen199 <- ( to_pay_min_44 ( positive 1 ) ( positive-derivator pen_cl44_min ?gen206 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl44_min] ) ) ) ?gen212 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen211 & : ( >= ?gen211 1 ) ) ) ?gen205 <- ( to_pay_min_44 ( value 80 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen207 & : ( not ( member$ pen_cl44_min $?gen207 ) ) ) ) ( test ( eq ( class ?gen205 ) to_pay_min_44 ) ) => ?gen205 <- ( to_pay_min_44 ( positive 1 ) ( positive-derivator pen_cl44_min ?gen212 ) )"))
 
 ([pen_cl44_min-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl44_min-overruled-dot-gen350)
+   (pos-name pen_cl44_min-overruled-dot-gen397)
    (depends-on declare to_pay_min_44 commited_cl44 to_pay_min_44)
    (implies to_pay_min_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl44_min] ) ) ) ?gen199 <- ( to_pay_min_44 ( value 80 ) ( negative-support $?gen202 ) ( negative-overruled $?gen203 & : ( subseq-pos ( create$ pen_cl44_min-overruled $?gen202 $$$ $?gen203 ) ) ) ) ( test ( eq ( class ?gen199 ) to_pay_min_44 ) ) ( not ( and ?gen206 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen205 & : ( >= ?gen205 1 ) ) ) ?gen199 <- ( to_pay_min_44 ( positive-defeated $?gen201 & : ( not ( member$ pen_cl44_min $?gen201 ) ) ) ) ) ) => ( calc ( bind $?gen204 ( delete-member$ $?gen203 ( create$ pen_cl44_min-overruled $?gen202 ) ) ) ) ?gen199 <- ( to_pay_min_44 ( negative-overruled $?gen204 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl44_min] ) ) ) ?gen205 <- ( to_pay_min_44 ( value 80 ) ( negative-support $?gen208 ) ( negative-overruled $?gen209 & : ( subseq-pos ( create$ pen_cl44_min-overruled $?gen208 $$$ $?gen209 ) ) ) ) ( test ( eq ( class ?gen205 ) to_pay_min_44 ) ) ( not ( and ?gen212 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen211 & : ( >= ?gen211 1 ) ) ) ?gen205 <- ( to_pay_min_44 ( positive-defeated $?gen207 & : ( not ( member$ pen_cl44_min $?gen207 ) ) ) ) ) ) => ( calc ( bind $?gen210 ( delete-member$ $?gen209 ( create$ pen_cl44_min-overruled $?gen208 ) ) ) ) ?gen205 <- ( to_pay_min_44 ( negative-overruled $?gen210 ) )"))
 
 ([pen_cl44_min-overruled] of derived-attribute-rule
-   (pos-name pen_cl44_min-overruled-gen352)
+   (pos-name pen_cl44_min-overruled-gen399)
    (depends-on declare commited_cl44 to_pay_min_44)
    (implies to_pay_min_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl44_min] ) ) ) ?gen206 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen205 & : ( >= ?gen205 1 ) ) ) ?gen199 <- ( to_pay_min_44 ( value 80 ) ( negative-support $?gen202 ) ( negative-overruled $?gen203 & : ( not ( subseq-pos ( create$ pen_cl44_min-overruled $?gen202 $$$ $?gen203 ) ) ) ) ( positive-defeated $?gen201 & : ( not ( member$ pen_cl44_min $?gen201 ) ) ) ) ( test ( eq ( class ?gen199 ) to_pay_min_44 ) ) => ( calc ( bind $?gen204 ( create$ pen_cl44_min-overruled $?gen202 $?gen203 ) ) ) ?gen199 <- ( to_pay_min_44 ( negative-overruled $?gen204 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl44_min] ) ) ) ?gen212 <- ( commited_cl44 ( defendant ?Defendant ) ( positive ?gen211 & : ( >= ?gen211 1 ) ) ) ?gen205 <- ( to_pay_min_44 ( value 80 ) ( negative-support $?gen208 ) ( negative-overruled $?gen209 & : ( not ( subseq-pos ( create$ pen_cl44_min-overruled $?gen208 $$$ $?gen209 ) ) ) ) ( positive-defeated $?gen207 & : ( not ( member$ pen_cl44_min $?gen207 ) ) ) ) ( test ( eq ( class ?gen205 ) to_pay_min_44 ) ) => ( calc ( bind $?gen210 ( create$ pen_cl44_min-overruled $?gen208 $?gen209 ) ) ) ?gen205 <- ( to_pay_min_44 ( negative-overruled $?gen210 ) )"))
 
 ([pen_cl44_min-support] of derived-attribute-rule
-   (pos-name pen_cl44_min-support-gen354)
+   (pos-name pen_cl44_min-support-gen401)
    (depends-on declare commited_cl44 to_pay_min_44)
    (implies to_pay_min_44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl44_min] ) ) ) ?gen198 <- ( commited_cl44 ( defendant ?Defendant ) ) ?gen199 <- ( to_pay_min_44 ( value 80 ) ( positive-support $?gen201 & : ( not ( subseq-pos ( create$ pen_cl44_min ?gen198 $$$ $?gen201 ) ) ) ) ) ( test ( eq ( class ?gen199 ) to_pay_min_44 ) ) => ( calc ( bind $?gen204 ( create$ pen_cl44_min ?gen198 $?gen201 ) ) ) ?gen199 <- ( to_pay_min_44 ( positive-support $?gen204 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl44_min] ) ) ) ?gen204 <- ( commited_cl44 ( defendant ?Defendant ) ) ?gen205 <- ( to_pay_min_44 ( value 80 ) ( positive-support $?gen207 & : ( not ( subseq-pos ( create$ pen_cl44_min ?gen204 $$$ $?gen207 ) ) ) ) ) ( test ( eq ( class ?gen205 ) to_pay_min_44 ) ) => ( calc ( bind $?gen210 ( create$ pen_cl44_min ?gen204 $?gen207 ) ) ) ?gen205 <- ( to_pay_min_44 ( positive-support $?gen210 ) )"))
 
 ([pen_cl35_st1_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl35_st1_max-defeasibly-dot-gen356)
+   (pos-name pen_cl35_st1_max-defeasibly-dot-gen403)
    (depends-on declare to_pay_max_35 commited_cl35_st1 to_pay_max_35)
    (implies to_pay_max_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl35_st1_max] ) ) ) ?gen190 <- ( to_pay_max_35 ( value 400 ) ( positive 1 ) ( positive-derivator pen_cl35_st1_max $? ) ) ( test ( eq ( class ?gen190 ) to_pay_max_35 ) ) ( not ( and ?gen197 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen196 & : ( >= ?gen196 1 ) ) ) ?gen190 <- ( to_pay_max_35 ( negative ~ 2 ) ( positive-overruled $?gen192 & : ( not ( member$ pen_cl35_st1_max $?gen192 ) ) ) ) ) ) => ?gen190 <- ( to_pay_max_35 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl35_st1_max] ) ) ) ?gen196 <- ( to_pay_max_35 ( value 400 ) ( positive 1 ) ( positive-derivator pen_cl35_st1_max $? ) ) ( test ( eq ( class ?gen196 ) to_pay_max_35 ) ) ( not ( and ?gen203 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen202 & : ( >= ?gen202 1 ) ) ) ?gen196 <- ( to_pay_max_35 ( negative ~ 2 ) ( positive-overruled $?gen198 & : ( not ( member$ pen_cl35_st1_max $?gen198 ) ) ) ) ) ) => ?gen196 <- ( to_pay_max_35 ( positive 0 ) )"))
 
 ([pen_cl35_st1_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl35_st1_max-defeasibly-gen358)
+   (pos-name pen_cl35_st1_max-defeasibly-gen405)
    (depends-on declare commited_cl35_st1 to_pay_max_35)
    (implies to_pay_max_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl35_st1_max] ) ) ) ?gen197 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen196 & : ( >= ?gen196 1 ) ) ) ?gen190 <- ( to_pay_max_35 ( value 400 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen192 & : ( not ( member$ pen_cl35_st1_max $?gen192 ) ) ) ) ( test ( eq ( class ?gen190 ) to_pay_max_35 ) ) => ?gen190 <- ( to_pay_max_35 ( positive 1 ) ( positive-derivator pen_cl35_st1_max ?gen197 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl35_st1_max] ) ) ) ?gen203 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen202 & : ( >= ?gen202 1 ) ) ) ?gen196 <- ( to_pay_max_35 ( value 400 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen198 & : ( not ( member$ pen_cl35_st1_max $?gen198 ) ) ) ) ( test ( eq ( class ?gen196 ) to_pay_max_35 ) ) => ?gen196 <- ( to_pay_max_35 ( positive 1 ) ( positive-derivator pen_cl35_st1_max ?gen203 ) )"))
 
 ([pen_cl35_st1_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl35_st1_max-overruled-dot-gen360)
+   (pos-name pen_cl35_st1_max-overruled-dot-gen407)
    (depends-on declare to_pay_max_35 commited_cl35_st1 to_pay_max_35)
    (implies to_pay_max_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl35_st1_max] ) ) ) ?gen190 <- ( to_pay_max_35 ( value 400 ) ( negative-support $?gen193 ) ( negative-overruled $?gen194 & : ( subseq-pos ( create$ pen_cl35_st1_max-overruled $?gen193 $$$ $?gen194 ) ) ) ) ( test ( eq ( class ?gen190 ) to_pay_max_35 ) ) ( not ( and ?gen197 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen196 & : ( >= ?gen196 1 ) ) ) ?gen190 <- ( to_pay_max_35 ( positive-defeated $?gen192 & : ( not ( member$ pen_cl35_st1_max $?gen192 ) ) ) ) ) ) => ( calc ( bind $?gen195 ( delete-member$ $?gen194 ( create$ pen_cl35_st1_max-overruled $?gen193 ) ) ) ) ?gen190 <- ( to_pay_max_35 ( negative-overruled $?gen195 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl35_st1_max] ) ) ) ?gen196 <- ( to_pay_max_35 ( value 400 ) ( negative-support $?gen199 ) ( negative-overruled $?gen200 & : ( subseq-pos ( create$ pen_cl35_st1_max-overruled $?gen199 $$$ $?gen200 ) ) ) ) ( test ( eq ( class ?gen196 ) to_pay_max_35 ) ) ( not ( and ?gen203 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen202 & : ( >= ?gen202 1 ) ) ) ?gen196 <- ( to_pay_max_35 ( positive-defeated $?gen198 & : ( not ( member$ pen_cl35_st1_max $?gen198 ) ) ) ) ) ) => ( calc ( bind $?gen201 ( delete-member$ $?gen200 ( create$ pen_cl35_st1_max-overruled $?gen199 ) ) ) ) ?gen196 <- ( to_pay_max_35 ( negative-overruled $?gen201 ) )"))
 
 ([pen_cl35_st1_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl35_st1_max-overruled-gen362)
+   (pos-name pen_cl35_st1_max-overruled-gen409)
    (depends-on declare commited_cl35_st1 to_pay_max_35)
    (implies to_pay_max_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl35_st1_max] ) ) ) ?gen197 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen196 & : ( >= ?gen196 1 ) ) ) ?gen190 <- ( to_pay_max_35 ( value 400 ) ( negative-support $?gen193 ) ( negative-overruled $?gen194 & : ( not ( subseq-pos ( create$ pen_cl35_st1_max-overruled $?gen193 $$$ $?gen194 ) ) ) ) ( positive-defeated $?gen192 & : ( not ( member$ pen_cl35_st1_max $?gen192 ) ) ) ) ( test ( eq ( class ?gen190 ) to_pay_max_35 ) ) => ( calc ( bind $?gen195 ( create$ pen_cl35_st1_max-overruled $?gen193 $?gen194 ) ) ) ?gen190 <- ( to_pay_max_35 ( negative-overruled $?gen195 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl35_st1_max] ) ) ) ?gen203 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen202 & : ( >= ?gen202 1 ) ) ) ?gen196 <- ( to_pay_max_35 ( value 400 ) ( negative-support $?gen199 ) ( negative-overruled $?gen200 & : ( not ( subseq-pos ( create$ pen_cl35_st1_max-overruled $?gen199 $$$ $?gen200 ) ) ) ) ( positive-defeated $?gen198 & : ( not ( member$ pen_cl35_st1_max $?gen198 ) ) ) ) ( test ( eq ( class ?gen196 ) to_pay_max_35 ) ) => ( calc ( bind $?gen201 ( create$ pen_cl35_st1_max-overruled $?gen199 $?gen200 ) ) ) ?gen196 <- ( to_pay_max_35 ( negative-overruled $?gen201 ) )"))
 
 ([pen_cl35_st1_max-support] of derived-attribute-rule
-   (pos-name pen_cl35_st1_max-support-gen364)
+   (pos-name pen_cl35_st1_max-support-gen411)
    (depends-on declare commited_cl35_st1 to_pay_max_35)
    (implies to_pay_max_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl35_st1_max] ) ) ) ?gen189 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ?gen190 <- ( to_pay_max_35 ( value 400 ) ( positive-support $?gen192 & : ( not ( subseq-pos ( create$ pen_cl35_st1_max ?gen189 $$$ $?gen192 ) ) ) ) ) ( test ( eq ( class ?gen190 ) to_pay_max_35 ) ) => ( calc ( bind $?gen195 ( create$ pen_cl35_st1_max ?gen189 $?gen192 ) ) ) ?gen190 <- ( to_pay_max_35 ( positive-support $?gen195 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl35_st1_max] ) ) ) ?gen195 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ?gen196 <- ( to_pay_max_35 ( value 400 ) ( positive-support $?gen198 & : ( not ( subseq-pos ( create$ pen_cl35_st1_max ?gen195 $$$ $?gen198 ) ) ) ) ) ( test ( eq ( class ?gen196 ) to_pay_max_35 ) ) => ( calc ( bind $?gen201 ( create$ pen_cl35_st1_max ?gen195 $?gen198 ) ) ) ?gen196 <- ( to_pay_max_35 ( positive-support $?gen201 ) )"))
 
 ([pen_cl35_st1_min-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl35_st1_min-defeasibly-dot-gen366)
+   (pos-name pen_cl35_st1_min-defeasibly-dot-gen413)
    (depends-on declare to_pay_min_35 commited_cl35_st1 to_pay_min_35)
    (implies to_pay_min_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl35_st1_min] ) ) ) ?gen181 <- ( to_pay_min_35 ( value 120 ) ( positive 1 ) ( positive-derivator pen_cl35_st1_min $? ) ) ( test ( eq ( class ?gen181 ) to_pay_min_35 ) ) ( not ( and ?gen188 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen187 & : ( >= ?gen187 1 ) ) ) ?gen181 <- ( to_pay_min_35 ( negative ~ 2 ) ( positive-overruled $?gen183 & : ( not ( member$ pen_cl35_st1_min $?gen183 ) ) ) ) ) ) => ?gen181 <- ( to_pay_min_35 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl35_st1_min] ) ) ) ?gen187 <- ( to_pay_min_35 ( value 120 ) ( positive 1 ) ( positive-derivator pen_cl35_st1_min $? ) ) ( test ( eq ( class ?gen187 ) to_pay_min_35 ) ) ( not ( and ?gen194 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen193 & : ( >= ?gen193 1 ) ) ) ?gen187 <- ( to_pay_min_35 ( negative ~ 2 ) ( positive-overruled $?gen189 & : ( not ( member$ pen_cl35_st1_min $?gen189 ) ) ) ) ) ) => ?gen187 <- ( to_pay_min_35 ( positive 0 ) )"))
 
 ([pen_cl35_st1_min-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl35_st1_min-defeasibly-gen368)
+   (pos-name pen_cl35_st1_min-defeasibly-gen415)
    (depends-on declare commited_cl35_st1 to_pay_min_35)
    (implies to_pay_min_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl35_st1_min] ) ) ) ?gen188 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen187 & : ( >= ?gen187 1 ) ) ) ?gen181 <- ( to_pay_min_35 ( value 120 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen183 & : ( not ( member$ pen_cl35_st1_min $?gen183 ) ) ) ) ( test ( eq ( class ?gen181 ) to_pay_min_35 ) ) => ?gen181 <- ( to_pay_min_35 ( positive 1 ) ( positive-derivator pen_cl35_st1_min ?gen188 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl35_st1_min] ) ) ) ?gen194 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen193 & : ( >= ?gen193 1 ) ) ) ?gen187 <- ( to_pay_min_35 ( value 120 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen189 & : ( not ( member$ pen_cl35_st1_min $?gen189 ) ) ) ) ( test ( eq ( class ?gen187 ) to_pay_min_35 ) ) => ?gen187 <- ( to_pay_min_35 ( positive 1 ) ( positive-derivator pen_cl35_st1_min ?gen194 ) )"))
 
 ([pen_cl35_st1_min-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl35_st1_min-overruled-dot-gen370)
+   (pos-name pen_cl35_st1_min-overruled-dot-gen417)
    (depends-on declare to_pay_min_35 commited_cl35_st1 to_pay_min_35)
    (implies to_pay_min_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl35_st1_min] ) ) ) ?gen181 <- ( to_pay_min_35 ( value 120 ) ( negative-support $?gen184 ) ( negative-overruled $?gen185 & : ( subseq-pos ( create$ pen_cl35_st1_min-overruled $?gen184 $$$ $?gen185 ) ) ) ) ( test ( eq ( class ?gen181 ) to_pay_min_35 ) ) ( not ( and ?gen188 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen187 & : ( >= ?gen187 1 ) ) ) ?gen181 <- ( to_pay_min_35 ( positive-defeated $?gen183 & : ( not ( member$ pen_cl35_st1_min $?gen183 ) ) ) ) ) ) => ( calc ( bind $?gen186 ( delete-member$ $?gen185 ( create$ pen_cl35_st1_min-overruled $?gen184 ) ) ) ) ?gen181 <- ( to_pay_min_35 ( negative-overruled $?gen186 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl35_st1_min] ) ) ) ?gen187 <- ( to_pay_min_35 ( value 120 ) ( negative-support $?gen190 ) ( negative-overruled $?gen191 & : ( subseq-pos ( create$ pen_cl35_st1_min-overruled $?gen190 $$$ $?gen191 ) ) ) ) ( test ( eq ( class ?gen187 ) to_pay_min_35 ) ) ( not ( and ?gen194 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen193 & : ( >= ?gen193 1 ) ) ) ?gen187 <- ( to_pay_min_35 ( positive-defeated $?gen189 & : ( not ( member$ pen_cl35_st1_min $?gen189 ) ) ) ) ) ) => ( calc ( bind $?gen192 ( delete-member$ $?gen191 ( create$ pen_cl35_st1_min-overruled $?gen190 ) ) ) ) ?gen187 <- ( to_pay_min_35 ( negative-overruled $?gen192 ) )"))
 
 ([pen_cl35_st1_min-overruled] of derived-attribute-rule
-   (pos-name pen_cl35_st1_min-overruled-gen372)
+   (pos-name pen_cl35_st1_min-overruled-gen419)
    (depends-on declare commited_cl35_st1 to_pay_min_35)
    (implies to_pay_min_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl35_st1_min] ) ) ) ?gen188 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen187 & : ( >= ?gen187 1 ) ) ) ?gen181 <- ( to_pay_min_35 ( value 120 ) ( negative-support $?gen184 ) ( negative-overruled $?gen185 & : ( not ( subseq-pos ( create$ pen_cl35_st1_min-overruled $?gen184 $$$ $?gen185 ) ) ) ) ( positive-defeated $?gen183 & : ( not ( member$ pen_cl35_st1_min $?gen183 ) ) ) ) ( test ( eq ( class ?gen181 ) to_pay_min_35 ) ) => ( calc ( bind $?gen186 ( create$ pen_cl35_st1_min-overruled $?gen184 $?gen185 ) ) ) ?gen181 <- ( to_pay_min_35 ( negative-overruled $?gen186 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl35_st1_min] ) ) ) ?gen194 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive ?gen193 & : ( >= ?gen193 1 ) ) ) ?gen187 <- ( to_pay_min_35 ( value 120 ) ( negative-support $?gen190 ) ( negative-overruled $?gen191 & : ( not ( subseq-pos ( create$ pen_cl35_st1_min-overruled $?gen190 $$$ $?gen191 ) ) ) ) ( positive-defeated $?gen189 & : ( not ( member$ pen_cl35_st1_min $?gen189 ) ) ) ) ( test ( eq ( class ?gen187 ) to_pay_min_35 ) ) => ( calc ( bind $?gen192 ( create$ pen_cl35_st1_min-overruled $?gen190 $?gen191 ) ) ) ?gen187 <- ( to_pay_min_35 ( negative-overruled $?gen192 ) )"))
 
 ([pen_cl35_st1_min-support] of derived-attribute-rule
-   (pos-name pen_cl35_st1_min-support-gen374)
+   (pos-name pen_cl35_st1_min-support-gen421)
    (depends-on declare commited_cl35_st1 to_pay_min_35)
    (implies to_pay_min_35)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl35_st1_min] ) ) ) ?gen180 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ?gen181 <- ( to_pay_min_35 ( value 120 ) ( positive-support $?gen183 & : ( not ( subseq-pos ( create$ pen_cl35_st1_min ?gen180 $$$ $?gen183 ) ) ) ) ) ( test ( eq ( class ?gen181 ) to_pay_min_35 ) ) => ( calc ( bind $?gen186 ( create$ pen_cl35_st1_min ?gen180 $?gen183 ) ) ) ?gen181 <- ( to_pay_min_35 ( positive-support $?gen186 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl35_st1_min] ) ) ) ?gen186 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ?gen187 <- ( to_pay_min_35 ( value 120 ) ( positive-support $?gen189 & : ( not ( subseq-pos ( create$ pen_cl35_st1_min ?gen186 $$$ $?gen189 ) ) ) ) ) ( test ( eq ( class ?gen187 ) to_pay_min_35 ) ) => ( calc ( bind $?gen192 ( create$ pen_cl35_st1_min ?gen186 $?gen189 ) ) ) ?gen187 <- ( to_pay_min_35 ( positive-support $?gen192 ) )"))
 
 ([pen_cl29_st1_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl29_st1_max-defeasibly-dot-gen376)
+   (pos-name pen_cl29_st1_max-defeasibly-dot-gen423)
    (depends-on declare to_pay_max_29 commited_cl29_st1 to_pay_max_29)
    (implies to_pay_max_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl29_st1_max] ) ) ) ?gen172 <- ( to_pay_max_29 ( value 400 ) ( positive 1 ) ( positive-derivator pen_cl29_st1_max $? ) ) ( test ( eq ( class ?gen172 ) to_pay_max_29 ) ) ( not ( and ?gen179 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen178 & : ( >= ?gen178 1 ) ) ) ?gen172 <- ( to_pay_max_29 ( negative ~ 2 ) ( positive-overruled $?gen174 & : ( not ( member$ pen_cl29_st1_max $?gen174 ) ) ) ) ) ) => ?gen172 <- ( to_pay_max_29 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl29_st1_max] ) ) ) ?gen178 <- ( to_pay_max_29 ( value 400 ) ( positive 1 ) ( positive-derivator pen_cl29_st1_max $? ) ) ( test ( eq ( class ?gen178 ) to_pay_max_29 ) ) ( not ( and ?gen185 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen184 & : ( >= ?gen184 1 ) ) ) ?gen178 <- ( to_pay_max_29 ( negative ~ 2 ) ( positive-overruled $?gen180 & : ( not ( member$ pen_cl29_st1_max $?gen180 ) ) ) ) ) ) => ?gen178 <- ( to_pay_max_29 ( positive 0 ) )"))
 
 ([pen_cl29_st1_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl29_st1_max-defeasibly-gen378)
+   (pos-name pen_cl29_st1_max-defeasibly-gen425)
    (depends-on declare commited_cl29_st1 to_pay_max_29)
    (implies to_pay_max_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl29_st1_max] ) ) ) ?gen179 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen178 & : ( >= ?gen178 1 ) ) ) ?gen172 <- ( to_pay_max_29 ( value 400 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen174 & : ( not ( member$ pen_cl29_st1_max $?gen174 ) ) ) ) ( test ( eq ( class ?gen172 ) to_pay_max_29 ) ) => ?gen172 <- ( to_pay_max_29 ( positive 1 ) ( positive-derivator pen_cl29_st1_max ?gen179 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl29_st1_max] ) ) ) ?gen185 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen184 & : ( >= ?gen184 1 ) ) ) ?gen178 <- ( to_pay_max_29 ( value 400 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen180 & : ( not ( member$ pen_cl29_st1_max $?gen180 ) ) ) ) ( test ( eq ( class ?gen178 ) to_pay_max_29 ) ) => ?gen178 <- ( to_pay_max_29 ( positive 1 ) ( positive-derivator pen_cl29_st1_max ?gen185 ) )"))
 
 ([pen_cl29_st1_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl29_st1_max-overruled-dot-gen380)
+   (pos-name pen_cl29_st1_max-overruled-dot-gen427)
    (depends-on declare to_pay_max_29 commited_cl29_st1 to_pay_max_29)
    (implies to_pay_max_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl29_st1_max] ) ) ) ?gen172 <- ( to_pay_max_29 ( value 400 ) ( negative-support $?gen175 ) ( negative-overruled $?gen176 & : ( subseq-pos ( create$ pen_cl29_st1_max-overruled $?gen175 $$$ $?gen176 ) ) ) ) ( test ( eq ( class ?gen172 ) to_pay_max_29 ) ) ( not ( and ?gen179 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen178 & : ( >= ?gen178 1 ) ) ) ?gen172 <- ( to_pay_max_29 ( positive-defeated $?gen174 & : ( not ( member$ pen_cl29_st1_max $?gen174 ) ) ) ) ) ) => ( calc ( bind $?gen177 ( delete-member$ $?gen176 ( create$ pen_cl29_st1_max-overruled $?gen175 ) ) ) ) ?gen172 <- ( to_pay_max_29 ( negative-overruled $?gen177 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl29_st1_max] ) ) ) ?gen178 <- ( to_pay_max_29 ( value 400 ) ( negative-support $?gen181 ) ( negative-overruled $?gen182 & : ( subseq-pos ( create$ pen_cl29_st1_max-overruled $?gen181 $$$ $?gen182 ) ) ) ) ( test ( eq ( class ?gen178 ) to_pay_max_29 ) ) ( not ( and ?gen185 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen184 & : ( >= ?gen184 1 ) ) ) ?gen178 <- ( to_pay_max_29 ( positive-defeated $?gen180 & : ( not ( member$ pen_cl29_st1_max $?gen180 ) ) ) ) ) ) => ( calc ( bind $?gen183 ( delete-member$ $?gen182 ( create$ pen_cl29_st1_max-overruled $?gen181 ) ) ) ) ?gen178 <- ( to_pay_max_29 ( negative-overruled $?gen183 ) )"))
 
 ([pen_cl29_st1_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl29_st1_max-overruled-gen382)
+   (pos-name pen_cl29_st1_max-overruled-gen429)
    (depends-on declare commited_cl29_st1 to_pay_max_29)
    (implies to_pay_max_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl29_st1_max] ) ) ) ?gen179 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen178 & : ( >= ?gen178 1 ) ) ) ?gen172 <- ( to_pay_max_29 ( value 400 ) ( negative-support $?gen175 ) ( negative-overruled $?gen176 & : ( not ( subseq-pos ( create$ pen_cl29_st1_max-overruled $?gen175 $$$ $?gen176 ) ) ) ) ( positive-defeated $?gen174 & : ( not ( member$ pen_cl29_st1_max $?gen174 ) ) ) ) ( test ( eq ( class ?gen172 ) to_pay_max_29 ) ) => ( calc ( bind $?gen177 ( create$ pen_cl29_st1_max-overruled $?gen175 $?gen176 ) ) ) ?gen172 <- ( to_pay_max_29 ( negative-overruled $?gen177 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl29_st1_max] ) ) ) ?gen185 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen184 & : ( >= ?gen184 1 ) ) ) ?gen178 <- ( to_pay_max_29 ( value 400 ) ( negative-support $?gen181 ) ( negative-overruled $?gen182 & : ( not ( subseq-pos ( create$ pen_cl29_st1_max-overruled $?gen181 $$$ $?gen182 ) ) ) ) ( positive-defeated $?gen180 & : ( not ( member$ pen_cl29_st1_max $?gen180 ) ) ) ) ( test ( eq ( class ?gen178 ) to_pay_max_29 ) ) => ( calc ( bind $?gen183 ( create$ pen_cl29_st1_max-overruled $?gen181 $?gen182 ) ) ) ?gen178 <- ( to_pay_max_29 ( negative-overruled $?gen183 ) )"))
 
 ([pen_cl29_st1_max-support] of derived-attribute-rule
-   (pos-name pen_cl29_st1_max-support-gen384)
+   (pos-name pen_cl29_st1_max-support-gen431)
    (depends-on declare commited_cl29_st1 to_pay_max_29)
    (implies to_pay_max_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl29_st1_max] ) ) ) ?gen171 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ?gen172 <- ( to_pay_max_29 ( value 400 ) ( positive-support $?gen174 & : ( not ( subseq-pos ( create$ pen_cl29_st1_max ?gen171 $$$ $?gen174 ) ) ) ) ) ( test ( eq ( class ?gen172 ) to_pay_max_29 ) ) => ( calc ( bind $?gen177 ( create$ pen_cl29_st1_max ?gen171 $?gen174 ) ) ) ?gen172 <- ( to_pay_max_29 ( positive-support $?gen177 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl29_st1_max] ) ) ) ?gen177 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ?gen178 <- ( to_pay_max_29 ( value 400 ) ( positive-support $?gen180 & : ( not ( subseq-pos ( create$ pen_cl29_st1_max ?gen177 $$$ $?gen180 ) ) ) ) ) ( test ( eq ( class ?gen178 ) to_pay_max_29 ) ) => ( calc ( bind $?gen183 ( create$ pen_cl29_st1_max ?gen177 $?gen180 ) ) ) ?gen178 <- ( to_pay_max_29 ( positive-support $?gen183 ) )"))
 
 ([pen_cl29_st1_min-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl29_st1_min-defeasibly-dot-gen386)
+   (pos-name pen_cl29_st1_min-defeasibly-dot-gen433)
    (depends-on declare to_pay_min_29 commited_cl29_st1 to_pay_min_29)
    (implies to_pay_min_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl29_st1_min] ) ) ) ?gen163 <- ( to_pay_min_29 ( value 120 ) ( positive 1 ) ( positive-derivator pen_cl29_st1_min $? ) ) ( test ( eq ( class ?gen163 ) to_pay_min_29 ) ) ( not ( and ?gen170 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen169 & : ( >= ?gen169 1 ) ) ) ?gen163 <- ( to_pay_min_29 ( negative ~ 2 ) ( positive-overruled $?gen165 & : ( not ( member$ pen_cl29_st1_min $?gen165 ) ) ) ) ) ) => ?gen163 <- ( to_pay_min_29 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl29_st1_min] ) ) ) ?gen169 <- ( to_pay_min_29 ( value 120 ) ( positive 1 ) ( positive-derivator pen_cl29_st1_min $? ) ) ( test ( eq ( class ?gen169 ) to_pay_min_29 ) ) ( not ( and ?gen176 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen175 & : ( >= ?gen175 1 ) ) ) ?gen169 <- ( to_pay_min_29 ( negative ~ 2 ) ( positive-overruled $?gen171 & : ( not ( member$ pen_cl29_st1_min $?gen171 ) ) ) ) ) ) => ?gen169 <- ( to_pay_min_29 ( positive 0 ) )"))
 
 ([pen_cl29_st1_min-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl29_st1_min-defeasibly-gen388)
+   (pos-name pen_cl29_st1_min-defeasibly-gen435)
    (depends-on declare commited_cl29_st1 to_pay_min_29)
    (implies to_pay_min_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl29_st1_min] ) ) ) ?gen170 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen169 & : ( >= ?gen169 1 ) ) ) ?gen163 <- ( to_pay_min_29 ( value 120 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen165 & : ( not ( member$ pen_cl29_st1_min $?gen165 ) ) ) ) ( test ( eq ( class ?gen163 ) to_pay_min_29 ) ) => ?gen163 <- ( to_pay_min_29 ( positive 1 ) ( positive-derivator pen_cl29_st1_min ?gen170 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl29_st1_min] ) ) ) ?gen176 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen175 & : ( >= ?gen175 1 ) ) ) ?gen169 <- ( to_pay_min_29 ( value 120 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen171 & : ( not ( member$ pen_cl29_st1_min $?gen171 ) ) ) ) ( test ( eq ( class ?gen169 ) to_pay_min_29 ) ) => ?gen169 <- ( to_pay_min_29 ( positive 1 ) ( positive-derivator pen_cl29_st1_min ?gen176 ) )"))
 
 ([pen_cl29_st1_min-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl29_st1_min-overruled-dot-gen390)
+   (pos-name pen_cl29_st1_min-overruled-dot-gen437)
    (depends-on declare to_pay_min_29 commited_cl29_st1 to_pay_min_29)
    (implies to_pay_min_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl29_st1_min] ) ) ) ?gen163 <- ( to_pay_min_29 ( value 120 ) ( negative-support $?gen166 ) ( negative-overruled $?gen167 & : ( subseq-pos ( create$ pen_cl29_st1_min-overruled $?gen166 $$$ $?gen167 ) ) ) ) ( test ( eq ( class ?gen163 ) to_pay_min_29 ) ) ( not ( and ?gen170 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen169 & : ( >= ?gen169 1 ) ) ) ?gen163 <- ( to_pay_min_29 ( positive-defeated $?gen165 & : ( not ( member$ pen_cl29_st1_min $?gen165 ) ) ) ) ) ) => ( calc ( bind $?gen168 ( delete-member$ $?gen167 ( create$ pen_cl29_st1_min-overruled $?gen166 ) ) ) ) ?gen163 <- ( to_pay_min_29 ( negative-overruled $?gen168 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl29_st1_min] ) ) ) ?gen169 <- ( to_pay_min_29 ( value 120 ) ( negative-support $?gen172 ) ( negative-overruled $?gen173 & : ( subseq-pos ( create$ pen_cl29_st1_min-overruled $?gen172 $$$ $?gen173 ) ) ) ) ( test ( eq ( class ?gen169 ) to_pay_min_29 ) ) ( not ( and ?gen176 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen175 & : ( >= ?gen175 1 ) ) ) ?gen169 <- ( to_pay_min_29 ( positive-defeated $?gen171 & : ( not ( member$ pen_cl29_st1_min $?gen171 ) ) ) ) ) ) => ( calc ( bind $?gen174 ( delete-member$ $?gen173 ( create$ pen_cl29_st1_min-overruled $?gen172 ) ) ) ) ?gen169 <- ( to_pay_min_29 ( negative-overruled $?gen174 ) )"))
 
 ([pen_cl29_st1_min-overruled] of derived-attribute-rule
-   (pos-name pen_cl29_st1_min-overruled-gen392)
+   (pos-name pen_cl29_st1_min-overruled-gen439)
    (depends-on declare commited_cl29_st1 to_pay_min_29)
    (implies to_pay_min_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl29_st1_min] ) ) ) ?gen170 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen169 & : ( >= ?gen169 1 ) ) ) ?gen163 <- ( to_pay_min_29 ( value 120 ) ( negative-support $?gen166 ) ( negative-overruled $?gen167 & : ( not ( subseq-pos ( create$ pen_cl29_st1_min-overruled $?gen166 $$$ $?gen167 ) ) ) ) ( positive-defeated $?gen165 & : ( not ( member$ pen_cl29_st1_min $?gen165 ) ) ) ) ( test ( eq ( class ?gen163 ) to_pay_min_29 ) ) => ( calc ( bind $?gen168 ( create$ pen_cl29_st1_min-overruled $?gen166 $?gen167 ) ) ) ?gen163 <- ( to_pay_min_29 ( negative-overruled $?gen168 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl29_st1_min] ) ) ) ?gen176 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive ?gen175 & : ( >= ?gen175 1 ) ) ) ?gen169 <- ( to_pay_min_29 ( value 120 ) ( negative-support $?gen172 ) ( negative-overruled $?gen173 & : ( not ( subseq-pos ( create$ pen_cl29_st1_min-overruled $?gen172 $$$ $?gen173 ) ) ) ) ( positive-defeated $?gen171 & : ( not ( member$ pen_cl29_st1_min $?gen171 ) ) ) ) ( test ( eq ( class ?gen169 ) to_pay_min_29 ) ) => ( calc ( bind $?gen174 ( create$ pen_cl29_st1_min-overruled $?gen172 $?gen173 ) ) ) ?gen169 <- ( to_pay_min_29 ( negative-overruled $?gen174 ) )"))
 
 ([pen_cl29_st1_min-support] of derived-attribute-rule
-   (pos-name pen_cl29_st1_min-support-gen394)
+   (pos-name pen_cl29_st1_min-support-gen441)
    (depends-on declare commited_cl29_st1 to_pay_min_29)
    (implies to_pay_min_29)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl29_st1_min] ) ) ) ?gen162 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ?gen163 <- ( to_pay_min_29 ( value 120 ) ( positive-support $?gen165 & : ( not ( subseq-pos ( create$ pen_cl29_st1_min ?gen162 $$$ $?gen165 ) ) ) ) ) ( test ( eq ( class ?gen163 ) to_pay_min_29 ) ) => ( calc ( bind $?gen168 ( create$ pen_cl29_st1_min ?gen162 $?gen165 ) ) ) ?gen163 <- ( to_pay_min_29 ( positive-support $?gen168 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl29_st1_min] ) ) ) ?gen168 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ?gen169 <- ( to_pay_min_29 ( value 120 ) ( positive-support $?gen171 & : ( not ( subseq-pos ( create$ pen_cl29_st1_min ?gen168 $$$ $?gen171 ) ) ) ) ) ( test ( eq ( class ?gen169 ) to_pay_min_29 ) ) => ( calc ( bind $?gen174 ( create$ pen_cl29_st1_min ?gen168 $?gen171 ) ) ) ?gen169 <- ( to_pay_min_29 ( positive-support $?gen174 ) )"))
 
 ([pen_cl27_st1_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl27_st1_max-defeasibly-dot-gen396)
+   (pos-name pen_cl27_st1_max-defeasibly-dot-gen443)
    (depends-on declare to_pay_max_27 commited_cl27_st1 to_pay_max_27)
    (implies to_pay_max_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl27_st1_max] ) ) ) ?gen154 <- ( to_pay_max_27 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl27_st1_max $? ) ) ( test ( eq ( class ?gen154 ) to_pay_max_27 ) ) ( not ( and ?gen161 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen160 & : ( >= ?gen160 1 ) ) ) ?gen154 <- ( to_pay_max_27 ( negative ~ 2 ) ( positive-overruled $?gen156 & : ( not ( member$ pen_cl27_st1_max $?gen156 ) ) ) ) ) ) => ?gen154 <- ( to_pay_max_27 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl27_st1_max] ) ) ) ?gen160 <- ( to_pay_max_27 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl27_st1_max $? ) ) ( test ( eq ( class ?gen160 ) to_pay_max_27 ) ) ( not ( and ?gen167 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen166 & : ( >= ?gen166 1 ) ) ) ?gen160 <- ( to_pay_max_27 ( negative ~ 2 ) ( positive-overruled $?gen162 & : ( not ( member$ pen_cl27_st1_max $?gen162 ) ) ) ) ) ) => ?gen160 <- ( to_pay_max_27 ( positive 0 ) )"))
 
 ([pen_cl27_st1_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl27_st1_max-defeasibly-gen398)
+   (pos-name pen_cl27_st1_max-defeasibly-gen445)
    (depends-on declare commited_cl27_st1 to_pay_max_27)
    (implies to_pay_max_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl27_st1_max] ) ) ) ?gen161 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen160 & : ( >= ?gen160 1 ) ) ) ?gen154 <- ( to_pay_max_27 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen156 & : ( not ( member$ pen_cl27_st1_max $?gen156 ) ) ) ) ( test ( eq ( class ?gen154 ) to_pay_max_27 ) ) => ?gen154 <- ( to_pay_max_27 ( positive 1 ) ( positive-derivator pen_cl27_st1_max ?gen161 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl27_st1_max] ) ) ) ?gen167 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen166 & : ( >= ?gen166 1 ) ) ) ?gen160 <- ( to_pay_max_27 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen162 & : ( not ( member$ pen_cl27_st1_max $?gen162 ) ) ) ) ( test ( eq ( class ?gen160 ) to_pay_max_27 ) ) => ?gen160 <- ( to_pay_max_27 ( positive 1 ) ( positive-derivator pen_cl27_st1_max ?gen167 ) )"))
 
 ([pen_cl27_st1_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl27_st1_max-overruled-dot-gen400)
+   (pos-name pen_cl27_st1_max-overruled-dot-gen447)
    (depends-on declare to_pay_max_27 commited_cl27_st1 to_pay_max_27)
    (implies to_pay_max_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl27_st1_max] ) ) ) ?gen154 <- ( to_pay_max_27 ( value 250 ) ( negative-support $?gen157 ) ( negative-overruled $?gen158 & : ( subseq-pos ( create$ pen_cl27_st1_max-overruled $?gen157 $$$ $?gen158 ) ) ) ) ( test ( eq ( class ?gen154 ) to_pay_max_27 ) ) ( not ( and ?gen161 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen160 & : ( >= ?gen160 1 ) ) ) ?gen154 <- ( to_pay_max_27 ( positive-defeated $?gen156 & : ( not ( member$ pen_cl27_st1_max $?gen156 ) ) ) ) ) ) => ( calc ( bind $?gen159 ( delete-member$ $?gen158 ( create$ pen_cl27_st1_max-overruled $?gen157 ) ) ) ) ?gen154 <- ( to_pay_max_27 ( negative-overruled $?gen159 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl27_st1_max] ) ) ) ?gen160 <- ( to_pay_max_27 ( value 250 ) ( negative-support $?gen163 ) ( negative-overruled $?gen164 & : ( subseq-pos ( create$ pen_cl27_st1_max-overruled $?gen163 $$$ $?gen164 ) ) ) ) ( test ( eq ( class ?gen160 ) to_pay_max_27 ) ) ( not ( and ?gen167 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen166 & : ( >= ?gen166 1 ) ) ) ?gen160 <- ( to_pay_max_27 ( positive-defeated $?gen162 & : ( not ( member$ pen_cl27_st1_max $?gen162 ) ) ) ) ) ) => ( calc ( bind $?gen165 ( delete-member$ $?gen164 ( create$ pen_cl27_st1_max-overruled $?gen163 ) ) ) ) ?gen160 <- ( to_pay_max_27 ( negative-overruled $?gen165 ) )"))
 
 ([pen_cl27_st1_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl27_st1_max-overruled-gen402)
+   (pos-name pen_cl27_st1_max-overruled-gen449)
    (depends-on declare commited_cl27_st1 to_pay_max_27)
    (implies to_pay_max_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl27_st1_max] ) ) ) ?gen161 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen160 & : ( >= ?gen160 1 ) ) ) ?gen154 <- ( to_pay_max_27 ( value 250 ) ( negative-support $?gen157 ) ( negative-overruled $?gen158 & : ( not ( subseq-pos ( create$ pen_cl27_st1_max-overruled $?gen157 $$$ $?gen158 ) ) ) ) ( positive-defeated $?gen156 & : ( not ( member$ pen_cl27_st1_max $?gen156 ) ) ) ) ( test ( eq ( class ?gen154 ) to_pay_max_27 ) ) => ( calc ( bind $?gen159 ( create$ pen_cl27_st1_max-overruled $?gen157 $?gen158 ) ) ) ?gen154 <- ( to_pay_max_27 ( negative-overruled $?gen159 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl27_st1_max] ) ) ) ?gen167 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen166 & : ( >= ?gen166 1 ) ) ) ?gen160 <- ( to_pay_max_27 ( value 250 ) ( negative-support $?gen163 ) ( negative-overruled $?gen164 & : ( not ( subseq-pos ( create$ pen_cl27_st1_max-overruled $?gen163 $$$ $?gen164 ) ) ) ) ( positive-defeated $?gen162 & : ( not ( member$ pen_cl27_st1_max $?gen162 ) ) ) ) ( test ( eq ( class ?gen160 ) to_pay_max_27 ) ) => ( calc ( bind $?gen165 ( create$ pen_cl27_st1_max-overruled $?gen163 $?gen164 ) ) ) ?gen160 <- ( to_pay_max_27 ( negative-overruled $?gen165 ) )"))
 
 ([pen_cl27_st1_max-support] of derived-attribute-rule
-   (pos-name pen_cl27_st1_max-support-gen404)
+   (pos-name pen_cl27_st1_max-support-gen451)
    (depends-on declare commited_cl27_st1 to_pay_max_27)
    (implies to_pay_max_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl27_st1_max] ) ) ) ?gen153 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ?gen154 <- ( to_pay_max_27 ( value 250 ) ( positive-support $?gen156 & : ( not ( subseq-pos ( create$ pen_cl27_st1_max ?gen153 $$$ $?gen156 ) ) ) ) ) ( test ( eq ( class ?gen154 ) to_pay_max_27 ) ) => ( calc ( bind $?gen159 ( create$ pen_cl27_st1_max ?gen153 $?gen156 ) ) ) ?gen154 <- ( to_pay_max_27 ( positive-support $?gen159 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl27_st1_max] ) ) ) ?gen159 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ?gen160 <- ( to_pay_max_27 ( value 250 ) ( positive-support $?gen162 & : ( not ( subseq-pos ( create$ pen_cl27_st1_max ?gen159 $$$ $?gen162 ) ) ) ) ) ( test ( eq ( class ?gen160 ) to_pay_max_27 ) ) => ( calc ( bind $?gen165 ( create$ pen_cl27_st1_max ?gen159 $?gen162 ) ) ) ?gen160 <- ( to_pay_max_27 ( positive-support $?gen165 ) )"))
 
 ([pen_cl27_st1_min-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl27_st1_min-defeasibly-dot-gen406)
+   (pos-name pen_cl27_st1_min-defeasibly-dot-gen453)
    (depends-on declare to_pay_min_27 commited_cl27_st1 to_pay_min_27)
    (implies to_pay_min_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl27_st1_min] ) ) ) ?gen145 <- ( to_pay_min_27 ( value 90 ) ( positive 1 ) ( positive-derivator pen_cl27_st1_min $? ) ) ( test ( eq ( class ?gen145 ) to_pay_min_27 ) ) ( not ( and ?gen152 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen151 & : ( >= ?gen151 1 ) ) ) ?gen145 <- ( to_pay_min_27 ( negative ~ 2 ) ( positive-overruled $?gen147 & : ( not ( member$ pen_cl27_st1_min $?gen147 ) ) ) ) ) ) => ?gen145 <- ( to_pay_min_27 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl27_st1_min] ) ) ) ?gen151 <- ( to_pay_min_27 ( value 90 ) ( positive 1 ) ( positive-derivator pen_cl27_st1_min $? ) ) ( test ( eq ( class ?gen151 ) to_pay_min_27 ) ) ( not ( and ?gen158 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen157 & : ( >= ?gen157 1 ) ) ) ?gen151 <- ( to_pay_min_27 ( negative ~ 2 ) ( positive-overruled $?gen153 & : ( not ( member$ pen_cl27_st1_min $?gen153 ) ) ) ) ) ) => ?gen151 <- ( to_pay_min_27 ( positive 0 ) )"))
 
 ([pen_cl27_st1_min-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl27_st1_min-defeasibly-gen408)
+   (pos-name pen_cl27_st1_min-defeasibly-gen455)
    (depends-on declare commited_cl27_st1 to_pay_min_27)
    (implies to_pay_min_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl27_st1_min] ) ) ) ?gen152 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen151 & : ( >= ?gen151 1 ) ) ) ?gen145 <- ( to_pay_min_27 ( value 90 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen147 & : ( not ( member$ pen_cl27_st1_min $?gen147 ) ) ) ) ( test ( eq ( class ?gen145 ) to_pay_min_27 ) ) => ?gen145 <- ( to_pay_min_27 ( positive 1 ) ( positive-derivator pen_cl27_st1_min ?gen152 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl27_st1_min] ) ) ) ?gen158 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen157 & : ( >= ?gen157 1 ) ) ) ?gen151 <- ( to_pay_min_27 ( value 90 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen153 & : ( not ( member$ pen_cl27_st1_min $?gen153 ) ) ) ) ( test ( eq ( class ?gen151 ) to_pay_min_27 ) ) => ?gen151 <- ( to_pay_min_27 ( positive 1 ) ( positive-derivator pen_cl27_st1_min ?gen158 ) )"))
 
 ([pen_cl27_st1_min-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl27_st1_min-overruled-dot-gen410)
+   (pos-name pen_cl27_st1_min-overruled-dot-gen457)
    (depends-on declare to_pay_min_27 commited_cl27_st1 to_pay_min_27)
    (implies to_pay_min_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl27_st1_min] ) ) ) ?gen145 <- ( to_pay_min_27 ( value 90 ) ( negative-support $?gen148 ) ( negative-overruled $?gen149 & : ( subseq-pos ( create$ pen_cl27_st1_min-overruled $?gen148 $$$ $?gen149 ) ) ) ) ( test ( eq ( class ?gen145 ) to_pay_min_27 ) ) ( not ( and ?gen152 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen151 & : ( >= ?gen151 1 ) ) ) ?gen145 <- ( to_pay_min_27 ( positive-defeated $?gen147 & : ( not ( member$ pen_cl27_st1_min $?gen147 ) ) ) ) ) ) => ( calc ( bind $?gen150 ( delete-member$ $?gen149 ( create$ pen_cl27_st1_min-overruled $?gen148 ) ) ) ) ?gen145 <- ( to_pay_min_27 ( negative-overruled $?gen150 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl27_st1_min] ) ) ) ?gen151 <- ( to_pay_min_27 ( value 90 ) ( negative-support $?gen154 ) ( negative-overruled $?gen155 & : ( subseq-pos ( create$ pen_cl27_st1_min-overruled $?gen154 $$$ $?gen155 ) ) ) ) ( test ( eq ( class ?gen151 ) to_pay_min_27 ) ) ( not ( and ?gen158 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen157 & : ( >= ?gen157 1 ) ) ) ?gen151 <- ( to_pay_min_27 ( positive-defeated $?gen153 & : ( not ( member$ pen_cl27_st1_min $?gen153 ) ) ) ) ) ) => ( calc ( bind $?gen156 ( delete-member$ $?gen155 ( create$ pen_cl27_st1_min-overruled $?gen154 ) ) ) ) ?gen151 <- ( to_pay_min_27 ( negative-overruled $?gen156 ) )"))
 
 ([pen_cl27_st1_min-overruled] of derived-attribute-rule
-   (pos-name pen_cl27_st1_min-overruled-gen412)
+   (pos-name pen_cl27_st1_min-overruled-gen459)
    (depends-on declare commited_cl27_st1 to_pay_min_27)
    (implies to_pay_min_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl27_st1_min] ) ) ) ?gen152 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen151 & : ( >= ?gen151 1 ) ) ) ?gen145 <- ( to_pay_min_27 ( value 90 ) ( negative-support $?gen148 ) ( negative-overruled $?gen149 & : ( not ( subseq-pos ( create$ pen_cl27_st1_min-overruled $?gen148 $$$ $?gen149 ) ) ) ) ( positive-defeated $?gen147 & : ( not ( member$ pen_cl27_st1_min $?gen147 ) ) ) ) ( test ( eq ( class ?gen145 ) to_pay_min_27 ) ) => ( calc ( bind $?gen150 ( create$ pen_cl27_st1_min-overruled $?gen148 $?gen149 ) ) ) ?gen145 <- ( to_pay_min_27 ( negative-overruled $?gen150 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl27_st1_min] ) ) ) ?gen158 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive ?gen157 & : ( >= ?gen157 1 ) ) ) ?gen151 <- ( to_pay_min_27 ( value 90 ) ( negative-support $?gen154 ) ( negative-overruled $?gen155 & : ( not ( subseq-pos ( create$ pen_cl27_st1_min-overruled $?gen154 $$$ $?gen155 ) ) ) ) ( positive-defeated $?gen153 & : ( not ( member$ pen_cl27_st1_min $?gen153 ) ) ) ) ( test ( eq ( class ?gen151 ) to_pay_min_27 ) ) => ( calc ( bind $?gen156 ( create$ pen_cl27_st1_min-overruled $?gen154 $?gen155 ) ) ) ?gen151 <- ( to_pay_min_27 ( negative-overruled $?gen156 ) )"))
 
 ([pen_cl27_st1_min-support] of derived-attribute-rule
-   (pos-name pen_cl27_st1_min-support-gen414)
+   (pos-name pen_cl27_st1_min-support-gen461)
    (depends-on declare commited_cl27_st1 to_pay_min_27)
    (implies to_pay_min_27)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl27_st1_min] ) ) ) ?gen144 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ?gen145 <- ( to_pay_min_27 ( value 90 ) ( positive-support $?gen147 & : ( not ( subseq-pos ( create$ pen_cl27_st1_min ?gen144 $$$ $?gen147 ) ) ) ) ) ( test ( eq ( class ?gen145 ) to_pay_min_27 ) ) => ( calc ( bind $?gen150 ( create$ pen_cl27_st1_min ?gen144 $?gen147 ) ) ) ?gen145 <- ( to_pay_min_27 ( positive-support $?gen150 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl27_st1_min] ) ) ) ?gen150 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ?gen151 <- ( to_pay_min_27 ( value 90 ) ( positive-support $?gen153 & : ( not ( subseq-pos ( create$ pen_cl27_st1_min ?gen150 $$$ $?gen153 ) ) ) ) ) ( test ( eq ( class ?gen151 ) to_pay_min_27 ) ) => ( calc ( bind $?gen156 ( create$ pen_cl27_st1_min ?gen150 $?gen153 ) ) ) ?gen151 <- ( to_pay_min_27 ( positive-support $?gen156 ) )"))
 
 ([pen_cl26_st2_max-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl26_st2_max-defeasibly-dot-gen416)
+   (pos-name pen_cl26_st2_max-defeasibly-dot-gen463)
    (depends-on declare to_pay_max_26 commited_cl26_st2 to_pay_max_26)
    (implies to_pay_max_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl26_st2_max] ) ) ) ?gen136 <- ( to_pay_max_26 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl26_st2_max $? ) ) ( test ( eq ( class ?gen136 ) to_pay_max_26 ) ) ( not ( and ?gen143 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen142 & : ( >= ?gen142 1 ) ) ) ?gen136 <- ( to_pay_max_26 ( negative ~ 2 ) ( positive-overruled $?gen138 & : ( not ( member$ pen_cl26_st2_max $?gen138 ) ) ) ) ) ) => ?gen136 <- ( to_pay_max_26 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl26_st2_max] ) ) ) ?gen142 <- ( to_pay_max_26 ( value 250 ) ( positive 1 ) ( positive-derivator pen_cl26_st2_max $? ) ) ( test ( eq ( class ?gen142 ) to_pay_max_26 ) ) ( not ( and ?gen149 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen148 & : ( >= ?gen148 1 ) ) ) ?gen142 <- ( to_pay_max_26 ( negative ~ 2 ) ( positive-overruled $?gen144 & : ( not ( member$ pen_cl26_st2_max $?gen144 ) ) ) ) ) ) => ?gen142 <- ( to_pay_max_26 ( positive 0 ) )"))
 
 ([pen_cl26_st2_max-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl26_st2_max-defeasibly-gen418)
+   (pos-name pen_cl26_st2_max-defeasibly-gen465)
    (depends-on declare commited_cl26_st2 to_pay_max_26)
    (implies to_pay_max_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl26_st2_max] ) ) ) ?gen143 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen142 & : ( >= ?gen142 1 ) ) ) ?gen136 <- ( to_pay_max_26 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen138 & : ( not ( member$ pen_cl26_st2_max $?gen138 ) ) ) ) ( test ( eq ( class ?gen136 ) to_pay_max_26 ) ) => ?gen136 <- ( to_pay_max_26 ( positive 1 ) ( positive-derivator pen_cl26_st2_max ?gen143 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl26_st2_max] ) ) ) ?gen149 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen148 & : ( >= ?gen148 1 ) ) ) ?gen142 <- ( to_pay_max_26 ( value 250 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen144 & : ( not ( member$ pen_cl26_st2_max $?gen144 ) ) ) ) ( test ( eq ( class ?gen142 ) to_pay_max_26 ) ) => ?gen142 <- ( to_pay_max_26 ( positive 1 ) ( positive-derivator pen_cl26_st2_max ?gen149 ) )"))
 
 ([pen_cl26_st2_max-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl26_st2_max-overruled-dot-gen420)
+   (pos-name pen_cl26_st2_max-overruled-dot-gen467)
    (depends-on declare to_pay_max_26 commited_cl26_st2 to_pay_max_26)
    (implies to_pay_max_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl26_st2_max] ) ) ) ?gen136 <- ( to_pay_max_26 ( value 250 ) ( negative-support $?gen139 ) ( negative-overruled $?gen140 & : ( subseq-pos ( create$ pen_cl26_st2_max-overruled $?gen139 $$$ $?gen140 ) ) ) ) ( test ( eq ( class ?gen136 ) to_pay_max_26 ) ) ( not ( and ?gen143 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen142 & : ( >= ?gen142 1 ) ) ) ?gen136 <- ( to_pay_max_26 ( positive-defeated $?gen138 & : ( not ( member$ pen_cl26_st2_max $?gen138 ) ) ) ) ) ) => ( calc ( bind $?gen141 ( delete-member$ $?gen140 ( create$ pen_cl26_st2_max-overruled $?gen139 ) ) ) ) ?gen136 <- ( to_pay_max_26 ( negative-overruled $?gen141 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl26_st2_max] ) ) ) ?gen142 <- ( to_pay_max_26 ( value 250 ) ( negative-support $?gen145 ) ( negative-overruled $?gen146 & : ( subseq-pos ( create$ pen_cl26_st2_max-overruled $?gen145 $$$ $?gen146 ) ) ) ) ( test ( eq ( class ?gen142 ) to_pay_max_26 ) ) ( not ( and ?gen149 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen148 & : ( >= ?gen148 1 ) ) ) ?gen142 <- ( to_pay_max_26 ( positive-defeated $?gen144 & : ( not ( member$ pen_cl26_st2_max $?gen144 ) ) ) ) ) ) => ( calc ( bind $?gen147 ( delete-member$ $?gen146 ( create$ pen_cl26_st2_max-overruled $?gen145 ) ) ) ) ?gen142 <- ( to_pay_max_26 ( negative-overruled $?gen147 ) )"))
 
 ([pen_cl26_st2_max-overruled] of derived-attribute-rule
-   (pos-name pen_cl26_st2_max-overruled-gen422)
+   (pos-name pen_cl26_st2_max-overruled-gen469)
    (depends-on declare commited_cl26_st2 to_pay_max_26)
    (implies to_pay_max_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl26_st2_max] ) ) ) ?gen143 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen142 & : ( >= ?gen142 1 ) ) ) ?gen136 <- ( to_pay_max_26 ( value 250 ) ( negative-support $?gen139 ) ( negative-overruled $?gen140 & : ( not ( subseq-pos ( create$ pen_cl26_st2_max-overruled $?gen139 $$$ $?gen140 ) ) ) ) ( positive-defeated $?gen138 & : ( not ( member$ pen_cl26_st2_max $?gen138 ) ) ) ) ( test ( eq ( class ?gen136 ) to_pay_max_26 ) ) => ( calc ( bind $?gen141 ( create$ pen_cl26_st2_max-overruled $?gen139 $?gen140 ) ) ) ?gen136 <- ( to_pay_max_26 ( negative-overruled $?gen141 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl26_st2_max] ) ) ) ?gen149 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen148 & : ( >= ?gen148 1 ) ) ) ?gen142 <- ( to_pay_max_26 ( value 250 ) ( negative-support $?gen145 ) ( negative-overruled $?gen146 & : ( not ( subseq-pos ( create$ pen_cl26_st2_max-overruled $?gen145 $$$ $?gen146 ) ) ) ) ( positive-defeated $?gen144 & : ( not ( member$ pen_cl26_st2_max $?gen144 ) ) ) ) ( test ( eq ( class ?gen142 ) to_pay_max_26 ) ) => ( calc ( bind $?gen147 ( create$ pen_cl26_st2_max-overruled $?gen145 $?gen146 ) ) ) ?gen142 <- ( to_pay_max_26 ( negative-overruled $?gen147 ) )"))
 
 ([pen_cl26_st2_max-support] of derived-attribute-rule
-   (pos-name pen_cl26_st2_max-support-gen424)
+   (pos-name pen_cl26_st2_max-support-gen471)
    (depends-on declare commited_cl26_st2 to_pay_max_26)
    (implies to_pay_max_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl26_st2_max] ) ) ) ?gen135 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ?gen136 <- ( to_pay_max_26 ( value 250 ) ( positive-support $?gen138 & : ( not ( subseq-pos ( create$ pen_cl26_st2_max ?gen135 $$$ $?gen138 ) ) ) ) ) ( test ( eq ( class ?gen136 ) to_pay_max_26 ) ) => ( calc ( bind $?gen141 ( create$ pen_cl26_st2_max ?gen135 $?gen138 ) ) ) ?gen136 <- ( to_pay_max_26 ( positive-support $?gen141 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl26_st2_max] ) ) ) ?gen141 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ?gen142 <- ( to_pay_max_26 ( value 250 ) ( positive-support $?gen144 & : ( not ( subseq-pos ( create$ pen_cl26_st2_max ?gen141 $$$ $?gen144 ) ) ) ) ) ( test ( eq ( class ?gen142 ) to_pay_max_26 ) ) => ( calc ( bind $?gen147 ( create$ pen_cl26_st2_max ?gen141 $?gen144 ) ) ) ?gen142 <- ( to_pay_max_26 ( positive-support $?gen147 ) )"))
 
 ([pen_cl26_st2_min-defeasibly-dot] of derived-attribute-rule
-   (pos-name pen_cl26_st2_min-defeasibly-dot-gen426)
+   (pos-name pen_cl26_st2_min-defeasibly-dot-gen473)
    (depends-on declare to_pay_min_26 commited_cl26_st2 to_pay_min_26)
    (implies to_pay_min_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl26_st2_min] ) ) ) ?gen127 <- ( to_pay_min_26 ( value 90 ) ( positive 1 ) ( positive-derivator pen_cl26_st2_min $? ) ) ( test ( eq ( class ?gen127 ) to_pay_min_26 ) ) ( not ( and ?gen134 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen133 & : ( >= ?gen133 1 ) ) ) ?gen127 <- ( to_pay_min_26 ( negative ~ 2 ) ( positive-overruled $?gen129 & : ( not ( member$ pen_cl26_st2_min $?gen129 ) ) ) ) ) ) => ?gen127 <- ( to_pay_min_26 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [pen_cl26_st2_min] ) ) ) ?gen133 <- ( to_pay_min_26 ( value 90 ) ( positive 1 ) ( positive-derivator pen_cl26_st2_min $? ) ) ( test ( eq ( class ?gen133 ) to_pay_min_26 ) ) ( not ( and ?gen140 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen139 & : ( >= ?gen139 1 ) ) ) ?gen133 <- ( to_pay_min_26 ( negative ~ 2 ) ( positive-overruled $?gen135 & : ( not ( member$ pen_cl26_st2_min $?gen135 ) ) ) ) ) ) => ?gen133 <- ( to_pay_min_26 ( positive 0 ) )"))
 
 ([pen_cl26_st2_min-defeasibly] of derived-attribute-rule
-   (pos-name pen_cl26_st2_min-defeasibly-gen428)
+   (pos-name pen_cl26_st2_min-defeasibly-gen475)
    (depends-on declare commited_cl26_st2 to_pay_min_26)
    (implies to_pay_min_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl26_st2_min] ) ) ) ?gen134 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen133 & : ( >= ?gen133 1 ) ) ) ?gen127 <- ( to_pay_min_26 ( value 90 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen129 & : ( not ( member$ pen_cl26_st2_min $?gen129 ) ) ) ) ( test ( eq ( class ?gen127 ) to_pay_min_26 ) ) => ?gen127 <- ( to_pay_min_26 ( positive 1 ) ( positive-derivator pen_cl26_st2_min ?gen134 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [pen_cl26_st2_min] ) ) ) ?gen140 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen139 & : ( >= ?gen139 1 ) ) ) ?gen133 <- ( to_pay_min_26 ( value 90 ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen135 & : ( not ( member$ pen_cl26_st2_min $?gen135 ) ) ) ) ( test ( eq ( class ?gen133 ) to_pay_min_26 ) ) => ?gen133 <- ( to_pay_min_26 ( positive 1 ) ( positive-derivator pen_cl26_st2_min ?gen140 ) )"))
 
 ([pen_cl26_st2_min-overruled-dot] of derived-attribute-rule
-   (pos-name pen_cl26_st2_min-overruled-dot-gen430)
+   (pos-name pen_cl26_st2_min-overruled-dot-gen477)
    (depends-on declare to_pay_min_26 commited_cl26_st2 to_pay_min_26)
    (implies to_pay_min_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl26_st2_min] ) ) ) ?gen127 <- ( to_pay_min_26 ( value 90 ) ( negative-support $?gen130 ) ( negative-overruled $?gen131 & : ( subseq-pos ( create$ pen_cl26_st2_min-overruled $?gen130 $$$ $?gen131 ) ) ) ) ( test ( eq ( class ?gen127 ) to_pay_min_26 ) ) ( not ( and ?gen134 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen133 & : ( >= ?gen133 1 ) ) ) ?gen127 <- ( to_pay_min_26 ( positive-defeated $?gen129 & : ( not ( member$ pen_cl26_st2_min $?gen129 ) ) ) ) ) ) => ( calc ( bind $?gen132 ( delete-member$ $?gen131 ( create$ pen_cl26_st2_min-overruled $?gen130 ) ) ) ) ?gen127 <- ( to_pay_min_26 ( negative-overruled $?gen132 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [pen_cl26_st2_min] ) ) ) ?gen133 <- ( to_pay_min_26 ( value 90 ) ( negative-support $?gen136 ) ( negative-overruled $?gen137 & : ( subseq-pos ( create$ pen_cl26_st2_min-overruled $?gen136 $$$ $?gen137 ) ) ) ) ( test ( eq ( class ?gen133 ) to_pay_min_26 ) ) ( not ( and ?gen140 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen139 & : ( >= ?gen139 1 ) ) ) ?gen133 <- ( to_pay_min_26 ( positive-defeated $?gen135 & : ( not ( member$ pen_cl26_st2_min $?gen135 ) ) ) ) ) ) => ( calc ( bind $?gen138 ( delete-member$ $?gen137 ( create$ pen_cl26_st2_min-overruled $?gen136 ) ) ) ) ?gen133 <- ( to_pay_min_26 ( negative-overruled $?gen138 ) )"))
 
 ([pen_cl26_st2_min-overruled] of derived-attribute-rule
-   (pos-name pen_cl26_st2_min-overruled-gen432)
+   (pos-name pen_cl26_st2_min-overruled-gen479)
    (depends-on declare commited_cl26_st2 to_pay_min_26)
    (implies to_pay_min_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl26_st2_min] ) ) ) ?gen134 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen133 & : ( >= ?gen133 1 ) ) ) ?gen127 <- ( to_pay_min_26 ( value 90 ) ( negative-support $?gen130 ) ( negative-overruled $?gen131 & : ( not ( subseq-pos ( create$ pen_cl26_st2_min-overruled $?gen130 $$$ $?gen131 ) ) ) ) ( positive-defeated $?gen129 & : ( not ( member$ pen_cl26_st2_min $?gen129 ) ) ) ) ( test ( eq ( class ?gen127 ) to_pay_min_26 ) ) => ( calc ( bind $?gen132 ( create$ pen_cl26_st2_min-overruled $?gen130 $?gen131 ) ) ) ?gen127 <- ( to_pay_min_26 ( negative-overruled $?gen132 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [pen_cl26_st2_min] ) ) ) ?gen140 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive ?gen139 & : ( >= ?gen139 1 ) ) ) ?gen133 <- ( to_pay_min_26 ( value 90 ) ( negative-support $?gen136 ) ( negative-overruled $?gen137 & : ( not ( subseq-pos ( create$ pen_cl26_st2_min-overruled $?gen136 $$$ $?gen137 ) ) ) ) ( positive-defeated $?gen135 & : ( not ( member$ pen_cl26_st2_min $?gen135 ) ) ) ) ( test ( eq ( class ?gen133 ) to_pay_min_26 ) ) => ( calc ( bind $?gen138 ( create$ pen_cl26_st2_min-overruled $?gen136 $?gen137 ) ) ) ?gen133 <- ( to_pay_min_26 ( negative-overruled $?gen138 ) )"))
 
 ([pen_cl26_st2_min-support] of derived-attribute-rule
-   (pos-name pen_cl26_st2_min-support-gen434)
+   (pos-name pen_cl26_st2_min-support-gen481)
    (depends-on declare commited_cl26_st2 to_pay_min_26)
    (implies to_pay_min_26)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl26_st2_min] ) ) ) ?gen126 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ?gen127 <- ( to_pay_min_26 ( value 90 ) ( positive-support $?gen129 & : ( not ( subseq-pos ( create$ pen_cl26_st2_min ?gen126 $$$ $?gen129 ) ) ) ) ) ( test ( eq ( class ?gen127 ) to_pay_min_26 ) ) => ( calc ( bind $?gen132 ( create$ pen_cl26_st2_min ?gen126 $?gen129 ) ) ) ?gen127 <- ( to_pay_min_26 ( positive-support $?gen132 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [pen_cl26_st2_min] ) ) ) ?gen132 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ?gen133 <- ( to_pay_min_26 ( value 90 ) ( positive-support $?gen135 & : ( not ( subseq-pos ( create$ pen_cl26_st2_min ?gen132 $$$ $?gen135 ) ) ) ) ) ( test ( eq ( class ?gen133 ) to_pay_min_26 ) ) => ( calc ( bind $?gen138 ( create$ pen_cl26_st2_min ?gen132 $?gen135 ) ) ) ?gen133 <- ( to_pay_min_26 ( positive-support $?gen138 ) )"))
 
 ([rule_cl348_st3_injury-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl348_st3_injury-defeasibly-dot-gen436)
+   (pos-name rule_cl348_st3_injury-defeasibly-dot-gen483)
    (depends-on declare commited_cl348_st3 lc:case lc:case commited_cl348_st3)
    (implies commited_cl348_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl348_st3_injury] ) ) ) ?gen116 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl348_st3_injury $? ) ) ( test ( eq ( class ?gen116 ) commited_cl348_st3 ) ) ( not ( and ?gen123 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen122 & : ( >= ?gen122 1 ) ) ) ?gen125 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen124 & : ( >= ?gen124 1 ) ) ) ?gen116 <- ( commited_cl348_st3 ( negative ~ 2 ) ( positive-overruled $?gen118 & : ( not ( member$ rule_cl348_st3_injury $?gen118 ) ) ) ) ) ) => ?gen116 <- ( commited_cl348_st3 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl348_st3_injury] ) ) ) ?gen122 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl348_st3_injury $? ) ) ( test ( eq ( class ?gen122 ) commited_cl348_st3 ) ) ( not ( and ?gen129 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen128 & : ( >= ?gen128 1 ) ) ) ?gen131 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen130 & : ( >= ?gen130 1 ) ) ) ?gen122 <- ( commited_cl348_st3 ( negative ~ 2 ) ( positive-overruled $?gen124 & : ( not ( member$ rule_cl348_st3_injury $?gen124 ) ) ) ) ) ) => ?gen122 <- ( commited_cl348_st3 ( positive 0 ) )"))
 
 ([rule_cl348_st3_injury-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl348_st3_injury-defeasibly-gen438)
+   (pos-name rule_cl348_st3_injury-defeasibly-gen485)
    (depends-on declare lc:case lc:case commited_cl348_st3)
    (implies commited_cl348_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl348_st3_injury] ) ) ) ?gen123 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen122 & : ( >= ?gen122 1 ) ) ) ?gen125 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen124 & : ( >= ?gen124 1 ) ) ) ?gen116 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen118 & : ( not ( member$ rule_cl348_st3_injury $?gen118 ) ) ) ) ( test ( eq ( class ?gen116 ) commited_cl348_st3 ) ) => ?gen116 <- ( commited_cl348_st3 ( positive 1 ) ( positive-derivator rule_cl348_st3_injury ?gen123 ?gen125 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl348_st3_injury] ) ) ) ?gen129 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen128 & : ( >= ?gen128 1 ) ) ) ?gen131 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen130 & : ( >= ?gen130 1 ) ) ) ?gen122 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen124 & : ( not ( member$ rule_cl348_st3_injury $?gen124 ) ) ) ) ( test ( eq ( class ?gen122 ) commited_cl348_st3 ) ) => ?gen122 <- ( commited_cl348_st3 ( positive 1 ) ( positive-derivator rule_cl348_st3_injury ?gen129 ?gen131 ) )"))
 
 ([rule_cl348_st3_injury-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl348_st3_injury-overruled-dot-gen440)
+   (pos-name rule_cl348_st3_injury-overruled-dot-gen487)
    (depends-on declare commited_cl348_st3 lc:case lc:case commited_cl348_st3)
    (implies commited_cl348_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl348_st3_injury] ) ) ) ?gen116 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( negative-support $?gen119 ) ( negative-overruled $?gen120 & : ( subseq-pos ( create$ rule_cl348_st3_injury-overruled $?gen119 $$$ $?gen120 ) ) ) ) ( test ( eq ( class ?gen116 ) commited_cl348_st3 ) ) ( not ( and ?gen123 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen122 & : ( >= ?gen122 1 ) ) ) ?gen125 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen124 & : ( >= ?gen124 1 ) ) ) ?gen116 <- ( commited_cl348_st3 ( positive-defeated $?gen118 & : ( not ( member$ rule_cl348_st3_injury $?gen118 ) ) ) ) ) ) => ( calc ( bind $?gen121 ( delete-member$ $?gen120 ( create$ rule_cl348_st3_injury-overruled $?gen119 ) ) ) ) ?gen116 <- ( commited_cl348_st3 ( negative-overruled $?gen121 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl348_st3_injury] ) ) ) ?gen122 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( negative-support $?gen125 ) ( negative-overruled $?gen126 & : ( subseq-pos ( create$ rule_cl348_st3_injury-overruled $?gen125 $$$ $?gen126 ) ) ) ) ( test ( eq ( class ?gen122 ) commited_cl348_st3 ) ) ( not ( and ?gen129 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen128 & : ( >= ?gen128 1 ) ) ) ?gen131 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen130 & : ( >= ?gen130 1 ) ) ) ?gen122 <- ( commited_cl348_st3 ( positive-defeated $?gen124 & : ( not ( member$ rule_cl348_st3_injury $?gen124 ) ) ) ) ) ) => ( calc ( bind $?gen127 ( delete-member$ $?gen126 ( create$ rule_cl348_st3_injury-overruled $?gen125 ) ) ) ) ?gen122 <- ( commited_cl348_st3 ( negative-overruled $?gen127 ) )"))
 
 ([rule_cl348_st3_injury-overruled] of derived-attribute-rule
-   (pos-name rule_cl348_st3_injury-overruled-gen442)
+   (pos-name rule_cl348_st3_injury-overruled-gen489)
    (depends-on declare lc:case lc:case commited_cl348_st3)
    (implies commited_cl348_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl348_st3_injury] ) ) ) ?gen123 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen122 & : ( >= ?gen122 1 ) ) ) ?gen125 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen124 & : ( >= ?gen124 1 ) ) ) ?gen116 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( negative-support $?gen119 ) ( negative-overruled $?gen120 & : ( not ( subseq-pos ( create$ rule_cl348_st3_injury-overruled $?gen119 $$$ $?gen120 ) ) ) ) ( positive-defeated $?gen118 & : ( not ( member$ rule_cl348_st3_injury $?gen118 ) ) ) ) ( test ( eq ( class ?gen116 ) commited_cl348_st3 ) ) => ( calc ( bind $?gen121 ( create$ rule_cl348_st3_injury-overruled $?gen119 $?gen120 ) ) ) ?gen116 <- ( commited_cl348_st3 ( negative-overruled $?gen121 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl348_st3_injury] ) ) ) ?gen129 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen128 & : ( >= ?gen128 1 ) ) ) ?gen131 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen130 & : ( >= ?gen130 1 ) ) ) ?gen122 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( negative-support $?gen125 ) ( negative-overruled $?gen126 & : ( not ( subseq-pos ( create$ rule_cl348_st3_injury-overruled $?gen125 $$$ $?gen126 ) ) ) ) ( positive-defeated $?gen124 & : ( not ( member$ rule_cl348_st3_injury $?gen124 ) ) ) ) ( test ( eq ( class ?gen122 ) commited_cl348_st3 ) ) => ( calc ( bind $?gen127 ( create$ rule_cl348_st3_injury-overruled $?gen125 $?gen126 ) ) ) ?gen122 <- ( commited_cl348_st3 ( negative-overruled $?gen127 ) )"))
 
 ([rule_cl348_st3_injury-support] of derived-attribute-rule
-   (pos-name rule_cl348_st3_injury-support-gen444)
+   (pos-name rule_cl348_st3_injury-support-gen491)
    (depends-on declare lc:case lc:case commited_cl348_st3)
    (implies commited_cl348_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl348_st3_injury] ) ) ) ?gen114 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen115 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ?gen116 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive-support $?gen118 & : ( not ( subseq-pos ( create$ rule_cl348_st3_injury ?gen114 ?gen115 $$$ $?gen118 ) ) ) ) ) ( test ( eq ( class ?gen116 ) commited_cl348_st3 ) ) => ( calc ( bind $?gen121 ( create$ rule_cl348_st3_injury ?gen114 ?gen115 $?gen118 ) ) ) ?gen116 <- ( commited_cl348_st3 ( positive-support $?gen121 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl348_st3_injury] ) ) ) ?gen120 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen121 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ?gen122 <- ( commited_cl348_st3 ( defendant ?Defendant ) ( positive-support $?gen124 & : ( not ( subseq-pos ( create$ rule_cl348_st3_injury ?gen120 ?gen121 $$$ $?gen124 ) ) ) ) ) ( test ( eq ( class ?gen122 ) commited_cl348_st3 ) ) => ( calc ( bind $?gen127 ( create$ rule_cl348_st3_injury ?gen120 ?gen121 $?gen124 ) ) ) ?gen122 <- ( commited_cl348_st3 ( positive-support $?gen127 ) )"))
 
 ([rule_cl348_st1_injury-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl348_st1_injury-defeasibly-dot-gen446)
+   (pos-name rule_cl348_st1_injury-defeasibly-dot-gen493)
    (depends-on declare commited_cl348_st1 lc:case lc:case commited_cl348_st1)
    (implies commited_cl348_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl348_st1_injury] ) ) ) ?gen104 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl348_st1_injury $? ) ) ( test ( eq ( class ?gen104 ) commited_cl348_st1 ) ) ( not ( and ?gen111 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen110 & : ( >= ?gen110 1 ) ) ) ?gen113 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen112 & : ( >= ?gen112 1 ) ) ) ?gen104 <- ( commited_cl348_st1 ( negative ~ 2 ) ( positive-overruled $?gen106 & : ( not ( member$ rule_cl348_st1_injury $?gen106 ) ) ) ) ) ) => ?gen104 <- ( commited_cl348_st1 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl348_st1_injury] ) ) ) ?gen110 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl348_st1_injury $? ) ) ( test ( eq ( class ?gen110 ) commited_cl348_st1 ) ) ( not ( and ?gen117 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen116 & : ( >= ?gen116 1 ) ) ) ?gen119 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen118 & : ( >= ?gen118 1 ) ) ) ?gen110 <- ( commited_cl348_st1 ( negative ~ 2 ) ( positive-overruled $?gen112 & : ( not ( member$ rule_cl348_st1_injury $?gen112 ) ) ) ) ) ) => ?gen110 <- ( commited_cl348_st1 ( positive 0 ) )"))
 
 ([rule_cl348_st1_injury-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl348_st1_injury-defeasibly-gen448)
+   (pos-name rule_cl348_st1_injury-defeasibly-gen495)
    (depends-on declare lc:case lc:case commited_cl348_st1)
    (implies commited_cl348_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl348_st1_injury] ) ) ) ?gen111 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen110 & : ( >= ?gen110 1 ) ) ) ?gen113 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen112 & : ( >= ?gen112 1 ) ) ) ?gen104 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen106 & : ( not ( member$ rule_cl348_st1_injury $?gen106 ) ) ) ) ( test ( eq ( class ?gen104 ) commited_cl348_st1 ) ) => ?gen104 <- ( commited_cl348_st1 ( positive 1 ) ( positive-derivator rule_cl348_st1_injury ?gen111 ?gen113 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl348_st1_injury] ) ) ) ?gen117 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen116 & : ( >= ?gen116 1 ) ) ) ?gen119 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen118 & : ( >= ?gen118 1 ) ) ) ?gen110 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen112 & : ( not ( member$ rule_cl348_st1_injury $?gen112 ) ) ) ) ( test ( eq ( class ?gen110 ) commited_cl348_st1 ) ) => ?gen110 <- ( commited_cl348_st1 ( positive 1 ) ( positive-derivator rule_cl348_st1_injury ?gen117 ?gen119 ) )"))
 
 ([rule_cl348_st1_injury-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl348_st1_injury-overruled-dot-gen450)
+   (pos-name rule_cl348_st1_injury-overruled-dot-gen497)
    (depends-on declare commited_cl348_st1 lc:case lc:case commited_cl348_st1)
    (implies commited_cl348_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl348_st1_injury] ) ) ) ?gen104 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( negative-support $?gen107 ) ( negative-overruled $?gen108 & : ( subseq-pos ( create$ rule_cl348_st1_injury-overruled $?gen107 $$$ $?gen108 ) ) ) ) ( test ( eq ( class ?gen104 ) commited_cl348_st1 ) ) ( not ( and ?gen111 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen110 & : ( >= ?gen110 1 ) ) ) ?gen113 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen112 & : ( >= ?gen112 1 ) ) ) ?gen104 <- ( commited_cl348_st1 ( positive-defeated $?gen106 & : ( not ( member$ rule_cl348_st1_injury $?gen106 ) ) ) ) ) ) => ( calc ( bind $?gen109 ( delete-member$ $?gen108 ( create$ rule_cl348_st1_injury-overruled $?gen107 ) ) ) ) ?gen104 <- ( commited_cl348_st1 ( negative-overruled $?gen109 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl348_st1_injury] ) ) ) ?gen110 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( negative-support $?gen113 ) ( negative-overruled $?gen114 & : ( subseq-pos ( create$ rule_cl348_st1_injury-overruled $?gen113 $$$ $?gen114 ) ) ) ) ( test ( eq ( class ?gen110 ) commited_cl348_st1 ) ) ( not ( and ?gen117 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen116 & : ( >= ?gen116 1 ) ) ) ?gen119 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen118 & : ( >= ?gen118 1 ) ) ) ?gen110 <- ( commited_cl348_st1 ( positive-defeated $?gen112 & : ( not ( member$ rule_cl348_st1_injury $?gen112 ) ) ) ) ) ) => ( calc ( bind $?gen115 ( delete-member$ $?gen114 ( create$ rule_cl348_st1_injury-overruled $?gen113 ) ) ) ) ?gen110 <- ( commited_cl348_st1 ( negative-overruled $?gen115 ) )"))
 
 ([rule_cl348_st1_injury-overruled] of derived-attribute-rule
-   (pos-name rule_cl348_st1_injury-overruled-gen452)
+   (pos-name rule_cl348_st1_injury-overruled-gen499)
    (depends-on declare lc:case lc:case commited_cl348_st1)
    (implies commited_cl348_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl348_st1_injury] ) ) ) ?gen111 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen110 & : ( >= ?gen110 1 ) ) ) ?gen113 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen112 & : ( >= ?gen112 1 ) ) ) ?gen104 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( negative-support $?gen107 ) ( negative-overruled $?gen108 & : ( not ( subseq-pos ( create$ rule_cl348_st1_injury-overruled $?gen107 $$$ $?gen108 ) ) ) ) ( positive-defeated $?gen106 & : ( not ( member$ rule_cl348_st1_injury $?gen106 ) ) ) ) ( test ( eq ( class ?gen104 ) commited_cl348_st1 ) ) => ( calc ( bind $?gen109 ( create$ rule_cl348_st1_injury-overruled $?gen107 $?gen108 ) ) ) ?gen104 <- ( commited_cl348_st1 ( negative-overruled $?gen109 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl348_st1_injury] ) ) ) ?gen117 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ( positive ?gen116 & : ( >= ?gen116 1 ) ) ) ?gen119 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen118 & : ( >= ?gen118 1 ) ) ) ?gen110 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( negative-support $?gen113 ) ( negative-overruled $?gen114 & : ( not ( subseq-pos ( create$ rule_cl348_st1_injury-overruled $?gen113 $$$ $?gen114 ) ) ) ) ( positive-defeated $?gen112 & : ( not ( member$ rule_cl348_st1_injury $?gen112 ) ) ) ) ( test ( eq ( class ?gen110 ) commited_cl348_st1 ) ) => ( calc ( bind $?gen115 ( create$ rule_cl348_st1_injury-overruled $?gen113 $?gen114 ) ) ) ?gen110 <- ( commited_cl348_st1 ( negative-overruled $?gen115 ) )"))
 
 ([rule_cl348_st1_injury-support] of derived-attribute-rule
-   (pos-name rule_cl348_st1_injury-support-gen454)
+   (pos-name rule_cl348_st1_injury-support-gen501)
    (depends-on declare lc:case lc:case commited_cl348_st1)
    (implies commited_cl348_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl348_st1_injury] ) ) ) ?gen102 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen103 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ?gen104 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive-support $?gen106 & : ( not ( subseq-pos ( create$ rule_cl348_st1_injury ?gen102 ?gen103 $$$ $?gen106 ) ) ) ) ) ( test ( eq ( class ?gen104 ) commited_cl348_st1 ) ) => ( calc ( bind $?gen109 ( create$ rule_cl348_st1_injury ?gen102 ?gen103 $?gen106 ) ) ) ?gen104 <- ( commited_cl348_st1 ( positive-support $?gen109 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl348_st1_injury] ) ) ) ?gen108 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen109 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ?gen110 <- ( commited_cl348_st1 ( defendant ?Defendant ) ( positive-support $?gen112 & : ( not ( subseq-pos ( create$ rule_cl348_st1_injury ?gen108 ?gen109 $$$ $?gen112 ) ) ) ) ) ( test ( eq ( class ?gen110 ) commited_cl348_st1 ) ) => ( calc ( bind $?gen115 ( create$ rule_cl348_st1_injury ?gen108 ?gen109 $?gen112 ) ) ) ?gen110 <- ( commited_cl348_st1 ( positive-support $?gen115 ) )"))
 
 ([rule_cl339_st3_injury-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl339_st3_injury-defeasibly-dot-gen456)
+   (pos-name rule_cl339_st3_injury-defeasibly-dot-gen503)
    (depends-on declare commited_cl339_st3 lc:case lc:case commited_cl339_st3)
    (implies commited_cl339_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl339_st3_injury] ) ) ) ?gen92 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl339_st3_injury $? ) ) ( test ( eq ( class ?gen92 ) commited_cl339_st3 ) ) ( not ( and ?gen99 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen98 & : ( >= ?gen98 1 ) ) ) ?gen101 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen100 & : ( >= ?gen100 1 ) ) ) ?gen92 <- ( commited_cl339_st3 ( negative ~ 2 ) ( positive-overruled $?gen94 & : ( not ( member$ rule_cl339_st3_injury $?gen94 ) ) ) ) ) ) => ?gen92 <- ( commited_cl339_st3 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl339_st3_injury] ) ) ) ?gen98 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl339_st3_injury $? ) ) ( test ( eq ( class ?gen98 ) commited_cl339_st3 ) ) ( not ( and ?gen105 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen104 & : ( >= ?gen104 1 ) ) ) ?gen107 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen106 & : ( >= ?gen106 1 ) ) ) ?gen98 <- ( commited_cl339_st3 ( negative ~ 2 ) ( positive-overruled $?gen100 & : ( not ( member$ rule_cl339_st3_injury $?gen100 ) ) ) ) ) ) => ?gen98 <- ( commited_cl339_st3 ( positive 0 ) )"))
 
 ([rule_cl339_st3_injury-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl339_st3_injury-defeasibly-gen458)
+   (pos-name rule_cl339_st3_injury-defeasibly-gen505)
    (depends-on declare lc:case lc:case commited_cl339_st3)
    (implies commited_cl339_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl339_st3_injury] ) ) ) ?gen99 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen98 & : ( >= ?gen98 1 ) ) ) ?gen101 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen100 & : ( >= ?gen100 1 ) ) ) ?gen92 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen94 & : ( not ( member$ rule_cl339_st3_injury $?gen94 ) ) ) ) ( test ( eq ( class ?gen92 ) commited_cl339_st3 ) ) => ?gen92 <- ( commited_cl339_st3 ( positive 1 ) ( positive-derivator rule_cl339_st3_injury ?gen99 ?gen101 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl339_st3_injury] ) ) ) ?gen105 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen104 & : ( >= ?gen104 1 ) ) ) ?gen107 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen106 & : ( >= ?gen106 1 ) ) ) ?gen98 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen100 & : ( not ( member$ rule_cl339_st3_injury $?gen100 ) ) ) ) ( test ( eq ( class ?gen98 ) commited_cl339_st3 ) ) => ?gen98 <- ( commited_cl339_st3 ( positive 1 ) ( positive-derivator rule_cl339_st3_injury ?gen105 ?gen107 ) )"))
 
 ([rule_cl339_st3_injury-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl339_st3_injury-overruled-dot-gen460)
+   (pos-name rule_cl339_st3_injury-overruled-dot-gen507)
    (depends-on declare commited_cl339_st3 lc:case lc:case commited_cl339_st3)
    (implies commited_cl339_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl339_st3_injury] ) ) ) ?gen92 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( negative-support $?gen95 ) ( negative-overruled $?gen96 & : ( subseq-pos ( create$ rule_cl339_st3_injury-overruled $?gen95 $$$ $?gen96 ) ) ) ) ( test ( eq ( class ?gen92 ) commited_cl339_st3 ) ) ( not ( and ?gen99 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen98 & : ( >= ?gen98 1 ) ) ) ?gen101 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen100 & : ( >= ?gen100 1 ) ) ) ?gen92 <- ( commited_cl339_st3 ( positive-defeated $?gen94 & : ( not ( member$ rule_cl339_st3_injury $?gen94 ) ) ) ) ) ) => ( calc ( bind $?gen97 ( delete-member$ $?gen96 ( create$ rule_cl339_st3_injury-overruled $?gen95 ) ) ) ) ?gen92 <- ( commited_cl339_st3 ( negative-overruled $?gen97 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl339_st3_injury] ) ) ) ?gen98 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( negative-support $?gen101 ) ( negative-overruled $?gen102 & : ( subseq-pos ( create$ rule_cl339_st3_injury-overruled $?gen101 $$$ $?gen102 ) ) ) ) ( test ( eq ( class ?gen98 ) commited_cl339_st3 ) ) ( not ( and ?gen105 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen104 & : ( >= ?gen104 1 ) ) ) ?gen107 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen106 & : ( >= ?gen106 1 ) ) ) ?gen98 <- ( commited_cl339_st3 ( positive-defeated $?gen100 & : ( not ( member$ rule_cl339_st3_injury $?gen100 ) ) ) ) ) ) => ( calc ( bind $?gen103 ( delete-member$ $?gen102 ( create$ rule_cl339_st3_injury-overruled $?gen101 ) ) ) ) ?gen98 <- ( commited_cl339_st3 ( negative-overruled $?gen103 ) )"))
 
 ([rule_cl339_st3_injury-overruled] of derived-attribute-rule
-   (pos-name rule_cl339_st3_injury-overruled-gen462)
+   (pos-name rule_cl339_st3_injury-overruled-gen509)
    (depends-on declare lc:case lc:case commited_cl339_st3)
    (implies commited_cl339_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl339_st3_injury] ) ) ) ?gen99 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen98 & : ( >= ?gen98 1 ) ) ) ?gen101 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen100 & : ( >= ?gen100 1 ) ) ) ?gen92 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( negative-support $?gen95 ) ( negative-overruled $?gen96 & : ( not ( subseq-pos ( create$ rule_cl339_st3_injury-overruled $?gen95 $$$ $?gen96 ) ) ) ) ( positive-defeated $?gen94 & : ( not ( member$ rule_cl339_st3_injury $?gen94 ) ) ) ) ( test ( eq ( class ?gen92 ) commited_cl339_st3 ) ) => ( calc ( bind $?gen97 ( create$ rule_cl339_st3_injury-overruled $?gen95 $?gen96 ) ) ) ?gen92 <- ( commited_cl339_st3 ( negative-overruled $?gen97 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl339_st3_injury] ) ) ) ?gen105 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen104 & : ( >= ?gen104 1 ) ) ) ?gen107 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ( positive ?gen106 & : ( >= ?gen106 1 ) ) ) ?gen98 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( negative-support $?gen101 ) ( negative-overruled $?gen102 & : ( not ( subseq-pos ( create$ rule_cl339_st3_injury-overruled $?gen101 $$$ $?gen102 ) ) ) ) ( positive-defeated $?gen100 & : ( not ( member$ rule_cl339_st3_injury $?gen100 ) ) ) ) ( test ( eq ( class ?gen98 ) commited_cl339_st3 ) ) => ( calc ( bind $?gen103 ( create$ rule_cl339_st3_injury-overruled $?gen101 $?gen102 ) ) ) ?gen98 <- ( commited_cl339_st3 ( negative-overruled $?gen103 ) )"))
 
 ([rule_cl339_st3_injury-support] of derived-attribute-rule
-   (pos-name rule_cl339_st3_injury-support-gen464)
+   (pos-name rule_cl339_st3_injury-support-gen511)
    (depends-on declare lc:case lc:case commited_cl339_st3)
    (implies commited_cl339_st3)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl339_st3_injury] ) ) ) ?gen90 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen91 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ?gen92 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive-support $?gen94 & : ( not ( subseq-pos ( create$ rule_cl339_st3_injury ?gen90 ?gen91 $$$ $?gen94 ) ) ) ) ) ( test ( eq ( class ?gen92 ) commited_cl339_st3 ) ) => ( calc ( bind $?gen97 ( create$ rule_cl339_st3_injury ?gen90 ?gen91 $?gen94 ) ) ) ?gen92 <- ( commited_cl339_st3 ( positive-support $?gen97 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl339_st3_injury] ) ) ) ?gen96 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen97 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ?gen98 <- ( commited_cl339_st3 ( defendant ?Defendant ) ( positive-support $?gen100 & : ( not ( subseq-pos ( create$ rule_cl339_st3_injury ?gen96 ?gen97 $$$ $?gen100 ) ) ) ) ) ( test ( eq ( class ?gen98 ) commited_cl339_st3 ) ) => ( calc ( bind $?gen103 ( create$ rule_cl339_st3_injury ?gen96 ?gen97 $?gen100 ) ) ) ?gen98 <- ( commited_cl339_st3 ( positive-support $?gen103 ) )"))
 
 ([rule_cl339_st1_injury-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl339_st1_injury-defeasibly-dot-gen466)
+   (pos-name rule_cl339_st1_injury-defeasibly-dot-gen513)
    (depends-on declare commited_cl339_st1 lc:case lc:case commited_cl339_st1)
    (implies commited_cl339_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl339_st1_injury] ) ) ) ?gen80 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl339_st1_injury $? ) ) ( test ( eq ( class ?gen80 ) commited_cl339_st1 ) ) ( not ( and ?gen87 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen86 & : ( >= ?gen86 1 ) ) ) ?gen89 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen88 & : ( >= ?gen88 1 ) ) ) ?gen80 <- ( commited_cl339_st1 ( negative ~ 2 ) ( positive-overruled $?gen82 & : ( not ( member$ rule_cl339_st1_injury $?gen82 ) ) ) ) ) ) => ?gen80 <- ( commited_cl339_st1 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl339_st1_injury] ) ) ) ?gen86 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl339_st1_injury $? ) ) ( test ( eq ( class ?gen86 ) commited_cl339_st1 ) ) ( not ( and ?gen93 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen92 & : ( >= ?gen92 1 ) ) ) ?gen95 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen94 & : ( >= ?gen94 1 ) ) ) ?gen86 <- ( commited_cl339_st1 ( negative ~ 2 ) ( positive-overruled $?gen88 & : ( not ( member$ rule_cl339_st1_injury $?gen88 ) ) ) ) ) ) => ?gen86 <- ( commited_cl339_st1 ( positive 0 ) )"))
 
 ([rule_cl339_st1_injury-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl339_st1_injury-defeasibly-gen468)
+   (pos-name rule_cl339_st1_injury-defeasibly-gen515)
    (depends-on declare lc:case lc:case commited_cl339_st1)
    (implies commited_cl339_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl339_st1_injury] ) ) ) ?gen87 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen86 & : ( >= ?gen86 1 ) ) ) ?gen89 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen88 & : ( >= ?gen88 1 ) ) ) ?gen80 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen82 & : ( not ( member$ rule_cl339_st1_injury $?gen82 ) ) ) ) ( test ( eq ( class ?gen80 ) commited_cl339_st1 ) ) => ?gen80 <- ( commited_cl339_st1 ( positive 1 ) ( positive-derivator rule_cl339_st1_injury ?gen87 ?gen89 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl339_st1_injury] ) ) ) ?gen93 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen92 & : ( >= ?gen92 1 ) ) ) ?gen95 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen94 & : ( >= ?gen94 1 ) ) ) ?gen86 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen88 & : ( not ( member$ rule_cl339_st1_injury $?gen88 ) ) ) ) ( test ( eq ( class ?gen86 ) commited_cl339_st1 ) ) => ?gen86 <- ( commited_cl339_st1 ( positive 1 ) ( positive-derivator rule_cl339_st1_injury ?gen93 ?gen95 ) )"))
 
 ([rule_cl339_st1_injury-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl339_st1_injury-overruled-dot-gen470)
+   (pos-name rule_cl339_st1_injury-overruled-dot-gen517)
    (depends-on declare commited_cl339_st1 lc:case lc:case commited_cl339_st1)
    (implies commited_cl339_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl339_st1_injury] ) ) ) ?gen80 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( negative-support $?gen83 ) ( negative-overruled $?gen84 & : ( subseq-pos ( create$ rule_cl339_st1_injury-overruled $?gen83 $$$ $?gen84 ) ) ) ) ( test ( eq ( class ?gen80 ) commited_cl339_st1 ) ) ( not ( and ?gen87 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen86 & : ( >= ?gen86 1 ) ) ) ?gen89 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen88 & : ( >= ?gen88 1 ) ) ) ?gen80 <- ( commited_cl339_st1 ( positive-defeated $?gen82 & : ( not ( member$ rule_cl339_st1_injury $?gen82 ) ) ) ) ) ) => ( calc ( bind $?gen85 ( delete-member$ $?gen84 ( create$ rule_cl339_st1_injury-overruled $?gen83 ) ) ) ) ?gen80 <- ( commited_cl339_st1 ( negative-overruled $?gen85 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl339_st1_injury] ) ) ) ?gen86 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( negative-support $?gen89 ) ( negative-overruled $?gen90 & : ( subseq-pos ( create$ rule_cl339_st1_injury-overruled $?gen89 $$$ $?gen90 ) ) ) ) ( test ( eq ( class ?gen86 ) commited_cl339_st1 ) ) ( not ( and ?gen93 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen92 & : ( >= ?gen92 1 ) ) ) ?gen95 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen94 & : ( >= ?gen94 1 ) ) ) ?gen86 <- ( commited_cl339_st1 ( positive-defeated $?gen88 & : ( not ( member$ rule_cl339_st1_injury $?gen88 ) ) ) ) ) ) => ( calc ( bind $?gen91 ( delete-member$ $?gen90 ( create$ rule_cl339_st1_injury-overruled $?gen89 ) ) ) ) ?gen86 <- ( commited_cl339_st1 ( negative-overruled $?gen91 ) )"))
 
 ([rule_cl339_st1_injury-overruled] of derived-attribute-rule
-   (pos-name rule_cl339_st1_injury-overruled-gen472)
+   (pos-name rule_cl339_st1_injury-overruled-gen519)
    (depends-on declare lc:case lc:case commited_cl339_st1)
    (implies commited_cl339_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl339_st1_injury] ) ) ) ?gen87 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen86 & : ( >= ?gen86 1 ) ) ) ?gen89 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen88 & : ( >= ?gen88 1 ) ) ) ?gen80 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( negative-support $?gen83 ) ( negative-overruled $?gen84 & : ( not ( subseq-pos ( create$ rule_cl339_st1_injury-overruled $?gen83 $$$ $?gen84 ) ) ) ) ( positive-defeated $?gen82 & : ( not ( member$ rule_cl339_st1_injury $?gen82 ) ) ) ) ( test ( eq ( class ?gen80 ) commited_cl339_st1 ) ) => ( calc ( bind $?gen85 ( create$ rule_cl339_st1_injury-overruled $?gen83 $?gen84 ) ) ) ?gen80 <- ( commited_cl339_st1 ( negative-overruled $?gen85 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl339_st1_injury] ) ) ) ?gen93 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ( positive ?gen92 & : ( >= ?gen92 1 ) ) ) ?gen95 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ( positive ?gen94 & : ( >= ?gen94 1 ) ) ) ?gen86 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( negative-support $?gen89 ) ( negative-overruled $?gen90 & : ( not ( subseq-pos ( create$ rule_cl339_st1_injury-overruled $?gen89 $$$ $?gen90 ) ) ) ) ( positive-defeated $?gen88 & : ( not ( member$ rule_cl339_st1_injury $?gen88 ) ) ) ) ( test ( eq ( class ?gen86 ) commited_cl339_st1 ) ) => ( calc ( bind $?gen91 ( create$ rule_cl339_st1_injury-overruled $?gen89 $?gen90 ) ) ) ?gen86 <- ( commited_cl339_st1 ( negative-overruled $?gen91 ) )"))
 
 ([rule_cl339_st1_injury-support] of derived-attribute-rule
-   (pos-name rule_cl339_st1_injury-support-gen474)
+   (pos-name rule_cl339_st1_injury-support-gen521)
    (depends-on declare lc:case lc:case commited_cl339_st1)
    (implies commited_cl339_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl339_st1_injury] ) ) ) ?gen78 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen79 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ?gen80 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive-support $?gen82 & : ( not ( subseq-pos ( create$ rule_cl339_st1_injury ?gen78 ?gen79 $$$ $?gen82 ) ) ) ) ) ( test ( eq ( class ?gen80 ) commited_cl339_st1 ) ) => ( calc ( bind $?gen85 ( create$ rule_cl339_st1_injury ?gen78 ?gen79 $?gen82 ) ) ) ?gen80 <- ( commited_cl339_st1 ( positive-support $?gen85 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl339_st1_injury] ) ) ) ?gen84 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen85 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ?gen86 <- ( commited_cl339_st1 ( defendant ?Defendant ) ( positive-support $?gen88 & : ( not ( subseq-pos ( create$ rule_cl339_st1_injury ?gen84 ?gen85 $$$ $?gen88 ) ) ) ) ) ( test ( eq ( class ?gen86 ) commited_cl339_st1 ) ) => ( calc ( bind $?gen91 ( create$ rule_cl339_st1_injury ?gen84 ?gen85 $?gen88 ) ) ) ?gen86 <- ( commited_cl339_st1 ( positive-support $?gen91 ) )"))
+
+([rule_cl97_st3-defeasibly-dot] of derived-attribute-rule
+   (pos-name rule_cl97_st3-defeasibly-dot-gen523)
+   (depends-on declare commited_cl97_st3 lc:case commited_cl97_st3)
+   (implies commited_cl97_st3)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl97_st3] ) ) ) ?gen76 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl97_st3 $? ) ) ( test ( eq ( class ?gen76 ) commited_cl97_st3 ) ) ( not ( and ?gen83 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ( positive ?gen82 & : ( >= ?gen82 1 ) ) ) ?gen76 <- ( commited_cl97_st3 ( negative ~ 2 ) ( positive-overruled $?gen78 & : ( not ( member$ rule_cl97_st3 $?gen78 ) ) ) ) ) ) => ?gen76 <- ( commited_cl97_st3 ( positive 0 ) )"))
+
+([rule_cl97_st3-defeasibly] of derived-attribute-rule
+   (pos-name rule_cl97_st3-defeasibly-gen525)
+   (depends-on declare lc:case commited_cl97_st3)
+   (implies commited_cl97_st3)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl97_st3] ) ) ) ?gen83 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ( positive ?gen82 & : ( >= ?gen82 1 ) ) ) ?gen76 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen78 & : ( not ( member$ rule_cl97_st3 $?gen78 ) ) ) ) ( test ( eq ( class ?gen76 ) commited_cl97_st3 ) ) => ?gen76 <- ( commited_cl97_st3 ( positive 1 ) ( positive-derivator rule_cl97_st3 ?gen83 ) )"))
+
+([rule_cl97_st3-overruled-dot] of derived-attribute-rule
+   (pos-name rule_cl97_st3-overruled-dot-gen527)
+   (depends-on declare commited_cl97_st3 lc:case commited_cl97_st3)
+   (implies commited_cl97_st3)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl97_st3] ) ) ) ?gen76 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( negative-support $?gen79 ) ( negative-overruled $?gen80 & : ( subseq-pos ( create$ rule_cl97_st3-overruled $?gen79 $$$ $?gen80 ) ) ) ) ( test ( eq ( class ?gen76 ) commited_cl97_st3 ) ) ( not ( and ?gen83 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ( positive ?gen82 & : ( >= ?gen82 1 ) ) ) ?gen76 <- ( commited_cl97_st3 ( positive-defeated $?gen78 & : ( not ( member$ rule_cl97_st3 $?gen78 ) ) ) ) ) ) => ( calc ( bind $?gen81 ( delete-member$ $?gen80 ( create$ rule_cl97_st3-overruled $?gen79 ) ) ) ) ?gen76 <- ( commited_cl97_st3 ( negative-overruled $?gen81 ) )"))
+
+([rule_cl97_st3-overruled] of derived-attribute-rule
+   (pos-name rule_cl97_st3-overruled-gen529)
+   (depends-on declare lc:case commited_cl97_st3)
+   (implies commited_cl97_st3)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl97_st3] ) ) ) ?gen83 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ( positive ?gen82 & : ( >= ?gen82 1 ) ) ) ?gen76 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( negative-support $?gen79 ) ( negative-overruled $?gen80 & : ( not ( subseq-pos ( create$ rule_cl97_st3-overruled $?gen79 $$$ $?gen80 ) ) ) ) ( positive-defeated $?gen78 & : ( not ( member$ rule_cl97_st3 $?gen78 ) ) ) ) ( test ( eq ( class ?gen76 ) commited_cl97_st3 ) ) => ( calc ( bind $?gen81 ( create$ rule_cl97_st3-overruled $?gen79 $?gen80 ) ) ) ?gen76 <- ( commited_cl97_st3 ( negative-overruled $?gen81 ) )"))
+
+([rule_cl97_st3-support] of derived-attribute-rule
+   (pos-name rule_cl97_st3-support-gen531)
+   (depends-on declare lc:case commited_cl97_st3)
+   (implies commited_cl97_st3)
+   (del-name nil)
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl97_st3] ) ) ) ?gen75 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ) ?gen76 <- ( commited_cl97_st3 ( defendant ?Defendant ) ( positive-support $?gen78 & : ( not ( subseq-pos ( create$ rule_cl97_st3 ?gen75 $$$ $?gen78 ) ) ) ) ) ( test ( eq ( class ?gen76 ) commited_cl97_st3 ) ) => ( calc ( bind $?gen81 ( create$ rule_cl97_st3 ?gen75 $?gen78 ) ) ) ?gen76 <- ( commited_cl97_st3 ( positive-support $?gen81 ) )"))
 
 ([rule_cl44-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl44-defeasibly-dot-gen476)
+   (pos-name rule_cl44-defeasibly-dot-gen533)
    (depends-on declare commited_cl44 lc:case commited_cl44)
    (implies commited_cl44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl44] ) ) ) ?gen70 <- ( commited_cl44 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl44 $? ) ) ( test ( eq ( class ?gen70 ) commited_cl44 ) ) ( not ( and ?gen77 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen76 & : ( >= ?gen76 1 ) ) ) ?gen70 <- ( commited_cl44 ( negative ~ 2 ) ( positive-overruled $?gen72 & : ( not ( member$ rule_cl44 $?gen72 ) ) ) ) ) ) => ?gen70 <- ( commited_cl44 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl44] ) ) ) ?gen67 <- ( commited_cl44 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl44 $? ) ) ( test ( eq ( class ?gen67 ) commited_cl44 ) ) ( not ( and ?gen74 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen73 & : ( >= ?gen73 1 ) ) ) ?gen67 <- ( commited_cl44 ( negative ~ 2 ) ( positive-overruled $?gen69 & : ( not ( member$ rule_cl44 $?gen69 ) ) ) ) ) ) => ?gen67 <- ( commited_cl44 ( positive 0 ) )"))
 
 ([rule_cl44-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl44-defeasibly-gen478)
+   (pos-name rule_cl44-defeasibly-gen535)
    (depends-on declare lc:case commited_cl44)
    (implies commited_cl44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl44] ) ) ) ?gen77 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen76 & : ( >= ?gen76 1 ) ) ) ?gen70 <- ( commited_cl44 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen72 & : ( not ( member$ rule_cl44 $?gen72 ) ) ) ) ( test ( eq ( class ?gen70 ) commited_cl44 ) ) => ?gen70 <- ( commited_cl44 ( positive 1 ) ( positive-derivator rule_cl44 ?gen77 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl44] ) ) ) ?gen74 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen73 & : ( >= ?gen73 1 ) ) ) ?gen67 <- ( commited_cl44 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen69 & : ( not ( member$ rule_cl44 $?gen69 ) ) ) ) ( test ( eq ( class ?gen67 ) commited_cl44 ) ) => ?gen67 <- ( commited_cl44 ( positive 1 ) ( positive-derivator rule_cl44 ?gen74 ) )"))
 
 ([rule_cl44-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl44-overruled-dot-gen480)
+   (pos-name rule_cl44-overruled-dot-gen537)
    (depends-on declare commited_cl44 lc:case commited_cl44)
    (implies commited_cl44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl44] ) ) ) ?gen70 <- ( commited_cl44 ( defendant ?Defendant ) ( negative-support $?gen73 ) ( negative-overruled $?gen74 & : ( subseq-pos ( create$ rule_cl44-overruled $?gen73 $$$ $?gen74 ) ) ) ) ( test ( eq ( class ?gen70 ) commited_cl44 ) ) ( not ( and ?gen77 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen76 & : ( >= ?gen76 1 ) ) ) ?gen70 <- ( commited_cl44 ( positive-defeated $?gen72 & : ( not ( member$ rule_cl44 $?gen72 ) ) ) ) ) ) => ( calc ( bind $?gen75 ( delete-member$ $?gen74 ( create$ rule_cl44-overruled $?gen73 ) ) ) ) ?gen70 <- ( commited_cl44 ( negative-overruled $?gen75 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl44] ) ) ) ?gen67 <- ( commited_cl44 ( defendant ?Defendant ) ( negative-support $?gen70 ) ( negative-overruled $?gen71 & : ( subseq-pos ( create$ rule_cl44-overruled $?gen70 $$$ $?gen71 ) ) ) ) ( test ( eq ( class ?gen67 ) commited_cl44 ) ) ( not ( and ?gen74 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen73 & : ( >= ?gen73 1 ) ) ) ?gen67 <- ( commited_cl44 ( positive-defeated $?gen69 & : ( not ( member$ rule_cl44 $?gen69 ) ) ) ) ) ) => ( calc ( bind $?gen72 ( delete-member$ $?gen71 ( create$ rule_cl44-overruled $?gen70 ) ) ) ) ?gen67 <- ( commited_cl44 ( negative-overruled $?gen72 ) )"))
 
 ([rule_cl44-overruled] of derived-attribute-rule
-   (pos-name rule_cl44-overruled-gen482)
+   (pos-name rule_cl44-overruled-gen539)
    (depends-on declare lc:case commited_cl44)
    (implies commited_cl44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl44] ) ) ) ?gen77 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen76 & : ( >= ?gen76 1 ) ) ) ?gen70 <- ( commited_cl44 ( defendant ?Defendant ) ( negative-support $?gen73 ) ( negative-overruled $?gen74 & : ( not ( subseq-pos ( create$ rule_cl44-overruled $?gen73 $$$ $?gen74 ) ) ) ) ( positive-defeated $?gen72 & : ( not ( member$ rule_cl44 $?gen72 ) ) ) ) ( test ( eq ( class ?gen70 ) commited_cl44 ) ) => ( calc ( bind $?gen75 ( create$ rule_cl44-overruled $?gen73 $?gen74 ) ) ) ?gen70 <- ( commited_cl44 ( negative-overruled $?gen75 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl44] ) ) ) ?gen74 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ( positive ?gen73 & : ( >= ?gen73 1 ) ) ) ?gen67 <- ( commited_cl44 ( defendant ?Defendant ) ( negative-support $?gen70 ) ( negative-overruled $?gen71 & : ( not ( subseq-pos ( create$ rule_cl44-overruled $?gen70 $$$ $?gen71 ) ) ) ) ( positive-defeated $?gen69 & : ( not ( member$ rule_cl44 $?gen69 ) ) ) ) ( test ( eq ( class ?gen67 ) commited_cl44 ) ) => ( calc ( bind $?gen72 ( create$ rule_cl44-overruled $?gen70 $?gen71 ) ) ) ?gen67 <- ( commited_cl44 ( negative-overruled $?gen72 ) )"))
 
 ([rule_cl44-support] of derived-attribute-rule
-   (pos-name rule_cl44-support-gen484)
+   (pos-name rule_cl44-support-gen541)
    (depends-on declare lc:case commited_cl44)
    (implies commited_cl44)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl44] ) ) ) ?gen69 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ) ?gen70 <- ( commited_cl44 ( defendant ?Defendant ) ( positive-support $?gen72 & : ( not ( subseq-pos ( create$ rule_cl44 ?gen69 $$$ $?gen72 ) ) ) ) ) ( test ( eq ( class ?gen70 ) commited_cl44 ) ) => ( calc ( bind $?gen75 ( create$ rule_cl44 ?gen69 $?gen72 ) ) ) ?gen70 <- ( commited_cl44 ( positive-support $?gen75 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl44] ) ) ) ?gen66 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ) ?gen67 <- ( commited_cl44 ( defendant ?Defendant ) ( positive-support $?gen69 & : ( not ( subseq-pos ( create$ rule_cl44 ?gen66 $$$ $?gen69 ) ) ) ) ) ( test ( eq ( class ?gen67 ) commited_cl44 ) ) => ( calc ( bind $?gen72 ( create$ rule_cl44 ?gen66 $?gen69 ) ) ) ?gen67 <- ( commited_cl44 ( positive-support $?gen72 ) )"))
 
 ([rule_cl41-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl41-defeasibly-dot-gen486)
+   (pos-name rule_cl41-defeasibly-dot-gen543)
    (depends-on declare commited_cl41 lc:case commited_cl41)
    (implies commited_cl41)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl41] ) ) ) ?gen61 <- ( commited_cl41 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl41 $? ) ) ( test ( eq ( class ?gen61 ) commited_cl41 ) ) ( not ( and ?gen68 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen67 & : ( >= ?gen67 1 ) ) ) ?gen61 <- ( commited_cl41 ( negative ~ 2 ) ( positive-overruled $?gen63 & : ( not ( member$ rule_cl41 $?gen63 ) ) ) ) ) ) => ?gen61 <- ( commited_cl41 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl41] ) ) ) ?gen58 <- ( commited_cl41 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl41 $? ) ) ( test ( eq ( class ?gen58 ) commited_cl41 ) ) ( not ( and ?gen65 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen64 & : ( >= ?gen64 1 ) ) ) ?gen58 <- ( commited_cl41 ( negative ~ 2 ) ( positive-overruled $?gen60 & : ( not ( member$ rule_cl41 $?gen60 ) ) ) ) ) ) => ?gen58 <- ( commited_cl41 ( positive 0 ) )"))
 
 ([rule_cl41-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl41-defeasibly-gen488)
+   (pos-name rule_cl41-defeasibly-gen545)
    (depends-on declare lc:case commited_cl41)
    (implies commited_cl41)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl41] ) ) ) ?gen68 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen67 & : ( >= ?gen67 1 ) ) ) ?gen61 <- ( commited_cl41 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen63 & : ( not ( member$ rule_cl41 $?gen63 ) ) ) ) ( test ( eq ( class ?gen61 ) commited_cl41 ) ) => ?gen61 <- ( commited_cl41 ( positive 1 ) ( positive-derivator rule_cl41 ?gen68 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl41] ) ) ) ?gen65 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen64 & : ( >= ?gen64 1 ) ) ) ?gen58 <- ( commited_cl41 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen60 & : ( not ( member$ rule_cl41 $?gen60 ) ) ) ) ( test ( eq ( class ?gen58 ) commited_cl41 ) ) => ?gen58 <- ( commited_cl41 ( positive 1 ) ( positive-derivator rule_cl41 ?gen65 ) )"))
 
 ([rule_cl41-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl41-overruled-dot-gen490)
+   (pos-name rule_cl41-overruled-dot-gen547)
    (depends-on declare commited_cl41 lc:case commited_cl41)
    (implies commited_cl41)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl41] ) ) ) ?gen61 <- ( commited_cl41 ( defendant ?Defendant ) ( negative-support $?gen64 ) ( negative-overruled $?gen65 & : ( subseq-pos ( create$ rule_cl41-overruled $?gen64 $$$ $?gen65 ) ) ) ) ( test ( eq ( class ?gen61 ) commited_cl41 ) ) ( not ( and ?gen68 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen67 & : ( >= ?gen67 1 ) ) ) ?gen61 <- ( commited_cl41 ( positive-defeated $?gen63 & : ( not ( member$ rule_cl41 $?gen63 ) ) ) ) ) ) => ( calc ( bind $?gen66 ( delete-member$ $?gen65 ( create$ rule_cl41-overruled $?gen64 ) ) ) ) ?gen61 <- ( commited_cl41 ( negative-overruled $?gen66 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl41] ) ) ) ?gen58 <- ( commited_cl41 ( defendant ?Defendant ) ( negative-support $?gen61 ) ( negative-overruled $?gen62 & : ( subseq-pos ( create$ rule_cl41-overruled $?gen61 $$$ $?gen62 ) ) ) ) ( test ( eq ( class ?gen58 ) commited_cl41 ) ) ( not ( and ?gen65 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen64 & : ( >= ?gen64 1 ) ) ) ?gen58 <- ( commited_cl41 ( positive-defeated $?gen60 & : ( not ( member$ rule_cl41 $?gen60 ) ) ) ) ) ) => ( calc ( bind $?gen63 ( delete-member$ $?gen62 ( create$ rule_cl41-overruled $?gen61 ) ) ) ) ?gen58 <- ( commited_cl41 ( negative-overruled $?gen63 ) )"))
 
 ([rule_cl41-overruled] of derived-attribute-rule
-   (pos-name rule_cl41-overruled-gen492)
+   (pos-name rule_cl41-overruled-gen549)
    (depends-on declare lc:case commited_cl41)
    (implies commited_cl41)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl41] ) ) ) ?gen68 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen67 & : ( >= ?gen67 1 ) ) ) ?gen61 <- ( commited_cl41 ( defendant ?Defendant ) ( negative-support $?gen64 ) ( negative-overruled $?gen65 & : ( not ( subseq-pos ( create$ rule_cl41-overruled $?gen64 $$$ $?gen65 ) ) ) ) ( positive-defeated $?gen63 & : ( not ( member$ rule_cl41 $?gen63 ) ) ) ) ( test ( eq ( class ?gen61 ) commited_cl41 ) ) => ( calc ( bind $?gen66 ( create$ rule_cl41-overruled $?gen64 $?gen65 ) ) ) ?gen61 <- ( commited_cl41 ( negative-overruled $?gen66 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl41] ) ) ) ?gen65 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ( positive ?gen64 & : ( >= ?gen64 1 ) ) ) ?gen58 <- ( commited_cl41 ( defendant ?Defendant ) ( negative-support $?gen61 ) ( negative-overruled $?gen62 & : ( not ( subseq-pos ( create$ rule_cl41-overruled $?gen61 $$$ $?gen62 ) ) ) ) ( positive-defeated $?gen60 & : ( not ( member$ rule_cl41 $?gen60 ) ) ) ) ( test ( eq ( class ?gen58 ) commited_cl41 ) ) => ( calc ( bind $?gen63 ( create$ rule_cl41-overruled $?gen61 $?gen62 ) ) ) ?gen58 <- ( commited_cl41 ( negative-overruled $?gen63 ) )"))
 
 ([rule_cl41-support] of derived-attribute-rule
-   (pos-name rule_cl41-support-gen494)
+   (pos-name rule_cl41-support-gen551)
    (depends-on declare lc:case commited_cl41)
    (implies commited_cl41)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl41] ) ) ) ?gen60 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ) ?gen61 <- ( commited_cl41 ( defendant ?Defendant ) ( positive-support $?gen63 & : ( not ( subseq-pos ( create$ rule_cl41 ?gen60 $$$ $?gen63 ) ) ) ) ) ( test ( eq ( class ?gen61 ) commited_cl41 ) ) => ( calc ( bind $?gen66 ( create$ rule_cl41 ?gen60 $?gen63 ) ) ) ?gen61 <- ( commited_cl41 ( positive-support $?gen66 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl41] ) ) ) ?gen57 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ) ?gen58 <- ( commited_cl41 ( defendant ?Defendant ) ( positive-support $?gen60 & : ( not ( subseq-pos ( create$ rule_cl41 ?gen57 $$$ $?gen60 ) ) ) ) ) ( test ( eq ( class ?gen58 ) commited_cl41 ) ) => ( calc ( bind $?gen63 ( create$ rule_cl41 ?gen57 $?gen60 ) ) ) ?gen58 <- ( commited_cl41 ( positive-support $?gen63 ) )"))
 
 ([rule_cl35_st1-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl35_st1-defeasibly-dot-gen496)
-   (depends-on declare commited_cl35_st1 lc:case lc:case commited_cl35_st1)
+   (pos-name rule_cl35_st1-defeasibly-dot-gen553)
+   (depends-on declare commited_cl35_st1 lc:case commited_cl35_st1)
    (implies commited_cl35_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl35_st1] ) ) ) ?gen50 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl35_st1 $? ) ) ( test ( eq ( class ?gen50 ) commited_cl35_st1 ) ) ( not ( and ?gen57 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ( positive ?gen56 & : ( >= ?gen56 1 ) ) ) ?gen59 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ( positive ?gen58 & : ( >= ?gen58 1 ) ) ) ?gen50 <- ( commited_cl35_st1 ( negative ~ 2 ) ( positive-overruled $?gen52 & : ( not ( member$ rule_cl35_st1 $?gen52 ) ) ) ) ) ) => ?gen50 <- ( commited_cl35_st1 ( positive 0 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl35_st1] ) ) ) ?gen49 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl35_st1 $? ) ) ( test ( eq ( class ?gen49 ) commited_cl35_st1 ) ) ( not ( and ?gen56 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ( positive ?gen55 & : ( >= ?gen55 1 ) ) ) ?gen49 <- ( commited_cl35_st1 ( negative ~ 2 ) ( positive-overruled $?gen51 & : ( not ( member$ rule_cl35_st1 $?gen51 ) ) ) ) ) ) => ?gen49 <- ( commited_cl35_st1 ( positive 0 ) )"))
 
 ([rule_cl35_st1-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl35_st1-defeasibly-gen498)
-   (depends-on declare lc:case lc:case commited_cl35_st1)
+   (pos-name rule_cl35_st1-defeasibly-gen555)
+   (depends-on declare lc:case commited_cl35_st1)
    (implies commited_cl35_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl35_st1] ) ) ) ?gen57 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ( positive ?gen56 & : ( >= ?gen56 1 ) ) ) ?gen59 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ( positive ?gen58 & : ( >= ?gen58 1 ) ) ) ?gen50 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen52 & : ( not ( member$ rule_cl35_st1 $?gen52 ) ) ) ) ( test ( eq ( class ?gen50 ) commited_cl35_st1 ) ) => ?gen50 <- ( commited_cl35_st1 ( positive 1 ) ( positive-derivator rule_cl35_st1 ?gen57 ?gen59 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl35_st1] ) ) ) ?gen56 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ( positive ?gen55 & : ( >= ?gen55 1 ) ) ) ?gen49 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen51 & : ( not ( member$ rule_cl35_st1 $?gen51 ) ) ) ) ( test ( eq ( class ?gen49 ) commited_cl35_st1 ) ) => ?gen49 <- ( commited_cl35_st1 ( positive 1 ) ( positive-derivator rule_cl35_st1 ?gen56 ) )"))
 
 ([rule_cl35_st1-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl35_st1-overruled-dot-gen500)
-   (depends-on declare commited_cl35_st1 lc:case lc:case commited_cl35_st1)
+   (pos-name rule_cl35_st1-overruled-dot-gen557)
+   (depends-on declare commited_cl35_st1 lc:case commited_cl35_st1)
    (implies commited_cl35_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl35_st1] ) ) ) ?gen50 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( negative-support $?gen53 ) ( negative-overruled $?gen54 & : ( subseq-pos ( create$ rule_cl35_st1-overruled $?gen53 $$$ $?gen54 ) ) ) ) ( test ( eq ( class ?gen50 ) commited_cl35_st1 ) ) ( not ( and ?gen57 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ( positive ?gen56 & : ( >= ?gen56 1 ) ) ) ?gen59 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ( positive ?gen58 & : ( >= ?gen58 1 ) ) ) ?gen50 <- ( commited_cl35_st1 ( positive-defeated $?gen52 & : ( not ( member$ rule_cl35_st1 $?gen52 ) ) ) ) ) ) => ( calc ( bind $?gen55 ( delete-member$ $?gen54 ( create$ rule_cl35_st1-overruled $?gen53 ) ) ) ) ?gen50 <- ( commited_cl35_st1 ( negative-overruled $?gen55 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl35_st1] ) ) ) ?gen49 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( negative-support $?gen52 ) ( negative-overruled $?gen53 & : ( subseq-pos ( create$ rule_cl35_st1-overruled $?gen52 $$$ $?gen53 ) ) ) ) ( test ( eq ( class ?gen49 ) commited_cl35_st1 ) ) ( not ( and ?gen56 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ( positive ?gen55 & : ( >= ?gen55 1 ) ) ) ?gen49 <- ( commited_cl35_st1 ( positive-defeated $?gen51 & : ( not ( member$ rule_cl35_st1 $?gen51 ) ) ) ) ) ) => ( calc ( bind $?gen54 ( delete-member$ $?gen53 ( create$ rule_cl35_st1-overruled $?gen52 ) ) ) ) ?gen49 <- ( commited_cl35_st1 ( negative-overruled $?gen54 ) )"))
 
 ([rule_cl35_st1-overruled] of derived-attribute-rule
-   (pos-name rule_cl35_st1-overruled-gen502)
-   (depends-on declare lc:case lc:case commited_cl35_st1)
+   (pos-name rule_cl35_st1-overruled-gen559)
+   (depends-on declare lc:case commited_cl35_st1)
    (implies commited_cl35_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl35_st1] ) ) ) ?gen57 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ( positive ?gen56 & : ( >= ?gen56 1 ) ) ) ?gen59 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ( positive ?gen58 & : ( >= ?gen58 1 ) ) ) ?gen50 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( negative-support $?gen53 ) ( negative-overruled $?gen54 & : ( not ( subseq-pos ( create$ rule_cl35_st1-overruled $?gen53 $$$ $?gen54 ) ) ) ) ( positive-defeated $?gen52 & : ( not ( member$ rule_cl35_st1 $?gen52 ) ) ) ) ( test ( eq ( class ?gen50 ) commited_cl35_st1 ) ) => ( calc ( bind $?gen55 ( create$ rule_cl35_st1-overruled $?gen53 $?gen54 ) ) ) ?gen50 <- ( commited_cl35_st1 ( negative-overruled $?gen55 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl35_st1] ) ) ) ?gen56 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ( positive ?gen55 & : ( >= ?gen55 1 ) ) ) ?gen49 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( negative-support $?gen52 ) ( negative-overruled $?gen53 & : ( not ( subseq-pos ( create$ rule_cl35_st1-overruled $?gen52 $$$ $?gen53 ) ) ) ) ( positive-defeated $?gen51 & : ( not ( member$ rule_cl35_st1 $?gen51 ) ) ) ) ( test ( eq ( class ?gen49 ) commited_cl35_st1 ) ) => ( calc ( bind $?gen54 ( create$ rule_cl35_st1-overruled $?gen52 $?gen53 ) ) ) ?gen49 <- ( commited_cl35_st1 ( negative-overruled $?gen54 ) )"))
 
 ([rule_cl35_st1-support] of derived-attribute-rule
-   (pos-name rule_cl35_st1-support-gen504)
-   (depends-on declare lc:case lc:case commited_cl35_st1)
+   (pos-name rule_cl35_st1-support-gen561)
+   (depends-on declare lc:case commited_cl35_st1)
    (implies commited_cl35_st1)
    (del-name nil)
-   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl35_st1] ) ) ) ?gen48 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ) ?gen49 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ) ?gen50 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive-support $?gen52 & : ( not ( subseq-pos ( create$ rule_cl35_st1 ?gen48 ?gen49 $$$ $?gen52 ) ) ) ) ) ( test ( eq ( class ?gen50 ) commited_cl35_st1 ) ) => ( calc ( bind $?gen55 ( create$ rule_cl35_st1 ?gen48 ?gen49 $?gen52 ) ) ) ?gen50 <- ( commited_cl35_st1 ( positive-support $?gen55 ) )"))
+   (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl35_st1] ) ) ) ?gen48 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ) ?gen49 <- ( commited_cl35_st1 ( defendant ?Defendant ) ( positive-support $?gen51 & : ( not ( subseq-pos ( create$ rule_cl35_st1 ?gen48 $$$ $?gen51 ) ) ) ) ) ( test ( eq ( class ?gen49 ) commited_cl35_st1 ) ) => ( calc ( bind $?gen54 ( create$ rule_cl35_st1 ?gen48 $?gen51 ) ) ) ?gen49 <- ( commited_cl35_st1 ( positive-support $?gen54 ) )"))
 
 ([rule_cl29_st1-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl29_st1-defeasibly-dot-gen506)
+   (pos-name rule_cl29_st1-defeasibly-dot-gen563)
    (depends-on declare commited_cl29_st1 lc:case commited_cl29_st1)
    (implies commited_cl29_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl29_st1] ) ) ) ?gen40 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl29_st1 $? ) ) ( test ( eq ( class ?gen40 ) commited_cl29_st1 ) ) ( not ( and ?gen47 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ( positive ?gen46 & : ( >= ?gen46 1 ) ) ) ?gen40 <- ( commited_cl29_st1 ( negative ~ 2 ) ( positive-overruled $?gen42 & : ( not ( member$ rule_cl29_st1 $?gen42 ) ) ) ) ) ) => ?gen40 <- ( commited_cl29_st1 ( positive 0 ) )"))
 
 ([rule_cl29_st1-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl29_st1-defeasibly-gen508)
+   (pos-name rule_cl29_st1-defeasibly-gen565)
    (depends-on declare lc:case commited_cl29_st1)
    (implies commited_cl29_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl29_st1] ) ) ) ?gen47 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ( positive ?gen46 & : ( >= ?gen46 1 ) ) ) ?gen40 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen42 & : ( not ( member$ rule_cl29_st1 $?gen42 ) ) ) ) ( test ( eq ( class ?gen40 ) commited_cl29_st1 ) ) => ?gen40 <- ( commited_cl29_st1 ( positive 1 ) ( positive-derivator rule_cl29_st1 ?gen47 ) )"))
 
 ([rule_cl29_st1-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl29_st1-overruled-dot-gen510)
+   (pos-name rule_cl29_st1-overruled-dot-gen567)
    (depends-on declare commited_cl29_st1 lc:case commited_cl29_st1)
    (implies commited_cl29_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl29_st1] ) ) ) ?gen40 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( negative-support $?gen43 ) ( negative-overruled $?gen44 & : ( subseq-pos ( create$ rule_cl29_st1-overruled $?gen43 $$$ $?gen44 ) ) ) ) ( test ( eq ( class ?gen40 ) commited_cl29_st1 ) ) ( not ( and ?gen47 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ( positive ?gen46 & : ( >= ?gen46 1 ) ) ) ?gen40 <- ( commited_cl29_st1 ( positive-defeated $?gen42 & : ( not ( member$ rule_cl29_st1 $?gen42 ) ) ) ) ) ) => ( calc ( bind $?gen45 ( delete-member$ $?gen44 ( create$ rule_cl29_st1-overruled $?gen43 ) ) ) ) ?gen40 <- ( commited_cl29_st1 ( negative-overruled $?gen45 ) )"))
 
 ([rule_cl29_st1-overruled] of derived-attribute-rule
-   (pos-name rule_cl29_st1-overruled-gen512)
+   (pos-name rule_cl29_st1-overruled-gen569)
    (depends-on declare lc:case commited_cl29_st1)
    (implies commited_cl29_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl29_st1] ) ) ) ?gen47 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ( positive ?gen46 & : ( >= ?gen46 1 ) ) ) ?gen40 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( negative-support $?gen43 ) ( negative-overruled $?gen44 & : ( not ( subseq-pos ( create$ rule_cl29_st1-overruled $?gen43 $$$ $?gen44 ) ) ) ) ( positive-defeated $?gen42 & : ( not ( member$ rule_cl29_st1 $?gen42 ) ) ) ) ( test ( eq ( class ?gen40 ) commited_cl29_st1 ) ) => ( calc ( bind $?gen45 ( create$ rule_cl29_st1-overruled $?gen43 $?gen44 ) ) ) ?gen40 <- ( commited_cl29_st1 ( negative-overruled $?gen45 ) )"))
 
 ([rule_cl29_st1-support] of derived-attribute-rule
-   (pos-name rule_cl29_st1-support-gen514)
+   (pos-name rule_cl29_st1-support-gen571)
    (depends-on declare lc:case commited_cl29_st1)
    (implies commited_cl29_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl29_st1] ) ) ) ?gen39 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ) ?gen40 <- ( commited_cl29_st1 ( defendant ?Defendant ) ( positive-support $?gen42 & : ( not ( subseq-pos ( create$ rule_cl29_st1 ?gen39 $$$ $?gen42 ) ) ) ) ) ( test ( eq ( class ?gen40 ) commited_cl29_st1 ) ) => ( calc ( bind $?gen45 ( create$ rule_cl29_st1 ?gen39 $?gen42 ) ) ) ?gen40 <- ( commited_cl29_st1 ( positive-support $?gen45 ) )"))
 
 ([rule_cl27_st1-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl27_st1-defeasibly-dot-gen516)
+   (pos-name rule_cl27_st1-defeasibly-dot-gen573)
    (depends-on declare commited_cl27_st1 lc:case lc:case commited_cl27_st1)
    (implies commited_cl27_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl27_st1] ) ) ) ?gen29 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl27_st1 $? ) ) ( test ( eq ( class ?gen29 ) commited_cl27_st1 ) ) ( not ( and ?gen36 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ( positive ?gen35 & : ( >= ?gen35 1 ) ) ) ?gen38 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen37 & : ( >= ?gen37 1 ) ) ) ?gen29 <- ( commited_cl27_st1 ( negative ~ 2 ) ( positive-overruled $?gen31 & : ( not ( member$ rule_cl27_st1 $?gen31 ) ) ) ) ) ) => ?gen29 <- ( commited_cl27_st1 ( positive 0 ) )"))
 
 ([rule_cl27_st1-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl27_st1-defeasibly-gen518)
+   (pos-name rule_cl27_st1-defeasibly-gen575)
    (depends-on declare lc:case lc:case commited_cl27_st1)
    (implies commited_cl27_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl27_st1] ) ) ) ?gen36 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ( positive ?gen35 & : ( >= ?gen35 1 ) ) ) ?gen38 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen37 & : ( >= ?gen37 1 ) ) ) ?gen29 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen31 & : ( not ( member$ rule_cl27_st1 $?gen31 ) ) ) ) ( test ( eq ( class ?gen29 ) commited_cl27_st1 ) ) => ?gen29 <- ( commited_cl27_st1 ( positive 1 ) ( positive-derivator rule_cl27_st1 ?gen36 ?gen38 ) )"))
 
 ([rule_cl27_st1-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl27_st1-overruled-dot-gen520)
+   (pos-name rule_cl27_st1-overruled-dot-gen577)
    (depends-on declare commited_cl27_st1 lc:case lc:case commited_cl27_st1)
    (implies commited_cl27_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl27_st1] ) ) ) ?gen29 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( negative-support $?gen32 ) ( negative-overruled $?gen33 & : ( subseq-pos ( create$ rule_cl27_st1-overruled $?gen32 $$$ $?gen33 ) ) ) ) ( test ( eq ( class ?gen29 ) commited_cl27_st1 ) ) ( not ( and ?gen36 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ( positive ?gen35 & : ( >= ?gen35 1 ) ) ) ?gen38 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen37 & : ( >= ?gen37 1 ) ) ) ?gen29 <- ( commited_cl27_st1 ( positive-defeated $?gen31 & : ( not ( member$ rule_cl27_st1 $?gen31 ) ) ) ) ) ) => ( calc ( bind $?gen34 ( delete-member$ $?gen33 ( create$ rule_cl27_st1-overruled $?gen32 ) ) ) ) ?gen29 <- ( commited_cl27_st1 ( negative-overruled $?gen34 ) )"))
 
 ([rule_cl27_st1-overruled] of derived-attribute-rule
-   (pos-name rule_cl27_st1-overruled-gen522)
+   (pos-name rule_cl27_st1-overruled-gen579)
    (depends-on declare lc:case lc:case commited_cl27_st1)
    (implies commited_cl27_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl27_st1] ) ) ) ?gen36 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ( positive ?gen35 & : ( >= ?gen35 1 ) ) ) ?gen38 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen37 & : ( >= ?gen37 1 ) ) ) ?gen29 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( negative-support $?gen32 ) ( negative-overruled $?gen33 & : ( not ( subseq-pos ( create$ rule_cl27_st1-overruled $?gen32 $$$ $?gen33 ) ) ) ) ( positive-defeated $?gen31 & : ( not ( member$ rule_cl27_st1 $?gen31 ) ) ) ) ( test ( eq ( class ?gen29 ) commited_cl27_st1 ) ) => ( calc ( bind $?gen34 ( create$ rule_cl27_st1-overruled $?gen32 $?gen33 ) ) ) ?gen29 <- ( commited_cl27_st1 ( negative-overruled $?gen34 ) )"))
 
 ([rule_cl27_st1-support] of derived-attribute-rule
-   (pos-name rule_cl27_st1-support-gen524)
+   (pos-name rule_cl27_st1-support-gen581)
    (depends-on declare lc:case lc:case commited_cl27_st1)
    (implies commited_cl27_st1)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl27_st1] ) ) ) ?gen27 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ) ?gen28 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ?gen29 <- ( commited_cl27_st1 ( defendant ?Defendant ) ( positive-support $?gen31 & : ( not ( subseq-pos ( create$ rule_cl27_st1 ?gen27 ?gen28 $$$ $?gen31 ) ) ) ) ) ( test ( eq ( class ?gen29 ) commited_cl27_st1 ) ) => ( calc ( bind $?gen34 ( create$ rule_cl27_st1 ?gen27 ?gen28 $?gen31 ) ) ) ?gen29 <- ( commited_cl27_st1 ( positive-support $?gen34 ) )"))
 
 ([rule_cl26_st2-defeasibly-dot] of derived-attribute-rule
-   (pos-name rule_cl26_st2-defeasibly-dot-gen526)
+   (pos-name rule_cl26_st2-defeasibly-dot-gen583)
    (depends-on declare commited_cl26_st2 lc:case lc:case commited_cl26_st2)
    (implies commited_cl26_st2)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -1 [rule_cl26_st2] ) ) ) ?gen17 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive 1 ) ( positive-derivator rule_cl26_st2 $? ) ) ( test ( eq ( class ?gen17 ) commited_cl26_st2 ) ) ( not ( and ?gen24 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ( positive ?gen23 & : ( >= ?gen23 1 ) ) ) ?gen26 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen25 & : ( >= ?gen25 1 ) ) ) ?gen17 <- ( commited_cl26_st2 ( negative ~ 2 ) ( positive-overruled $?gen19 & : ( not ( member$ rule_cl26_st2 $?gen19 ) ) ) ) ) ) => ?gen17 <- ( commited_cl26_st2 ( positive 0 ) )"))
 
 ([rule_cl26_st2-defeasibly] of derived-attribute-rule
-   (pos-name rule_cl26_st2-defeasibly-gen528)
+   (pos-name rule_cl26_st2-defeasibly-gen585)
    (depends-on declare lc:case lc:case commited_cl26_st2)
    (implies commited_cl26_st2)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 1 [rule_cl26_st2] ) ) ) ?gen24 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ( positive ?gen23 & : ( >= ?gen23 1 ) ) ) ?gen26 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen25 & : ( >= ?gen25 1 ) ) ) ?gen17 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive 0 ) ( negative ~ 2 ) ( positive-overruled $?gen19 & : ( not ( member$ rule_cl26_st2 $?gen19 ) ) ) ) ( test ( eq ( class ?gen17 ) commited_cl26_st2 ) ) => ?gen17 <- ( commited_cl26_st2 ( positive 1 ) ( positive-derivator rule_cl26_st2 ?gen24 ?gen26 ) )"))
 
 ([rule_cl26_st2-overruled-dot] of derived-attribute-rule
-   (pos-name rule_cl26_st2-overruled-dot-gen530)
+   (pos-name rule_cl26_st2-overruled-dot-gen587)
    (depends-on declare commited_cl26_st2 lc:case lc:case commited_cl26_st2)
    (implies commited_cl26_st2)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority -2 [rule_cl26_st2] ) ) ) ?gen17 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( negative-support $?gen20 ) ( negative-overruled $?gen21 & : ( subseq-pos ( create$ rule_cl26_st2-overruled $?gen20 $$$ $?gen21 ) ) ) ) ( test ( eq ( class ?gen17 ) commited_cl26_st2 ) ) ( not ( and ?gen24 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ( positive ?gen23 & : ( >= ?gen23 1 ) ) ) ?gen26 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen25 & : ( >= ?gen25 1 ) ) ) ?gen17 <- ( commited_cl26_st2 ( positive-defeated $?gen19 & : ( not ( member$ rule_cl26_st2 $?gen19 ) ) ) ) ) ) => ( calc ( bind $?gen22 ( delete-member$ $?gen21 ( create$ rule_cl26_st2-overruled $?gen20 ) ) ) ) ?gen17 <- ( commited_cl26_st2 ( negative-overruled $?gen22 ) )"))
 
 ([rule_cl26_st2-overruled] of derived-attribute-rule
-   (pos-name rule_cl26_st2-overruled-gen532)
+   (pos-name rule_cl26_st2-overruled-gen589)
    (depends-on declare lc:case lc:case commited_cl26_st2)
    (implies commited_cl26_st2)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 2 [rule_cl26_st2] ) ) ) ?gen24 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ( positive ?gen23 & : ( >= ?gen23 1 ) ) ) ?gen26 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ( positive ?gen25 & : ( >= ?gen25 1 ) ) ) ?gen17 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( negative-support $?gen20 ) ( negative-overruled $?gen21 & : ( not ( subseq-pos ( create$ rule_cl26_st2-overruled $?gen20 $$$ $?gen21 ) ) ) ) ( positive-defeated $?gen19 & : ( not ( member$ rule_cl26_st2 $?gen19 ) ) ) ) ( test ( eq ( class ?gen17 ) commited_cl26_st2 ) ) => ( calc ( bind $?gen22 ( create$ rule_cl26_st2-overruled $?gen20 $?gen21 ) ) ) ?gen17 <- ( commited_cl26_st2 ( negative-overruled $?gen22 ) )"))
 
 ([rule_cl26_st2-support] of derived-attribute-rule
-   (pos-name rule_cl26_st2-support-gen534)
+   (pos-name rule_cl26_st2-support-gen591)
    (depends-on declare lc:case lc:case commited_cl26_st2)
    (implies commited_cl26_st2)
    (del-name nil)
    (derived-attribute-rule "( declare ( priority ( calc-defeasible-priority 5 [rule_cl26_st2] ) ) ) ?gen15 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ) ?gen16 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ?gen17 <- ( commited_cl26_st2 ( defendant ?Defendant ) ( positive-support $?gen19 & : ( not ( subseq-pos ( create$ rule_cl26_st2 ?gen15 ?gen16 $$$ $?gen19 ) ) ) ) ) ( test ( eq ( class ?gen17 ) commited_cl26_st2 ) ) => ( calc ( bind $?gen22 ( create$ rule_cl26_st2 ?gen15 ?gen16 $?gen19 ) ) ) ?gen17 <- ( commited_cl26_st2 ( positive-support $?gen22 ) )"))
 
 ([pen_cl348_st3_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl348_st3_max-deductive-gen285)
+   (pos-name pen_cl348_st3_max-deductive-gen312)
    (depends-on commited_cl348_st3 max_imprisonment)
    (implies max_imprisonment)
-   (deductive-rule "?gen252 <- ( commited_cl348_st3 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 4 ) ) ) => ( max_imprisonment ( value 4 ) )")
-   (production-rule "( defrule pen_cl348_st3_max-deductive-gen285 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen252 ) ( is-a commited_cl348_st3 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 4 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 4 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 4 ) ) ) ( make-instance ?oid of max_imprisonment ( value 4 ) ) )")
+   (deductive-rule "?gen276 <- ( commited_cl348_st3 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 4 ) ) ) => ( max_imprisonment ( value 4 ) )")
+   (production-rule "( defrule pen_cl348_st3_max-deductive-gen312 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen276 ) ( is-a commited_cl348_st3 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 4 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 4 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 4 ) ) ) ( make-instance ?oid of max_imprisonment ( value 4 ) ) )")
    (derived-class max_imprisonment))
 
 ([pen_cl348_st1_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl348_st1_max-deductive-gen284)
+   (pos-name pen_cl348_st1_max-deductive-gen311)
    (depends-on commited_cl348_st1 max_imprisonment)
    (implies max_imprisonment)
-   (deductive-rule "?gen243 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 8 ) ) ) => ( max_imprisonment ( value 8 ) )")
-   (production-rule "( defrule pen_cl348_st1_max-deductive-gen284 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen243 ) ( is-a commited_cl348_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 8 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 8 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 8 ) ) ) ( make-instance ?oid of max_imprisonment ( value 8 ) ) )")
+   (deductive-rule "?gen267 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 8 ) ) ) => ( max_imprisonment ( value 8 ) )")
+   (production-rule "( defrule pen_cl348_st1_max-deductive-gen311 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen267 ) ( is-a commited_cl348_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 8 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 8 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 8 ) ) ) ( make-instance ?oid of max_imprisonment ( value 8 ) ) )")
    (derived-class max_imprisonment))
 
 ([pen_cl348_st1_min-deductive] of ntm-deductive-rule
-   (pos-name pen_cl348_st1_min-deductive-gen283)
+   (pos-name pen_cl348_st1_min-deductive-gen310)
    (depends-on commited_cl348_st1 min_imprisonment)
    (implies min_imprisonment)
-   (deductive-rule "?gen234 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ( not ( min_imprisonment ( value 1 ) ) ) => ( min_imprisonment ( value 1 ) )")
-   (production-rule "( defrule pen_cl348_st1_min-deductive-gen283 ( declare ( salience ( calc-salience min_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen234 ) ( is-a commited_cl348_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a min_imprisonment ) ( value 1 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat min_imprisonment 1 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat min_imprisonment 1 ) ) ) ( make-instance ?oid of min_imprisonment ( value 1 ) ) )")
+   (deductive-rule "?gen258 <- ( commited_cl348_st1 ( defendant ?Defendant ) ) ( not ( min_imprisonment ( value 1 ) ) ) => ( min_imprisonment ( value 1 ) )")
+   (production-rule "( defrule pen_cl348_st1_min-deductive-gen310 ( declare ( salience ( calc-salience min_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen258 ) ( is-a commited_cl348_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a min_imprisonment ) ( value 1 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat min_imprisonment 1 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat min_imprisonment 1 ) ) ) ( make-instance ?oid of min_imprisonment ( value 1 ) ) )")
    (derived-class min_imprisonment))
 
 ([pen_cl339_st3_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl339_st3_max-deductive-gen282)
+   (pos-name pen_cl339_st3_max-deductive-gen309)
    (depends-on commited_cl339_st3 max_imprisonment)
    (implies max_imprisonment)
-   (deductive-rule "?gen225 <- ( commited_cl339_st3 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 1 ) ) ) => ( max_imprisonment ( value 1 ) )")
-   (production-rule "( defrule pen_cl339_st3_max-deductive-gen282 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen225 ) ( is-a commited_cl339_st3 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 1 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 1 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 1 ) ) ) ( make-instance ?oid of max_imprisonment ( value 1 ) ) )")
+   (deductive-rule "?gen249 <- ( commited_cl339_st3 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 1 ) ) ) => ( max_imprisonment ( value 1 ) )")
+   (production-rule "( defrule pen_cl339_st3_max-deductive-gen309 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen249 ) ( is-a commited_cl339_st3 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 1 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 1 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 1 ) ) ) ( make-instance ?oid of max_imprisonment ( value 1 ) ) )")
    (derived-class max_imprisonment))
 
 ([pen_cl339_st1_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl339_st1_max-deductive-gen281)
+   (pos-name pen_cl339_st1_max-deductive-gen308)
    (depends-on commited_cl339_st1 max_imprisonment)
    (implies max_imprisonment)
-   (deductive-rule "?gen216 <- ( commited_cl339_st1 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 3 ) ) ) => ( max_imprisonment ( value 3 ) )")
-   (production-rule "( defrule pen_cl339_st1_max-deductive-gen281 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen216 ) ( is-a commited_cl339_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 3 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 3 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 3 ) ) ) ( make-instance ?oid of max_imprisonment ( value 3 ) ) )")
+   (deductive-rule "?gen240 <- ( commited_cl339_st1 ( defendant ?Defendant ) ) ( not ( max_imprisonment ( value 3 ) ) ) => ( max_imprisonment ( value 3 ) )")
+   (production-rule "( defrule pen_cl339_st1_max-deductive-gen308 ( declare ( salience ( calc-salience max_imprisonment ) ) ) ( run-deductive-rules ) ( object ( name ?gen240 ) ( is-a commited_cl339_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a max_imprisonment ) ( value 3 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat max_imprisonment 3 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat max_imprisonment 3 ) ) ) ( make-instance ?oid of max_imprisonment ( value 3 ) ) )")
    (derived-class max_imprisonment))
 
+([pen_cl97_st3_max-deductive] of ntm-deductive-rule
+   (pos-name pen_cl97_st3_max-deductive-gen307)
+   (depends-on commited_cl97_st3 to_pay_max_97)
+   (implies to_pay_max_97)
+   (deductive-rule "?gen231 <- ( commited_cl97_st3 ( defendant ?Defendant ) ) ( not ( to_pay_max_97 ( value 250 ) ) ) => ( to_pay_max_97 ( value 250 ) )")
+   (production-rule "( defrule pen_cl97_st3_max-deductive-gen307 ( declare ( salience ( calc-salience to_pay_max_97 ) ) ) ( run-deductive-rules ) ( object ( name ?gen231 ) ( is-a commited_cl97_st3 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_97 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_97 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_97 250 ) ) ) ( make-instance ?oid of to_pay_max_97 ( value 250 ) ) )")
+   (derived-class to_pay_max_97))
+
+([pen_cl97_st3_min-deductive] of ntm-deductive-rule
+   (pos-name pen_cl97_st3_min-deductive-gen306)
+   (depends-on commited_cl97_st3 to_pay_min_97)
+   (implies to_pay_min_97)
+   (deductive-rule "?gen222 <- ( commited_cl97_st3 ( defendant ?Defendant ) ) ( not ( to_pay_min_97 ( value 80 ) ) ) => ( to_pay_min_97 ( value 80 ) )")
+   (production-rule "( defrule pen_cl97_st3_min-deductive-gen306 ( declare ( salience ( calc-salience to_pay_min_97 ) ) ) ( run-deductive-rules ) ( object ( name ?gen222 ) ( is-a commited_cl97_st3 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_97 ) ( value 80 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_97 80 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_97 80 ) ) ) ( make-instance ?oid of to_pay_min_97 ( value 80 ) ) )")
+   (derived-class to_pay_min_97))
+
 ([pen_cl44_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl44_max-deductive-gen280)
+   (pos-name pen_cl44_max-deductive-gen305)
    (depends-on commited_cl44 to_pay_max_44)
    (implies to_pay_max_44)
-   (deductive-rule "?gen207 <- ( commited_cl44 ( defendant ?Defendant ) ) ( not ( to_pay_max_44 ( value 250 ) ) ) => ( to_pay_max_44 ( value 250 ) )")
-   (production-rule "( defrule pen_cl44_max-deductive-gen280 ( declare ( salience ( calc-salience to_pay_max_44 ) ) ) ( run-deductive-rules ) ( object ( name ?gen207 ) ( is-a commited_cl44 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_44 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_44 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_44 250 ) ) ) ( make-instance ?oid of to_pay_max_44 ( value 250 ) ) )")
+   (deductive-rule "?gen213 <- ( commited_cl44 ( defendant ?Defendant ) ) ( not ( to_pay_max_44 ( value 250 ) ) ) => ( to_pay_max_44 ( value 250 ) )")
+   (production-rule "( defrule pen_cl44_max-deductive-gen305 ( declare ( salience ( calc-salience to_pay_max_44 ) ) ) ( run-deductive-rules ) ( object ( name ?gen213 ) ( is-a commited_cl44 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_44 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_44 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_44 250 ) ) ) ( make-instance ?oid of to_pay_max_44 ( value 250 ) ) )")
    (derived-class to_pay_max_44))
 
 ([pen_cl44_min-deductive] of ntm-deductive-rule
-   (pos-name pen_cl44_min-deductive-gen279)
+   (pos-name pen_cl44_min-deductive-gen304)
    (depends-on commited_cl44 to_pay_min_44)
    (implies to_pay_min_44)
-   (deductive-rule "?gen198 <- ( commited_cl44 ( defendant ?Defendant ) ) ( not ( to_pay_min_44 ( value 80 ) ) ) => ( to_pay_min_44 ( value 80 ) )")
-   (production-rule "( defrule pen_cl44_min-deductive-gen279 ( declare ( salience ( calc-salience to_pay_min_44 ) ) ) ( run-deductive-rules ) ( object ( name ?gen198 ) ( is-a commited_cl44 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_44 ) ( value 80 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_44 80 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_44 80 ) ) ) ( make-instance ?oid of to_pay_min_44 ( value 80 ) ) )")
+   (deductive-rule "?gen204 <- ( commited_cl44 ( defendant ?Defendant ) ) ( not ( to_pay_min_44 ( value 80 ) ) ) => ( to_pay_min_44 ( value 80 ) )")
+   (production-rule "( defrule pen_cl44_min-deductive-gen304 ( declare ( salience ( calc-salience to_pay_min_44 ) ) ) ( run-deductive-rules ) ( object ( name ?gen204 ) ( is-a commited_cl44 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_44 ) ( value 80 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_44 80 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_44 80 ) ) ) ( make-instance ?oid of to_pay_min_44 ( value 80 ) ) )")
    (derived-class to_pay_min_44))
 
 ([pen_cl35_st1_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl35_st1_max-deductive-gen278)
+   (pos-name pen_cl35_st1_max-deductive-gen303)
    (depends-on commited_cl35_st1 to_pay_max_35)
    (implies to_pay_max_35)
-   (deductive-rule "?gen189 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ( not ( to_pay_max_35 ( value 400 ) ) ) => ( to_pay_max_35 ( value 400 ) )")
-   (production-rule "( defrule pen_cl35_st1_max-deductive-gen278 ( declare ( salience ( calc-salience to_pay_max_35 ) ) ) ( run-deductive-rules ) ( object ( name ?gen189 ) ( is-a commited_cl35_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_35 ) ( value 400 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_35 400 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_35 400 ) ) ) ( make-instance ?oid of to_pay_max_35 ( value 400 ) ) )")
+   (deductive-rule "?gen195 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ( not ( to_pay_max_35 ( value 400 ) ) ) => ( to_pay_max_35 ( value 400 ) )")
+   (production-rule "( defrule pen_cl35_st1_max-deductive-gen303 ( declare ( salience ( calc-salience to_pay_max_35 ) ) ) ( run-deductive-rules ) ( object ( name ?gen195 ) ( is-a commited_cl35_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_35 ) ( value 400 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_35 400 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_35 400 ) ) ) ( make-instance ?oid of to_pay_max_35 ( value 400 ) ) )")
    (derived-class to_pay_max_35))
 
 ([pen_cl35_st1_min-deductive] of ntm-deductive-rule
-   (pos-name pen_cl35_st1_min-deductive-gen277)
+   (pos-name pen_cl35_st1_min-deductive-gen302)
    (depends-on commited_cl35_st1 to_pay_min_35)
    (implies to_pay_min_35)
-   (deductive-rule "?gen180 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ( not ( to_pay_min_35 ( value 120 ) ) ) => ( to_pay_min_35 ( value 120 ) )")
-   (production-rule "( defrule pen_cl35_st1_min-deductive-gen277 ( declare ( salience ( calc-salience to_pay_min_35 ) ) ) ( run-deductive-rules ) ( object ( name ?gen180 ) ( is-a commited_cl35_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_35 ) ( value 120 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_35 120 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_35 120 ) ) ) ( make-instance ?oid of to_pay_min_35 ( value 120 ) ) )")
+   (deductive-rule "?gen186 <- ( commited_cl35_st1 ( defendant ?Defendant ) ) ( not ( to_pay_min_35 ( value 120 ) ) ) => ( to_pay_min_35 ( value 120 ) )")
+   (production-rule "( defrule pen_cl35_st1_min-deductive-gen302 ( declare ( salience ( calc-salience to_pay_min_35 ) ) ) ( run-deductive-rules ) ( object ( name ?gen186 ) ( is-a commited_cl35_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_35 ) ( value 120 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_35 120 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_35 120 ) ) ) ( make-instance ?oid of to_pay_min_35 ( value 120 ) ) )")
    (derived-class to_pay_min_35))
 
 ([pen_cl29_st1_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl29_st1_max-deductive-gen276)
+   (pos-name pen_cl29_st1_max-deductive-gen301)
    (depends-on commited_cl29_st1 to_pay_max_29)
    (implies to_pay_max_29)
-   (deductive-rule "?gen171 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ( not ( to_pay_max_29 ( value 400 ) ) ) => ( to_pay_max_29 ( value 400 ) )")
-   (production-rule "( defrule pen_cl29_st1_max-deductive-gen276 ( declare ( salience ( calc-salience to_pay_max_29 ) ) ) ( run-deductive-rules ) ( object ( name ?gen171 ) ( is-a commited_cl29_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_29 ) ( value 400 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_29 400 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_29 400 ) ) ) ( make-instance ?oid of to_pay_max_29 ( value 400 ) ) )")
+   (deductive-rule "?gen177 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ( not ( to_pay_max_29 ( value 400 ) ) ) => ( to_pay_max_29 ( value 400 ) )")
+   (production-rule "( defrule pen_cl29_st1_max-deductive-gen301 ( declare ( salience ( calc-salience to_pay_max_29 ) ) ) ( run-deductive-rules ) ( object ( name ?gen177 ) ( is-a commited_cl29_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_29 ) ( value 400 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_29 400 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_29 400 ) ) ) ( make-instance ?oid of to_pay_max_29 ( value 400 ) ) )")
    (derived-class to_pay_max_29))
 
 ([pen_cl29_st1_min-deductive] of ntm-deductive-rule
-   (pos-name pen_cl29_st1_min-deductive-gen275)
+   (pos-name pen_cl29_st1_min-deductive-gen300)
    (depends-on commited_cl29_st1 to_pay_min_29)
    (implies to_pay_min_29)
-   (deductive-rule "?gen162 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ( not ( to_pay_min_29 ( value 120 ) ) ) => ( to_pay_min_29 ( value 120 ) )")
-   (production-rule "( defrule pen_cl29_st1_min-deductive-gen275 ( declare ( salience ( calc-salience to_pay_min_29 ) ) ) ( run-deductive-rules ) ( object ( name ?gen162 ) ( is-a commited_cl29_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_29 ) ( value 120 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_29 120 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_29 120 ) ) ) ( make-instance ?oid of to_pay_min_29 ( value 120 ) ) )")
+   (deductive-rule "?gen168 <- ( commited_cl29_st1 ( defendant ?Defendant ) ) ( not ( to_pay_min_29 ( value 120 ) ) ) => ( to_pay_min_29 ( value 120 ) )")
+   (production-rule "( defrule pen_cl29_st1_min-deductive-gen300 ( declare ( salience ( calc-salience to_pay_min_29 ) ) ) ( run-deductive-rules ) ( object ( name ?gen168 ) ( is-a commited_cl29_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_29 ) ( value 120 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_29 120 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_29 120 ) ) ) ( make-instance ?oid of to_pay_min_29 ( value 120 ) ) )")
    (derived-class to_pay_min_29))
 
 ([pen_cl27_st1_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl27_st1_max-deductive-gen274)
+   (pos-name pen_cl27_st1_max-deductive-gen299)
    (depends-on commited_cl27_st1 to_pay_max_27)
    (implies to_pay_max_27)
-   (deductive-rule "?gen153 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ( not ( to_pay_max_27 ( value 250 ) ) ) => ( to_pay_max_27 ( value 250 ) )")
-   (production-rule "( defrule pen_cl27_st1_max-deductive-gen274 ( declare ( salience ( calc-salience to_pay_max_27 ) ) ) ( run-deductive-rules ) ( object ( name ?gen153 ) ( is-a commited_cl27_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_27 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_27 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_27 250 ) ) ) ( make-instance ?oid of to_pay_max_27 ( value 250 ) ) )")
+   (deductive-rule "?gen159 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ( not ( to_pay_max_27 ( value 250 ) ) ) => ( to_pay_max_27 ( value 250 ) )")
+   (production-rule "( defrule pen_cl27_st1_max-deductive-gen299 ( declare ( salience ( calc-salience to_pay_max_27 ) ) ) ( run-deductive-rules ) ( object ( name ?gen159 ) ( is-a commited_cl27_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_27 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_27 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_27 250 ) ) ) ( make-instance ?oid of to_pay_max_27 ( value 250 ) ) )")
    (derived-class to_pay_max_27))
 
 ([pen_cl27_st1_min-deductive] of ntm-deductive-rule
-   (pos-name pen_cl27_st1_min-deductive-gen273)
+   (pos-name pen_cl27_st1_min-deductive-gen298)
    (depends-on commited_cl27_st1 to_pay_min_27)
    (implies to_pay_min_27)
-   (deductive-rule "?gen144 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ( not ( to_pay_min_27 ( value 90 ) ) ) => ( to_pay_min_27 ( value 90 ) )")
-   (production-rule "( defrule pen_cl27_st1_min-deductive-gen273 ( declare ( salience ( calc-salience to_pay_min_27 ) ) ) ( run-deductive-rules ) ( object ( name ?gen144 ) ( is-a commited_cl27_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_27 ) ( value 90 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_27 90 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_27 90 ) ) ) ( make-instance ?oid of to_pay_min_27 ( value 90 ) ) )")
+   (deductive-rule "?gen150 <- ( commited_cl27_st1 ( defendant ?Defendant ) ) ( not ( to_pay_min_27 ( value 90 ) ) ) => ( to_pay_min_27 ( value 90 ) )")
+   (production-rule "( defrule pen_cl27_st1_min-deductive-gen298 ( declare ( salience ( calc-salience to_pay_min_27 ) ) ) ( run-deductive-rules ) ( object ( name ?gen150 ) ( is-a commited_cl27_st1 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_27 ) ( value 90 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_27 90 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_27 90 ) ) ) ( make-instance ?oid of to_pay_min_27 ( value 90 ) ) )")
    (derived-class to_pay_min_27))
 
 ([pen_cl26_st2_max-deductive] of ntm-deductive-rule
-   (pos-name pen_cl26_st2_max-deductive-gen272)
+   (pos-name pen_cl26_st2_max-deductive-gen297)
    (depends-on commited_cl26_st2 to_pay_max_26)
    (implies to_pay_max_26)
-   (deductive-rule "?gen135 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ( not ( to_pay_max_26 ( value 250 ) ) ) => ( to_pay_max_26 ( value 250 ) )")
-   (production-rule "( defrule pen_cl26_st2_max-deductive-gen272 ( declare ( salience ( calc-salience to_pay_max_26 ) ) ) ( run-deductive-rules ) ( object ( name ?gen135 ) ( is-a commited_cl26_st2 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_26 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_26 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_26 250 ) ) ) ( make-instance ?oid of to_pay_max_26 ( value 250 ) ) )")
+   (deductive-rule "?gen141 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ( not ( to_pay_max_26 ( value 250 ) ) ) => ( to_pay_max_26 ( value 250 ) )")
+   (production-rule "( defrule pen_cl26_st2_max-deductive-gen297 ( declare ( salience ( calc-salience to_pay_max_26 ) ) ) ( run-deductive-rules ) ( object ( name ?gen141 ) ( is-a commited_cl26_st2 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_max_26 ) ( value 250 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_max_26 250 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_max_26 250 ) ) ) ( make-instance ?oid of to_pay_max_26 ( value 250 ) ) )")
    (derived-class to_pay_max_26))
 
 ([pen_cl26_st2_min-deductive] of ntm-deductive-rule
-   (pos-name pen_cl26_st2_min-deductive-gen271)
+   (pos-name pen_cl26_st2_min-deductive-gen296)
    (depends-on commited_cl26_st2 to_pay_min_26)
    (implies to_pay_min_26)
-   (deductive-rule "?gen126 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ( not ( to_pay_min_26 ( value 90 ) ) ) => ( to_pay_min_26 ( value 90 ) )")
-   (production-rule "( defrule pen_cl26_st2_min-deductive-gen271 ( declare ( salience ( calc-salience to_pay_min_26 ) ) ) ( run-deductive-rules ) ( object ( name ?gen126 ) ( is-a commited_cl26_st2 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_26 ) ( value 90 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_26 90 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_26 90 ) ) ) ( make-instance ?oid of to_pay_min_26 ( value 90 ) ) )")
+   (deductive-rule "?gen132 <- ( commited_cl26_st2 ( defendant ?Defendant ) ) ( not ( to_pay_min_26 ( value 90 ) ) ) => ( to_pay_min_26 ( value 90 ) )")
+   (production-rule "( defrule pen_cl26_st2_min-deductive-gen296 ( declare ( salience ( calc-salience to_pay_min_26 ) ) ) ( run-deductive-rules ) ( object ( name ?gen132 ) ( is-a commited_cl26_st2 ) ( defendant ?Defendant ) ) ( not ( object ( is-a to_pay_min_26 ) ( value 90 ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat to_pay_min_26 90 ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat to_pay_min_26 90 ) ) ) ( make-instance ?oid of to_pay_min_26 ( value 90 ) ) )")
    (derived-class to_pay_min_26))
 
 ([rule_cl348_st3_injury-deductive] of ntm-deductive-rule
-   (pos-name rule_cl348_st3_injury-deductive-gen270)
+   (pos-name rule_cl348_st3_injury-deductive-gen295)
    (depends-on lc:case lc:case commited_cl348_st3)
    (implies commited_cl348_st3)
-   (deductive-rule "?gen114 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen115 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( commited_cl348_st3 ( defendant ?Defendant ) ) ) => ( commited_cl348_st3 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl348_st3_injury-deductive-gen270 ( declare ( salience ( calc-salience commited_cl348_st3 ) ) ) ( run-deductive-rules ) ( object ( name ?gen114 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ( object ( name ?gen115 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( object ( is-a commited_cl348_st3 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl348_st3 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl348_st3 ?Defendant ) ) ) ( make-instance ?oid of commited_cl348_st3 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen120 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen121 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( commited_cl348_st3 ( defendant ?Defendant ) ) ) => ( commited_cl348_st3 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl348_st3_injury-deductive-gen295 ( declare ( salience ( calc-salience commited_cl348_st3 ) ) ) ( run-deductive-rules ) ( object ( name ?gen120 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ( object ( name ?gen121 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( object ( is-a commited_cl348_st3 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl348_st3 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl348_st3 ?Defendant ) ) ) ( make-instance ?oid of commited_cl348_st3 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl348_st3))
 
 ([rule_cl348_st1_injury-deductive] of ntm-deductive-rule
-   (pos-name rule_cl348_st1_injury-deductive-gen269)
+   (pos-name rule_cl348_st1_injury-deductive-gen294)
    (depends-on lc:case lc:case commited_cl348_st1)
    (implies commited_cl348_st1)
-   (deductive-rule "?gen102 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen103 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( commited_cl348_st1 ( defendant ?Defendant ) ) ) => ( commited_cl348_st1 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl348_st1_injury-deductive-gen269 ( declare ( salience ( calc-salience commited_cl348_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen102 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ( object ( name ?gen103 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( object ( is-a commited_cl348_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl348_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl348_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl348_st1 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen108 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ?gen109 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( commited_cl348_st1 ( defendant ?Defendant ) ) ) => ( commited_cl348_st1 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl348_st1_injury-deductive-gen294 ( declare ( salience ( calc-salience commited_cl348_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen108 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"serious\" ) ) ( object ( name ?gen109 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( object ( is-a commited_cl348_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl348_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl348_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl348_st1 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl348_st1))
 
 ([rule_cl339_st3_injury-deductive] of ntm-deductive-rule
-   (pos-name rule_cl339_st3_injury-deductive-gen268)
+   (pos-name rule_cl339_st3_injury-deductive-gen293)
    (depends-on lc:case lc:case commited_cl339_st3)
    (implies commited_cl339_st3)
-   (deductive-rule "?gen90 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen91 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( commited_cl339_st3 ( defendant ?Defendant ) ) ) => ( commited_cl339_st3 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl339_st3_injury-deductive-gen268 ( declare ( salience ( calc-salience commited_cl339_st3 ) ) ) ( run-deductive-rules ) ( object ( name ?gen90 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ( object ( name ?gen91 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( object ( is-a commited_cl339_st3 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl339_st3 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl339_st3 ?Defendant ) ) ) ( make-instance ?oid of commited_cl339_st3 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen96 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen97 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( commited_cl339_st3 ( defendant ?Defendant ) ) ) => ( commited_cl339_st3 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl339_st3_injury-deductive-gen293 ( declare ( salience ( calc-salience commited_cl339_st3 ) ) ) ( run-deductive-rules ) ( object ( name ?gen96 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ( object ( name ?gen97 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"no\" ) ) ( not ( object ( is-a commited_cl339_st3 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl339_st3 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl339_st3 ?Defendant ) ) ) ( make-instance ?oid of commited_cl339_st3 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl339_st3))
 
 ([rule_cl339_st1_injury-deductive] of ntm-deductive-rule
-   (pos-name rule_cl339_st1_injury-deductive-gen267)
+   (pos-name rule_cl339_st1_injury-deductive-gen292)
    (depends-on lc:case lc:case commited_cl339_st1)
    (implies commited_cl339_st1)
-   (deductive-rule "?gen78 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen79 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( commited_cl339_st1 ( defendant ?Defendant ) ) ) => ( commited_cl339_st1 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl339_st1_injury-deductive-gen267 ( declare ( salience ( calc-salience commited_cl339_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen78 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ( object ( name ?gen79 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( object ( is-a commited_cl339_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl339_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl339_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl339_st1 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen84 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ?gen85 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( commited_cl339_st1 ( defendant ?Defendant ) ) ) => ( commited_cl339_st1 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl339_st1_injury-deductive-gen292 ( declare ( salience ( calc-salience commited_cl339_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen84 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:victim_injuries \"slight\" ) ) ( object ( name ?gen85 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:is_conscious \"yes\" ) ) ( not ( object ( is-a commited_cl339_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl339_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl339_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl339_st1 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl339_st1))
 
+([rule_cl97_st3-deductive] of ntm-deductive-rule
+   (pos-name rule_cl97_st3-deductive-gen291)
+   (depends-on lc:case commited_cl97_st3)
+   (implies commited_cl97_st3)
+   (deductive-rule "?gen75 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ) ( not ( commited_cl97_st3 ( defendant ?Defendant ) ) ) => ( commited_cl97_st3 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl97_st3-deductive-gen291 ( declare ( salience ( calc-salience commited_cl97_st3 ) ) ) ( run-deductive-rules ) ( object ( name ?gen75 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_crosswalk \"no\" ) ) ( not ( object ( is-a commited_cl97_st3 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl97_st3 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl97_st3 ?Defendant ) ) ) ( make-instance ?oid of commited_cl97_st3 ( defendant ?Defendant ) ) )")
+   (derived-class commited_cl97_st3))
+
 ([rule_cl44-deductive] of ntm-deductive-rule
-   (pos-name rule_cl44-deductive-gen266)
+   (pos-name rule_cl44-deductive-gen290)
    (depends-on lc:case commited_cl44)
    (implies commited_cl44)
-   (deductive-rule "?gen69 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ) ( not ( commited_cl44 ( defendant ?Defendant ) ) ) => ( commited_cl44 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl44-deductive-gen266 ( declare ( salience ( calc-salience commited_cl44 ) ) ) ( run-deductive-rules ) ( object ( name ?gen69 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ) ( not ( object ( is-a commited_cl44 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl44 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl44 ?Defendant ) ) ) ( make-instance ?oid of commited_cl44 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen66 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ) ( not ( commited_cl44 ( defendant ?Defendant ) ) ) => ( commited_cl44 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl44-deductive-gen290 ( declare ( salience ( calc-salience commited_cl44 ) ) ) ( run-deductive-rules ) ( object ( name ?gen66 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_done_U_turn_prohibited_by_traffic_sign \"yes\" ) ) ( not ( object ( is-a commited_cl44 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl44 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl44 ?Defendant ) ) ) ( make-instance ?oid of commited_cl44 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl44))
 
 ([rule_cl41-deductive] of ntm-deductive-rule
-   (pos-name rule_cl41-deductive-gen265)
+   (pos-name rule_cl41-deductive-gen289)
    (depends-on lc:case commited_cl41)
    (implies commited_cl41)
-   (deductive-rule "?gen60 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ) ( not ( commited_cl41 ( defendant ?Defendant ) ) ) => ( commited_cl41 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl41-deductive-gen265 ( declare ( salience ( calc-salience commited_cl41 ) ) ) ( run-deductive-rules ) ( object ( name ?gen60 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ) ( not ( object ( is-a commited_cl41 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl41 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl41 ?Defendant ) ) ) ( make-instance ?oid of commited_cl41 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen57 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ) ( not ( commited_cl41 ( defendant ?Defendant ) ) ) => ( commited_cl41 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl41-deductive-gen289 ( declare ( salience ( calc-salience commited_cl41 ) ) ) ( run-deductive-rules ) ( object ( name ?gen57 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_intersection \"no\" ) ) ( not ( object ( is-a commited_cl41 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl41 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl41 ?Defendant ) ) ) ( make-instance ?oid of commited_cl41 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl41))
 
 ([rule_cl35_st1-deductive] of ntm-deductive-rule
-   (pos-name rule_cl35_st1-deductive-gen264)
-   (depends-on lc:case lc:case commited_cl35_st1)
+   (pos-name rule_cl35_st1-deductive-gen288)
+   (depends-on lc:case commited_cl35_st1)
    (implies commited_cl35_st1)
-   (deductive-rule "?gen48 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ) ?gen49 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ) ( not ( commited_cl35_st1 ( defendant ?Defendant ) ) ) => ( commited_cl35_st1 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl35_st1-deductive-gen264 ( declare ( salience ( calc-salience commited_cl35_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen48 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:speed_adjustment_according_to \"road_condition\" ) ) ( object ( name ?gen49 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed \"no\" ) ) ( not ( object ( is-a commited_cl35_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl35_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl35_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl35_st1 ( defendant ?Defendant ) ) )")
+   (deductive-rule "?gen48 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ) ( not ( commited_cl35_st1 ( defendant ?Defendant ) ) ) => ( commited_cl35_st1 ( defendant ?Defendant ) )")
+   (production-rule "( defrule rule_cl35_st1-deductive-gen288 ( declare ( salience ( calc-salience commited_cl35_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen48 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_speed_according_to_road_condition \"no\" ) ) ( not ( object ( is-a commited_cl35_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl35_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl35_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl35_st1 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl35_st1))
 
 ([rule_cl29_st1-deductive] of ntm-deductive-rule
-   (pos-name rule_cl29_st1-deductive-gen263)
+   (pos-name rule_cl29_st1-deductive-gen287)
    (depends-on lc:case commited_cl29_st1)
    (implies commited_cl29_st1)
    (deductive-rule "?gen39 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ) ( not ( commited_cl29_st1 ( defendant ?Defendant ) ) ) => ( commited_cl29_st1 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl29_st1-deductive-gen263 ( declare ( salience ( calc-salience commited_cl29_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen39 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ) ( not ( object ( is-a commited_cl29_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl29_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl29_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl29_st1 ( defendant ?Defendant ) ) )")
+   (production-rule "( defrule rule_cl29_st1-deductive-gen287 ( declare ( salience ( calc-salience commited_cl29_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen39 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_adjusted_driving_to_right_road_side \"no\" ) ) ( not ( object ( is-a commited_cl29_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl29_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl29_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl29_st1 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl29_st1))
 
 ([rule_cl27_st1-deductive] of ntm-deductive-rule
-   (pos-name rule_cl27_st1-deductive-gen262)
+   (pos-name rule_cl27_st1-deductive-gen286)
    (depends-on lc:case lc:case commited_cl27_st1)
    (implies commited_cl27_st1)
    (deductive-rule "?gen27 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ) ?gen28 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ( not ( commited_cl27_st1 ( defendant ?Defendant ) ) ) => ( commited_cl27_st1 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl27_st1-deductive-gen262 ( declare ( salience ( calc-salience commited_cl27_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen27 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ) ( object ( name ?gen28 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ( not ( object ( is-a commited_cl27_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl27_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl27_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl27_st1 ( defendant ?Defendant ) ) )")
+   (production-rule "( defrule rule_cl27_st1-deductive-gen286 ( declare ( salience ( calc-salience commited_cl27_st1 ) ) ) ( run-deductive-rules ) ( object ( name ?gen27 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_joining \"yes\" ) ) ( object ( name ?gen28 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ( not ( object ( is-a commited_cl27_st1 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl27_st1 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl27_st1 ?Defendant ) ) ) ( make-instance ?oid of commited_cl27_st1 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl27_st1))
 
 ([rule_cl26_st2-deductive] of ntm-deductive-rule
-   (pos-name rule_cl26_st2-deductive-gen261)
+   (pos-name rule_cl26_st2-deductive-gen285)
    (depends-on lc:case lc:case commited_cl26_st2)
    (implies commited_cl26_st2)
    (deductive-rule "?gen15 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ) ?gen16 <- ( lc:case ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ( not ( commited_cl26_st2 ( defendant ?Defendant ) ) ) => ( commited_cl26_st2 ( defendant ?Defendant ) )")
-   (production-rule "( defrule rule_cl26_st2-deductive-gen261 ( declare ( salience ( calc-salience commited_cl26_st2 ) ) ) ( run-deductive-rules ) ( object ( name ?gen15 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ) ( object ( name ?gen16 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ( not ( object ( is-a commited_cl26_st2 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl26_st2 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl26_st2 ?Defendant ) ) ) ( make-instance ?oid of commited_cl26_st2 ( defendant ?Defendant ) ) )")
+   (production-rule "( defrule rule_cl26_st2-deductive-gen285 ( declare ( salience ( calc-salience commited_cl26_st2 ) ) ) ( run-deductive-rules ) ( object ( name ?gen15 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:wants_to_do_traffic_action \"yes\" ) ) ( object ( name ?gen16 ) ( is-a lc:case ) ( lc:defendant ?Defendant ) ( lc:has_previously_convinced \"no\" ) ) ( not ( object ( is-a commited_cl26_st2 ) ( defendant ?Defendant ) ) ) ( test ( not ( instance-existp ( symbol-to-instance-name ( sym-cat commited_cl26_st2 ?Defendant ) ) ) ) ) => ( bind ?oid ( symbol-to-instance-name ( sym-cat commited_cl26_st2 ?Defendant ) ) ) ( make-instance ?oid of commited_cl26_st2 ( defendant ?Defendant ) ) )")
    (derived-class commited_cl26_st2))
 

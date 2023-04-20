@@ -78,18 +78,11 @@
 		<lrml:PrescriptiveStatement key="ps_cl35_st1">
 			<ruleml:Rule key=":rule_cl35_st1" closure="universal" strength="defeasible">
 				<ruleml:if>
-					<ruleml:And>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:speed_adjustment_according_to"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">road_condition</ruleml:Data>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:has_adjusted_speed"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
-						</ruleml:Atom>
-					</ruleml:And>
+					<ruleml:Atom>
+						<ruleml:Rel iri="lc:has_adjusted_speed_according_to_road_condition"/>
+						<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+						<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+					</ruleml:Atom>
 				</ruleml:if>
 				<ruleml:then>
 					<ruleml:Atom>
@@ -138,6 +131,25 @@
 			</ruleml:Rule>
 		</lrml:PrescriptiveStatement>
 
+		<!--Clan 97 st3-->
+		<lrml:PrescriptiveStatement key="ps_cl97_st3">
+			<ruleml:Rule key=":rule_cl97_st3" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:Atom>
+						<ruleml:Rel iri="lc:has_adjusted_speed_according_to_crosswalk"/>
+						<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+						<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+					</ruleml:Atom>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl97_st3</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
 
 		<!--Clan 339 st1 za tjelesne povrede-->
 		<lrml:PrescriptiveStatement key="ps_cl339_st1_injury">
@@ -167,6 +179,10 @@
 							</ruleml:Atom>
 							<ruleml:Atom>
 								<ruleml:Rel>commited_cl44</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl97_st3</ruleml:Rel>
 								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
 							</ruleml:Atom>
 						</ruleml:Or>
@@ -221,6 +237,10 @@
 								<ruleml:Rel>commited_cl44</ruleml:Rel>
 								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
 							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl97_st3</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
 						</ruleml:Or>
 						<ruleml:Atom>
  							<ruleml:Rel iri="lc:victim_injuries"/>
@@ -273,6 +293,10 @@
 								<ruleml:Rel>commited_cl44</ruleml:Rel>
 								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
 							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl97_st3</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
 						</ruleml:Or>
 						<ruleml:Atom>
  							<ruleml:Rel iri="lc:victim_injuries"/>
@@ -323,6 +347,10 @@
 							</ruleml:Atom>
 							<ruleml:Atom>
 								<ruleml:Rel>commited_cl44</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl97_st3</ruleml:Rel>
 								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
 							</ruleml:Atom>
 						</ruleml:Or>
@@ -471,6 +499,30 @@
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
 
+		<!--Clan  97 st3-->
+		<lrml:PenaltyStatement key="pen_cl97_st3_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>t
+						<ruleml:Rel iri=":to_pay_min_97"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>80</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		<lrml:PenaltyStatement key="pen_cl97_st3_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_max_97"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>250</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
 	
 		<!--Clan 339-->
 		<lrml:PenaltyStatement key="pen_cl339_st1_max">
@@ -605,6 +657,22 @@
 				<lrml:toPrescriptiveStatement keyref="#ps_cl44"/>
 			</lrml:Reparation>
 		</lrml:ReparationStatement>
+
+		<!--Clan 97 st3-->		
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl97_st3_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl97_st3"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl97_st3_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl97_st3"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		
 
 		<!--Clan 339 st1-->
 		<lrml:ReparationStatement>
