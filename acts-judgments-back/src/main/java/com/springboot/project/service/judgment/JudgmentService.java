@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import java.io.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,9 +44,6 @@ public class JudgmentService {
             pdfcontent = pdfcontent.substring(0, pdfcontent.indexOf("O b r a z l o ž e nj e"));
         if (pdfcontent.contains("O b r a z l o ž e n j e"))
             pdfcontent = pdfcontent.substring(0, pdfcontent.indexOf("O b r a z l o ž e n j e"));
-//        System.out.println(pdfcontent);
-        //Closing the document
-        document.close();
 
         CaseDescriptionFromRegexDto caseDescription = new CaseDescriptionFromRegexDto();
 
@@ -350,11 +345,11 @@ public class JudgmentService {
         Pattern vrstePovredePattern = Pattern.compile("(lak|tešk)[a-z][ \\n\\r,]*tjelesn", Pattern.DOTALL | Pattern.MULTILINE);
         matcher = vrstePovredePattern.matcher(propisiString);
         if (matcher.find()) {
-            if (matcher.group(1).equals("lak")) {
+            if (matcher.group(1).equals("lak"))
                 ugrozenSaobracaj = ugrozenSaobracaj.concat(" lake");
-            } else {
+             else
                 ugrozenSaobracaj = ugrozenSaobracaj.concat(" teske");
-            }
+
         } else System.out.print("---\n");
         System.out.println(ugrozenSaobracaj);
         caseDescription.setUgrozenSaobracaj(ugrozenSaobracaj);
@@ -392,7 +387,7 @@ public class JudgmentService {
             System.out.println("Ne");
         }
 
-        System.out.print("Vozac nije prilagodio brzinu: ");
+        System.out.println("Vozac nije prilagodio brzinu: ");
         List<String> radnjeBezPrilagodjavanjaBrzine = new ArrayList<>();
         Pattern pjesackiPattern = Pattern.compile("(pješačkog prelaza)|(pješačkom prelazu)", Pattern.DOTALL | Pattern.MULTILINE);
         matcher = pjesackiPattern.matcher(propisiString);
@@ -406,7 +401,7 @@ public class JudgmentService {
         caseDescription.setRadnjeBezPrilagodjavanjaBrzine(radnjeBezPrilagodjavanjaBrzine);
         radnjeBezPrilagodjavanjaBrzine.forEach(System.out::println);
 
-        System.out.print("Vozac nije prilagodio brzinu: ");
+        System.out.println("Vozac se nije uvjerio: ");
         List<String> slicnostRadnjiBezPrethodnogUvjerenja = new ArrayList<>();
         Pattern uSaobracajuPattern = Pattern.compile("(prethodno nije uvjerio)", Pattern.DOTALL | Pattern.MULTILINE);
         matcher = uSaobracajuPattern.matcher(propisiString);
@@ -420,9 +415,35 @@ public class JudgmentService {
         caseDescription.setRadnjeBezPrethodnogUvjerenja(slicnostRadnjiBezPrethodnogUvjerenja);
         slicnostRadnjiBezPrethodnogUvjerenja.forEach(System.out::println);
 
+        System.out.print("Datum: ");
+        Pattern datumPattern = Pattern.compile("[\\r\\n](([0-9]{2}\\.) ([A-Za-z]{3,}) ([0-9]{4}))", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = datumPattern.matcher(pdfStripper.getText(document));
+        if (matcher.find()) {
+            String datStr = matcher.group(1).toLowerCase();
+            datStr = datStr.replace(". ", "/");
+            final Matcher m = Pattern.compile("([A-Za-z]*)").matcher(datStr);
+            if (m.find()) {
+                if(datStr.contains("januar")) datStr = datStr.replaceAll("[A-za-z]+ ", "01/");
+                if(datStr.contains("februar")) datStr = datStr.replaceAll("[A-za-z]+ ", "02/");
+                if(datStr.contains("mart")) datStr = datStr.replaceAll("[A-za-z]+ ", "03/");
+                if(datStr.contains("april")) datStr = datStr.replaceAll("[A-za-z]+ ", "04/");
+                if(datStr.contains("maj")) datStr = datStr.replaceAll("[A-za-z]+ ", "05/");
+                if(datStr.contains("jun")) datStr = datStr.replaceAll("[A-za-z]+ ", "06/");
+                if(datStr.contains("jul")) datStr = datStr.replaceAll("[A-za-z]+ ", "07/");
+                if(datStr.contains("avgust")) datStr = datStr.replaceAll("[A-za-z]+ ", "08/");
+                if(datStr.contains("septembar")) datStr = datStr.replaceAll("[A-za-z]+ ", "09/");
+                if(datStr.contains("oktobar")) datStr = datStr.replaceAll("[A-za-z]+ ", "10/");
+                if(datStr.contains("novembar")) datStr = datStr.replaceAll("[A-za-z]+ ", "11/");
+                if(datStr.contains("decembar")) datStr = datStr.replaceAll("[A-za-z]+ ", "12/");
+            }
+            caseDescription.setDatum(datStr);
+            System.out.println(datStr);
+        }
+        else System.out.println("---");
+        
 
         System.out.print("_____________\n");
-//        System.out.print(propisiString);
+        document.close();
         return caseDescription;
     }
 
