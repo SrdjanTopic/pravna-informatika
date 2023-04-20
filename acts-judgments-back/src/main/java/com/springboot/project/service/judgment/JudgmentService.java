@@ -375,7 +375,7 @@ public class JudgmentService {
         File file = new File(ResourceUtils.getFile("classpath:testPresude.csv/").toURI());
         try {
             FileWriter myWriter = new FileWriter(file);
-            myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;Prekrseno prvenstvo prolaza;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
+            myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;;Prekrseno kretanje desnom stranom;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
             cases.forEach(caseDescription -> {
                 try {
                     myWriter.write(caseDescription.toString() + "\n");
@@ -433,7 +433,7 @@ public class JudgmentService {
             File file = new File(ResourceUtils.getFile("classpath:testPresude.csv/").toURI());
             try {
                 FileWriter myWriter = new FileWriter(file);
-                myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;Prekrseno prvenstvo prolaza;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
+                myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;;Prekrseno kretanje desnom stranom;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
                 cases.forEach(caseDescription -> {
                     try {
                         myWriter.write(caseDescription.toString() + "\n");

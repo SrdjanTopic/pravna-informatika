@@ -96,6 +96,12 @@ public class BaseCbrApplication implements StandardCBRApplication {
         simConfig.addMapping(brojOsudjivanja, new Interval(4));
 
 
+        simConfig.setWeight(ugrozenSaobracaj, 3.0);
+        simConfig.setWeight(radnjeBezPrethodnogUvjerenja,2.0);
+        simConfig.setWeight(radnjeBezPrilagodjavanjaBrzine,2.0);
+        simConfig.setWeight(nedozvoljenoPolukruznoOkretanje,2.0);
+        simConfig.setWeight(prekrsenaPravilaNaRaskrsnici,2.0);
+        simConfig.setWeight(prekrsenoKretanjeDesnomStranom,2.0);
         // Equal - returns 1 if both individuals are equal, otherwise returns 0
         // Interval - returns the similarity of two number inside an interval: sim(x,y) = 1-(|x-y|/interval)
         // Threshold - returns 1 if the difference between two numbers is less than a threshold, 0 in the other case
