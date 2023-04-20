@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lrml:LegalRuleML xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legalruleml/ns/v1.0/ xsd-compact/lrml-compact.xsd" xmlns:ruleml="http://ruleml.org/spec">
+	<lrml:Statements>
+
+
+		<!--Clan 26 st2-->
+		<lrml:PrescriptiveStatement key="ps_cl26_st2">
+			<ruleml:Rule key=":rule_cl26_st2" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:wants_to_do_traffic_action"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:has_previously_convinced"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl26_st2</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!--Clan 27 st1-->
+		<lrml:PrescriptiveStatement key="ps_cl27_st1">
+			<ruleml:Rule key=":rule_cl27_st1" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:wants_to_do_traffic_joining"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:has_previously_convinced"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl27_st1</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!--Clan 29-->	
+		<lrml:PrescriptiveStatement key="ps_cl29_st1">
+			<ruleml:Rule key=":rule_cl29_st1" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:Atom>
+						<ruleml:Rel iri="lc:has_adjusted_driving_to_right_road_side"/>
+						<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+						<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+					</ruleml:Atom>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl29_st1</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!--Clan 35 st1-->
+		<lrml:PrescriptiveStatement key="ps_cl35_st1">
+			<ruleml:Rule key=":rule_cl35_st1" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:speed_adjustment_according_to"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">road_condition</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:has_adjusted_speed"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl35_st1</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!--Clan 41-->
+		<lrml:PrescriptiveStatement key="ps_cl41">
+			<ruleml:Rule key=":rule_cl41" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:Atom>
+						<ruleml:Rel iri="lc:has_adjusted_driving_to_intersection"/>
+						<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+						<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+					</ruleml:Atom>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl41</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!--Clan 44-->
+		<lrml:PrescriptiveStatement key="ps_cl44">
+			<ruleml:Rule key=":rule_cl44" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:Atom>
+						<ruleml:Rel iri="lc:has_done_U_turn_prohibited_by_traffic_sign"/>
+						<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+						<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+					</ruleml:Atom>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl44</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+
+		<!--Clan 339 st1 za tjelesne povrede-->
+		<lrml:PrescriptiveStatement key="ps_cl339_st1_injury">
+			<ruleml:Rule key=":rule_cl339_st1_injury" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl26_st2</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl27_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl29_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl35_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl41</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl44</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:victim_injuries"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">slight</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:is_conscious"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl339_st1</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>	
+
+		<!--Clan 339 st3 za tjelesne povrede-->
+		<lrml:PrescriptiveStatement key="ps_cl339_st3_injury">
+			<ruleml:Rule key=":rule_cl339_st3_injury" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl26_st2</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl27_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl29_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl35_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl41</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl44</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:victim_injuries"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">slight</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:is_conscious"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl339_st3</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>	
+
+		<!--Clan 348 st1 u vezi cl339 st1 za tjelesne povrede-->
+		<lrml:PrescriptiveStatement key="ps_cl348_st1_injury">
+			<ruleml:Rule key=":rule_cl348_st1_injury" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl26_st2</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl27_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl29_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl35_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl41</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl44</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:victim_injuries"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">serious</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:is_conscious"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl348_st1</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!--Clan 348 st3 u vezi cl339 st3 u vezi st1 za tjelesne povrede-->
+		<lrml:PrescriptiveStatement key="ps_cl348_st3_injury">
+			<ruleml:Rule key=":rule_cl348_st3_injury" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl26_st2</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl27_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl29_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl35_st1</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl41</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+							<ruleml:Atom>
+								<ruleml:Rel>commited_cl44</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:victim_injuries"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">serious</ruleml:Data>
+						</ruleml:Atom>
+						<ruleml:Atom>
+ 							<ruleml:Rel iri="lc:is_conscious"/>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>commited_cl348_st3</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+		
+			
+
+
+		<!--Kazne za navedene propise-->
+		<!--Clan 26 st21-->
+		<lrml:PenaltyStatement key="pen_cl26_st2_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_min_26"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>90</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		<lrml:PenaltyStatement key="pen_cl26_st2_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_max_26"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>250</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<!--Clan 27 st1-->
+		<lrml:PenaltyStatement key="pen_cl27_st1_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_min_27"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>90</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		<lrml:PenaltyStatement key="pen_cl27_st1_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_max_27"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>250</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<!--Clan 29 st1-->
+		<lrml:PenaltyStatement key="pen_cl29_st1_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_min_29"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>120</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		<lrml:PenaltyStatement key="pen_cl29_st1_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_max_29"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>400</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<!--Clan 35 st1-->
+		<lrml:PenaltyStatement key="pen_cl35_st1_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_min_35"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>120</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		<lrml:PenaltyStatement key="pen_cl35_st1_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_max_35"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>400</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<!--Clan  44-->
+		<lrml:PenaltyStatement key="pen_cl44_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>t
+						<ruleml:Rel iri=":to_pay_min_44"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>80</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		<lrml:PenaltyStatement key="pen_cl44_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":to_pay_max_44"/>
+						<ruleml:Var>Money</ruleml:Var>
+						<ruleml:Ind>250</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+	
+		<!--Clan 339-->
+		<lrml:PenaltyStatement key="pen_cl339_st1_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":max_imprisonment"/>
+						<ruleml:Var>Years</ruleml:Var>
+						<ruleml:Ind>3</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<lrml:PenaltyStatement key="pen_cl339_st3_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":max_imprisonment"/>
+						<ruleml:Var>Years</ruleml:Var>
+						<ruleml:Ind>1</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<!--Clan 348-->
+		<lrml:PenaltyStatement key="pen_cl348_st1_min">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":min_imprisonment"/>
+						<ruleml:Var>Years</ruleml:Var>
+						<ruleml:Ind>1</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<lrml:PenaltyStatement key="pen_cl348_st1_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":max_imprisonment"/>
+						<ruleml:Var>Years</ruleml:Var>
+						<ruleml:Ind>8</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<lrml:PenaltyStatement key="pen_cl348_st3_max">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+					<ruleml:Atom>
+						<ruleml:Rel iri=":max_imprisonment"/>
+						<ruleml:Var>Years</ruleml:Var>
+						<ruleml:Ind>4</ruleml:Ind>
+					</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+		
+
+		<!--Spajanje dispozicija i sankcija -->
+		<!--Clan 26-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl26_st2_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl26_st2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl26_st2_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl26_st2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 26-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl27_st1_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl27_st1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl27_st1_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl27_st1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 29-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl29_st1_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl29_st1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl29_st1_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl29_st1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 35-->		
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl35_st1_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl35_st1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl35_st1_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl35_st1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 44-->		
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl44_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl44"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl44_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl44"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 339 st1-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl339_st1_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl339_st1_injury"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<!--Clan 339 st3-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl339_st3_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl339_st3_injury"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 348 st1-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl348_st1_min"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl348_st1_injury"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl348_st1_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl348_st1_injury"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!--Clan 348 st3-->
+		<lrml:ReparationStatement>
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_cl348_st3_max"/>
+				<lrml:toPrescriptiveStatement keyref="#ps_cl348_st3_injury"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+		
+	
+	</lrml:Statements>
+</lrml:LegalRuleML>

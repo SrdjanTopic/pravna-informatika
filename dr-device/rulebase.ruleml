@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleML xmlns="http://www.ruleml.org/0.91/xsd"
+         xmlns:lc="http://ftn.uns.ac.rs/legal-case"
+         xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/"
+         xmlns:ruleml="http://ruleml.org/spec"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         proof="proof.ruleml"
+         rdf_export="export.rdf"
+         rdf_export_classes="&#xA;&#x9;&#x9;&#x9;&#x9;commited_cl26_st2 commited_cl27_st1 commited_cl29_st1 commited_cl35_st1 commited_cl41 commited_cl44 commited_cl339_st1 commited_cl339_st3 commited_cl348_st1 commited_cl348_st3 min_imprisonment max_imprisonment to_pay_min_26 to_pay_max_26 to_pay_min_27 to_pay_max_27 to_pay_min_29 to_pay_max_29 to_pay_min_35 to_pay_max_35 to_pay_min_44 to_pay_max_44&#xA;&#x9;&#x9;&#x9;"
+         rdf_import="&#34;facts.rdf&#34;">
+   <Assert>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl26_st2">rule_cl26_st2</Ind>
+         </oid>
+         <body>
+            <And>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:wants_to_do_traffic_action"/>
+                     <Data xsi:type="xs:string">yes</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:has_previously_convinced"/>
+                     <Data xsi:type="xs:string">no</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl26_st2</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl27_st1">rule_cl27_st1</Ind>
+         </oid>
+         <body>
+            <And>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:wants_to_do_traffic_joining"/>
+                     <Data xsi:type="xs:string">yes</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:has_previously_convinced"/>
+                     <Data xsi:type="xs:string">no</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl27_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl29_st1">rule_cl29_st1</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel uri="lc:case"/>
+               </op>
+               <slot>
+                  <Ind uri="lc:defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+               <slot>
+                  <Ind uri="lc:has_adjusted_driving_to_right_road_side"/>
+                  <Data xsi:type="xs:string">no</Data>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl29_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl35_st1">rule_cl35_st1</Ind>
+         </oid>
+         <body>
+            <And>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:speed_adjustment_according_to"/>
+                     <Data xsi:type="xs:string">road_condition</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:has_adjusted_speed"/>
+                     <Data xsi:type="xs:string">no</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl35_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl41">rule_cl41</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel uri="lc:case"/>
+               </op>
+               <slot>
+                  <Ind uri="lc:defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+               <slot>
+                  <Ind uri="lc:has_adjusted_driving_to_intersection"/>
+                  <Data xsi:type="xs:string">no</Data>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl41</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl44">rule_cl44</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel uri="lc:case"/>
+               </op>
+               <slot>
+                  <Ind uri="lc:defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+               <slot>
+                  <Ind uri="lc:has_done_U_turn_prohibited_by_traffic_sign"/>
+                  <Data xsi:type="xs:string">yes</Data>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl44</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl339_st1_injury">rule_cl339_st1_injury</Ind>
+         </oid>
+         <body>
+            <And>
+               <Or>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl26_st2</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl27_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl29_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl35_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl41</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl44</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+               </Or>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:victim_injuries"/>
+                     <Data xsi:type="xs:string">slight</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:is_conscious"/>
+                     <Data xsi:type="xs:string">yes</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl339_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl339_st3_injury">rule_cl339_st3_injury</Ind>
+         </oid>
+         <body>
+            <And>
+               <Or>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl26_st2</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl27_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl29_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl35_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl41</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl44</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+               </Or>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:victim_injuries"/>
+                     <Data xsi:type="xs:string">slight</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:is_conscious"/>
+                     <Data xsi:type="xs:string">no</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl339_st3</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl348_st1_injury">rule_cl348_st1_injury</Ind>
+         </oid>
+         <body>
+            <And>
+               <Or>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl26_st2</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl27_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl29_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl35_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl41</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl44</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+               </Or>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:victim_injuries"/>
+                     <Data xsi:type="xs:string">serious</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:is_conscious"/>
+                     <Data xsi:type="xs:string">yes</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl348_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="rule_cl348_st3_injury">rule_cl348_st3_injury</Ind>
+         </oid>
+         <body>
+            <And>
+               <Or>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl26_st2</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl27_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl29_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl35_st1</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl41</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+                  <Atom>
+                     <op>
+                        <Rel>commited_cl44</Rel>
+                     </op>
+                     <slot>
+                        <Ind uri="defendant"/>
+                        <Var>Defendant</Var>
+                     </slot>
+                  </Atom>
+               </Or>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:victim_injuries"/>
+                     <Data xsi:type="xs:string">serious</Data>
+                  </slot>
+               </Atom>
+               <Atom>
+                  <op>
+                     <Rel uri="lc:case"/>
+                  </op>
+                  <slot>
+                     <Ind uri="lc:defendant"/>
+                     <Var>Defendant</Var>
+                  </slot>
+                  <slot>
+                     <Ind uri="lc:is_conscious"/>
+                     <Data xsi:type="xs:string">no</Data>
+                  </slot>
+               </Atom>
+            </And>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>commited_cl348_st3</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl26_st2_min">pen_cl26_st2_min</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl26_st2</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_min_26</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">90</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl26_st2_max">pen_cl26_st2_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl26_st2</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_max_26</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">250</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl27_st1_min">pen_cl27_st1_min</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl27_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_min_27</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">90</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl27_st1_max">pen_cl27_st1_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl27_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_max_27</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">250</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl29_st1_min">pen_cl29_st1_min</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl29_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_min_29</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">120</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl29_st1_max">pen_cl29_st1_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl29_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_max_29</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">400</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl35_st1_min">pen_cl35_st1_min</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl35_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_min_35</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">120</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl35_st1_max">pen_cl35_st1_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl35_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_max_35</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">400</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl44_min">pen_cl44_min</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl44</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_min_44</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">80</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl44_max">pen_cl44_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl44</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>to_pay_max_44</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">250</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl339_st1_max">pen_cl339_st1_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl339_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>max_imprisonment</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">3</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl339_st3_max">pen_cl339_st3_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl339_st3</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>max_imprisonment</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">1</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl348_st1_min">pen_cl348_st1_min</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl348_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>min_imprisonment</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">1</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl348_st1_max">pen_cl348_st1_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl348_st1</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>max_imprisonment</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">8</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+      <Implies ruletype="defeasiblerule">
+         <oid>
+            <Ind uri="pen_cl348_st3_max">pen_cl348_st3_max</Ind>
+         </oid>
+         <body>
+            <Atom>
+               <op>
+                  <Rel>commited_cl348_st3</Rel>
+               </op>
+               <slot>
+                  <Ind uri="defendant"/>
+                  <Var>Defendant</Var>
+               </slot>
+            </Atom>
+         </body>
+         <head>
+            <Atom>
+               <op>
+                  <Rel>max_imprisonment</Rel>
+               </op>
+               <slot>
+                  <Ind uri="value"/>
+                  <Data xsi:type="xs:integer">4</Data>
+               </slot>
+            </Atom>
+         </head>
+      </Implies>
+   </Assert>
+</RuleML>
