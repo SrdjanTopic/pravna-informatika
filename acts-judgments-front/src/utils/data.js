@@ -24,3 +24,4 @@ export const naciniUgrozavanjaSaobracaja = [
   "svjesno, lake tjelesne povrede",
   "svjesno, teske tjelesne povrede"
 ]
+export const vrstePresuda = ["osudjujuca", "uslovna", "oslobadjajuca"]

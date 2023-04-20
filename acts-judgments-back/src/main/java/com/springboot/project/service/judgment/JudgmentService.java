@@ -405,9 +405,7 @@ public class JudgmentService {
                 caseDescription.setId(Integer.parseInt(values[0]));
                 caseDescription.setSud(values[1]);
                 caseDescription.setPoslovniBroj(values[2]);
-                DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-                Date datum = df.parse(values[3]);
-                caseDescription.setDatum(datum);
+                caseDescription.setDatum(values[3]);
                 caseDescription.setSudija(values[4]);
                 caseDescription.setTuzilac(values[5]);
                 caseDescription.setOkrivljeni(values[6]);
