@@ -247,46 +247,28 @@
      <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof1</defeasible:proof>
 </export:commited_cl26_st2>
 
-<export:commited_cl97_st3 rdf:about='&export;commited_cl97_st31'>
-     <export:defendant>Defendant</export:defendant>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof2</defeasible:proof>
-</export:commited_cl97_st3>
-
 <export:commited_cl339_st3 rdf:about='&export;commited_cl339_st31'>
      <export:defendant>Defendant</export:defendant>
      <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof3</defeasible:proof>
+     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof2</defeasible:proof>
 </export:commited_cl339_st3>
 
 <export:max_imprisonment rdf:about='&export;max_imprisonment1'>
      <export:value>1</export:value>
      <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof4</defeasible:proof>
+     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof3</defeasible:proof>
 </export:max_imprisonment>
 
 <export:to_pay_min_26 rdf:about='&export;to_pay_min_261'>
      <export:value>90</export:value>
      <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof5</defeasible:proof>
+     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof4</defeasible:proof>
 </export:to_pay_min_26>
 
 <export:to_pay_max_26 rdf:about='&export;to_pay_max_261'>
      <export:value>250</export:value>
      <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof6</defeasible:proof>
+     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof5</defeasible:proof>
 </export:to_pay_max_26>
-
-<export:to_pay_min_97 rdf:about='&export;to_pay_min_971'>
-     <export:value>80</export:value>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof7</defeasible:proof>
-</export:to_pay_min_97>
-
-<export:to_pay_max_97 rdf:about='&export;to_pay_max_971'>
-     <export:value>250</export:value>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof8</defeasible:proof>
-</export:to_pay_max_97>
 
 </rdf:RDF>

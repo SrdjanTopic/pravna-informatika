@@ -21,7 +21,7 @@ public class CsvConnector implements Connector {
         LinkedList<CBRCase> cases = new LinkedList<CBRCase>();
 
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/presude.csv")));
+            BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/testPresude.csv")));
             if (br == null)
                 throw new Exception("Error opening file");
 
@@ -58,10 +58,10 @@ public class CsvConnector implements Connector {
                 else{
                     caseDescription.setRadnjeBezPrilagodjavanjaBrzine(Arrays.asList(values[13].split(",")));
                 }
-                caseDescription.setNedozvoljenoPolukruznoOkretanje(values[14].equals("da"));
-                caseDescription.setPrekrsenaPravilaNaRaskrsnici(values[15].equals("da"));
-                caseDescription.setPrekrsenoKretanjeDesnomStranom(values[16].equals("da"));
-                caseDescription.setOsudjivan(values[17].equals("da"));
+                caseDescription.setNedozvoljenoPolukruznoOkretanje(Boolean.parseBoolean(values[14]));
+                caseDescription.setPrekrsenaPravilaNaRaskrsnici(Boolean.parseBoolean(values[15]));
+                caseDescription.setPrekrsenoKretanjeDesnomStranom(Boolean.parseBoolean(values[16]));
+                caseDescription.setOsudjivan(Boolean.parseBoolean(values[17]));
                 caseDescription.setBrojOsudjivanja(Integer.parseInt(values[18]));
                 caseDescription.setImovnoStanje(values[19]);
 

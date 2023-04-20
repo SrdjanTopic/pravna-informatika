@@ -84,8 +84,8 @@ public class CaseDescription implements CaseComponent {
                 + primijenjeni+";"
                 + vrstaPresude +";"
                 + ugrozenSaobracaj +";"
-                + radnjeBezPrethodnogUvjerenja +";"
-                + radnjeBezPrilagodjavanjaBrzine +";"
+                + prethodnaUvjerenja +";"
+                + prilagodjenjaBrzine +";"
                 + nedozvoljenoPolukruznoOkretanje +";"
                 + prekrsenaPravilaNaRaskrsnici +";"
                 + prekrsenoKretanjeDesnomStranom +";"
@@ -118,7 +118,7 @@ public class CaseDescription implements CaseComponent {
         this.nedozvoljenoPolukruznoOkretanje=description.getNedozvoljenoPolukruznoOkretanje();
         this.prekrsenaPravilaNaRaskrsnici=description.getPrekrsenaPravilaNaRaskrsnici();
         this.prekrsenoKretanjeDesnomStranom=description.getPrekrsenoKretanjeDesnomStranom();
-        this.osudjivan = description.getOsudjivan().equals("da");
+        this.osudjivan = description.getOsudjivan();
         this.brojOsudjivanja = description.getBrojOsudjivanja();
         this.imovnoStanje = description.getImovnoStanje();
 

@@ -11,7 +11,7 @@
 		<lc:wants_to_do_traffic_joining>no</lc:wants_to_do_traffic_joining>
 		<lc:has_adjusted_driving_to_right_road_side>yes</lc:has_adjusted_driving_to_right_road_side>
 		<lc:has_adjusted_speed_according_to_road_condition>yes</lc:has_adjusted_speed_according_to_road_condition>
-		<lc:has_adjusted_speed_according_to_crosswalk>no</lc:has_adjusted_speed_according_to_crosswalk>
+		<lc:has_adjusted_speed_according_to_crosswalk>yes</lc:has_adjusted_speed_according_to_crosswalk>
 		<lc:has_adjusted_driving_to_intersection>yes</lc:has_adjusted_driving_to_intersection>
 		<lc:has_done_U_turn_prohibited_by_traffic_sign>no</lc:has_done_U_turn_prohibited_by_traffic_sign>
 		<lc:victim_injuries>slight</lc:victim_injuries>

@@ -417,7 +417,7 @@ public class JudgmentService {
         if (matcher.find())
             slicnostRadnjiBezPrethodnogUvjerenja.add("pri ukljucenju u saobracaj");
 
-        caseDescription.setRadnjeBezPrilagodjavanjaBrzine(slicnostRadnjiBezPrethodnogUvjerenja);
+        caseDescription.setRadnjeBezPrethodnogUvjerenja(slicnostRadnjiBezPrethodnogUvjerenja);
         slicnostRadnjiBezPrethodnogUvjerenja.forEach(System.out::println);
 
 
