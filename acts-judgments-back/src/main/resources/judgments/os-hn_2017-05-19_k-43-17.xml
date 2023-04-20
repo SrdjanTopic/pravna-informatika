@@ -49,7 +49,7 @@
     <header>
       <judge refersTo="#dabetic">Dabetić Zorica</judge>
       <party refersTo="#tm" as="#Defendant">T.M.</party>
-      <party refersTo="#sn" as="#Plaintiff">Samardžić Nikola</party>
+      <party refersTo="#odthn" as="#Plaintiff">Osnovno državno tužilaštvo Herceg Novi</party>
       <lawyer refersTo="#zp" as="#DefendantLawyer">Z.P.</lawyer>
       <neutralCitation>[2017] OSHN K 43</neutralCitation>
       <courtType>Basic Court</courtType>
@@ -64,7 +64,7 @@
           OSNOVNI SUD U HERCEG NOVOM, po sudiji <judge id="jud01" refersTo="#dabetic">Dabetić Zorici</judge> , uz učestvovanje zapisničara Milović Tereze, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#tm" as="#Defendant">T.M.</party> , zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnog predloga Osnovnog državnog tužilaštva Herceg Novi Kt.br.274/2016 od <date date="2017-03-30">30.03.2017.</date> godine, nakon održanog usmenog i javnog glavnog pretresa, u prisustvu državnog tužioca ODT Herceg Novi <party id="p2" refersTo="#sn" as="#Plaintiff">Samardžić Nikole</party> , branioca okrivljenog advokata <lawyer id="lyr1" refersTo="#zp" as="#DefendantLawyer">Z.P.</lawyer> iz HN i oštećenih V.M. i V.M1., u odsustvu uredno pozvanog okrivljenog <party id="p3" refersTo="#tm" as="#Defendant">T.M.</party> , dana 19.05.2017.godine donio je i javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnog predloga <party id="p2" refersTo="#odthn" as="#Plaintiff">Osnovnog državnog tužilaštva Herceg Novi</party> Kt.br.274/2016 od <date date="2017-03-30">30.03.2017.</date> godine, nakon održanog usmenog i javnog glavnog pretresa, u prisustvu državnog tužioca ODT Herceg Novi Samardžić Nikole , branioca okrivljenog advokata <lawyer id="lyr1" refersTo="#zp" as="#DefendantLawyer">Z.P.</lawyer> iz HN i oštećenih V.M. i V.M1., u odsustvu uredno pozvanog okrivljenog <party id="p3" refersTo="#tm" as="#Defendant">T.M.</party> , dana 19.05.2017.godine donio je i javno objavio,
         </p>
         <p style="text-align: center;">
           P R E S U D U!

@@ -49,7 +49,7 @@
     <header>
       <judge refersTo="#djukovic">Đuković Goran</judge>
       <party refersTo="#mv" as="#Defendant">M.V.</party>
-      <party refersTo="#mv2" as="#Plaintiff">M.V.</party>
+      <party refersTo="#odtpg" as="#Plaintiff">Osnovno državno tužilaštvo u Podgorici</party>
       <lawyer refersTo="#rm" as="#DefendantLawyer">R.M.</lawyer>
       <lawyer refersTo="#djms" as="#PlaintiffLawyer">Đ.M.S.</lawyer>
       <neutralCitation>[2016] OSPG K 106</neutralCitation>
@@ -64,7 +64,7 @@
         <p>
           OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#djukovic">Đuković Goran</judge> uz učešće Maraš Ane kao zapisničara, u krivičnom predmetu protiv okrivljene <party id="p1" refersTo="#mv" as="#Defendant">M. V.</party> iz P. zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, rješavajući po optužnom predlogu ODT Podgorica Kt.br.1315/15 od 17.02.2016. godine, nakon održanog glavnog i javnog pretresa u prisustvu zastupnika optužbe <party id="p2" refersTo="#mv2" as="#Plaintiff">M. V.</party> savjetnika ODT-a Podgorica, branioca okrivljene <lawyer id="lyr1" refersTo="#rm" as="#DefendantLawyer">R. M.</lawyer> adv. iz P., punomoćnika oštećene <lawyer id="lyr2" refersTo="#djms" as="#PlaintiffLawyer">Đ. M. S.</lawyer> adv. iz P. i okrivljene dana, <date date="2016-05-27">27. 05. 2016.</date> godine, donio je i istog dana javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, rješavajući po optužnom predlogu <party id="p2" refersTo="#odtpg" as="#Plaintiff"> ODT Podgorica</party> Kt.br.1315/15 od 17.02.2016. godine, nakon održanog glavnog i javnog pretresa u prisustvu zastupnika optužbe M. V. savjetnika ODT-a Podgorica, branioca okrivljene <lawyer id="lyr1" refersTo="#rm" as="#DefendantLawyer">R. M.</lawyer> adv. iz P., punomoćnika oštećene <lawyer id="lyr2" refersTo="#djms" as="#PlaintiffLawyer">Đ. M. S.</lawyer> adv. iz P. i okrivljene dana, <date date="2016-05-27">27. 05. 2016.</date> godine, donio je i istog dana javno objavio,
         </p>
         <p style="text-align: center;">
           PRESUDU
@@ -76,7 +76,7 @@
           Okrivljena:
         </p>
         <p>
-          <party id="p4" refersTo="#mv" as="#Defendant">M. B.</party> , JMB 1..., od oca M. i majke L., rođ. V., rodjena .... godine, na C., sa prebivalištem u P., ul. O. r. br....državljanka Crne Gore, završila Srednju turističku školu, zaposlena u "R. DOO", razvedena, majka jednog maloljetnog djeteta, lošeg imovnog stanja, neosudjivana,
+          <party id="p4" refersTo="#mv" as="#Defendant">M. V.</party> , JMB 1..., od oca M. i majke L., rođ. V., rodjena .... godine, na C., sa prebivalištem u P., ul. O. r. br....državljanka Crne Gore, završila Srednju turističku školu, zaposlena u "R. DOO", razvedena, majka jednog maloljetnog djeteta, lošeg imovnog stanja, neosudjivana,
         </p>
       </background>
 

@@ -49,7 +49,7 @@
     <header>
       <judge refersTo="#djukovic">Đuković Goran</judge>
       <party refersTo="#gd" as="#Defendant">G.D.</party>
-      <party refersTo="#mm" as="#Plaintiff">M.M.</party>
+      <party refersTo="#odtpg" as="#Plaintiff">Osnovno državno tužilaštvo u Podgorici</party>
       <neutralCitation>[2017] OSPG K 444</neutralCitation>
       <courtType>Basic Court</courtType>
     </header>
@@ -63,7 +63,7 @@
           OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#djukovic">Đuković Goran</judge> uz učešće Radević Sanje kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#gd" as="#Defendant">G. D.</party> iz Podgorice, zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, rješavajući po optužnom predllogu ODT Podgorica Kt.br. 603/17 od <date date="2017-06-02">02.06.2017.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zastupnika optužbe, savjetnika ODT-a Podgorica <party id="p2" refersTo="#mm" as="#Plaintiff">M.M.</party> i okrivljenog, dana <date date="2017-09-06">06.09.2017.</date> godine, donio je i istog dana javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, rješavajući po optužnom predllogu <party id="p2" refersTo="#odtpg" as="#Plaintiff"> ODT Podgorica</party> Kt.br. 603/17 od <date date="2017-06-02">02.06.2017.</date> godine, nakon održanog glavnog i javnog pretresa u prisustvu zastupnika optužbe, savjetnika ODT-a Podgorica M.M. i okrivljenog, dana <date date="2017-09-06">06.09.2017.</date> godine, donio je i istog dana javno objavio,
         </p>
         <p style="text-align: center;">
           PRESUDU

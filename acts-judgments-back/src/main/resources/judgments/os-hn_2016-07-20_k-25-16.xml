@@ -48,7 +48,7 @@
     <header>
       <judge refersTo="#dabetic">Dabetić Zorica</judge>
       <party refersTo="#vm" as="#Defendant">V.M.</party>
-      <party refersTo="#zs" as="#Plaintiff">Zejnilagić Snježana</party>
+      <party refersTo="#odthn" as="#Plaintiff">Osnovno državno tužilaštvo Herceg Novi</party>
       <lawyer refersTo="#cs" as="#DefendantLawyer">Ć.S.</lawyer>
       <lawyer refersTo="#im" as="#PlaintiffLawyer">I.M.</lawyer>
       <neutralCitation>[2016] OSBA K 25</neutralCitation>
@@ -64,7 +64,7 @@
           OSNOVNI SUD U HERCEG NOVOM, po sudiji <judge id="jud1" refersTo="#dabetic">Dabetić Zorici</judge> , uz učestvovanje zapisničara Bosanac Vjere, u krivičnom predmetu protiv okrivljenog <party id="p01" refersTo="#vm" as="#Defendant">V.M.</party> , zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348">čl. 348</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan348-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnice Osnovnog državnog tužilaštva Herceg Novi Kt.br.9/2016 od <date date="2016-02-25">25.02.2016.</date> godine, nakon održanog usmenog i javnog glavnog pretresa dana <date date="2016-07-18">18.07.2016.</date> godine u prisustvu rukovodioca ODT Herceg Novi <party id="p03" refersTo="#zs" as="#Plaintiff">Zejnilagić Snježane</party> , okrivljenog <party id="p02" refersTo="#vm" as="#Defendant">V.M.</party> , branioca okrivljenog advokata <lawyer id="lwyr1" refersTo="#cs" as="#DefendantLawyer">Ć.S.</lawyer> iz Herceg Novog i punomoćnika oštećene porodice advokata <lawyer id="lwyr2" refersTo="#im" as="#PlaintiffLawyer">I.M.</lawyer> iz Podgorice, dana <date date="2016-07-20">20.07.2016.</date> godine donio je i javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, povodom optužnice <party id="p03" refersTo="#odthn" as="#Plaintiff">Osnovnog državnog tužilaštva Herceg Novi</party> Kt.br.9/2016 od <date date="2016-02-25">25.02.2016.</date> godine, nakon održanog usmenog i javnog glavnog pretresa dana <date date="2016-07-18">18.07.2016.</date> godine u prisustvu rukovodioca ODT Herceg Novi Zejnilagić Snježane , okrivljenog <party id="p02" refersTo="#vm" as="#Defendant">V.M.</party> , branioca okrivljenog advokata <lawyer id="lwyr1" refersTo="#cs" as="#DefendantLawyer">Ć.S.</lawyer> iz Herceg Novog i punomoćnika oštećene porodice advokata <lawyer id="lwyr2" refersTo="#im" as="#PlaintiffLawyer">I.M.</lawyer> iz Podgorice, dana <date date="2016-07-20">20.07.2016.</date> godine donio je i javno objavio,
         </p>
         <p style="text-align: center;">
           P R E S U D U

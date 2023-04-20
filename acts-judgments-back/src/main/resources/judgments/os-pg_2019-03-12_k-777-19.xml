@@ -48,7 +48,7 @@
     <header>
       <judge refersTo="#djukovic">Đuković Goran</judge>
       <party refersTo="#pi" as="#Defendant">P.I.</party>
-      <party refersTo="#id" as="#Plaintiff">Ivanović Danijela</party>
+      <party refersTo="#odtpg" as="#Plaintiff">Osnovno državno tužilaštvo u Podgorici</party>
       <neutralCitation>[2019] OSPG K 777</neutralCitation>
       <courtType>Basic Court</courtType>
     </header>
@@ -61,7 +61,7 @@
         <p>
           OSNOVNI SUD U PODGORICI, po sudiji <judge id="jud01" refersTo="#djukovic">Đuković Goranu</judge> , uz učešće namještenika suda Radević Sanje, kao zapisničara, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#pi" as="#Defendant">P. I.</party> , zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt.br. 1178/19 od <date date="2019-12-12">12.12.2019.</date> godine, kog je na glavnom pretresu zastupala <party id="p2" refersTo="#id" as="#Plaintiff">Ivanović Danijela</party> savjetnica u ODT-u Podgorica, nakon glavnog i javnog pretresa, održanog dana <date date="2019-03-09">09.03.2019.</date> godine, u prisustvu zastupnice optužbe i okrivljenog, donio je i istog dana javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu  <party id="p2" refersTo="#odtpg" as="#Plaintiff">Osnovnog državnog tužilaštva iz Podgorice</party>  Kt.br. 1178/19 od <date date="2019-12-12">12.12.2019.</date> godine, kog je na glavnom pretresu zastupala Ivanović Danijela savjetnica u ODT-u Podgorica, nakon glavnog i javnog pretresa, održanog dana <date date="2019-03-09">09.03.2019.</date> godine, u prisustvu zastupnice optužbe i okrivljenog, donio je i istog dana javno objavio
         </p>
         <p style="text-align: center;">
           PRESUDU

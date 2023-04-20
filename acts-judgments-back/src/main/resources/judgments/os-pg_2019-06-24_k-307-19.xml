@@ -48,7 +48,7 @@
     <header>
       <judge refersTo="#vujanovic">Nenad Vujanović</judge>
       <party refersTo="#ap" as="#Defendant">A.P.</party>
-      <party refersTo="#rg" as="#Plaintiff">Ranka Gospić</party>
+      <party refersTo="#odtpg" as="#Plaintiff">Osnovno državno tužilaštvo u Podgorici</party>
       <lawyer refersTo="#bm">B.M.</lawyer>
       <neutralCitation>[2019] OSPG K 307</neutralCitation>
       <courtType>Basic Court</courtType>
@@ -62,7 +62,7 @@
         <p>
           OSNOVNI SUD U PODGORICI, sudija <judge id="jud01" refersTo="#vujanovic">Nenad Vujanović</judge> , uz učešće Nataše Paunović, kao zapisničara, u krivičnom postupku protiv okrivljenog <party id="p1" refersTo="#ap" as="#Defendant">A. P.</party> , koga brani advokat <lawyer id="lyr1" refersTo="#bm">B. M.</lawyer> iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva iz Podgorice Kt.br. 1980/18 od <date date="2019-05-24">24.05.2019.</date> godine, nakon održanog glavnog i javnog pretresa dana <date date="2019-05-24">24.06.2019.</date> godine, u prisustvu zastupnika optužbe savjetnika na radu kod ODT-a u Podgorici <party id="p2" refersTo="#rg" as="#Plaintiff">Ranke Gospić</party> , okrivljenog i njegovog branioca, istog dana donio je i javno objavio
+          <ref href="/akn/me/act/2006-24-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu <party id="p2" refersTo="#rg" as="#Plaintiff"> Osnovnog državnog tužilaštva iz Podgorice </party> Kt.br. 1980/18 od <date date="2019-05-24">24.05.2019.</date> godine, nakon održanog glavnog i javnog pretresa dana <date date="2019-05-24">24.06.2019.</date> godine, u prisustvu zastupnika optužbe savjetnika na radu kod ODT-a u Podgorici Ranke Gospić , okrivljenog i njegovog branioca, istog dana donio je i javno objavio
         </p>
         <p style="text-align: center;">
           PRESUDU
