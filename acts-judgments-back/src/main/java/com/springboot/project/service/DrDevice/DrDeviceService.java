@@ -21,43 +21,38 @@ public class DrDeviceService {
     private String BASE_PATH;
 
     public String startDrDevice(SimilarCaseDto caseDto) throws IOException, InterruptedException {
-        String cleanPath = BASE_PATH + "clean.bat";
-        String startPath = BASE_PATH + "start.bat";
-
-        writeFactsRdf(caseDto);
+        writeFacts(caseDto);
 
         try {
-            ProcessBuilder pb = new ProcessBuilder(cleanPath);
+            ProcessBuilder pb = new ProcessBuilder(BASE_PATH + "clean.bat");
             pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
             pb.redirectError(ProcessBuilder.Redirect.INHERIT);
-            pb.directory(new File(cleanPath).getParentFile());
-            System.out.println(cleanPath);
+            pb.directory(new File(BASE_PATH + "clean.bat").getParentFile());
+            System.out.println(BASE_PATH + "clean.bat");
             Process process = pb.start();
             int exitCode = process.waitFor();
-            // Print the exit code
             System.out.println("CLEAN.BAT file exited with code " + exitCode);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
-                ProcessBuilder pb = new ProcessBuilder(startPath);
+                ProcessBuilder pb = new ProcessBuilder(BASE_PATH + "start.bat");
                 pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
                 pb.redirectError(ProcessBuilder.Redirect.INHERIT);
-                pb.directory(new File(startPath).getParentFile());
+                pb.directory(new File(BASE_PATH + "start.bat").getParentFile());
 
                 Process process = pb.start();
                 int exitCode = process.waitFor();
-                // Print the exit code
                 System.out.println("START.BAT file exited with code " + exitCode);
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                return formatResults();
+                return parseResult();
             }
         }
     }
 
-    private void writeFactsRdf(SimilarCaseDto caseDto) throws IOException {
+    private void writeFacts(SimilarCaseDto caseDto) throws IOException {
         String wants_to_do_traffic_action="no";
         String has_previously_convinced="yes";
         String wants_to_do_traffic_joining="no";
@@ -98,16 +93,19 @@ public class DrDeviceService {
         if(caseDto.getNedozvoljenoPolukruznoOkretanje()){
             has_done_U_turn_prohibited_by_traffic_sign="yes";
         }
-        if(Objects.equals(caseDto.getUgrozenSaobracaj().split(" ")[0],"svjesno")){
-            is_conscious="yes";
-        }else{
-            is_conscious="no";
+        if(caseDto.getUgrozenSaobracaj()!=""){
+            if(Objects.equals(caseDto.getUgrozenSaobracaj().split(" ")[0],"svjesno")){
+                is_conscious="yes";
+            }else{
+                is_conscious="no";
+            }
+            if(Objects.equals(caseDto.getUgrozenSaobracaj().split(" ")[1],"lake")){
+                victim_injuries="slight";
+            }else{
+                victim_injuries="serious";
+            }
         }
-        if(Objects.equals(caseDto.getUgrozenSaobracaj().split(" ")[1],"lake")){
-            victim_injuries="slight";
-        }else{
-            victim_injuries="serious";
-        }
+
 
 
 
@@ -117,33 +115,32 @@ public class DrDeviceService {
                         "        xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n" +
                         "        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\"\n" +
                         "        xmlns:lc=\"http://informatika.ftn.uns.ac.rs/legal-case.rdf#\">\n" +
-                        "    <lc:case rdf:about=\"http://informatika.ftn.uns.ac.rs/legal-case.rdf#case01\">\n" +
-                        "\t<lc:defendant>John</lc:defendant>\n" +
-                        "\t<lc:name>case 01</lc:name>\n" +
-                        "\t<lc:wants_to_do_traffic_action>" + wants_to_do_traffic_action + "</lc:wants_to_do_traffic_action>\n" +
-                        "\t<lc:has_previously_convinced>" + has_previously_convinced + "</lc:has_previously_convinced>\n" +
-                        "\t<lc:wants_to_do_traffic_joining>" + wants_to_do_traffic_joining + "</lc:wants_to_do_traffic_joining>\n" +
-                        "\t<lc:has_adjusted_driving_to_right_road_side>" + has_adjusted_driving_to_right_road_side + "</lc:has_adjusted_driving_to_right_road_side>\n" +
-                        "\t<lc:has_adjusted_speed_according_to_road_condition>" + has_adjusted_speed_according_to_road_condition + "</lc:has_adjusted_speed_according_to_road_condition>\n" +
-                        "\t<lc:has_adjusted_speed_according_to_crosswalk>" + has_adjusted_speed_according_to_crosswalk + "</lc:has_adjusted_speed_according_to_crosswalk>\n" +
-                        "\t<lc:has_adjusted_driving_to_intersection>" + has_adjusted_driving_to_intersection + "</lc:has_adjusted_driving_to_intersection>\n" +
-                        "\t<lc:has_done_U_turn_prohibited_by_traffic_sign>" + has_done_U_turn_prohibited_by_traffic_sign + "</lc:has_done_U_turn_prohibited_by_traffic_sign>\n" +
-                        "\t<lc:victim_injuries>" + victim_injuries + "</lc:victim_injuries>\n" +
-                        "\t<lc:is_conscious>" + is_conscious + "</lc:is_conscious>\n" +
+                        "\t<lc:case rdf:about=\"http://informatika.ftn.uns.ac.rs/legal-case.rdf#case01\">\n" +
+                        "\t\t<lc:defendant>Defendant</lc:defendant>\n" +
+                        "\t\t<lc:name>case 01</lc:name>\n" +
+                        "\t\t<lc:wants_to_do_traffic_action>" + wants_to_do_traffic_action + "</lc:wants_to_do_traffic_action>\n" +
+                        "\t\t<lc:has_previously_convinced>" + has_previously_convinced + "</lc:has_previously_convinced>\n" +
+                        "\t\t<lc:wants_to_do_traffic_joining>" + wants_to_do_traffic_joining + "</lc:wants_to_do_traffic_joining>\n" +
+                        "\t\t<lc:has_adjusted_driving_to_right_road_side>" + has_adjusted_driving_to_right_road_side + "</lc:has_adjusted_driving_to_right_road_side>\n" +
+                        "\t\t<lc:has_adjusted_speed_according_to_road_condition>" + has_adjusted_speed_according_to_road_condition + "</lc:has_adjusted_speed_according_to_road_condition>\n" +
+                        "\t\t<lc:has_adjusted_speed_according_to_crosswalk>" + has_adjusted_speed_according_to_crosswalk + "</lc:has_adjusted_speed_according_to_crosswalk>\n" +
+                        "\t\t<lc:has_adjusted_driving_to_intersection>" + has_adjusted_driving_to_intersection + "</lc:has_adjusted_driving_to_intersection>\n" +
+                        "\t\t<lc:has_done_U_turn_prohibited_by_traffic_sign>" + has_done_U_turn_prohibited_by_traffic_sign + "</lc:has_done_U_turn_prohibited_by_traffic_sign>\n" +
+                        "\t\t<lc:victim_injuries>" + victim_injuries + "</lc:victim_injuries>\n" +
+                        "\t\t<lc:is_conscious>" + is_conscious + "</lc:is_conscious>\n" +
 
-                        "    </lc:case>\n" +
+                        "\t</lc:case>\n" +
                         "</rdf:RDF>";
         FileWriter writer = new FileWriter(BASE_PATH + "facts.rdf", false);
         writer.write(fileContent);
         writer.close();
     }
 
-    private String formatResults() throws IOException {
+    private String parseResult() throws IOException {
         String retVal = "";
         String provenPositive = "<defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>";
 
-        String resultsPath = BASE_PATH + "export.rdf";
-        String fileContent = new String(Files.readAllBytes(Paths.get(resultsPath)), StandardCharsets.UTF_8);
+        String fileContent = new String(Files.readAllBytes(Paths.get( BASE_PATH + "export.rdf")), StandardCharsets.UTF_8);
 
         String commited_cl26_st2 = StringUtils.substringBetween(fileContent, "<export:commited_cl26_st2", "</export:commited_cl26_st2");
         if (commited_cl26_st2 != null && commited_cl26_st2.contains(provenPositive)) {
@@ -161,12 +158,12 @@ public class DrDeviceService {
         String commited_cl29_st1 = StringUtils.substringBetween(fileContent, "<export:commited_cl29_st1", "</export:commited_cl29_st1>");
         if (commited_cl29_st1 != null && commited_cl29_st1.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje bezbjednosti saobracaja napostovanjem pravila " +
-                    "kretanja desnom stranom kolovoza u smijeru kretanja (cl.29 st.1) \n\n";
+                    "kretanja desnom stranom kolovoza u smijeru kretanja (cl.29 st.1 ZOBSNP) \n\n";
         }
         String commited_cl35_st1 = StringUtils.substringBetween(fileContent, "<export:commited_cl35_st1", "</export:commited_cl35_st1>");
         if (commited_cl35_st1 != null && commited_cl35_st1.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje bezbjednosti saobracaja neprilagodjavanjem " +
-                    "brzine stanju puta i drugim saobracajnim uslovima  (cl.35 st.1) \n\n";
+                    "brzine stanju puta i drugim saobracajnim uslovima  (cl.35 st.1 ZOBSNP) \n\n";
         }
         String commited_cl41 = StringUtils.substringBetween(fileContent, "<export:commited_cl41", "</export:commited_cl41>");
         if (commited_cl41 != null && commited_cl41.contains(provenPositive)) {
@@ -176,54 +173,81 @@ public class DrDeviceService {
         String commited_cl44 = StringUtils.substringBetween(fileContent, "<export:commited_cl44", "</export:commited_cl44>");
         if (commited_cl44 != null && commited_cl44.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje bezbjednosti saobracaja izvodjenjem "  +
-                    "polukruznog okretanja na mjestu gdje je to saobracajnim znakom zabranjeno (cl.44) \n\n";
+                    "polukruznog okretanja na mjestu gdje je to saobracajnim znakom zabranjeno (cl.44 ZOBSNP) \n\n";
         }
         String commited_cl97_st3 = StringUtils.substringBetween(fileContent, "<export:commited_cl97_st3", "</export:commited_cl97_st3>");
         if (commited_cl97_st3 != null && commited_cl97_st3.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje bezbjednosti saobracaja neprilagodjavanjem "  +
-                    "brzine pred pjesacki prelaz koji nije regulisan uredjajima za saobracajne svjetlosne znakove(cl.97 st.3) \n\n";
+                    "brzine pred pjesacki prelaz koji nije regulisan uredjajima za saobracajne svjetlosne znakove(cl.97 st.3 ZOBSNP) \n\n";
         }
         String commited_cl339_st1 = StringUtils.substringBetween(fileContent, "<export:commited_cl339_st1", "</export:commited_cl339_st1>");
         if (commited_cl339_st1 != null && commited_cl339_st1.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje javnog saobracaja i dovodjenje u opasnost zivot ljudi "  +
-                    "pri cemu je uzrokovao lake tjelesne povrede (cl.339 st.1) \n\n";
+                    "pri cemu je uzrokovao lake tjelesne povrede (cl.339 st.1 KZ) \n\n";
         }
         String commited_cl339_st3 = StringUtils.substringBetween(fileContent, "<export:commited_cl339_st3", "</export:commited_cl339_st3>");
         if (commited_cl339_st3 != null && commited_cl339_st3.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje javnog saobracaja i dovodjenje u opasnost zivot ljudi "  +
-                    "pri cemu je uzrokovao lake tjelesne povrede, ali je to ucinio iz nehata (cl.339 st.1) \n\n";
+                    "pri cemu je uzrokovao lake tjelesne povrede, ali je to ucinio iz nehata (cl.339 st.1 KZ) \n\n";
         }
         String commited_cl348_st1 = StringUtils.substringBetween(fileContent, "<export:commited_cl348_st1", "</export:commited_cl348_st1>");
         if (commited_cl348_st1 != null && commited_cl348_st1.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje javnog saobracaja  i dovodjenje u opasnost zivot ljudi "  +
-                    "pri cemu je uzrokovao teske tjelesne povrede (cl.348 st.1) \n\n";
+                    "pri cemu je uzrokovao teske tjelesne povrede (cl.348 st.1 KZ) \n\n";
         }
         String commited_cl348_st3 = StringUtils.substringBetween(fileContent, "<export:commited_cl348_st3", "</export:commited_cl348_st3>");
         if (commited_cl348_st3 != null && commited_cl348_st3.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje javnog saobracaja i dovodjenje u opasnost zivot ljudi "  +
-                    "pri cemu je uzrokovao teske tjelesne povrede, ali je to ucinio iz nehata (cl.348 st.3) \n\n";
+                    "pri cemu je uzrokovao teske tjelesne povrede, ali je to ucinio iz nehata (cl.348 st.3 KZ) \n\n";
         }
 
-        String to_pay_min = StringUtils.substringBetween(fileContent, "<export:to_pay_min", "</export:to_pay_min");
-        if (to_pay_min != null && to_pay_min.contains(provenPositive)) {
-            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min, "<export:value>", "</export:value>") + "e. \n\n";
+        String to_pay_min_26 = StringUtils.substringBetween(fileContent, "<export:to_pay_min_26", "</export:to_pay_min_26");
+        String to_pay_max_26 = StringUtils.substringBetween(fileContent, "<export:to_pay_max_26", "</export:to_pay_max_26");
+        if (to_pay_min_26 != null && to_pay_min_26.contains(provenPositive) && to_pay_max_26 != null && to_pay_max_26.contains(provenPositive)) {
+            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min_26, "<export:value>", "</export:value>") + "e, a " +
+                    "maksimalno "+ StringUtils.substringBetween(to_pay_max_26, "<export:value>", "</export:value>") +" (za cl.26 st.2 ZOBSNP). \n\n";
+        }
+        String to_pay_min_27 = StringUtils.substringBetween(fileContent, "<export:to_pay_min_27", "</export:to_pay_min_27");
+        String to_pay_max_27 = StringUtils.substringBetween(fileContent, "<export:to_pay_max_27", "</export:to_pay_max_27");
+        if (to_pay_min_27 != null && to_pay_min_27.contains(provenPositive) && to_pay_max_27 != null && to_pay_max_27.contains(provenPositive)) {
+            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min_27, "<export:value>", "</export:value>") + "e, a " +
+                    "maksimalno "+ StringUtils.substringBetween(to_pay_max_27, "<export:value>", "</export:value>") +" (za cl.27 st.1 ZOBSNP). \n\n";
+        }
+        String to_pay_min_29 = StringUtils.substringBetween(fileContent, "<export:to_pay_min_29", "</export:to_pay_min_29");
+        String to_pay_max_29 = StringUtils.substringBetween(fileContent, "<export:to_pay_max_29", "</export:to_pay_max_29");
+        if (to_pay_min_29 != null && to_pay_min_29.contains(provenPositive) && to_pay_max_29 != null && to_pay_max_29.contains(provenPositive)) {
+            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min_29, "<export:value>", "</export:value>") + "e, a " +
+                    "maksimalno "+ StringUtils.substringBetween(to_pay_max_29, "<export:value>", "</export:value>") +" (za cl.29 st.1 ZOBSNP). \n\n";
+        }
+        String to_pay_min_35 = StringUtils.substringBetween(fileContent, "<export:to_pay_min_35", "</export:to_pay_min_35");
+        String to_pay_max_35 = StringUtils.substringBetween(fileContent, "<export:to_pay_max_35", "</export:to_pay_max_35");
+        if (to_pay_min_35 != null && to_pay_min_35.contains(provenPositive) && to_pay_max_35 != null && to_pay_max_35.contains(provenPositive)) {
+            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min_29, "<export:value>", "</export:value>") + "e, a " +
+                    "maksimalno "+ StringUtils.substringBetween(to_pay_max_35, "<export:value>", "</export:value>") +" (za cl.35 st.1 ZOBSNP). \n\n";
+        }
+        String to_pay_min_44 = StringUtils.substringBetween(fileContent, "<export:to_pay_min_44", "</export:to_pay_min_44");
+        String to_pay_max_44 = StringUtils.substringBetween(fileContent, "<export:to_pay_max_44", "</export:to_pay_max_44");
+        if (to_pay_min_44 != null && to_pay_min_44.contains(provenPositive) && to_pay_max_44 != null && to_pay_max_44.contains(provenPositive)) {
+            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min_44, "<export:value>", "</export:value>") + "e, a " +
+                    "maksimalno "+ StringUtils.substringBetween(to_pay_max_44, "<export:value>", "</export:value>") +" (za cl.44 ZOBSNP). \n\n";
+        }
+        String to_pay_min_97 = StringUtils.substringBetween(fileContent, "<export:to_pay_min_97", "</export:to_pay_min_97");
+        String to_pay_max_97 = StringUtils.substringBetween(fileContent, "<export:to_pay_max_97", "</export:to_pay_max_97");
+        if (to_pay_min_97 != null && to_pay_min_97.contains(provenPositive) && to_pay_max_97 != null && to_pay_max_97.contains(provenPositive)) {
+            retVal += "Okrivljeni je duzan da plati minimalno " + StringUtils.substringBetween(to_pay_min_97, "<export:value>", "</export:value>") + "e, a " +
+                    "maksimalno "+ StringUtils.substringBetween(to_pay_max_97, "<export:value>", "</export:value>") +" (za cl.97 st.3 ZOBSNP). \n\n";
         }
 
-        String to_pay_max = StringUtils.substringBetween(fileContent, "<export:to_pay_max", "</export:to_pay_max");
-        if (to_pay_max != null && to_pay_max.contains(provenPositive)) {
-            retVal += "Okrivljeni je duzan da plati maksimalno " + StringUtils.substringBetween(to_pay_max, "<export:value>", "</export:value>") + "e. \n\n";
+        String min_imprisonment = StringUtils.substringBetween(fileContent, "<export:min_imprisonment", "</export:min_imprisonment");
+        if (min_imprisonment != null && min_imprisonment.contains(provenPositive)) {
+            retVal += "Okrivljenom se izrice minimalna zatvorska kazna od " + StringUtils.substringBetween(min_imprisonment, "<export:value>", "</export:value>") + " godine. \n\n";
         }
+
 
         String max_imprisonment = StringUtils.substringBetween(fileContent, "<export:max_imprisonment", "</export:max_imprisonment");
         if (max_imprisonment != null && max_imprisonment.contains(provenPositive)) {
             retVal += "Okrivljenom se izrice maksimalna zatvorska kazna od " + StringUtils.substringBetween(max_imprisonment, "<export:value>", "</export:value>") + " godine. \n\n";
         }
-
-        String min_imprisonment = StringUtils.substringBetween(fileContent, "<export:min_imprisonment", "</export:min_imprisonment");
-        if (min_imprisonment != null && max_imprisonment.contains(provenPositive)) {
-            retVal += "Okrivljenom se izrice minimalna zatvorska kazna od " + StringUtils.substringBetween(min_imprisonment, "<export:value>", "</export:value>") + " godine. \n\n";
-        }
-
 
         if (retVal.isEmpty()) {
             retVal = "Nema poklapanja sa definisanim pravilima.";

@@ -27,7 +27,8 @@ public class DrDeviceController {
         try{
             return drDeviceService.startDrDevice(caseDto);
         }catch (Exception e){
-            return "sdsd";
+            e.printStackTrace();
+            return "";
         }
 
     }
