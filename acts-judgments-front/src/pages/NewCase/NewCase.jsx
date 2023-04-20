@@ -8,7 +8,7 @@ import styles from "./NewCase.module.css";
 const NewCase = () => {
   const [showSimilarCases, setShowSimilarCases] = useState(true);
   const [similarCases, setSimilarCases] = useState([]);
-  const [odluka, setOdluka] = useState("");
+  const [odluka, setOdluka] = useState([]);
 
   function handleSubmit(e, form) {
     e.preventDefault();

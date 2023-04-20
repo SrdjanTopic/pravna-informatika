@@ -254,7 +254,7 @@ public class DrDeviceService {
         if (retVal.isEmpty()) {
             retVal.add("Nema poklapanja sa definisanim pravilima.");
         }
-
+        retVal.forEach(System.out::println);
         return retVal;
     }
 }

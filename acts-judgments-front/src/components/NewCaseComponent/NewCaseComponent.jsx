@@ -385,7 +385,8 @@ const NewCaseComponent = ({
           >
             Predloži odluku
           </button>
-          {odluka != "" && <p>{odluka}</p>}
+          {odluka.length > 0 &&
+            odluka.map((prijedlozi, index) => <p key={index}>{prijedlozi}</p>)}
         </div>
 
         <div className={styles.elements}>
