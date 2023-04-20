@@ -9,7 +9,12 @@ import {
 import styles from "./NewCaseComponent.module.css";
 import Input from "./parts/Input/Input";
 import Select from "./parts/Select/Select";
-const NewCaseComponent = ({ handleSubmit, handleDodajSlucaj }) => {
+const NewCaseComponent = ({
+  handleSubmit,
+  handleDodajSlucaj,
+  handlePredloziOdluku,
+  odluka,
+}) => {
   const [isOsudjivan, setIsOsudjivan] = useState(false);
   const [selectedZakonPropis, setSelectedZakonPropis] = useState("");
   const [selectedZakonPrekrsaj, setSelectedZakonPrekrsaj] = useState("");
@@ -328,6 +333,61 @@ const NewCaseComponent = ({ handleSubmit, handleDodajSlucaj }) => {
           </div>
         </div>
         <button>Nađi slične presude</button>
+
+        <div className={styles.predlogOdluke}>
+          <button
+            type="button"
+            onClick={() => {
+              handlePredloziOdluku({
+                poslovniBroj: poslovniBroj.current.value,
+                sud: sud.current.innerText,
+                sudija: sudija.current.value,
+                okrivljeni: okrivljeni.current.value,
+                tuzilac: tuzilac.current.value,
+                datum: reshapeDateStringFormat(datum.current.value),
+                osudjivan: osudjivan.current.innerText === "Da" ? true : false,
+                imovnoStanje: imovnoStanje.current.innerText,
+                brojOsudjivanja:
+                  osudjivan.current.innerText === "Da"
+                    ? parseInt(brOsudjivanja.current.value)
+                    : 0,
+                primijenjeniPropisi: primenjeniPropisi,
+                prekrseniPropisi: primenjeniPrekrsaji,
+                krivicnoDjelo: `cl.${clanKrivDjelo.current.value} ${
+                  stavKrivDjelo.current.value !== "0"
+                    ? "st.".concat(stavKrivDjelo.current.value)
+                    : ""
+                } ${zakonKrivDjelo.current.innerText}`,
+                radnjeBezPrethodnogUvjerenja: Array.prototype.slice
+                  .call(radnjeBezPrethodnogUvjerenja.current.children)
+                  .map((element) => {
+                    if (element.lastChild.checked)
+                      return element.lastChild.value;
+                  })
+                  .filter(Boolean),
+                radnjeBezPrilagodjavanjaBrzine: Array.prototype.slice
+                  .call(radnjeBezPrilagodjavanjaBrzine.current.children)
+                  .map((element) => {
+                    if (element.lastChild.checked)
+                      return element.lastChild.value;
+                  })
+                  .filter(Boolean),
+                ugrozenSaobracaj: extractUgrozenSaobracaj(
+                  ugrozenSaobracaj.current.innerText
+                ),
+                nedozvoljenoPolukruznoOkretanje:
+                  nedozvoljenoPolukruznoOkretanje,
+                prekrsenaPravilaNaRaskrsnici: prekrsenaPravilaNaRaskrsnici,
+                prekrsenoKretanjeDesnomStranom: prekrsenoKretanjeDesnomStranom,
+                vrstaPresude: vrstaPresude.current.innerText,
+              });
+            }}
+          >
+            Predloži odluku
+          </button>
+          {odluka != "" && <p>{odluka}</p>}
+        </div>
+
         <div className={styles.elements}>
           <div className={styles.bigWrap}>
             <h4>Krivično djelo</h4>
