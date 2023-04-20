@@ -339,21 +339,90 @@ public class JudgmentService {
             finalPropisi.forEach(System.out::println);
         } else System.out.print("---\n");
 
-        System.out.print("Tjelesne povrede: ");
+        System.out.print("Ugrozen saobracaj: ");
+        String ugrozenSaobracaj = "";
+        Pattern svjestanPattern = Pattern.compile("(pristao)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = svjestanPattern.matcher(propisiString);
+        if (matcher.find()) {
+            ugrozenSaobracaj = ugrozenSaobracaj.concat("svjesno");
+        } else ugrozenSaobracaj = ugrozenSaobracaj.concat("nehat");
+
         Pattern vrstePovredePattern = Pattern.compile("(lak|tešk)[a-z][ \\n\\r,]*tjelesn", Pattern.DOTALL | Pattern.MULTILINE);
         matcher = vrstePovredePattern.matcher(propisiString);
         if (matcher.find()) {
             if (matcher.group(1).equals("lak")) {
-                System.out.println("lake");
-               // caseDescription.setTjelesnePovrede("lake");
+                ugrozenSaobracaj = ugrozenSaobracaj.concat(" lake");
             } else {
-                System.out.println("teske");
-               // caseDescription.setTjelesnePovrede("teske");
+                ugrozenSaobracaj = ugrozenSaobracaj.concat(" teske");
             }
         } else System.out.print("---\n");
+        System.out.println(ugrozenSaobracaj);
+        caseDescription.setUgrozenSaobracaj(ugrozenSaobracaj);
+
+        System.out.print("Prekrseno kretanje desnom stranom : ");
+        Pattern prekrsenoKretanjeDesnomStranom = Pattern.compile("(desnom stranom kolovoza)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = prekrsenoKretanjeDesnomStranom.matcher(propisiString);
+        if (matcher.find()) {
+            caseDescription.setPrekrsenoKretanjeDesnomStranom(true);
+            System.out.println("Da");
+        } else {
+            caseDescription.setPrekrsenoKretanjeDesnomStranom(false);
+            System.out.println("Ne");
+        }
+
+        System.out.print("Nedozvoljeno Polukruzno Okretanje : ");
+        Pattern nedozvoljenoPolukruznoOkretanje = Pattern.compile("(polukružno)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = nedozvoljenoPolukruznoOkretanje.matcher(propisiString);
+        if (matcher.find()) {
+            caseDescription.setNedozvoljenoPolukruznoOkretanje(true);
+            System.out.println("Da");
+        } else {
+            caseDescription.setNedozvoljenoPolukruznoOkretanje(false);
+            System.out.println("Ne");
+        }
+
+        System.out.print("Vozac se nije prdrzavao pravila na raskrsnici : ");
+        Pattern prekrsenaPravilaNaRaskrsnici = Pattern.compile("(raskrsni.*) [\\n\\r ,.]*(prvenst)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = prekrsenaPravilaNaRaskrsnici.matcher(propisiString);
+        if (matcher.find()) {
+            caseDescription.setPrekrsenaPravilaNaRaskrsnici(true);
+            System.out.println("Da");
+        } else {
+            caseDescription.setPrekrsenaPravilaNaRaskrsnici(false);
+            System.out.println("Ne");
+        }
+
+        System.out.print("Vozac nije prilagodio brzinu: ");
+        List<String> radnjeBezPrilagodjavanjaBrzine = new ArrayList<>();
+        Pattern pjesackiPattern = Pattern.compile("(pješačkog prelaza)|(pješačkom prelazu)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = pjesackiPattern.matcher(propisiString);
+        if (matcher.find())
+            radnjeBezPrilagodjavanjaBrzine.add("pred pjesacki");
+        Pattern stanjePutaPattern = Pattern.compile("(prilago.*) [\\n\\r ,.]*(stanj)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = stanjePutaPattern.matcher(propisiString);
+        if (matcher.find())
+            radnjeBezPrilagodjavanjaBrzine.add("prema stanju puta");
+
+        caseDescription.setRadnjeBezPrilagodjavanjaBrzine(radnjeBezPrilagodjavanjaBrzine);
+        radnjeBezPrilagodjavanjaBrzine.forEach(System.out::println);
+
+        System.out.print("Vozac nije prilagodio brzinu: ");
+        List<String> slicnostRadnjiBezPrethodnogUvjerenja = new ArrayList<>();
+        Pattern uSaobracajuPattern = Pattern.compile("(prethodno nije uvjerio)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = uSaobracajuPattern.matcher(propisiString);
+        if (matcher.find())
+            slicnostRadnjiBezPrethodnogUvjerenja.add("u saobracaju");
+        Pattern priUkljucenjuUSaobracajPattern = Pattern.compile("(uključi)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = priUkljucenjuUSaobracajPattern.matcher(propisiString);
+        if (matcher.find())
+            slicnostRadnjiBezPrethodnogUvjerenja.add("pri ukljucenju u saobracaj");
+
+        caseDescription.setRadnjeBezPrilagodjavanjaBrzine(slicnostRadnjiBezPrethodnogUvjerenja);
+        slicnostRadnjiBezPrethodnogUvjerenja.forEach(System.out::println);
+
 
         System.out.print("_____________\n");
-
+//        System.out.print(propisiString);
         return caseDescription;
     }
 
