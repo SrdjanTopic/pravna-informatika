@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/cbr")
+@RequestMapping("/dr-device")
 public class DrDeviceController {
 
     @Autowired
@@ -23,12 +24,12 @@ public class DrDeviceController {
 
     @PostMapping(value="/recommend-by-rules",produces = {
             MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
-    public String recommendByRules(@RequestBody SimilarCaseDto caseDto) {
+    public List<String> recommendByRules(@RequestBody SimilarCaseDto caseDto) {
         try{
             return drDeviceService.startDrDevice(caseDto);
         }catch (Exception e){
             e.printStackTrace();
-            return "";
+            return new ArrayList<>();
         }
 
     }
