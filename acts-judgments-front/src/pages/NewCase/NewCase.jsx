@@ -8,6 +8,7 @@ import styles from "./NewCase.module.css";
 const NewCase = () => {
   const [showSimilarCases, setShowSimilarCases] = useState(true);
   const [similarCases, setSimilarCases] = useState([]);
+  const [odluka, setOdluka] = useState("");
 
   function handleSubmit(e, form) {
     e.preventDefault();
@@ -37,11 +38,24 @@ const NewCase = () => {
       })
       .catch((err) => console.log(err));
   }
+
+  function handlePredloziOdluku(caseInfo) {
+    console.log(caseInfo);
+    axios
+      .post("http://localhost:8080/dr-device/recommend-by-rules", caseInfo)
+      .then((res) => {
+        console.log(res.data);
+        setOdluka(res.data);
+      })
+      .catch((err) => console.log(err));
+  }
   return (
     <div className={styles.wrapper}>
       <NewCaseComponent
+        handlePredloziOdluku={handlePredloziOdluku}
         handleSubmit={handleSubmit}
         handleDodajSlucaj={handleDodajSlucaj}
+        odluka={odluka}
       />
       {showSimilarCases && (
         <SimilarCasesComponent similarCases={similarCases} />

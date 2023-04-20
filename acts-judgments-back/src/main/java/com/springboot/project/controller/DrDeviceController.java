@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/cbr")
+@RequestMapping("/dr-device")
 public class DrDeviceController {
 
     @Autowired
