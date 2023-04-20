@@ -49,7 +49,7 @@
     <header>
       <judge refersTo="#mijuskovic-stamatovic">Larisa Mijušković-Stamatović</judge>
       <party refersTo="#mm" as="#Defendant">G.B.</party>
-      <party refersTo="#odtpg" as="#Plaintiff">Osnovno državno tužilaštvo u Podgorici</party>
+      <party refersTo="#mv" as="#Plaintiff">Mihailović Vladan</party>
       <neutralCitation>[2017] OSPG K 61</neutralCitation>
       <courtType>Basic Court</courtType>
     </header>
@@ -62,8 +62,8 @@
         <p>
           OSNOVNI SUD U PODGORICI kao prvostepeni, krivični, po sudiji <judge id="jud01" refersTo="#mijuskovic-stamatovic">Larisi Mijušković- Stamatović</judge> , uz učešće Valentine Vukašinović, kao zapisničara u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#gb" as="#Defendant">G.B.</party> iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu<party id="p2" refersTo="#odtpg" as="#Plaintiff"> ODT-a Podgorica</party>
-          <ref href="/me/judgment/os-pg/2016-02-03/kt-1010-15">Kt.br. 1010/15</ref> od <date date="2016-02-03">03.02.2016.</date> godine, kojeg je na glavnom pretresu zastupao Mihailović Vladan , savjetnik na radu kod ODT-a Podgorica, nakon glavnog i javnog pretresa održanog dana <date date="2016-05-31">31.05.2016.</date> godine u prisustvu stranaka, donio je, a dana <date date="2016-06-03">03.06.2016.</date> godine i javno objavio,
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, odlučujući po optužnom predlogu ODT-a Podgorica
+          <ref href="/me/judgment/os-pg/2016-02-03/kt-1010-15">Kt.br. 1010/15</ref> od <date date="2016-02-03">03.02.2016.</date> godine, kojeg je na glavnom pretresu zastupao <party id="p2" refersTo="#mv" as="#Plaintiff">Mihailović Vladan</party> , savjetnik na radu kod ODT-a Podgorica, nakon glavnog i javnog pretresa održanog dana <date date="2016-05-31">31.05.2016.</date> godine u prisustvu stranaka, donio je, a dana <date date="2016-06-03">03.06.2016.</date> godine i javno objavio,
         </p>
         <p style="text-align: center;">
           PRESUDU
@@ -98,7 +98,7 @@
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>,
         </p>
         <p>
-          - pa mu Sud, primjenom citiranog zakonskog propisa, te <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan3">čl.3</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan4">4</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan5">5</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan15">15</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan16">16</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan32">32</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan33">33</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan36">36</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan42">42</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan52">52</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan53">53</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan54">54 Krivičnog Zakonika Crne Gore</ref>, te čl. 226, 227, 229 i 374 Zakonika o krivičnom postupku izriče
+          - pa mu Sud, primjenom citiranog zakonskog propisa, te <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan3">čl.3</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan4">4</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan5">5</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan13">13</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan16">16</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan32">32</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan33">33</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan36">36</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan42">42</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan52">52</ref>, <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan53">53</ref> i <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan54">54</ref> Krivičnog Zakonika Crne Gore, te čl. 226, 227, 229 i 374 Zakonika o krivičnom postupku izriče
         </p>
         <p style="text-align: center;">
           USLOVNU OSUDU

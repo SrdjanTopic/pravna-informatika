@@ -41,6 +41,10 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
             <b>{judgmentDescription.poslovniBroj}</b>
           </div>
           <div className={styles.textWrapper}>
+            <p>{`Datum: `}</p>
+            <b>{judgmentDescription.datum}</b>
+          </div>
+          <div className={styles.textWrapper}>
             <p>{`Sud: `}</p>
             <b>{judgmentDescription.sud}</b>
           </div>
