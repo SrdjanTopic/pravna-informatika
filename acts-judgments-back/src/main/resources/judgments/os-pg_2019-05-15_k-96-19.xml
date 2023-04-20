@@ -50,7 +50,7 @@
     <header>
       <judge refersTo="#cetkovic">Rade Ćetković</judge>
       <party refersTo="#sz" as="#Defendant">S.Z.</party>
-      <party refersTo="#ta" as="#Plaintiff">Osnovno državno tužilaštvo Podgorica</party>
+      <party refersTo="#odtpg" as="#Plaintiff">Osnovno državno tužilaštvo u Podgorici</party>
       <lawyer refersTo="#mb" as="#DefendantLawyer">Marice Babović</lawyer>
       <neutralCitation>[2019] OSPG K 96</neutralCitation>
       <courtType>Basic Court</courtType>

@@ -49,7 +49,7 @@
     <header>
       <judge refersTo="#andjelic">Anđelić Mihailo</judge>
       <party refersTo="#zm" as="#Defendant">Z.M.</party>
-      <party refersTo="#gi" as="#Plaintiff">Gačević Ivan</party>
+      <party refersTo="#odtpv" as="#Plaintiff">Osnovno državno tužilaštvo Pljevlja</party>
       <neutralCitation>[2022] OSzb K 14</neutralCitation>
       <courtType>Basic Court</courtType>
     </header>
@@ -62,7 +62,7 @@
         <p>
           OSNOVNI SUD U ŽABLJAKU, kao prvostepeni krivični, po predsjedniku suda <judge id="jud01" refersTo="#andjelic">Anđelić Mihailu</judge> , uz sudjelovanje zapisničara Knežević Ranke, u krivičnom predmetu protiv okrivljenog <party id="p1" refersTo="#zm" as="#Defendant">Z. M.</party> iz Ž., zbog krivičnog djela Ugrožavanje javnog saobraćaja iz <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339">čl. 339</ref>
           <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore (KZ CG)</ref>, po optužnom predlogu ODT iz Pljevalja Kt.br.122/21 od <date date="2021-09-16">16.09.2021.</date>godine, nakon usmenog, javnog i glavnog pretresa održanog <date date="2021-10-04">04.10.2021.</date>godine u prisustvu ODT iz Pljevalja <party id="p2" refersTo="#gi" as="#Plaintiff">Gačević Ivana</party> , okrivljenog i oštećenog Sokić Vukote iz Pljevalja, donio je i istog dana u odsustvu stranaka javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore (KZ CG)</ref>, po optužnom predlogu  <party id="p2" refersTo="#odtpv" as="#Plaintiff"> ODT iz Pljevalja </party>Kt.br.122/21 od <date date="2021-09-16">16.09.2021.</date>godine, nakon usmenog, javnog i glavnog pretresa održanog <date date="2021-10-04">04.10.2021.</date>godine u prisustvu ODT iz Pljevalja Gačević Ivana , okrivljenog i oštećenog Sokić Vukote iz Pljevalja, donio je i istog dana u odsustvu stranaka javno objavio
         </p>
         <p style="text-align: center;">
           P R E S U D U

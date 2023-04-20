@@ -49,7 +49,7 @@
     <header>
       <judge refersTo="#spasojevic">Tamara Spasojević</judge>
       <party refersTo="#ra" as="#Defendant">R.A.</party>
-      <party refersTo="#djp" as="#Plaintiff">Đikanović Predrag</party>
+      <party refersTo="#odtbr" as="#Plaintiff">Osnovno državno tužilaštvo u Baru</party>
       <neutralCitation>[2020] OSBR K 177</neutralCitation>
       <courtType>Basic Court</courtType>
     </header>
@@ -61,7 +61,7 @@
         </p>
         <p>
           OSNOVNI SUD U BARU, kao prvostepeni krivični, sudija <judge id="jud01" refersTo="#spasojevic">Tamara Spasojević</judge> , kao sudija pojedinac, sa zapisničarom Anom Stanišić, u krivičnom predmetu okrivljenog <party id="p1" refersTo="#ra" as="#Defendant">R. A.</party> , zbog krivičnog djela ugrožavanje javnog saobraćaja <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav03">st. 3</ref> u vezi <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml#clan339-stav01">st. 1</ref>
-          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu Osnovnog državnog tužilaštva u Baru Kt br. 369/20 od <date date="2020-07-06">06.07.2020.</date>godine, nakon održanog glavnog javnog pretresa u prisustvu zastupnika optužbe <party id="p2" refersTo="#djp" as="#Plaintiff">Đikanović Predraga</party> savjetnika kod Osnovnog državnog tužilaštva u Baru, a u odsustvu okrivljenog, <date date="2020-07-29">dana 29.07.2020.</date> godine donio je i javno objavio
+          <ref href="/akn/me/act/2003-12-25/70-2003/cnr@/main.xml">Krivičnog zakonika Crne Gore</ref>, po optužnom predlogu Osnovnog državnog tužilaštva u Baru Kt br. 369/20 od <date date="2020-07-06">06.07.2020.</date>godine, nakon održanog glavnog javnog pretresa u prisustvu zastupnika optužbe Đikanović Predraga savjetnika kod <party id="p2" refersTo="#odtbr" as="#Plaintiff">Osnovnog državnog tužilaštva u Baru</party>, a u odsustvu okrivljenog, <date date="2020-07-29">dana 29.07.2020.</date> godine donio je i javno objavio
         </p>
         <p style="text-align: center;">
           PRESUDU
