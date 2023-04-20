@@ -163,3 +163,21 @@ i {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.predlogOdluke {
+  padding: 0rem 1rem 1rem 1rem;
+  width: 90%;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 1rem;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.predlogOdluke button {
+  background-color: hsl(0, 0%, 60%);
+}
+.predlogOdluke button:hover {
+  background-color: hsl(0, 0%, 50%);
+}
