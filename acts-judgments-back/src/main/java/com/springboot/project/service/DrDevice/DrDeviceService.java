@@ -188,7 +188,7 @@ public class DrDeviceService {
         String commited_cl339_st3 = StringUtils.substringBetween(fileContent, "<export:commited_cl339_st3", "</export:commited_cl339_st3>");
         if (commited_cl339_st3 != null && commited_cl339_st3.contains(provenPositive)) {
             retVal += "Okrivljeni je optužen za ugrozavanje javnog saobracaja i dovodjenje u opasnost zivot ljudi "  +
-                    "pri cemu je uzrokovao lake tjelesne povrede, ali je to ucinio iz nehata (cl.339 st.1 KZ) \n\n";
+                    "pri cemu je uzrokovao lake tjelesne povrede, ali je to ucinio iz nehata (cl.339 st.3 KZ) \n\n";
         }
         String commited_cl348_st1 = StringUtils.substringBetween(fileContent, "<export:commited_cl348_st1", "</export:commited_cl348_st1>");
         if (commited_cl348_st1 != null && commited_cl348_st1.contains(provenPositive)) {
