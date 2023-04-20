@@ -7,6 +7,7 @@ import Motivation from "./parts/Motivation/Motivation";
 import Meta from "./parts/Meta/Meta";
 
 const JudgmentComponent = ({ judgment, judgmentDescription }) => {
+  console.log(judgmentDescription);
   return (
     <div className={styles.judmgnentWrapper}>
       <div className={styles.judgmentMain}>
@@ -65,7 +66,7 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
           </div>
           <div className={styles.textWrapper}>
             <p>{`Osuđivan: `}</p>
-            <b>{judgmentDescription.osudjivan}</b>
+            <b>{judgmentDescription.osudjivan === "da" ? "da" : "ne"}</b>
           </div>
           <div className={styles.textWrapper}>
             <p>{`Broj osuđivanja: `}</p>
@@ -82,10 +83,6 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
             <b className={styles.clanZakona}>
               {judgmentDescription.krivicnoDjelo}
             </b>
-          </div>
-          <div className={styles.textWrapper}>
-            <p>{`Tjelesne povrede: `}</p>
-            <b>{judgmentDescription.tjelesnePovrede}</b>
           </div>
           <div className={styles.propisiDiv}>
             <div className={styles.vrstaPropisa}>

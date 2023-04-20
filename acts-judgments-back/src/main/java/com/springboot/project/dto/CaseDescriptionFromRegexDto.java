@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.mindswap.pellet.utils.Bool;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -22,15 +20,15 @@ public class CaseDescriptionFromRegexDto {
     private String tuzilac; //*
     private String okrivljeni; //*
     private String krivicnoDjelo; //*
-    private List<String> prekrseniPropisi =new ArrayList<String>(); //*
-    private List<String> primijenjeniPropisi =new ArrayList<String>(); //*
+    private List<String> prekrseniPropisi =new ArrayList<>(); //*
+    private List<String> primijenjeniPropisi =new ArrayList<>(); //*
     private String vrstaPresude; //*
-    private String ugrozenSaobracaj; //-------
-    private List<String> radnjeBezPrethodnogUvjerenja =new ArrayList<String>(); //----------
-    private List<String> radnjeBezPrilagodjavanjaBrzine =new ArrayList<String>(); //-----------
-    private Boolean nedozvoljenoPolukruznoOkretanje;
-    private Boolean prekrsenaPravilaNaRaskrsnici;
-    private Boolean prekrsenoKretanjeDesnomStranom;
+    private String ugrozenSaobracaj; //*
+    private List<String> radnjeBezPrethodnogUvjerenja = new ArrayList<>(); //*
+    private List<String> radnjeBezPrilagodjavanjaBrzine =new ArrayList<>(); //*
+    private Boolean nedozvoljenoPolukruznoOkretanje; //*
+    private Boolean prekrsenaPravilaNaRaskrsnici; //----------
+    private Boolean prekrsenoKretanjeDesnomStranom; //*
     private Boolean osudjivan; //*
     private Integer brojOsudjivanja; //*
     private String imovnoStanje; //*
