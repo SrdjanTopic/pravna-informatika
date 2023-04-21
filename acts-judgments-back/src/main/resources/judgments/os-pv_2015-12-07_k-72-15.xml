@@ -35,6 +35,7 @@
         <TLCOrganization eId="odtpv" href="/akn/me/ontology/organisation/odtpv" showAs="Osnovno državno tužilaštvo Pljevlja"/>
         <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
         <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="pejovic" href="/akn/me/ontology/person/pejovic" showAs="Branko Pejović"/>
       </references>
       <analysis source="#ospv">
         <judicial>

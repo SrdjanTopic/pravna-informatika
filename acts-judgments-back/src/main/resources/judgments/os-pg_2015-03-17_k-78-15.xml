@@ -31,16 +31,18 @@
         </FRBRManifestation>
       </identification>
       <references source="#ospg">
-        <TLCOrganization eId="ospg" href="https://sudovi.me/ospg" showAs="Osnovni sud u Podgorici"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="ospg" href="/akn/me/ontology/organization/ospg" showAs="Osnovni sud u Podgorici"/>
+        <TLCOrganization eId="odtpg" href="/akn/me/ontology/organization/odtpg" showAs="Osnovno državno tužilaštvo u Podgorici"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="jovovic" href="/akn/me/ontology/person/jovovic" showAs="Jovović Željka"/>
       </references>
       <analysis source="#ospg">
         <judicial>
           <result type="approve"/>
           <supports id="jdc01">
             <source href="#casesReferences"/>
-            <destination href="/me/judgement/os-pg/2015-03-17/k-78-15"/>
+            <destination href="/akn/me/judgement/os-pg/2015-03-17/k-78-15"/>
           </supports>
         </judicial>
       </analysis>

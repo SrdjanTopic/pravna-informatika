@@ -105,15 +105,16 @@ export function getCaseObjectFromString(caseString) {
     primijenjeniPropisi: caseSplit[9].slice(0, -1).split(","),
     vrstaPresude: caseSplit[10],
     ugrozenSaobracaj: caseSplit[11],
-    radnjeBezPrethodnogUvjerenja: caseSplit[12].slice(1, -1).split(","),
-    radnjeBezPilagodjavanjaBrzine: caseSplit[13].slice(1, -1).split(","),
+    radnjeBezPrethodnogUvjerenja: caseSplit[12].slice(0, -1).split(","),
+    radnjeBezPilagodjavanjaBrzine: caseSplit[13].slice(0, -1).split(","),
     nedozvoljenoPolukreuznoOkretanje: caseSplit[14] === 'true' ? "Da" : "Ne",
     prekrsenaPravilaNaRaskrsnici: caseSplit[15] === 'true' ? "Da" : "Ne",
     prekrsenoKretanjeDesnomStranom: caseSplit[16] === 'true' ? "Da" : "Ne",
     osudjivan: caseSplit[17] ? "Da" : "Ne",
     brOsudjivanja: caseSplit[18],
     imovnoStanje: caseSplit[19],
-    slicnost: parseFloat(caseSplit[20].slice(0, 4))
+    kazna:caseSplit[20],
+    slicnost: parseFloat(caseSplit[21].slice(0, 4))
   }
   return caseObject;
 }

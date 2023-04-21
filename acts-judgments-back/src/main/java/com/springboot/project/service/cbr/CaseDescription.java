@@ -25,6 +25,7 @@ public class CaseDescription implements CaseComponent {
     private List<String> prekrseniPropisi = new ArrayList<String>();
     private List<String> primijenjeniPropisi = new ArrayList<String>();
     private String vrstaPresude;
+    private String kazna;
 
     //atributi za slicnost
     private String ugrozenSaobracaj;
@@ -91,7 +92,8 @@ public class CaseDescription implements CaseComponent {
                 + prekrsenoKretanjeDesnomStranom +";"
                 + osudjivan +";"
                 + brojOsudjivanja +";"
-                + imovnoStanje;
+                + imovnoStanje+";"
+                + kazna;
 
     }
 
@@ -121,6 +123,7 @@ public class CaseDescription implements CaseComponent {
         this.osudjivan = description.getOsudjivan();
         this.brojOsudjivanja = description.getBrojOsudjivanja();
         this.imovnoStanje = description.getImovnoStanje();
+        this.kazna=description.getKazna();
 
 
     }

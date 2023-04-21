@@ -31,16 +31,18 @@
         </FRBRManifestation>
       </identification>
       <references source="#oszb">
-        <TLCOrganization eId="oszb" href="https://sudovi.me/oszb" showAs="Osnovni sud u Žabljaku"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="oszb" href="/akn/me/ontology/organisation/oszb" showAs="Osnovni sud u Žabljaku"/>
+        <TLCOrganization eId="odtpv" href="/akn/me/ontology/organisation/odtpv" showAs="Osnovno državno tužilaštvo Pljevlja"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="andjelic" href="/akn/me/ontology/person/pejovic" showAs="Anđelić Mihailo"/>
       </references>
       <analysis source="#oszb">
         <judicial>
           <result type="approve"/>
           <supports id="jdc01">
             <source href="#casesReferences"/>
-            <destination href="/me/judgement/os-zb/2021-10-04/k-14-21"/>
+            <destination href="/akn/me/judgement/os-zb/2021-10-04/k-14-21"/>
           </supports>
         </judicial>
       </analysis>

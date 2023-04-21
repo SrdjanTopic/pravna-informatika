@@ -37,11 +37,11 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
         </div>
         <div className={styles.judmentDescription}>
           <div className={styles.textWrapper}>
-            <p>{`Poslovni broj: `}</p>
+            <p>{` Poslovni broj: `}</p>
             <b>{judgmentDescription.poslovniBroj}</b>
           </div>
           <div className={styles.textWrapper}>
-            <p>{`Datum: `}</p>
+            <p>{` Datum: `}</p>
             <b>{judgmentDescription.datum}</b>
           </div>
           <div className={styles.textWrapper}>
@@ -80,6 +80,73 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
                 : "---"}
             </b>
           </div>
+
+          <div className={styles.line}></div>
+          <div className={styles.textWrapper}>
+            <p>{`Ugržavanje saobraćaja: `}</p>
+            <b>
+              {judgmentDescription.ugrozenSaobracaj === "nehat lake"
+                ? "Iz nehata, izazivajući lake tjelesne povrede":""}
+              {judgmentDescription.ugrozenSaobracaj === "nehat teske"
+                ? "Iz nehata, izazivajući teške tjelesne povrede":""}
+              {judgmentDescription.ugrozenSaobracaj === "svjesno lake"
+                ? "Svjesno, izazivajući lake tjelesne povrede":""}
+              {judgmentDescription.ugrozenSaobracaj === "svjesno teske"
+                ? "Svjesno, izazivajući teške tjelesne povrede":""}
+            </b>
+          </div>
+          <div className={styles.textWrapper}>
+          {judgmentDescription.radnjeBezPrethodnogUvjerenja?.length > 0 &&
+                    judgmentDescription.radnjeBezPrethodnogUvjerenja[0] != "" &&
+                    judgmentDescription.radnjeBezPrethodnogUvjerenja.map(
+                      (radnja, id) => (
+                        <Fragment key={id}>
+                          <p>{`Neuvjeravanje: `}</p>
+                          <b>{`${radnja}`}</b>
+                        </Fragment>
+                      )
+                    )}
+          </div>
+          <div className={styles.textWrapper}>
+          {judgmentDescription.radnjeBezPrilagodjavanjaBrzine?.length > 0 &&
+                    judgmentDescription.radnjeBezPrilagodjavanjaBrzine[0] != "" &&
+                    judgmentDescription.radnjeBezPrilagodjavanjaBrzine.map(
+                      (radnja, id) => (
+                        <Fragment key={id}>
+                          <p>{`Neprilagodjavanje brzine: `}</p>
+                          <b>{`${radnja}`}</b>
+                        </Fragment>
+                      )
+                    )}
+          </div>
+          <div className={styles.textWrapper}>
+          {judgmentDescription.nedozvoljenoPolukruznoOkretanje == true && (
+                    <Fragment>
+                    <p>{`Prekršeno: `}</p>
+                    <b>{`Nedozvoljeno polukružno parkiranje`}</b>
+                  </Fragment>
+                  )}
+          </div>
+          <div className={styles.textWrapper}>
+          {judgmentDescription.prekrsenaPravilaNaRaskrsnici == true && (
+                  <Fragment >
+                  <p>{`Prekršeno: `}</p>
+                  <b>{`Nepridržavanje pravila na raskrsnici`}</b>
+                </Fragment>
+                  )}
+          </div>
+          <div className={styles.textWrapper}>
+          {judgmentDescription.prekrsenoKretanjeDesnomStranom == true && (
+                  <Fragment >
+                  <p>{`Prekršeno: `}</p>
+                  <b>{`Pravilo kretanja desnom stranom`}</b>
+                </Fragment>
+                   
+                  )}
+          </div>
+
+
+         
           <div className={styles.line}></div>
 
           <div className={styles.textWrapper}>
@@ -126,6 +193,10 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
           <div className={styles.textWrapper}>
             <p>{`Vrsta presude: `}</p>
             <b>{judgmentDescription.vrstaPresude}</b>
+          </div>
+          <div className={styles.textWrapper}>
+            <p>{`Kazna: `}</p>
+            <b>{judgmentDescription.kazna}</b>
           </div>
         </div>
       </div>

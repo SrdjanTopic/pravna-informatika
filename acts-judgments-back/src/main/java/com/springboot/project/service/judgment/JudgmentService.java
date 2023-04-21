@@ -1,5 +1,6 @@
 package com.springboot.project.service.judgment;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.springboot.project.dto.CaseDescriptionFromRegexDto;
 import com.springboot.project.service.cbr.CaseDescription;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -91,7 +92,7 @@ public class JudgmentService {
             caseDescription.setSudija(matcher.group(4).substring(0, matcher.group(4).length() - 1).trim());
         } else System.out.print("---\n");
 
-        Pattern tuzilacPattern = Pattern.compile("(Osnovn[a-z \\n\\r]*državno[a-z \\n\\r]*tuži[a-zš \\n\\r]*|ODT-a[ \\n\\r]|ODT-u[ \\n\\r]|ODT[ \\n\\r])([a-z]+[ \\n\\r])*(([A-ZŠĐČĆŽ][a-zšđžćč]{3,}[ \\n\\r])+)", Pattern.DOTALL);
+        Pattern tuzilacPattern = Pattern.compile("(Osnovn[a-z \\n\\r]*državno[a-z \\n\\r]*tuži[a-zš \\n\\r]*|ODT-a[ \\n\\r]|ODT-u[ \\n\\r]|ODT[ \\n\\r])([a-z]+[ \\n\\r])*(([A-ZŠĐČĆŽ][a-zšđžćč]{3,})+)", Pattern.DOTALL);
         matcher = tuzilacPattern.matcher(pdfcontent);
         System.out.print("Tuzilac: ");
         if (matcher.find()) {
@@ -147,10 +148,12 @@ public class JudgmentService {
                 System.out.print("srednje" + "\n");
                 caseDescription.setImovnoStanje("srednje");
             }
+
         } else {
             System.out.print("lose" + "\n");
             caseDescription.setImovnoStanje("lose");
         }
+        caseDescription.setKazna("3 mjeseca");
 
         Pattern krivicnoDjeloPattern = Pattern.compile("(javnog[ \\n\\r]saobraćaja[ \\n\\r]iz)(([ \\n\\r]?([1-9a-zšđžćč.]+)[ \\n\\r]?)+)", Pattern.DOTALL);
         matcher = krivicnoDjeloPattern.matcher(pdfcontent);
@@ -465,7 +468,7 @@ public class JudgmentService {
         File file = new File(ResourceUtils.getFile("classpath:testPresude.csv/").toURI());
         try {
             FileWriter myWriter = new FileWriter(file);
-            myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;;Prekrseno kretanje desnom stranom;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
+            myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;;Prekrseno kretanje desnom stranom;Osudjivan;#Broj osudjivanja;Imovno stanje;Kazna\n");
             cases.forEach(caseDescription -> {
                 try {
                     myWriter.write(caseDescription.toString() + "\n");
@@ -514,6 +517,8 @@ public class JudgmentService {
                 caseDescription.setBrojOsudjivanja(Integer.parseInt(values[18]));
                 caseDescription.setImovnoStanje(values[19]);
 
+                caseDescription.setKazna(values[20]);
+
                 cases.add(caseDescription);
             }
             br.close();
@@ -523,7 +528,7 @@ public class JudgmentService {
             File file = new File(ResourceUtils.getFile("classpath:testPresude.csv/").toURI());
             try {
                 FileWriter myWriter = new FileWriter(file);
-                myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;;Prekrseno kretanje desnom stranom;Osudjivan;#Broj osudjivanja;Imovno stanje\n");
+                myWriter.write("#id;Sud;Poslovni broj;Datum;Sudija;Tuzilac;Okrivljeni;Krivicno djelo;Prekrseni propisi;Primijenjeni propisi;Vrsta presude;Ugrozen saobracaj;Radnje bez prethodnog uvjerenja;Radnje bez prilagodjavanja brzine;Nedozvoljeno polukruzno okretanje;Prekrsena pravila na raskrsnici;;Prekrseno kretanje desnom stranom;Osudjivan;#Broj osudjivanja;Imovno stanje;Kazna\n");
                 cases.forEach(caseDescription -> {
                     try {
                         myWriter.write(caseDescription.toString() + "\n");

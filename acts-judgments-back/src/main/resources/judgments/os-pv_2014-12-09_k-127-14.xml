@@ -31,16 +31,18 @@
         </FRBRManifestation>
       </identification>
       <references source="#ospv">
-        <TLCOrganization eId="ospv" href="https://sudovi.me/ospv" showAs="Osnovni sud u Pljevljima"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="ospv" href="/akn/me/ontology/organisation/ospv" showAs="Osnovni sud u Pljevljima"/>
+        <TLCOrganization eId="odtpv" href="/akn/me/ontology/organisation/odtpv" showAs="Osnovno državno tužilaštvo Pljevlja"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="popovic" href="/akn/me/ontology/person/popovic" showAs="Ljiljana Popović"/>
       </references>
       <analysis source="#ospv">
         <judicial>
           <result type="approve"/>
           <supports id="jdc01">
             <source href="#casesReferences"/>
-            <destination href="/me/judgement/os-pv/2014-12-09/k-127-14"/>
+            <destination href="/akn/me/judgement/os-pv/2014-12-09/k-127-14"/>
           </supports>
         </judicial>
       </analysis>

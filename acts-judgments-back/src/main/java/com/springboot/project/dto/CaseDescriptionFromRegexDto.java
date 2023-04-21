@@ -32,5 +32,6 @@ public class CaseDescriptionFromRegexDto {
     private Boolean osudjivan; //*
     private Integer brojOsudjivanja; //*
     private String imovnoStanje; //*
+    private String kazna;
 
 }

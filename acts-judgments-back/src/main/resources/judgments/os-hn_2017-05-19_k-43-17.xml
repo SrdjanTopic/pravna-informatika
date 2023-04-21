@@ -31,16 +31,18 @@
         </FRBRManifestation>
       </identification>
       <references source="#oshn">
-        <TLCOrganization eId="oshn" href="https://sudovi.me/oshn" showAs="Osnovni sud u Herceg Novom"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="oshn" href="/akn/me/ontology/organization/oshn" showAs="Osnovni sud u Herceg Novom"/>
+        <TLCOrganization eId="odthn" href="/akn/me/ontology/organization/odthn" showAs="Osnovno državno tužilaštvo Herceg Novi"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="dabetic" href="/akn/me/ontology/person/dabetic" showAs="Dabetić Zorica"/>
       </references>
       <analysis source="#oshn">
         <judicial>
           <result type="approve"/>
           <supports id="jdc01">
             <source href="#casesReferences"/>
-            <destination href="/me/judgement/os-hn/2017-05-19/k-43-17"/>
+            <destination href="/akn/me/judgement/os-hn/2017-05-19/k-43-17"/>
           </supports>
         </judicial>
       </analysis>

@@ -31,16 +31,18 @@
         </FRBRManifestation>
       </identification>
       <references source="#osnk">
-        <TLCOrganization eId="osnk" href="https://sudovi.me/osnk" showAs="Osnovni sud u Nikšiću"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="osnk" href="/akn/me/ontology/organization/osnk" showAs="Osnovni sud u Nikšiću"/>
+        <TLCOrganization eId="odtnk" href="/akn/me/ontology/organization/odtnk" showAs="Osnovno državno tužilaštvo Nikšić"/>
+        <TLCRole eId="editor" href="/akn/me//ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me//ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="perovic" href="/akn/me/ontology/person/perovic" showAs="Perović Ivan"/>
       </references>
       <analysis source="#osnk">
         <judicial>
           <result type="approve"/>
           <supports id="jdc01">
             <source href="#casesReferences"/>
-            <destination href="/me/judgement/os-nk/2014-10-28/k-405-14"/>
+            <destination href="/akn/me/judgement/os-nk/2014-10-28/k-405-14"/>
           </supports>
         </judicial>
       </analysis>

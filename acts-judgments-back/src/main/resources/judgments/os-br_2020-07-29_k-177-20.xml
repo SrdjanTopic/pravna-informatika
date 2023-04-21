@@ -31,16 +31,18 @@
         </FRBRManifestation>
       </identification>
       <references source="#osbr">
-        <TLCOrganization eId="osbr" href="https://sudovi.me/osbr" showAs="Osnovni sud u Baru"/>
-        <TLCRole eId="editor" href="/ontology/role/editor" showAs="Editor"/>
-        <TLCRole eId="author" href="/ontology/role/author" showAs="Author"/>
+        <TLCOrganization eId="osbr" href="/akn/me/ontology/organization/osbr" showAs="Osnovni sud u Baru"/>
+        <TLCOrganization eId="odtbr" href="/akn/me/ontology/organization/odtbr" showAs="Osnovno državno tužilaštvo u Baru"/>
+        <TLCRole eId="editor" href="/akn/me/ontology/role/editor" showAs="Editor"/>
+        <TLCRole eId="author" href="/akn/me/ontology/role/author" showAs="Author"/>
+        <TLCPerson eId="spasojevic" href="/akn/me/ontology/person/spasojevic" showAs="Tamara Spasojevic"/>
       </references>
       <analysis source="#osbr">
         <judicial>
           <result type="approve"/>
           <supports id="jdc01">
             <source href="#casesReferences"/>
-            <destination href="/me/judgement/os-br/2020-07-29/k-177-20"/>
+            <destination href="/akn/me/judgement/os-br/2020-07-29/k-177-20"/>
           </supports>
         </judicial>
       </analysis>
