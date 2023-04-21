@@ -443,9 +443,47 @@ public class JudgmentService {
             System.out.println(datStr);
         }
         else System.out.println("---");
-        
+
+        if (pdfcontent.contains("USLOVNU OSUDU"))
+            idxfrom = pdfcontent.indexOf("USLOVNU OSUDU") + "USLOVNU OSUDU".length();
+        if (pdfcontent.contains("O S U Đ U J E"))
+            idxfrom = pdfcontent.indexOf("O S U Đ U J E") + "O S U Đ U J E".length();
+
+        String kaznaParagraph = pdfcontent.substring(idxfrom);
+//        System.out.println(kaznaParagraph);
+
+        System.out.print("Kazna: ");
+        Pattern kaznaPattern = Pattern.compile("(([0-9,]*)[ ]?\\([\\\\\\\\// A-z]*\\) ?[A-z]*€?)", Pattern.DOTALL | Pattern.MULTILINE);
+        matcher = kaznaPattern.matcher(kaznaParagraph);
+        String kazna1God = " ukoliko okrivljeni izvrsi krivicno djelo u roku od 1 (jedne) godine";
+        String kazna2God = " ukoliko okrivljeni izvrsi krivicno djelo u roku od 2 (dvije) godine";
+        if (matcher.find()) {
+            if(caseDescription.getVrstaPresude().equals("uslovna")){
+                if(matcher.group(1).contains("dan")){
+                    caseDescription.setKazna("kazna zatvora od ".concat(matcher.group(1)).concat(kazna1God));
+                    System.out.println("kazna zatvora od ".concat(matcher.group(1)).concat(kazna1God));
+                } else if(Integer.parseInt(matcher.group(2))<=3){
+                    caseDescription.setKazna("kazna zatvora od ".concat(matcher.group(1)).concat(kazna1God));
+                    System.out.println("kazna zatvora od ".concat(matcher.group(1)).concat(kazna1God));
+                }
+                else{
+                    caseDescription.setKazna("kazna zatvora od ".concat(matcher.group(1)).concat(kazna2God));
+                    System.out.println("kazna zatvora od ".concat(matcher.group(1)).concat(kazna2God));
+                }
+            } else{
+                if(matcher.group(1).contains("€")){
+                    caseDescription.setKazna("novcana kazna od ".concat(matcher.group(1)));
+                    System.out.println("novcana kazna od ".concat(matcher.group(1)));
+                }else{
+                    caseDescription.setKazna("kazna rada u javnom interesu od ".concat(matcher.group(1)).concat("časova"));
+                    System.out.println("kazna rada u javnom interesu od ".concat(matcher.group(1)).concat("časova"));
+                }
+            }
+        } else System.out.print("---\n");
 
         System.out.print("_____________\n");
+
+//        System.out.println(pdfStripper.getText(document));
         document.close();
         return caseDescription;
     }
