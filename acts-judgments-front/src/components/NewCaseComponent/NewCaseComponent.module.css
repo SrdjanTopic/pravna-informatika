@@ -8,6 +8,7 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .formElements {
@@ -63,7 +64,7 @@ input:focus {
 }
 
 .dodajBtn {
-  margin: 0;
+  margin:0;
   border: 2px solid hsl(42, 61%, 50%);
   color: hsl(42, 61%, 50%);
   background-color: white;

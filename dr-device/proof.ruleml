@@ -11,11 +11,11 @@
 <Ind uri='&proof-export;proof1'>proof1</Ind>
 </oid>
 <Literal>
-<RDF_resource uri='&export;commited_cl339_st11'/>
+<RDF_resource uri='&export;commited_cl27_st11'/>
 </Literal>
 <Defeasible_Proof>
 <supportive_rule>
-<rule_ref rule='&rulebase;rule_cl339_st1_injury'/>
+<rule_ref rule='&rulebase;rule_cl27_st1'/>
 </supportive_rule>
 <defeasible_body_grounds>
 <Definitely_Proved>
@@ -53,11 +53,121 @@
 <Ind uri='&proof-export;proof2'>proof2</Ind>
 </oid>
 <Literal>
+<RDF_resource uri='&export;commited_cl411'/>
+</Literal>
+<Defeasible_Proof>
+<supportive_rule>
+<rule_ref rule='&rulebase;rule_cl41'/>
+</supportive_rule>
+<defeasible_body_grounds>
+<Definitely_Proved>
+<Literal>
+<RDF_resource uri='&lc;case01'/>
+</Literal>
+<Definite_Proof>
+<strict_clause>
+<Fact>
+<RDF_resource uri='&lc;case01'/>
+</Fact>
+</strict_clause>
+</Definite_Proof>
+</Definitely_Proved>
+</defeasible_body_grounds>
+<not_strongly_attacked/>
+<defeasible_attackers_blocked>
+</defeasible_attackers_blocked>
+</Defeasible_Proof>
+</Defeasibly_Proved>
+<Defeasibly_Proved>
+<oid>
+<Ind uri='&proof-export;proof3'>proof3</Ind>
+</oid>
+<Literal>
+<RDF_resource uri='&export;commited_cl348_st31'/>
+</Literal>
+<Defeasible_Proof>
+<supportive_rule>
+<rule_ref rule='&rulebase;rule_cl348_st3_injury'/>
+</supportive_rule>
+<defeasible_body_grounds>
+<Definitely_Proved>
+<Literal>
+<RDF_resource uri='&lc;case01'/>
+</Literal>
+<Definite_Proof>
+<strict_clause>
+<Fact>
+<RDF_resource uri='&lc;case01'/>
+</Fact>
+</strict_clause>
+</Definite_Proof>
+</Definitely_Proved>
+<Definitely_Proved>
+<Literal>
+<RDF_resource uri='&lc;case01'/>
+</Literal>
+<Definite_Proof>
+<strict_clause>
+<Fact>
+<RDF_resource uri='&lc;case01'/>
+</Fact>
+</strict_clause>
+</Definite_Proof>
+</Definitely_Proved>
+</defeasible_body_grounds>
+<not_strongly_attacked/>
+<defeasible_attackers_blocked>
+</defeasible_attackers_blocked>
+</Defeasible_Proof>
+</Defeasibly_Proved>
+<Defeasibly_Proved>
+<oid>
+<Ind uri='&proof-export;proof4'>proof4</Ind>
+</oid>
+<Literal>
 <RDF_resource uri='&export;max_imprisonment1'/>
 </Literal>
 <Defeasible_Proof>
 <supportive_rule>
-<rule_ref rule='&rulebase;pen_cl339_st1_max'/>
+<rule_ref rule='&rulebase;pen_cl348_st3_max'/>
+</supportive_rule>
+<defeasible_body_grounds>
+<proof_ref proof='&proof-export;proof3'/>
+</defeasible_body_grounds>
+<not_strongly_attacked/>
+<defeasible_attackers_blocked>
+</defeasible_attackers_blocked>
+</Defeasible_Proof>
+</Defeasibly_Proved>
+<Defeasibly_Proved>
+<oid>
+<Ind uri='&proof-export;proof5'>proof5</Ind>
+</oid>
+<Literal>
+<RDF_resource uri='&export;to_pay_min_271'/>
+</Literal>
+<Defeasible_Proof>
+<supportive_rule>
+<rule_ref rule='&rulebase;pen_cl27_st1_min'/>
+</supportive_rule>
+<defeasible_body_grounds>
+<proof_ref proof='&proof-export;proof1'/>
+</defeasible_body_grounds>
+<not_strongly_attacked/>
+<defeasible_attackers_blocked>
+</defeasible_attackers_blocked>
+</Defeasible_Proof>
+</Defeasibly_Proved>
+<Defeasibly_Proved>
+<oid>
+<Ind uri='&proof-export;proof6'>proof6</Ind>
+</oid>
+<Literal>
+<RDF_resource uri='&export;to_pay_max_271'/>
+</Literal>
+<Defeasible_Proof>
+<supportive_rule>
+<rule_ref rule='&rulebase;pen_cl27_st1_max'/>
 </supportive_rule>
 <defeasible_body_grounds>
 <proof_ref proof='&proof-export;proof1'/>

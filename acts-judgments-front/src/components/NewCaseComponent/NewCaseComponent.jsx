@@ -50,6 +50,7 @@ const NewCaseComponent = ({
   const clanKrivDjelo = useRef();
   const stavKrivDjelo = useRef();
   const vrstaPresude = useRef();
+  const kazna=useRef();
 
   function triggerOsudjivan(value) {
     if (value === "Da") setIsOsudjivan(true);
@@ -155,6 +156,7 @@ const NewCaseComponent = ({
             prekrsenaPravilaNaRaskrsnici: prekrsenaPravilaNaRaskrsnici,
             prekrsenoKretanjeDesnomStranom: prekrsenoKretanjeDesnomStranom,
             vrstaPresude: vrstaPresude.current.innerText,
+            kazna:kazna.current.value
           })
         }
       >
@@ -523,11 +525,12 @@ const NewCaseComponent = ({
             </div>
           </div>
           <Select
-            width={"30%"}
+            width={"380px"}
             ref={vrstaPresude}
             label={"Vrsta presude"}
             options={vrstePresuda}
           />
+           <Input ref={kazna} label={"Kazna"} />
         </div>
         <button
           type="button"
@@ -571,6 +574,7 @@ const NewCaseComponent = ({
               prekrsenaPravilaNaRaskrsnici: prekrsenaPravilaNaRaskrsnici,
               prekrsenoKretanjeDesnomStranom: prekrsenoKretanjeDesnomStranom,
               vrstaPresude: vrstaPresude.current.innerText,
+              kazna: kazna.current.value
             });
           }}
         >

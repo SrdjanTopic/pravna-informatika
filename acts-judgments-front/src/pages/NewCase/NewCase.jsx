@@ -35,6 +35,7 @@ const NewCase = () => {
       .post("http://localhost:8080/judgments", caseInfo)
       .then((res) => {
         console.log(res.data);
+        alert("Presuda je uspješno dodata!")
       })
       .catch((err) => console.log(err));
   }
