@@ -59,6 +59,10 @@ public class BaseCbrApplication implements StandardCBRApplication {
         Attribute radnjeBezPrethodnogUvjerenja=new Attribute("radnjeBezPrethodnogUvjerenja", CaseDescription.class);
         simConfig.addMapping(radnjeBezPrethodnogUvjerenja, slicnostRadnjiBezPrethodnogUvjerenja);
 
+        //prekrseni propisi -clan 44
+        Attribute nedozvoljenoPolukruznoOkretanje=new Attribute("nedozvoljenoPolukruznoOkretanje", CaseDescription.class);
+        simConfig.addMapping(nedozvoljenoPolukruznoOkretanje, new Equal());
+
         //prekrseni propisi -clan 35,97
         TabularSimilarity slicnostRadnjiBezPrilagodjavanjaBrzine = new TabularSimilarity(Arrays.asList(
                 "pred pjesacki", //clan 97
@@ -69,9 +73,6 @@ public class BaseCbrApplication implements StandardCBRApplication {
         simConfig.addMapping(radnjeBezPrilagodjavanjaBrzine, slicnostRadnjiBezPrilagodjavanjaBrzine);
 
 
-        //prekrseni propisi -clan 44
-        Attribute nedozvoljenoPolukruznoOkretanje=new Attribute("nedozvoljenoPolukruznoOkretanje", CaseDescription.class);
-        simConfig.addMapping(nedozvoljenoPolukruznoOkretanje, new Equal());
 
         //prekrseni propisi- clan 41
         Attribute prekrsenaPravilaNaRaskrsnici=new Attribute("prekrsenaPravilaNaRaskrsnici", CaseDescription.class);

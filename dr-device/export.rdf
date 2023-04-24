@@ -241,40 +241,16 @@
      <rdfs:domain rdf:resource='&export;to_pay_max_97'/>
 </rdf:Property>
 
-<export:commited_cl27_st1 rdf:about='&export;commited_cl27_st11'>
-     <export:defendant>Defendant</export:defendant>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof1</defeasible:proof>
-</export:commited_cl27_st1>
-
-<export:commited_cl41 rdf:about='&export;commited_cl411'>
-     <export:defendant>Defendant</export:defendant>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof2</defeasible:proof>
-</export:commited_cl41>
-
 <export:commited_cl348_st3 rdf:about='&export;commited_cl348_st31'>
      <export:defendant>Defendant</export:defendant>
      <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof3</defeasible:proof>
+     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof1</defeasible:proof>
 </export:commited_cl348_st3>
 
 <export:max_imprisonment rdf:about='&export;max_imprisonment1'>
      <export:value>4</export:value>
      <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof4</defeasible:proof>
+     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof2</defeasible:proof>
 </export:max_imprisonment>
-
-<export:to_pay_min_27 rdf:about='&export;to_pay_min_271'>
-     <export:value>90</export:value>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof5</defeasible:proof>
-</export:to_pay_min_27>
-
-<export:to_pay_max_27 rdf:about='&export;to_pay_max_271'>
-     <export:value>250</export:value>
-     <defeasible:truthStatus>defeasibly-proven-positive</defeasible:truthStatus>
-     <defeasible:proof rdf:datatype='&xsd;anyURI'>&proof-export;proof6</defeasible:proof>
-</export:to_pay_max_27>
 
 </rdf:RDF>

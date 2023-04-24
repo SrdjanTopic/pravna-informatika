@@ -170,7 +170,7 @@ public class JudgmentService {
 
 
         System.out.print("Broj osudjivanja: ");
-        if (caseDescription.getOsudjivan().equals("ne")) {
+        if (!caseDescription.getOsudjivan()) {
             caseDescription.setBrojOsudjivanja(0);
             System.out.print("0" + "\n");
         } else {

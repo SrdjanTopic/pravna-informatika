@@ -70,12 +70,12 @@ const JudgmentComponent = ({ judgment, judgmentDescription }) => {
           </div>
           <div className={styles.textWrapper}>
             <p>{`Osuđivan: `}</p>
-            <b>{judgmentDescription.osudjivan === "da" ? "da" : "ne"}</b>
+            <b>{judgmentDescription.osudjivan === true ? "da" : "ne"}</b>
           </div>
           <div className={styles.textWrapper}>
             <p>{`Broj osuđivanja: `}</p>
             <b>
-              {judgmentDescription.osudjivan === "da"
+              {judgmentDescription.osudjivan === true
                 ? judgmentDescription.brojOsudjivanja
                 : "---"}
             </b>
